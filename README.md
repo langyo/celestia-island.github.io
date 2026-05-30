@@ -1,9 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-<img src="res/logos/entelecheia.webp" alt="Celestia Island logo" width="200"/>
-
-# Celestia Island
+# ✦ Celestia Island
 
 **A Constellation of Open-Source Rust Projects**
 
