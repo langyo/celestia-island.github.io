@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b --noEmit && vite build && cp CNAME dist/CNAME",
+    "build": "python3 scripts/build.py",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,12 +1,12 @@
 import { createI18n } from 'vue-i18n'
-import en from './en.json'
-import zhCN from './zh-CN.json'
-import zhTW from './zh-TW.json'
-import ja from './ja.json'
-import ko from './ko.json'
-import es from './es.json'
-import fr from './fr.json'
-import ru from './ru.json'
+import en from '../../res/i18n/en.json'
+import zhCN from '../../res/i18n/zh-CN.json'
+import zhTW from '../../res/i18n/zh-TW.json'
+import ja from '../../res/i18n/ja.json'
+import ko from '../../res/i18n/ko.json'
+import es from '../../res/i18n/es.json'
+import fr from '../../res/i18n/fr.json'
+import ru from '../../res/i18n/ru.json'
 
 const savedLocale = localStorage.getItem('celestia-locale')
 const browserLocale = navigator.language
