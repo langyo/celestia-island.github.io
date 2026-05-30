@@ -1,6 +1,7 @@
 export interface Project {
   id: string
   name: string
+  nameKey: string
   tagline: string
   taglineKey: string
   description: string
@@ -16,9 +17,10 @@ export const projects: Project[] = [
   {
     id: 'entelecheia',
     name: 'Entelecheia',
+    nameKey: 'entelecheia.name',
     tagline: 'Multi-Agent Collaboration Platform',
     taglineKey: 'entelecheia.tagline',
-    description: 'Assemble teams of AI agents that divide tasks, collaborate, and deliver results. From research and analysis to code generation and workflow automation — describe your goal, and specialized agents work together to achieve it.',
+    description: 'Assemble teams of AI agents that divide tasks, collaborate, and deliver results. Harness engineering in practice — constrain agents to their domains, and they excel. From research and analysis to code generation and workflow automation — describe your goal, and specialized agents work together to achieve it.',
     descriptionKey: 'entelecheia.description',
     techStack: ['Rust', 'TypeScript', 'Axum', 'SeaORM', 'ratatui', 'Boa JS', 'MCP', 'pgvector'],
     status: 'active',
@@ -29,6 +31,7 @@ export const projects: Project[] = [
   {
     id: 'shittim-chest',
     name: 'Shittim Chest',
+    nameKey: 'shittim.name',
     tagline: 'Chat With Your AI Agents',
     taglineKey: 'shittim.tagline',
     description: 'The interactive face of Entelecheia — a streaming chat interface to converse with AI agents, a control panel to configure systems and manage permissions, plus desktop and mobile apps. Everything the user sees and touches.',
@@ -42,9 +45,10 @@ export const projects: Project[] = [
   {
     id: 'tairitsu',
     name: 'Tairitsu',
-    tagline: 'Build Full-Stack Apps, Entirely in Rust',
+    nameKey: 'tairitsu.name',
+    tagline: 'Full-Stack, WASI-Native',
     taglineKey: 'tairitsu.tagline',
-    description: 'A web framework that lets you build complete applications — frontend UI, server logic, and everything in between — using only Rust. Your app compiles into portable components that run in the browser, on the server, or at the edge. One language, one codebase.',
+    description: 'Build complete web applications that target WASI — a single, portable runtime for both frontend and backend. Write your UI and server logic in Rust, compile to WASI components, and deploy to browser, server, or edge. One runtime, one language, one codebase.',
     descriptionKey: 'tairitsu.description',
     techStack: ['Rust', 'WASI', 'WIT', 'VDOM', 'SSR', 'wasmtime', 'TypeScript', 'Wry/Tao'],
     status: 'active',
@@ -55,9 +59,10 @@ export const projects: Project[] = [
   {
     id: 'hikari',
     name: 'Hikari',
-    tagline: 'Beautiful UI, Crafted in Rust',
+    nameKey: 'hikari.name',
+    tagline: 'WASI-Native UI Framework',
     taglineKey: 'hikari.tagline',
-    description: 'A design-first UI component library with a distinctive visual identity — Eastern aesthetics meet futuristic style. Drop in polished, ready-made components and spend your energy on what your app does, not how it looks.',
+    description: 'A UI component library purpose-built for WASI. Polished, ready-made components that run on the same WASI runtime as your backend — no wasm-bindgen, no JavaScript glue. Build interfaces once, render them anywhere.',
     descriptionKey: 'hikari.description',
     techStack: ['Rust', 'WASI', 'WIT', 'SCSS', 'Tairitsu vdom', 'VDOM + hooks'],
     status: 'active',
@@ -68,6 +73,7 @@ export const projects: Project[] = [
   {
     id: 'aoba',
     name: 'Aoba',
+    nameKey: 'aoba.name',
     tagline: 'Industrial Protocol Debugging, Made Effortless',
     taglineKey: 'aoba.tagline',
     description: 'Inspect, test, and simulate Modbus industrial devices right from your terminal. Connect to real hardware, spin up virtual devices for testing, and bridge data between protocols — an indispensable companion for automation engineers on the factory floor and in CI pipelines.',
@@ -81,9 +87,10 @@ export const projects: Project[] = [
   {
     id: 'kirino',
     name: 'Kirino',
-    tagline: 'Authentication & Access Control, Ready to Use',
+    nameKey: 'kirino.name',
+    tagline: 'Production-Grade RBAC, Constrained by Design',
     taglineKey: 'kirino.tagline',
-    description: 'Add battle-tested login, role-based permissions, and security auditing to your Rust application in minutes. From simple password authentication to complex permission hierarchies with separation of duties — focus on your business logic and leave the security plumbing to Kirino.',
+    description: 'An ambitious attempt to bring ANSI INCITS 359-2004 RBAC — with its full constraint apparatus: separation of duties, cardinality enforcement, temporal bounds, and role hierarchies — into a reusable Rust library. Not just who can do what, but under what conditions. Real-world authorization, made composable.',
     descriptionKey: 'kirino.description',
     techStack: ['Rust', 'Argon2', 'JWT', 'RBAC', 'SQL', 'Redis', 'crates.io'],
     status: 'stable',

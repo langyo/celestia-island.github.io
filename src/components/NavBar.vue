@@ -15,7 +15,7 @@
             GitHub
           </a>
 
-          <button @click="toggleTheme" class="btn-ghost text-sm px-2.5" :style="{ color: 'var(--text-secondary)' }" :title="theme === 'dark' ? 'Light mode' : 'Dark mode'">
+          <button @click="toggleTheme" class="btn-ghost text-sm px-2.5 rounded-lg hover:bg-[var(--bg-secondary)]" :style="{ color: 'var(--text-secondary)' }" :title="theme === 'dark' ? 'Light mode' : 'Dark mode'">
             <div v-if="theme === 'dark'" class="i-lucide-sun w-4 h-4" />
             <div v-else class="i-lucide-moon w-4 h-4" />
           </button>

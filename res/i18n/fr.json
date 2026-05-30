@@ -30,12 +30,12 @@
     "description": "Le visage interactif d'Entelecheia — une interface de chat en streaming pour converser avec les agents IA, un panneau de contrôle pour configurer les systèmes et gérer les permissions, ainsi que des applications desktop et mobiles. Tout ce que l'utilisateur voit et touche."
   },
   "tairitsu": {
-    "tagline": "Créez des apps complètes, uniquement en Rust",
-    "description": "Un framework web qui vous permet de construire des applications complètes — interface utilisateur, logique serveur et tout le reste — en utilisant uniquement Rust. Votre application se compile en composants portables qui s'exécutent dans le navigateur, sur le serveur ou en périphérie. Un seul langage, une seule base de code."
+    "tagline": "Full-Stack, Natif WASI",
+    "description": "Construisez des applications web complètes ciblant WASI — un runtime portable unique pour le frontend et le backend. Écrivez votre UI et votre logique serveur en Rust, compilez en composants WASI, et déployez sur navigateur, serveur ou edge. Un runtime, un langage, une base de code."
   },
   "hikari": {
-    "tagline": "De belles UI, conçues en Rust",
-    "description": "Une bibliothèque de composants UI axée sur le design, avec une identité visuelle distinctive — l'esthétique orientale rencontre le style futuriste. Intégrez des composants soignés et prêts à l'emploi, et concentrez votre énergie sur ce que fait votre application, pas sur son apparence."
+    "tagline": "Framework UI Natif WASI",
+    "description": "Une bibliothèque de composants UI conçue spécifiquement pour WASI. Des composants soignés qui s'exécutent sur le même runtime WASI que votre backend — sans wasm-bindgen, sans code glue JavaScript. Construisez vos interfaces une fois, affichez-les partout."
   },
   "aoba": {
     "tagline": "Débogage de protocoles industriels, sans effort",
@@ -47,7 +47,7 @@
       "tools": "Outils et Bibliothèques"
     },
     "kirino": {
-    "tagline": "Authentification et Contrôle d'Accès, prêts à l'emploi",
-    "description": "Ajoutez une connexion éprouvée, des permissions basées sur les rôles et un audit de sécurité à votre application Rust en quelques minutes. De l'authentification simple par mot de passe aux hiérarchies complexes de permissions avec séparation des tâches — concentrez-vous sur votre logique métier et laissez la sécurité à Kirino."
+    "tagline": "RBAC de Qualité Production, Conçu par Contraintes",
+    "description": "Une tentative ambitieuse d'apporter le standard ANSI INCITS 359-2004 RBAC — avec tout son appareil de contraintes : séparation des tâches, limites de cardinalité, contraintes temporelles et hiérarchies de rôles — dans une bibliothèque Rust réutilisable. Pas seulement qui peut faire quoi, mais sous quelles conditions. De l'autorisation du monde réel, rendue composable."
   }
 }

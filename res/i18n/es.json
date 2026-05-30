@@ -30,12 +30,12 @@
     "description": "La cara interactiva de Entelecheia — una interfaz de chat con streaming para conversar con agentes IA, un panel de control para configurar sistemas y gestionar permisos, además de apps de escritorio y móviles. Todo lo que el usuario ve y toca."
   },
   "tairitsu": {
-    "tagline": "Construye apps completas, solo con Rust",
-    "description": "Un framework web que te permite construir aplicaciones completas — interfaz de usuario, lógica del servidor y todo lo demás — usando solo Rust. Tu app se compila en componentes portables que se ejecutan en el navegador, el servidor o el edge. Un lenguaje, un código base."
+    "tagline": "Full-Stack, Nativo WASI",
+    "description": "Construye aplicaciones web completas orientadas a WASI — un único runtime portable para frontend y backend. Escribe tu UI y lógica de servidor en Rust, compila a componentes WASI y despliega en navegador, servidor o edge. Un runtime, un lenguaje, un código base."
   },
   "hikari": {
-    "tagline": "UI hermosa, creada en Rust",
-    "description": "Una biblioteca de componentes UI que prioriza el diseño, con una identidad visual única — la estética oriental se encuentra con el estilo futurista. Inserta componentes pulidos y listos para usar, y dedica tu energía a lo que hace tu app, no a cómo se ve."
+    "tagline": "Framework UI Nativo WASI",
+    "description": "Una biblioteca de componentes UI creada específicamente para WASI. Componentes pulidos que se ejecutan en el mismo runtime WASI que tu backend — sin wasm-bindgen, sin código glue JavaScript. Construye interfaces una vez, renderízalas en cualquier lugar."
   },
   "aoba": {
     "tagline": "Depuración de protocolos industriales, sin esfuerzo",
@@ -47,7 +47,7 @@
       "tools": "Herramientas y Bibliotecas"
     },
     "kirino": {
-    "tagline": "Autenticación y Control de Acceso, listo para usar",
-    "description": "Añade inicio de sesión probado en batalla, permisos basados en roles y auditoría de seguridad a tu aplicación Rust en minutos. Desde autenticación simple por contraseña hasta jerarquías complejas de permisos con separación de funciones — concéntrate en tu lógica de negocio y deja la seguridad en manos de Kirino."
+    "tagline": "RBAC de Grado Producción, Diseñado con Restricciones",
+    "description": "Un intento ambicioso de llevar ANSI INCITS 359-2004 RBAC — con todo su aparato de restricciones: separación de funciones, límites de cardinalidad, restricciones temporales y jerarquías de roles — a una biblioteca Rust reutilizable. No solo quién puede hacer qué, sino bajo qué condiciones. Autorización del mundo real, hecha componible."
   }
 }

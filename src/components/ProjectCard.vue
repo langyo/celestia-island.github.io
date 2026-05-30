@@ -18,7 +18,7 @@
         <div v-else :class="`${project.icon} w-6 h-6`" :style="{ color: project.color }" />
       </div>
       <div class="flex-1 min-w-0">
-        <h3 class="text-lg font-semibold mb-1 truncate" :style="{ color: 'var(--text-primary)' }">{{ project.name }}</h3>
+        <h3 class="text-lg font-semibold mb-1 truncate" :style="{ color: 'var(--text-primary)' }">{{ t(project.nameKey, project.name) }}</h3>
         <p class="text-sm font-medium" :style="{ color: project.color }">
           {{ t(project.taglineKey) || project.tagline }}
         </p>
