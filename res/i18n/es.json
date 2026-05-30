@@ -41,7 +41,12 @@
     "tagline": "Herramienta de Depuración Multi-Protocolo",
     "description": "CLI/TUI Rust para depuración Modbus RTU, con soporte para puertos serie físicos, modos maestro/esclavo, puertos virtuales y puente HTTP/MQTT."
   },
-  "kirino": {
+    "group": {
+      "platform": "Plataforma Principal",
+      "framework": "Framework WASM / UI",
+      "tools": "Herramientas y Bibliotecas"
+    },
+    "kirino": {
     "tagline": "Framework de Autenticación Zero-Trust y RBAC",
     "description": "Biblioteca de autenticación genérica basada en traits que implementa el estándar ANSI INCITS 359-2004 RBAC con herencia de roles, restricciones SoD y soporte multi-credencial."
   }

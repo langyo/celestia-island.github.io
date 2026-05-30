@@ -41,7 +41,12 @@
     "tagline": "멀티 프로토콜 디버깅 도구",
     "description": "Modbus RTU 디버깅용 Rust CLI/TUI 도구. 물리적 시리얼 포트, 마스터/슬레이브 모드, 가상 포트, HTTP/MQTT 브리징을 지원합니다."
   },
-  "kirino": {
+    "group": {
+      "platform": "코어 플랫폼",
+      "framework": "WASM / UI 프레임워크",
+      "tools": "도구 & 라이브러리"
+    },
+    "kirino": {
     "tagline": "제로 트러스트 인증 및 RBAC 프레임워크",
     "description": "ANSI INCITS 359-2004 RBAC를 구현하는 제네릭 트레이트 기반 인증 라이브러리. 역할 상속, 직무 분리 제약, 다중 자격 증명을 지원합니다."
   }

@@ -47,6 +47,16 @@ def main() -> None:
             shutil.copy2(src, dst)
             print(f"  {f}")
 
+    print("\n=== Copying logos ===")
+    logos_src = RES / "logos"
+    logos_dst = DIST / "logos"
+    if logos_src.exists():
+        if logos_dst.exists():
+            shutil.rmtree(logos_dst)
+        shutil.copytree(logos_src, logos_dst)
+        for f in logos_dst.iterdir():
+            print(f"  logos/{f.name}")
+
     print("\n=== Copying CNAME ===")
     cname = ROOT / "CNAME"
     if cname.exists():

@@ -41,7 +41,12 @@
     "tagline": "Multi-Protocol Debugging & Simulation Tool",
     "description": "Rust CLI/TUI for Modbus RTU debugging with physical serial ports, master/slave modes, virtual ports, and HTTP/MQTT bridging."
   },
-  "kirino": {
+    "group": {
+      "platform": "Core Platform",
+      "framework": "WASM / UI Framework",
+      "tools": "Tools & Libraries"
+    },
+    "kirino": {
     "tagline": "Zero-Trust Authentication & RBAC Framework",
     "description": "Generic trait-based auth implementing ANSI INCITS 359-2004 RBAC with role inheritance, SoD constraints, and multi-credential support."
   }

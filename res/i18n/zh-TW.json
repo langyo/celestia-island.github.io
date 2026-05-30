@@ -41,7 +41,12 @@
     "tagline": "多協定除錯與模擬工具",
     "description": "Modbus RTU 除錯的 Rust CLI/TUI 工具，支援實體序列埠、主/從模式、虛擬埠、HTTP/MQTT 橋接。"
   },
-  "kirino": {
+    "group": {
+      "platform": "核心平台",
+      "framework": "WASM / UI 框架",
+      "tools": "工具與庫"
+    },
+    "kirino": {
     "tagline": "零信任認證與 RBAC 框架",
     "description": "通用 trait 認證庫，實作 ANSI INCITS 359-2004 RBAC 標準，支援角色繼承、職責分離約束、多憑證支援。"
   }

@@ -41,7 +41,12 @@
     "tagline": "マルチプロトコルデバッグ・シミュレーションツール",
     "description": "Modbus RTUデバッグ用Rust CLI/TUIツール。物理シリアルポート、マスター/スレーブモード、仮想ポート、HTTP/MQTTブリッジをサポート。"
   },
-  "kirino": {
+    "group": {
+      "platform": "コアプラットフォーム",
+      "framework": "WASM / UI フレームワーク",
+      "tools": "ツール & ライブラリ"
+    },
+    "kirino": {
     "tagline": "ゼロトラスト認証・RBACフレームワーク",
     "description": "ANSI INCITS 359-2004 RBACを実装する汎用トレイトベース認証ライブラリ。ロール継承、職務分離制約、マルチクレデンシャルをサポート。"
   }

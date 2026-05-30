@@ -41,7 +41,12 @@
     "tagline": "多协议调试与模拟工具",
     "description": "Modbus RTU 调试的 Rust CLI/TUI 工具，支持物理串口、主/从模式、虚拟端口、HTTP/MQTT 桥接。"
   },
-  "kirino": {
+    "group": {
+      "platform": "核心平台",
+      "framework": "WASM / UI 框架",
+      "tools": "工具与库"
+    },
+    "kirino": {
     "tagline": "零信任认证与 RBAC 框架",
     "description": "通用 trait 认证库，实现 ANSI INCITS 359-2004 RBAC 标准，支持角色继承、职责分离约束、多凭证支持。"
   }

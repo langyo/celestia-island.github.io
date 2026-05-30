@@ -5,20 +5,27 @@
   >
     <div class="flex items-start gap-4 mb-4">
       <div
-        class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-        :style="{ background: `${project.color}15`, color: project.color }"
+        class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+        :style="{ background: `${project.color}10` }"
       >
-        <div :class="`${project.icon} w-6 h-6`" />
+        <img
+          v-if="logoUrl"
+          :src="logoUrl"
+          :alt="project.name"
+          class="w-9 h-9 object-contain"
+          draggable="false"
+        />
+        <div v-else :class="`${project.icon} w-6 h-6`" :style="{ color: project.color }" />
       </div>
       <div class="flex-1 min-w-0">
-        <h3 class="text-lg font-semibold text-white mb-1 truncate">{{ project.name }}</h3>
+        <h3 class="text-lg font-semibold mb-1 truncate" :style="{ color: 'var(--text-primary)' }">{{ project.name }}</h3>
         <p class="text-sm font-medium" :style="{ color: project.color }">
           {{ t(project.taglineKey) || project.tagline }}
         </p>
       </div>
     </div>
 
-    <p class="text-white/50 text-sm leading-relaxed mb-4 line-clamp-3">
+    <p class="text-sm leading-relaxed mb-4 line-clamp-3" :style="{ color: 'var(--text-secondary)' }">
       {{ t(project.descriptionKey, { en: project.description }) }}
     </p>
 
@@ -37,7 +44,7 @@
       </span>
     </div>
 
-    <div class="flex items-center justify-between pt-3 border-t border-white/5">
+    <div class="flex items-center justify-between pt-3 border-t" :style="{ borderColor: 'var(--border-subtle)' }">
       <span
         class="text-xs px-2 py-0.5 rounded-full"
         :style="{
@@ -50,7 +57,10 @@
       <a
         :href="`https://github.com/${project.repo}`"
         target="_blank"
-        class="text-white/30 hover:text-white/70 transition-colors text-sm flex items-center gap-1 no-underline"
+        class="transition-colors duration-200 text-sm flex items-center gap-1 no-underline"
+        :style="{ color: 'var(--text-muted)' }"
+        @mouseenter="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-secondary)' }"
+        @mouseleave="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-muted)' }"
       >
         <div class="i-lucide-external-link w-3.5 h-3.5" />
         GitHub
@@ -64,11 +74,29 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types/project'
 
+import entelecheiaLogo from '@res/logos/entelecheia.webp'
+import shittimLogo from '@res/logos/shittim-chest.webp'
+import tairitsuLogo from '@res/logos/tairitsu.png'
+import hikariLogo from '@res/logos/hikari.png'
+import aobaLogo from '@res/logos/aoba.png'
+import kirinoLogo from '@res/logos/kirino.webp'
+
 const props = defineProps<{
   project: Project
 }>()
 
 const { t } = useI18n()
+
+const logoMap: Record<string, string> = {
+  entelecheia: entelecheiaLogo,
+  'shittim-chest': shittimLogo,
+  tairitsu: tairitsuLogo,
+  hikari: hikariLogo,
+  aoba: aobaLogo,
+  kirino: kirinoLogo,
+}
+
+const logoUrl = computed(() => logoMap[props.project.id])
 
 const statusMap: Record<string, { bg: string; color: string }> = {
   active: { bg: 'rgba(34, 197, 94, 0.1)', color: '#22c55e' },

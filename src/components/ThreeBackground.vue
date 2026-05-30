@@ -20,9 +20,10 @@ let starPoints: THREE.Points
 let starTwinkle: THREE.Points
 let animationId: number
 let clock: THREE.Clock
+let visible = true
 
 function createStarfield() {
-  const count = 3000
+  const count = 1200
   const positions = new Float32Array(count * 3)
 
   for (let i = 0; i < count; i++) {
@@ -43,31 +44,31 @@ function createStarfield() {
   const ctx = canvas.getContext('2d')!
   const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32)
   gradient.addColorStop(0, 'rgba(255, 255, 255, 1)')
-  gradient.addColorStop(0.1, 'rgba(255, 255, 255, 0.9)')
-  gradient.addColorStop(0.3, 'rgba(200, 200, 255, 0.5)')
-  gradient.addColorStop(0.6, 'rgba(150, 150, 255, 0.1)')
+  gradient.addColorStop(0.15, 'rgba(200, 200, 255, 0.6)')
+  gradient.addColorStop(0.5, 'rgba(140, 140, 220, 0.15)')
   gradient.addColorStop(1, 'rgba(0, 0, 0, 0)')
   ctx.fillStyle = gradient
   ctx.fillRect(0, 0, 64, 64)
 
   const texture = new THREE.CanvasTexture(canvas)
+  texture.generateMipmaps = false
+  texture.minFilter = THREE.LinearFilter
+  texture.magFilter = THREE.LinearFilter
 
-  const material = new THREE.PointsMaterial({
-    size: 0.03,
+  starMaterial = new THREE.PointsMaterial({
+    size: 0.035,
     map: texture,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
-    opacity: 0.5,
+    opacity: 0.45,
   })
-  starMaterial = material
 
-  starPoints = new THREE.Points(geometry, material)
+  starPoints = new THREE.Points(geometry, starMaterial)
   scene.add(starPoints)
 
-  // Second layer of stars (further back, different color)
-  const count2 = 1500
+  const count2 = 600
   const positions2 = new Float32Array(count2 * 3)
   for (let i = 0; i < count2; i++) {
     const theta = Math.random() * Math.PI * 2
@@ -85,24 +86,23 @@ function createStarfield() {
   canvas2.height = 32
   const ctx2 = canvas2.getContext('2d')!
   const gradient2 = ctx2.createRadialGradient(16, 16, 0, 16, 16, 16)
-  gradient2.addColorStop(0, 'rgba(180, 180, 255, 0.8)')
-  gradient2.addColorStop(0.5, 'rgba(100, 100, 200, 0.3)')
+  gradient2.addColorStop(0, 'rgba(160, 160, 255, 0.7)')
+  gradient2.addColorStop(0.5, 'rgba(100, 100, 200, 0.25)')
   gradient2.addColorStop(1, 'rgba(0, 0, 0, 0)')
   ctx2.fillStyle = gradient2
   ctx2.fillRect(0, 0, 32, 32)
 
-  const material2 = new THREE.PointsMaterial({
-    size: 0.02,
+  twinkleMaterial = new THREE.PointsMaterial({
+    size: 0.022,
     map: new THREE.CanvasTexture(canvas2),
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
-    opacity: 0.3,
+    opacity: 0.28,
   })
-  twinkleMaterial = material2
 
-  starTwinkle = new THREE.Points(geometry2, material2)
+  starTwinkle = new THREE.Points(geometry2, twinkleMaterial)
   scene.add(starTwinkle)
 }
 
@@ -133,8 +133,8 @@ function init() {
   clock = new THREE.Clock()
   clock.start()
 
-  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'low-power' })
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setClearColor(0x000000, 0)
   containerRef.value.appendChild(renderer.domElement)
@@ -154,18 +154,19 @@ function init() {
 function animate() {
   animationId = requestAnimationFrame(animate)
 
+  if (!visible) return
+
   const t = clock.getElapsedTime()
 
   logoMaterial.uniforms.u_time.value = t
-  logoMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
 
-  starPoints.rotation.y += 0.0002
-  starPoints.rotation.x += 0.00008
-  starMaterial.opacity = 0.4 + 0.15 * Math.sin(t * 0.7)
+  starPoints.rotation.y += 0.00018
+  starPoints.rotation.x += 0.00006
+  starMaterial.opacity = 0.38 + 0.12 * Math.sin(t * 0.7)
 
-  starTwinkle.rotation.y -= 0.00015
-  starTwinkle.rotation.z += 0.00005
-  twinkleMaterial.opacity = 0.25 + 0.15 * Math.sin(t * 0.5 + 1)
+  starTwinkle.rotation.y -= 0.00012
+  starTwinkle.rotation.z += 0.00004
+  twinkleMaterial.opacity = 0.22 + 0.12 * Math.sin(t * 0.5 + 1)
 
   renderer.render(scene, camera)
 }
@@ -181,6 +182,12 @@ function onResize() {
 onMounted(() => {
   init()
   window.addEventListener('resize', onResize)
+
+  const observer = new IntersectionObserver(
+    ([entry]) => { visible = entry.isIntersecting },
+    { threshold: 0 }
+  )
+  if (containerRef.value) observer.observe(containerRef.value)
 })
 
 onBeforeUnmount(() => {

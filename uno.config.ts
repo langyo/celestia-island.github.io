@@ -9,9 +9,9 @@ export default defineConfig({
   shortcuts: {
     'btn': 'px-6 py-2 rounded-lg font-medium transition-all duration-300 cursor-pointer inline-flex items-center gap-2',
     'btn-primary': 'btn bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-500 hover:to-indigo-500 shadow-lg shadow-violet-500/25',
-    'btn-ghost': 'btn text-white/70 hover:text-white hover:bg-white/10',
-    'glass': 'backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl',
-    'glass-card': 'glass p-6 transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] hover:shadow-xl hover:shadow-violet-500/10',
+    'btn-ghost': 'btn hover:bg-[var(--bg-glass-hover)] transition-colors duration-200',
+    'glass': 'backdrop-blur-xl bg-[var(--bg-glass)] border border-[var(--border-subtle)] rounded-2xl',
+    'glass-card': 'glass p-6 transition-all duration-300 ease-out hover:bg-[var(--bg-glass-hover)] hover:border-[var(--border-hover)] hover:shadow-xl hover:shadow-[var(--shadow-card)]',
   },
   theme: {
     colors: {

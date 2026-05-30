@@ -41,7 +41,12 @@
     "tagline": "Outil de Débogage Multi-Protocole",
     "description": "CLI/TUI Rust pour le débogage Modbus RTU, avec support des ports série physiques, modes maître/esclave, ports virtuels et pont HTTP/MQTT."
   },
-  "kirino": {
+    "group": {
+      "platform": "Plateforme Principale",
+      "framework": "Framework WASM / UI",
+      "tools": "Outils et Bibliothèques"
+    },
+    "kirino": {
     "tagline": "Framework d'Authentification Zero-Trust et RBAC",
     "description": "Bibliothèque d'authentification générique basée sur les traits implémentant le standard ANSI INCITS 359-2004 RBAC avec héritage de rôles, contraintes SoD et support multi-identifiants."
   }

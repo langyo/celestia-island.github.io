@@ -1,6 +1,46 @@
+:root {
+  --bg-primary: #000;
+  --bg-secondary: rgba(255, 255, 255, 0.03);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --bg-glass-hover: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --text-primary: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.5);
+  --text-tertiary: rgba(255, 255, 255, 0.25);
+  --text-muted: rgba(255, 255, 255, 0.15);
+  --nav-bg: rgba(0, 0, 0, 0.3);
+  --footer-bg: rgba(0, 0, 0, 0.3);
+  --scrollbar-thumb: rgba(139, 92, 246, 0.3);
+  --selection-bg: rgba(139, 92, 246, 0.4);
+  --shadow-card: rgba(139, 92, 246, 0.1);
+  --glow-color: rgba(139, 92, 246, 0.4);
+  --glow-color-strong: rgba(139, 92, 246, 0.7);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: rgba(0, 0, 0, 0.03);
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-glass-hover: rgba(255, 255, 255, 0.85);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.18);
+  --text-primary: #0f172a;
+  --text-secondary: rgba(15, 23, 42, 0.55);
+  --text-tertiary: rgba(15, 23, 42, 0.3);
+  --text-muted: rgba(15, 23, 42, 0.15);
+  --nav-bg: rgba(248, 250, 252, 0.8);
+  --footer-bg: rgba(248, 250, 252, 0.8);
+  --scrollbar-thumb: rgba(99, 102, 241, 0.3);
+  --selection-bg: rgba(99, 102, 241, 0.3);
+  --shadow-card: rgba(99, 102, 241, 0.08);
+  --glow-color: rgba(99, 102, 241, 0.35);
+  --glow-color-strong: rgba(99, 102, 241, 0.6);
+}
+
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -12,7 +52,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3);
+  background: var(--scrollbar-thumb);
   border-radius: 3px;
 }
 
@@ -21,11 +61,12 @@ html {
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: 'Inter', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 #app {
@@ -34,13 +75,13 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 92, 246, 0.4);
+  background: var(--selection-bg);
   color: #fff;
 }
 
 @keyframes glow {
-  0%, 100% { filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4)); }
-  50% { filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.7)); }
+  0%, 100% { filter: drop-shadow(0 0 8px var(--glow-color)); }
+  50% { filter: drop-shadow(0 0 16px var(--glow-color-strong)); }
 }
 
 @keyframes float {
