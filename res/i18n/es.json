@@ -2,7 +2,7 @@
   "site": {
     "title": "Celestia Island",
     "subtitle": "Una constelación de proyectos de código abierto",
-    "description": "Explorando orquestación multi-agente, modelos de componentes WASM, autenticación de confianza cero y herramientas de depuración interactivas.",
+    "description": "Una constelación de proyectos de código abierto — agentes IA, frameworks web, bibliotecas UI, autenticación y herramientas industriales.",
     "nav": {
       "home": "Inicio",
       "projects": "Proyectos",
@@ -22,32 +22,32 @@
     }
   },
   "entelecheia": {
-    "tagline": "Plataforma de Colaboración Multi-Agente en Rust",
-    "description": "Un diseño de microkernel exec-only donde el LLM solo ve 3 herramientas, con más de 12 agentes invocados a través de importaciones de módulos ES en una capa IEPL TypeScript. Incluye TUI, CLI, runtime Cosmos/IEPL y más de 60 crates Rust."
+    "tagline": "Plataforma de Colaboración Multi-Agente",
+    "description": "Forma equipos de agentes IA que dividen tareas, colaboran y entregan resultados. Desde investigación y análisis hasta generación de código y automatización de flujos — describe tu objetivo y los agentes especializados trabajarán juntos para lograrlo."
   },
   "shittim": {
-    "tagline": "Interfaz de Usuario para Entelecheia",
-    "description": "Arona (chat con streaming) y Plana (panel de administración con RBAC), más un backend Rust+Axum. También incluye aplicaciones Tauri e plugins IDE."
+    "tagline": "Chatea con tus agentes IA",
+    "description": "La cara interactiva de Entelecheia — una interfaz de chat con streaming para conversar con agentes IA, un panel de control para configurar sistemas y gestionar permisos, además de apps de escritorio y móviles. Todo lo que el usuario ve y toca."
   },
   "tairitsu": {
-    "tagline": "Framework WASM de Modelo de Componentes Full-Stack",
-    "description": "Framework web Rust revolucionario que apunta a WASI a través del Modelo de Componentes. Unifica el renderizado del navegador y servidor mediante interfaces WIT con VDOM+hooks."
+    "tagline": "Construye apps completas, solo con Rust",
+    "description": "Un framework web que te permite construir aplicaciones completas — interfaz de usuario, lógica del servidor y todo lo demás — usando solo Rust. Tu app se compila en componentes portables que se ejecutan en el navegador, el servidor o el edge. Un lenguaje, un código base."
   },
   "hikari": {
-    "tagline": "El Frontend de Todo",
-    "description": "Framework UI Rust que fusiona estética china con diseño de ciencia ficción. Más de 40 componentes, SCSS con seguridad de tipos, efectos de brillo, i18n en 9 idiomas y más de 660 colores."
+    "tagline": "UI hermosa, creada en Rust",
+    "description": "Una biblioteca de componentes UI que prioriza el diseño, con una identidad visual única — la estética oriental se encuentra con el estilo futurista. Inserta componentes pulidos y listos para usar, y dedica tu energía a lo que hace tu app, no a cómo se ve."
   },
   "aoba": {
-    "tagline": "Herramienta de Depuración Multi-Protocolo",
-    "description": "CLI/TUI Rust para depuración Modbus RTU, con soporte para puertos serie físicos, modos maestro/esclavo, puertos virtuales y puente HTTP/MQTT."
+    "tagline": "Depuración de protocolos industriales, sin esfuerzo",
+    "description": "Inspecciona, prueba y simula dispositivos industriales Modbus directamente desde tu terminal. Conéctate a hardware real, crea dispositivos virtuales para pruebas y conecta datos entre protocolos — un compañero indispensable para ingenieros de automatización, tanto en planta como en pipelines CI."
   },
     "group": {
       "platform": "Plataforma Principal",
-      "framework": "Framework WASM / UI",
+      "framework": "Frameworks de Aplicación",
       "tools": "Herramientas y Bibliotecas"
     },
     "kirino": {
-    "tagline": "Framework de Autenticación Zero-Trust y RBAC",
-    "description": "Biblioteca de autenticación genérica basada en traits que implementa el estándar ANSI INCITS 359-2004 RBAC con herencia de roles, restricciones SoD y soporte multi-credencial."
+    "tagline": "Autenticación y Control de Acceso, listo para usar",
+    "description": "Añade inicio de sesión probado en batalla, permisos basados en roles y auditoría de seguridad a tu aplicación Rust en minutos. Desde autenticación simple por contraseña hasta jerarquías complejas de permisos con separación de funciones — concéntrate en tu lógica de negocio y deja la seguridad en manos de Kirino."
   }
 }

@@ -2,7 +2,7 @@
   "site": {
     "title": "Celestia Island",
     "subtitle": "開源專案的星座群",
-    "description": "探索多智能體編排、WASM 組件模型、零信任認證和互動式除錯工具。",
+    "description": "開源專案的星座群——AI 智能體、Web 框架、UI 庫、認證授權與工業工具。",
     "nav": {
       "home": "首頁",
       "projects": "專案",
@@ -22,32 +22,32 @@
     }
   },
   "entelecheia": {
-    "tagline": "Rust 多智能體協作平台",
-    "description": "exec-only 微內核設計，LLM 僅看到 3 個工具，透過 IEPL TypeScript 層的 ES 模組匯入調用 12+ 個智能體的全部能力。包含 TUI、CLI、Cosmos/IEPL 執行時、60+ Rust crates。"
+    "tagline": "多智能體協作平台",
+    "description": "組建 AI 智能體團隊，分工協作，交付成果。從研究分析到程式碼生成再到工作流程自動化——描述你的目標，專業智能體各司其職、共同達成。"
   },
   "shittim": {
-    "tagline": "Entelecheia 使用者互動前端",
-    "description": "Arona（帶串流傳輸的聊天介面）和 Plana（帶 RBAC 的管理面板），以及 Rust+Axum 後端。還包含 Tauri 桌面/行動應用和 IDE 外掛。"
+    "tagline": "與你的 AI 智能體對話",
+    "description": "Entelecheia 的互動入口——與 AI 智能體即時對話的聊天介面，用於系統設定與權限管理的控制面板，加上桌面與行動端應用。使用者所見所觸，盡在於此。"
   },
   "tairitsu": {
-    "tagline": "全端 WASM 組件模型框架",
-    "description": "革命性的 Rust Web 框架，透過組件模型面向 WASI。透過 WIT 介面統一瀏覽器和伺服器端渲染，配備 VDOM+hooks。"
+    "tagline": "全端應用，純 Rust 構建",
+    "description": "讓你用 Rust 一門語言構建完整應用的 Web 框架——前端介面、後端邏輯，全部搞定。你的應用編譯為可移植組件，在瀏覽器、伺服器或邊緣端無縫執行。一種語言，一套程式碼。"
   },
   "hikari": {
-    "tagline": "萬物之前端",
-    "description": "融合中式美學與科幻設計的 Rust UI 框架。40+ 組件、型別安全 SCSS、輝光效果、9 語言國際化、660+ 命名色彩。"
+    "tagline": "精美介面，用 Rust 打造",
+    "description": "以設計為先的 UI 組件庫，賦予你的應用獨特的視覺辨識度——東方美學與未來風格的交融。放入精美的現成組件，把精力花在應用功能上，而非介面細節。"
   },
   "aoba": {
-    "tagline": "多協定除錯與模擬工具",
-    "description": "Modbus RTU 除錯的 Rust CLI/TUI 工具，支援實體序列埠、主/從模式、虛擬埠、HTTP/MQTT 橋接。"
+    "tagline": "工業協定除錯，信手拈來",
+    "description": "在終端中檢測、測試和模擬 Modbus 工業裝置。連接真實硬體，快速建立虛擬裝置進行測試，在不同協定之間橋接資料——無論在生產現場還是 CI 管線中，都是自動化工程師的得力助手。"
   },
     "group": {
       "platform": "核心平台",
-      "framework": "WASM / UI 框架",
+      "framework": "應用框架",
       "tools": "工具與庫"
     },
     "kirino": {
-    "tagline": "零信任認證與 RBAC 框架",
-    "description": "通用 trait 認證庫，實作 ANSI INCITS 359-2004 RBAC 標準，支援角色繼承、職責分離約束、多憑證支援。"
+    "tagline": "身份認證與權限管理，開箱即用",
+    "description": "為你的 Rust 應用快速加入強健的登入、角色權限和安全審計。從簡單的密碼認證到複雜的多層級權限與職責分離——專注於業務邏輯，把安全管道交給 Kirino。"
   }
 }

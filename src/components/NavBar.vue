@@ -10,9 +10,6 @@
         </a>
 
         <div class="flex items-center gap-2">
-          <button class="btn-ghost text-sm" :style="{ color: 'var(--text-secondary)' }" @click="scrollToProjects">
-            {{ t('site.nav.projects') }}
-          </button>
           <a href="https://github.com/celestia-island" target="_blank" class="btn-ghost text-sm" :style="{ color: 'var(--text-secondary)' }">
             <div class="i-lucide-github w-4 h-4" />
             GitHub

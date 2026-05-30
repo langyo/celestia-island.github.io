@@ -2,7 +2,7 @@
   "site": {
     "title": "Celestia Island",
     "subtitle": "A constellation of open-source projects",
-    "description": "Exploring multi-agent orchestration, WASM component models, zero-trust authentication, and interactive debugging tools.",
+    "description": "A constellation of open-source projects — AI agents, web frameworks, UI libraries, authentication, and industrial tools.",
     "nav": {
       "home": "Home",
       "projects": "Projects",
@@ -22,32 +22,32 @@
     }
   },
   "entelecheia": {
-    "tagline": "Rust Multi-Agent Collaboration Platform",
-    "description": "An exec-only microkernel design where the LLM sees only 3 tools, with 12+ agents invoked through ES module imports in an IEPL TypeScript layer. Features TUI, CLI, Cosmos/IEPL runtime, 60+ Rust crates."
+    "tagline": "Multi-Agent Collaboration Platform",
+    "description": "Assemble teams of AI agents that divide tasks, collaborate, and deliver results. From research and analysis to code generation and workflow automation — describe your goal, and specialized agents work together to achieve it."
   },
   "shittim": {
-    "tagline": "User-Facing Shell for Entelecheia",
-    "description": "Arona (Chat UI with streaming) & Plana (Admin panel with RBAC), plus a Rust+Axum backend. Scaffolds Tauri desktop & mobile apps."
+    "tagline": "Chat With Your AI Agents",
+    "description": "The interactive face of Entelecheia — a streaming chat interface to converse with AI agents, a control panel to configure systems and manage permissions, plus desktop and mobile apps. Everything the user sees and touches."
   },
   "tairitsu": {
-    "tagline": "Full-Stack WASM Component Model Framework",
-    "description": "Revolutionary Rust web framework targeting WASI via the Component Model. Unifies browser & server rendering through WIT interfaces with VDOM+hooks."
+    "tagline": "Build Full-Stack Apps, Entirely in Rust",
+    "description": "A web framework that lets you build complete applications — frontend UI, server logic, and everything in between — using only Rust. Your app compiles into portable components that run in the browser, on the server, or at the edge. One language, one codebase."
   },
   "hikari": {
-    "tagline": "The Frontend of Everything",
-    "description": "Rust UI framework blending Chinese aesthetics with sci-fi design. 40+ components, type-safe SCSS, glow effects, 9-language i18n, 660+ named colors."
+    "tagline": "Beautiful UI, Crafted in Rust",
+    "description": "A design-first UI component library with a distinctive visual identity — Eastern aesthetics meet futuristic style. Drop in polished, ready-made components and spend your energy on what your app does, not how it looks."
   },
   "aoba": {
-    "tagline": "Multi-Protocol Debugging & Simulation Tool",
-    "description": "Rust CLI/TUI for Modbus RTU debugging with physical serial ports, master/slave modes, virtual ports, and HTTP/MQTT bridging."
+    "tagline": "Industrial Protocol Debugging, Made Effortless",
+    "description": "Inspect, test, and simulate Modbus industrial devices right from your terminal. Connect to real hardware, spin up virtual devices for testing, and bridge data between protocols — an indispensable companion for automation engineers on the factory floor and in CI pipelines."
   },
     "group": {
       "platform": "Core Platform",
-      "framework": "WASM / UI Framework",
+      "framework": "Application Frameworks",
       "tools": "Tools & Libraries"
     },
     "kirino": {
-    "tagline": "Zero-Trust Authentication & RBAC Framework",
-    "description": "Generic trait-based auth implementing ANSI INCITS 359-2004 RBAC with role inheritance, SoD constraints, and multi-credential support."
+    "tagline": "Authentication & Access Control, Ready to Use",
+    "description": "Add battle-tested login, role-based permissions, and security auditing to your Rust application in minutes. From simple password authentication to complex permission hierarchies with separation of duties — focus on your business logic and leave the security plumbing to Kirino."
   }
 }

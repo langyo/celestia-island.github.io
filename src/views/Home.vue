@@ -21,12 +21,9 @@
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
           <div class="text-center mb-8 reveal" :class="{ 'is-visible': platformVisible }">
-            <div class="flex items-center justify-center gap-2 mb-3">
-              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-violet-500 to-purple-600"></span>
-              <span class="text-sm font-semibold tracking-widest uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.platform') }}</span>
-            </div>
+            <span class="inline-block text-sm font-semibold tracking-widest uppercase mb-2" :style="{ color: 'var(--text-secondary)' }">{{ t('group.platform') }}</span>
             <h2
-              class="text-3xl sm:text-4xl font-bold mb-2"
+              class="text-3xl sm:text-4xl font-bold"
             >
               <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
                 {{ t('site.nav.projects') }}
@@ -48,12 +45,9 @@
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
           <div class="text-center mb-8 reveal" :class="{ 'is-visible': frameworkVisible }">
-            <div class="flex items-center justify-center gap-2 mb-3">
-              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-pink-500 to-rose-600"></span>
-              <span class="text-sm font-semibold tracking-widest uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.framework') }}</span>
-            </div>
+            <span class="inline-block text-sm font-semibold tracking-widest uppercase mb-2" :style="{ color: 'var(--text-secondary)' }">{{ t('group.framework') }}</span>
             <h2
-              class="text-3xl sm:text-4xl font-bold mb-2"
+              class="text-3xl sm:text-4xl font-bold"
             >
               <span class="bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
                 {{ t('site.nav.projects') }}
@@ -75,12 +69,9 @@
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
           <div class="text-center mb-8 reveal" :class="{ 'is-visible': toolsVisible }">
-            <div class="flex items-center justify-center gap-2 mb-3">
-              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-emerald-500 to-teal-600"></span>
-              <span class="text-sm font-semibold tracking-widest uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.tools') }}</span>
-            </div>
+            <span class="inline-block text-sm font-semibold tracking-widest uppercase mb-2" :style="{ color: 'var(--text-secondary)' }">{{ t('group.tools') }}</span>
             <h2
-              class="text-3xl sm:text-4xl font-bold mb-2"
+              class="text-3xl sm:text-4xl font-bold"
             >
               <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 {{ t('site.nav.projects') }}
@@ -170,7 +161,7 @@ const heroItems = computed(() => [
   `<div class="text-6xl sm:text-8xl font-bold tracking-tight mb-4"><span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">Celestia Island</span></div>`,
   `<p class="text-xl sm:text-2xl font-light mb-2" style="color: var(--text-secondary)">${t('site.subtitle')}</p>`,
   `<p class="text-base max-w-xl mx-auto" style="color: var(--text-tertiary)">${t('site.description')}</p>`,
-  `<div class="flex items-center justify-center gap-4 mt-8"><button class="btn-primary" onclick="document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'})">${t('site.nav.projects')} <span class="i-lucide-chevron-down inline-block w-4 h-4"></span></button><a href="https://github.com/celestia-island" target="_blank" class="btn-ghost" style="color: var(--text-secondary)"><span class="i-lucide-github inline-block w-4 h-4"></span> GitHub</a></div>`,
+  `<div class="flex items-center justify-center gap-4 mt-8"><button class="glass px-8 py-2.5 rounded-xl font-medium cursor-pointer inline-flex items-center gap-2 transition-all duration-300 hover:bg-[var(--bg-glass-hover)] hover:border-[var(--border-hover)]" style="color: var(--text-primary); border: 1px solid var(--border-subtle);" onclick="document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'})">${t('site.nav.projects')} <span class="i-lucide-chevron-down inline-block w-4 h-4"></span></button><a href="https://github.com/celestia-island" target="_blank" class="btn-ghost" style="color: var(--text-secondary)"><span class="i-lucide-github inline-block w-4 h-4"></span> GitHub</a></div>`,
   `<div class="mt-14 animate-float opacity-20"><span class="i-lucide-chevrons-down inline-block w-6 h-6" style="color: var(--text-primary)"></span></div>`,
 ])
 
