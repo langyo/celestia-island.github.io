@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "subtitle": "オープンソースプロジェクトの星座",
+    "description": "マルチエージェントオーケストレーション、WASMコンポーネントモデル、ゼロトラスト認証、インタラクティブなデバッグツールを探求しています。",
+    "nav": {
+      "home": "ホーム",
+      "projects": "プロジェクト",
+      "about": "概要",
+      "language": "言語"
+    },
+    "status": {
+      "active": "開発中",
+      "stable": "安定版",
+      "research": "研究中",
+      "legacy": "旧版"
+    },
+    "footer": {
+      "copyright": "© 2025 Celestia Island. All rights reserved.",
+      "domain": "celestia.world",
+      "icp": "Made in Celestia Project"
+    }
+  },
+  "entelecheia": {
+    "tagline": "Rust マルチエージェント協調プラットフォーム",
+    "description": "exec-only マイクロカーネル設計。LLMは3つのツールのみを認識し、IEPL TypeScript層のESモジュールインポートを通じて12以上のエージェント機能を呼び出します。"
+  },
+  "shittim": {
+    "tagline": "Entelecheia ユーザー向けフロントエンド",
+    "description": "Arona（ストリーミングチャットUI）とPlana（RBAC管理パネル）、Rust+Axumバックエンド。TauriアプリとIDEプラグインも含みます。"
+  },
+  "tairitsu": {
+    "tagline": "フルスタック WASM コンポーネントモデルフレームワーク",
+    "description": "コンポーネントモデルを通じてWASIをターゲットとする革新的なRust Webフレームワーク。WITインターフェースでブラウザとサーバーレンダリングを統合。"
+  },
+  "hikari": {
+    "tagline": "すべてのフロントエンド",
+    "description": "中国の伝統美学とSFデザインを融合したRust UIフレームワーク。40以上のコンポーネント、型安全SCSS、グローエフェクト、9言語i18n。"
+  },
+  "aoba": {
+    "tagline": "マルチプロトコルデバッグ・シミュレーションツール",
+    "description": "Modbus RTUデバッグ用Rust CLI/TUIツール。物理シリアルポート、マスター/スレーブモード、仮想ポート、HTTP/MQTTブリッジをサポート。"
+  },
+  "kirino": {
+    "tagline": "ゼロトラスト認証・RBACフレームワーク",
+    "description": "ANSI INCITS 359-2004 RBACを実装する汎用トレイトベース認証ライブラリ。ロール継承、職務分離制約、マルチクレデンシャルをサポート。"
+  }
+}

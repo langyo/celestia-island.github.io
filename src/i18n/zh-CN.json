@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "subtitle": "开源项目的星座群",
+    "description": "探索多智能体编排、WASM 组件模型、零信任认证和交互式调试工具。",
+    "nav": {
+      "home": "首页",
+      "projects": "项目",
+      "about": "关于",
+      "language": "语言"
+    },
+    "status": {
+      "active": "活跃开发中",
+      "stable": "稳定版",
+      "research": "研究中",
+      "legacy": "旧版"
+    },
+    "footer": {
+      "copyright": "© 2025 Celestia Island. 保留所有权利。",
+      "domain": "celestia.world",
+      "icp": "Made in Celestia Project"
+    }
+  },
+  "entelecheia": {
+    "tagline": "Rust 多智能体协作平台",
+    "description": "exec-only 微内核设计，LLM 仅看到 3 个工具，通过 IEPL TypeScript 层的 ES 模块导入调用 12+ 个智能体的全部能力。包含 TUI、CLI、Cosmos/IEPL 运行时、60+ Rust crates。"
+  },
+  "shittim": {
+    "tagline": "Entelecheia 用户交互前端",
+    "description": "Arona（带流式传输的聊天界面）和 Plana（带 RBAC 的管理面板），以及 Rust+Axum 后端。还包含 Tauri 桌面/移动应用和 IDE 插件。"
+  },
+  "tairitsu": {
+    "tagline": "全栈 WASM 组件模型框架",
+    "description": "革命性的 Rust Web 框架，通过组件模型面向 WASI。通过 WIT 接口统一浏览器和服务端渲染，配备 VDOM+hooks。"
+  },
+  "hikari": {
+    "tagline": "万物之前端",
+    "description": "融合中式美学与科幻设计的 Rust UI 框架。40+ 组件、类型安全 SCSS、辉光效果、9 语言国际化、660+ 命名色彩。"
+  },
+  "aoba": {
+    "tagline": "多协议调试与模拟工具",
+    "description": "Modbus RTU 调试的 Rust CLI/TUI 工具，支持物理串口、主/从模式、虚拟端口、HTTP/MQTT 桥接。"
+  },
+  "kirino": {
+    "tagline": "零信任认证与 RBAC 框架",
+    "description": "通用 trait 认证库，实现 ANSI INCITS 359-2004 RBAC 标准，支持角色继承、职责分离约束、多凭证支持。"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "subtitle": "Une constellation de projets open source",
+    "description": "Exploration de l'orchestration multi-agents, des modèles de composants WASM, de l'authentification zero-trust et des outils de débogage interactifs.",
+    "nav": {
+      "home": "Accueil",
+      "projects": "Projets",
+      "about": "À propos",
+      "language": "Langue"
+    },
+    "status": {
+      "active": "En développement",
+      "stable": "Stable",
+      "research": "Recherche",
+      "legacy": "Héritage"
+    },
+    "footer": {
+      "copyright": "© 2025 Celestia Island. Tous droits réservés.",
+      "domain": "celestia.world",
+      "icp": "Made in Celestia Project"
+    }
+  },
+  "entelecheia": {
+    "tagline": "Plateforme de Collaboration Multi-Agent en Rust",
+    "description": "Une conception de micro-noyau exec-only où le LLM ne voit que 3 outils, avec plus de 12 agents invoqués via des imports de modules ES dans une couche IEPL TypeScript. Comprend TUI, CLI, runtime Cosmos/IEPL et plus de 60 crates Rust."
+  },
+  "shittim": {
+    "tagline": "Interface Utilisateur pour Entelecheia",
+    "description": "Arona (chat avec streaming) et Plana (panneau d'administration RBAC), plus un backend Rust+Axum. Inclut également des applications Tauri et des plugins IDE."
+  },
+  "tairitsu": {
+    "tagline": "Framework WASM à Modèle de Composants Full-Stack",
+    "description": "Framework web Rust révolutionnaire ciblant WASI via le Modèle de Composants. Unifie le rendu navigateur et serveur via des interfaces WIT avec VDOM+hooks."
+  },
+  "hikari": {
+    "tagline": "Le Frontend de Tout",
+    "description": "Framework UI Rust fusionnant l'esthétique chinoise avec un design science-fiction. Plus de 40 composants, SCSS type-safe, effets de lueur, i18n en 9 langues et plus de 660 couleurs."
+  },
+  "aoba": {
+    "tagline": "Outil de Débogage Multi-Protocole",
+    "description": "CLI/TUI Rust pour le débogage Modbus RTU, avec support des ports série physiques, modes maître/esclave, ports virtuels et pont HTTP/MQTT."
+  },
+  "kirino": {
+    "tagline": "Framework d'Authentification Zero-Trust et RBAC",
+    "description": "Bibliothèque d'authentification générique basée sur les traits implémentant le standard ANSI INCITS 359-2004 RBAC avec héritage de rôles, contraintes SoD et support multi-identifiants."
+  }
+}

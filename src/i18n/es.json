@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "subtitle": "Una constelación de proyectos de código abierto",
+    "description": "Explorando orquestación multi-agente, modelos de componentes WASM, autenticación de confianza cero y herramientas de depuración interactivas.",
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "about": "Acerca de",
+      "language": "Idioma"
+    },
+    "status": {
+      "active": "En desarrollo",
+      "stable": "Estable",
+      "research": "Investigación",
+      "legacy": "Legado"
+    },
+    "footer": {
+      "copyright": "© 2025 Celestia Island. Todos los derechos reservados.",
+      "domain": "celestia.world",
+      "icp": "Made in Celestia Project"
+    }
+  },
+  "entelecheia": {
+    "tagline": "Plataforma de Colaboración Multi-Agente en Rust",
+    "description": "Un diseño de microkernel exec-only donde el LLM solo ve 3 herramientas, con más de 12 agentes invocados a través de importaciones de módulos ES en una capa IEPL TypeScript. Incluye TUI, CLI, runtime Cosmos/IEPL y más de 60 crates Rust."
+  },
+  "shittim": {
+    "tagline": "Interfaz de Usuario para Entelecheia",
+    "description": "Arona (chat con streaming) y Plana (panel de administración con RBAC), más un backend Rust+Axum. También incluye aplicaciones Tauri e plugins IDE."
+  },
+  "tairitsu": {
+    "tagline": "Framework WASM de Modelo de Componentes Full-Stack",
+    "description": "Framework web Rust revolucionario que apunta a WASI a través del Modelo de Componentes. Unifica el renderizado del navegador y servidor mediante interfaces WIT con VDOM+hooks."
+  },
+  "hikari": {
+    "tagline": "El Frontend de Todo",
+    "description": "Framework UI Rust que fusiona estética china con diseño de ciencia ficción. Más de 40 componentes, SCSS con seguridad de tipos, efectos de brillo, i18n en 9 idiomas y más de 660 colores."
+  },
+  "aoba": {
+    "tagline": "Herramienta de Depuración Multi-Protocolo",
+    "description": "CLI/TUI Rust para depuración Modbus RTU, con soporte para puertos serie físicos, modos maestro/esclavo, puertos virtuales y puente HTTP/MQTT."
+  },
+  "kirino": {
+    "tagline": "Framework de Autenticación Zero-Trust y RBAC",
+    "description": "Biblioteca de autenticación genérica basada en traits que implementa el estándar ANSI INCITS 359-2004 RBAC con herencia de roles, restricciones SoD y soporte multi-credencial."
+  }
+}
