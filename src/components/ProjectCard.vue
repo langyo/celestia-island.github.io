@@ -76,9 +76,9 @@ import type { Project } from '@/types/project'
 
 import entelecheiaLogo from '@res/logos/entelecheia.webp'
 import shittimLogo from '@res/logos/shittim-chest.webp'
-import tairitsuLogo from '@res/logos/tairitsu.png'
-import hikariLogo from '@res/logos/hikari.png'
-import aobaLogo from '@res/logos/aoba.png'
+import tairitsuLogo from '@res/logos/tairitsu.webp'
+import hikariLogo from '@res/logos/hikari.webp'
+import aobaLogo from '@res/logos/aoba.webp'
 import kirinoLogo from '@res/logos/kirino.webp'
 
 const props = defineProps<{

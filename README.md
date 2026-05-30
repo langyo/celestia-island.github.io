@@ -1,7 +1,9 @@
 <!-- markdownlint-disable MD033 MD041 MD036 -->
 <div align="center">
 
-# ✦ Celestia Island
+<img src="res/logos/celestia.webp" alt="Celestia Island logo" width="200"/>
+
+# Celestia Island
 
 **A Constellation of Open-Source Rust Projects**
 
