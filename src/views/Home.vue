@@ -16,66 +16,89 @@
       </div>
     </section>
 
-    <!-- Page 2: Entelecheia + Shittim Chest (Core Platform) -->
-    <section id="projects" class="snap-section" ref="projectsSection">
-      <div class="h-full flex flex-col justify-center px-4 pt-16 pb-8 overflow-y-auto">
+    <!-- Page 2: Core Platform — Entelecheia + Shittim Chest -->
+    <section id="projects" class="snap-section" ref="platformSection">
+      <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
-          <div class="text-center mb-8">
+          <div class="text-center mb-8 reveal" :class="{ 'is-visible': platformVisible }">
+            <div class="flex items-center justify-center gap-2 mb-3">
+              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-violet-500 to-purple-600"></span>
+              <span class="text-sm font-semibold tracking-widest uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.platform') }}</span>
+            </div>
             <h2
-              class="text-3xl sm:text-4xl font-bold mb-2 reveal"
-              :class="{ 'is-visible': projectsVisible }"
+              class="text-3xl sm:text-4xl font-bold mb-2"
             >
-              <span class="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
                 {{ t('site.nav.projects') }}
               </span>
             </h2>
-            <p
-              class="text-sm reveal"
-              :class="{ 'is-visible': projectsVisible }"
-              :style="{ color: 'var(--text-muted)', transitionDelay: '0.1s' }"
-            >
-              {{ projects.length }} core projects · All in Rust · Open source
-            </p>
           </div>
-
-          <!-- Group 1: Core Platform -->
-          <div class="mb-10 reveal" :class="{ 'is-visible': projectsVisible }" style="transition-delay: 0.15s">
-            <div class="flex items-center gap-2 mb-4 px-1">
-              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-violet-500 to-purple-600"></span>
-              <h3 class="text-base font-semibold tracking-wide uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.platform') }}</h3>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <ProjectCard v-for="p in platformProjects" :key="p.id" :project="p" />
-            </div>
-          </div>
-
-          <!-- Group 2: WASM / UI Framework -->
-          <div class="mb-10 reveal" :class="{ 'is-visible': projectsVisible }" style="transition-delay: 0.25s">
-            <div class="flex items-center gap-2 mb-4 px-1">
-              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-pink-500 to-rose-600"></span>
-              <h3 class="text-base font-semibold tracking-wide uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.framework') }}</h3>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <ProjectCard v-for="p in frameworkProjects" :key="p.id" :project="p" />
-            </div>
-          </div>
-
-          <!-- Group 3: Tools & Libraries -->
-          <div class="reveal" :class="{ 'is-visible': projectsVisible }" style="transition-delay: 0.35s">
-            <div class="flex items-center gap-2 mb-4 px-1">
-              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-emerald-500 to-teal-600"></span>
-              <h3 class="text-base font-semibold tracking-wide uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.tools') }}</h3>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <ProjectCard v-for="p in toolProjects" :key="p.id" :project="p" />
-            </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ProjectCard v-for="(p, i) in platformProjects" :key="p.id" :project="p"
+              class="reveal" :class="{ 'is-visible': platformVisible }"
+              :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Page 3: About + Footer -->
-    <section class="snap-start h-screen flex flex-col" ref="aboutSection">
+    <!-- Page 3: WASM / UI Framework — Tairitsu + Hikari -->
+    <section id="framework" class="snap-section" ref="frameworkSection">
+      <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
+        <div class="max-w-5xl mx-auto w-full">
+          <div class="text-center mb-8 reveal" :class="{ 'is-visible': frameworkVisible }">
+            <div class="flex items-center justify-center gap-2 mb-3">
+              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-pink-500 to-rose-600"></span>
+              <span class="text-sm font-semibold tracking-widest uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.framework') }}</span>
+            </div>
+            <h2
+              class="text-3xl sm:text-4xl font-bold mb-2"
+            >
+              <span class="bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
+                {{ t('site.nav.projects') }}
+              </span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ProjectCard v-for="(p, i) in frameworkProjects" :key="p.id" :project="p"
+              class="reveal" :class="{ 'is-visible': frameworkVisible }"
+              :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 4: Tools & Libraries — Aoba + Kirino -->
+    <section id="tools" class="snap-section" ref="toolsSection">
+      <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
+        <div class="max-w-5xl mx-auto w-full">
+          <div class="text-center mb-8 reveal" :class="{ 'is-visible': toolsVisible }">
+            <div class="flex items-center justify-center gap-2 mb-3">
+              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-emerald-500 to-teal-600"></span>
+              <span class="text-sm font-semibold tracking-widest uppercase" :style="{ color: 'var(--text-secondary)' }">{{ t('group.tools') }}</span>
+            </div>
+            <h2
+              class="text-3xl sm:text-4xl font-bold mb-2"
+            >
+              <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                {{ t('site.nav.projects') }}
+              </span>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ProjectCard v-for="(p, i) in toolProjects" :key="p.id" :project="p"
+              class="reveal" :class="{ 'is-visible': toolsVisible }"
+              :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 5: About + Footer -->
+    <section id="about" class="snap-start h-screen flex flex-col" ref="aboutSection">
       <div class="flex-1 flex items-center justify-center px-4">
         <div
           class="glass-card text-center p-10 max-w-3xl mx-auto reveal"
@@ -103,7 +126,7 @@
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col items-center justify-center gap-3 text-sm" :style="{ color: 'var(--text-muted)' }">
           <div class="flex items-center gap-3">
-            <a href="https://github.com/celestia-island" target="_blank" class="transition-colors duration-200 no-underline" :style="{ color: 'var(--text-muted)' }"             @mouseenter="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-secondary)' }" @mouseleave="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-muted)' }">
+            <a href="https://github.com/celestia-island" target="_blank" class="transition-colors duration-200 no-underline" :style="{ color: 'var(--text-muted)' }" @mouseenter="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-secondary)' }" @mouseleave="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-muted)' }">
               <div class="i-lucide-github w-4 h-4" />
             </a>
             <span :style="{ color: 'var(--text-muted)' }">|</span>
@@ -128,11 +151,15 @@ import ProjectCard from '@/components/ProjectCard.vue'
 const { t } = useI18n()
 
 const snapContainer = ref<HTMLDivElement>()
-const projectsSection = ref<HTMLElement>()
+const platformSection = ref<HTMLElement>()
+const frameworkSection = ref<HTMLElement>()
+const toolsSection = ref<HTMLElement>()
 const aboutSection = ref<HTMLElement>()
 
 const heroVisible = ref(false)
-const projectsVisible = ref(false)
+const platformVisible = ref(false)
+const frameworkVisible = ref(false)
+const toolsVisible = ref(false)
 const aboutVisible = ref(false)
 
 const platformProjects = computed(() => projects.filter(p => ['entelecheia', 'shittim-chest'].includes(p.id)))
@@ -152,16 +179,23 @@ let observer: IntersectionObserver
 onMounted(() => {
   heroVisible.value = true
 
+  const sectionMap: Record<string, () => void> = {}
+  if (platformSection.value) sectionMap[platformSection.value.id || 'platform'] = () => { platformVisible.value = true }
+  if (frameworkSection.value) sectionMap[frameworkSection.value.id || 'framework'] = () => { frameworkVisible.value = true }
+  if (toolsSection.value) sectionMap[toolsSection.value.id || 'tools'] = () => { toolsVisible.value = true }
+  if (aboutSection.value) sectionMap[aboutSection.value.id || 'about'] = () => { aboutVisible.value = true }
+
   observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue
-      if (entry.target === projectsSection.value) projectsVisible.value = true
-      if (entry.target === aboutSection.value) aboutVisible.value = true
+      const fn = sectionMap[entry.target.id]
+      if (fn) fn()
     }
   }, { root: snapContainer.value, threshold: 0.25 })
 
-  if (projectsSection.value) observer.observe(projectsSection.value)
-  if (aboutSection.value) observer.observe(aboutSection.value)
+  for (const el of [platformSection.value, frameworkSection.value, toolsSection.value, aboutSection.value]) {
+    if (el) observer.observe(el)
+  }
 })
 
 onBeforeUnmount(() => {

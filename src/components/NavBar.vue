@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="#" class="flex items-center gap-3 no-underline group" :style="{ color: 'var(--text-primary)' }" @click.prevent="scrollToTop">
-          <div class="text-2xl animate-glow">✦</div>
+          <img :src="celestiaLogo" alt="Celestia Island" class="w-8 h-8 object-contain rounded-lg animate-glow" draggable="false" />
           <span class="text-lg font-semibold tracking-wide bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
             {{ t('site.title') }}
           </span>
@@ -57,6 +57,7 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTheme } from '@/composables/useTheme'
+import celestiaLogo from '@res/logos/celestia.webp'
 
 const { t, locale } = useI18n()
 const { theme, toggleTheme } = useTheme()
