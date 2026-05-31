@@ -91,7 +91,7 @@
                   :key="p.id"
                   class="tool-card-wrapper reveal"
                   :class="{ 'is-visible': toolsVisible }"
-                  :style="{ transitionDelay: `${0.08 + i * 0.06}s` }"
+                  :style="{ width: toolsCardWidth, minWidth: toolsCardWidth, transitionDelay: `${0.08 + i * 0.06}s` }"
                 >
                   <ProjectCard :project="p" />
                 </div>
@@ -230,6 +230,16 @@ const toolProjects = computed(() => projects.filter(p => ['aoba', 'kirino', 'rat
 const toolsScrollRef = ref<HTMLDivElement>()
 const toolsCanScrollLeft = ref(false)
 const toolsCanScrollRight = ref(false)
+const toolsCardWidth = ref('280px')
+
+function updateToolsCardWidth() {
+  const el = toolsScrollRef.value
+  if (!el) return
+  const gap = 16
+  const visible = 3.2
+  const w = (el.clientWidth - Math.ceil(visible - 1) * gap) / visible
+  toolsCardWidth.value = `${w}px`
+}
 
 function updateToolsScrollState() {
   const el = toolsScrollRef.value
@@ -241,7 +251,7 @@ function updateToolsScrollState() {
 function scrollToolsBy(direction: number) {
   const el = toolsScrollRef.value
   if (!el) return
-  el.scrollBy({ left: direction * 320, behavior: 'smooth' })
+  el.scrollBy({ left: direction * parseFloat(toolsCardWidth.value) * 1.1, behavior: 'smooth' })
 }
 
 function onToolsWheel(e: WheelEvent) {
@@ -285,14 +295,22 @@ onMounted(() => {
   }
 
   nextTick(() => {
+    updateToolsCardWidth()
     updateToolsScrollState()
     toolsScrollRef.value?.addEventListener('scroll', updateToolsScrollState, { passive: true })
+    window.addEventListener('resize', onToolsResize)
   })
 })
+
+function onToolsResize() {
+  updateToolsCardWidth()
+  updateToolsScrollState()
+}
 
 onBeforeUnmount(() => {
   observer?.disconnect()
   toolsScrollRef.value?.removeEventListener('scroll', updateToolsScrollState)
+  window.removeEventListener('resize', onToolsResize)
 })
 </script>
 
@@ -411,7 +429,6 @@ onBeforeUnmount(() => {
 }
 
 .tool-card-wrapper {
-  flex: 0 0 calc((100% - 48px) / 3.2);
-  min-width: calc((100% - 48px) / 3.2);
+  flex-shrink: 0;
 }
 </style>
