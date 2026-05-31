@@ -32,7 +32,7 @@
 
     <div class="flex flex-wrap gap-1.5 content-start min-h-8">
       <span
-        v-for="tech in project.techStack"
+        v-for="tech in project.techStack.slice(0, 3)"
         :key="tech"
         class="px-2 py-0.5 rounded-md text-xs font-medium"
         :style="{
@@ -79,6 +79,11 @@ import tairitsuLogo from '@res/logos/tairitsu.webp'
 import hikariLogo from '@res/logos/hikari.webp'
 import aobaLogo from '@res/logos/aoba.webp'
 import kirinoLogo from '@res/logos/kirino.webp'
+import ratatuiMarkdownLogo from '@res/logos/ratatui-markdown.webp'
+import yuukaLogo from '@res/logos/yuuka.webp'
+import ichikaLogo from '@res/logos/ichika.webp'
+import hifumiLogo from '@res/logos/hifumi.webp'
+import noaLogo from '@res/logos/noa.webp'
 
 const props = defineProps<{
   project: Project
@@ -93,6 +98,11 @@ const logoMap: Record<string, string> = {
   hikari: hikariLogo,
   aoba: aobaLogo,
   kirino: kirinoLogo,
+  'ratatui-markdown': ratatuiMarkdownLogo,
+  yuuka: yuukaLogo,
+  ichika: ichikaLogo,
+  hifumi: hifumiLogo,
+  noa: noaLogo,
 }
 
 const logoUrl = computed(() => logoMap[props.project.id])
