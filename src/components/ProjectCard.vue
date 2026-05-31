@@ -20,7 +20,7 @@
       <div class="flex-1 min-w-0">
         <h3 class="text-lg font-semibold truncate text-primary">{{ t(project.shortLabelKey, project.shortLabel) }}</h3>
         <p class="text-xs font-medium mt-0.5 text-tertiary">{{ t(project.nameKey, project.name) }}</p>
-        <p class="text-sm font-medium mt-1" :style="{ color: project.color }">
+        <p class="text-sm font-medium mt-1 truncate" :style="{ color: project.color }">
           {{ t(project.taglineKey) || project.tagline }}
         </p>
       </div>

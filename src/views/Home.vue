@@ -84,7 +84,7 @@
             >
               <div class="i-lucide-chevron-left w-5 h-5" />
             </button>
-            <div class="tools-scroll-container" ref="toolsScrollRef" @wheel.prevent="onToolsWheel">
+            <div class="tools-scroll-container" ref="toolsScrollRef" @wheel="onToolsWheel">
               <div class="tools-scroll-track">
                 <div
                   v-for="(p, i) in toolProjects"
@@ -254,11 +254,41 @@ function scrollToolsBy(direction: number) {
   el.scrollBy({ left: direction * parseFloat(toolsCardWidth.value) * 1.1, behavior: 'smooth' })
 }
 
+let _wheelAccum = 0
+let _wheelRaf = 0
+
 function onToolsWheel(e: WheelEvent) {
   const el = toolsScrollRef.value
   if (!el) return
-  el.scrollBy({ left: e.deltaY || e.deltaX, behavior: 'smooth' })
-  requestAnimationFrame(updateToolsScrollState)
+
+  const delta = e.deltaY || e.deltaX
+  if (delta === 0) return
+
+  const atStart = el.scrollLeft <= 0 && delta < 0
+  const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0
+
+  if (atStart || atEnd) {
+    _wheelAccum = 0
+    return
+  }
+
+  e.preventDefault()
+
+  _wheelAccum += delta
+
+  if (!_wheelRaf) {
+    _wheelRaf = requestAnimationFrame(function step() {
+      if (Math.abs(_wheelAccum) < 0.5) {
+        _wheelRaf = 0
+        updateToolsScrollState()
+        return
+      }
+      const consume = _wheelAccum * 0.25
+      _wheelAccum -= consume
+      el.scrollLeft += consume
+      _wheelRaf = requestAnimationFrame(step)
+    })
+  }
 }
 
 const heroItems = computed(() => [
@@ -430,5 +460,10 @@ onBeforeUnmount(() => {
 
 .tool-card-wrapper {
   flex-shrink: 0;
+  height: 280px;
+}
+
+.tool-card-wrapper :deep(> *) {
+  height: 100%;
 }
 </style>
