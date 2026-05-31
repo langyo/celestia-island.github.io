@@ -21,9 +21,9 @@
     }
   },
   "group": {
-    "amphoreus": "アンフォレウス",
-    "arcaea": "アーケア",
-    "decagrammaton": "デカグラマトン",
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
     "platform": "コアプラットフォーム",
     "platformDesc": "マルチエージェントオーケストレーションと対話型AI",
     "framework": "アプリケーションフレームワーク",

@@ -21,9 +21,9 @@
     }
   },
   "group": {
-    "amphoreus": "安菲琉斯",
-    "arcaea": "弧光",
-    "decagrammaton": "十誡",
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
     "platform": "核心平台",
     "platformDesc": "多智能體編排與會話式 AI",
     "framework": "應用框架",

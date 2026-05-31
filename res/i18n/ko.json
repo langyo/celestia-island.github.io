@@ -21,9 +21,9 @@
     }
   },
   "group": {
-    "amphoreus": "암포레우스",
-    "arcaea": "아르케아",
-    "decagrammaton": "데카그라마톤",
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
     "platform": "코어 플랫폼",
     "platformDesc": "멀티 에이전트 오케스트레이션과 대화형 AI",
     "framework": "애플리케이션 프레임워크",

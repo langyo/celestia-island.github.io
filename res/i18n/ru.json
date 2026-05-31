@@ -21,9 +21,9 @@
     }
   },
   "group": {
-    "amphoreus": "Амфореус",
-    "arcaea": "Аркея",
-    "decagrammaton": "Декаграмматон",
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
     "platform": "Основная платформа",
     "platformDesc": "Мульти-агентная оркестровка и диалоговый ИИ",
     "framework": "Прикладные фреймворки",
