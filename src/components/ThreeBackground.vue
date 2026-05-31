@@ -52,13 +52,13 @@ function createStarfield() {
   texture.magFilter = THREE.LinearFilter
 
   starMaterial = new THREE.PointsMaterial({
-    size: 0.04,
+    size: 0.035,
     map: texture,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
-    opacity: 0.55,
+    opacity: 0.45,
   })
 
   starPoints = new THREE.Points(geometry, starMaterial)
@@ -89,13 +89,13 @@ function createStarfield() {
   ctx2.fillRect(0, 0, 32, 32)
 
   twinkleMaterial = new THREE.PointsMaterial({
-    size: 0.026,
+    size: 0.022,
     map: new THREE.CanvasTexture(canvas2),
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
-    opacity: 0.35,
+    opacity: 0.28,
   })
 
   starTwinkle = new THREE.Points(geometry2, twinkleMaterial)
@@ -108,10 +108,9 @@ function init() {
   clock = new THREE.Clock()
   clock.start()
 
-  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'low-power' })
+  renderer = new THREE.WebGLRenderer({ alpha: false, antialias: false, powerPreference: 'low-power' })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
   renderer.setSize(window.innerWidth, window.innerHeight)
-  renderer.setClearColor(0x000000, 0)
   containerRef.value.appendChild(renderer.domElement)
 
   scene = new THREE.Scene()

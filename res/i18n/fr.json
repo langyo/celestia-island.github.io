@@ -34,31 +34,37 @@
   "entelecheia": {
     "name": "Entelecheia",
     "tagline": "Plateforme de Collaboration Multi-Agent",
-    "description": "Assemblez des équipes d'agents IA qui se répartissent les tâches, collaborent et livrent des résultats. De la recherche et l'analyse à la génération de code et l'automatisation des flux — décrivez votre objectif, et des agents spécialisés travaillent ensemble pour l'atteindre."
+    "description": "Assemblez des équipes d'agents IA qui se répartissent les tâches, collaborent et livrent des résultats. De la recherche et l'analyse à la génération de code et l'automatisation des flux — décrivez votre objectif, et des agents spécialisés travaillent ensemble pour l'atteindre.",
+    "shortLabel": "Multi-Agent Platform"
   },
   "shittim": {
     "name": "Shittim Chest",
     "tagline": "Discutez avec vos agents IA",
-    "description": "Le visage interactif d'Entelecheia — une interface de chat en streaming pour converser avec les agents IA, un panneau de contrôle pour configurer les systèmes et gérer les permissions, ainsi que des applications desktop et mobiles. Tout ce que l'utilisateur voit et touche."
+    "description": "Le visage interactif d'Entelecheia — une interface de chat en streaming pour converser avec les agents IA, un panneau de contrôle pour configurer les systèmes et gérer les permissions, ainsi que des applications desktop et mobiles. Tout ce que l'utilisateur voit et touche.",
+    "shortLabel": "Agent Chat & Control Panel"
   },
   "tairitsu": {
     "name": "Tairitsu",
     "tagline": "Full-Stack, Natif WASI",
-    "description": "Construisez des applications web complètes ciblant WASI — un runtime portable unique pour le frontend et le backend. Écrivez votre UI et votre logique serveur en Rust, compilez en composants WASI, et déployez sur navigateur, serveur ou edge. Un runtime, un langage, une base de code."
+    "description": "Construisez des applications web complètes ciblant WASI — un runtime portable unique pour le frontend et le backend. Écrivez votre UI et votre logique serveur en Rust, compilez en composants WASI, et déployez sur navigateur, serveur ou edge. Un runtime, un langage, une base de code.",
+    "shortLabel": "WASI Full-Stack Framework"
   },
   "hikari": {
     "name": "Hikari",
     "tagline": "Framework UI Natif WASI",
-    "description": "Une bibliothèque de composants UI conçue spécifiquement pour WASI. Des composants soignés qui s'exécutent sur le même runtime WASI que votre backend — sans wasm-bindgen, sans code glue JavaScript. Construisez vos interfaces une fois, affichez-les partout."
+    "description": "Une bibliothèque de composants UI conçue spécifiquement pour WASI. Des composants soignés qui s'exécutent sur le même runtime WASI que votre backend — sans wasm-bindgen, sans code glue JavaScript. Construisez vos interfaces une fois, affichez-les partout.",
+    "shortLabel": "WASI UI Component Library"
   },
   "aoba": {
     "name": "Aoba",
     "tagline": "Débogage de protocoles industriels, sans effort",
-    "description": "Inspectez, testez et simulez des appareils industriels Modbus directement depuis votre terminal. Connectez-vous à du matériel réel, créez des appareils virtuels pour les tests et faites le pont entre les protocoles — un compagnon indispensable pour les ingénieurs en automatisation, en atelier comme dans les pipelines CI."
+    "description": "Inspectez, testez et simulez des appareils industriels Modbus directement depuis votre terminal. Connectez-vous à du matériel réel, créez des appareils virtuels pour les tests et faites le pont entre les protocoles — un compagnon indispensable pour les ingénieurs en automatisation, en atelier comme dans les pipelines CI.",
+    "shortLabel": "Modbus Debugging Tool"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "RBAC de Qualité Production, Conçu par Contraintes",
-    "description": "Une tentative ambitieuse d'apporter le standard ANSI INCITS 359-2004 RBAC — avec tout son appareil de contraintes : séparation des tâches, limites de cardinalité, contraintes temporelles et hiérarchies de rôles — dans une bibliothèque Rust réutilisable. Pas seulement qui peut faire quoi, mais sous quelles conditions. De l'autorisation du monde réel, rendue composable."
+    "description": "Une tentative ambitieuse d'apporter le standard ANSI INCITS 359-2004 RBAC — avec tout son appareil de contraintes : séparation des tâches, limites de cardinalité, contraintes temporelles et hiérarchies de rôles — dans une bibliothèque Rust réutilisable. Pas seulement qui peut faire quoi, mais sous quelles conditions. De l'autorisation du monde réel, rendue composable.",
+    "shortLabel": "RBAC Library"
   }
 }

@@ -34,31 +34,37 @@
   "entelecheia": {
     "name": "玄枢 / Entelecheia",
     "tagline": "多智能体协作平台",
-    "description": "组建 AI 智能体团队，分工协作，交付成果。Harness engineering 的实践典范——将智能体约束于其专精领域，使之各擅胜场。从研究分析到代码生成再到工作流自动化——描述你的目标，专业智能体各司其职、共同达成。"
+    "description": "组建 AI 智能体团队，分工协作，交付成果。Harness engineering 的实践典范——将智能体约束于其专精领域，使之各擅胜场。从研究分析到代码生成再到工作流自动化——描述你的目标，专业智能体各司其职、共同达成。",
+    "shortLabel": "Multi-Agent Platform"
   },
   "shittim": {
     "name": "什亭之匣",
     "tagline": "与你的 AI 智能体对话",
-    "description": "Entelecheia 的交互入口——与 AI 智能体流式对话的聊天界面，用于系统配置与权限管理的控制面板，加上桌面与移动端应用。用户所见所触，尽在于此。"
+    "description": "Entelecheia 的交互入口——与 AI 智能体流式对话的聊天界面，用于系统配置与权限管理的控制面板，加上桌面与移动端应用。用户所见所触，尽在于此。",
+    "shortLabel": "Agent Chat & Control Panel"
   },
   "tairitsu": {
     "name": "Tairitsu",
     "tagline": "WASI 原生，全栈一体",
-    "description": "构建面向 WASI 的完整 Web 应用——前后端共享同一套可移植运行时。用 Rust 编写界面与服务端逻辑，编译为 WASI 组件，部署到浏览器、服务器或边缘端。一个运行时，一种语言，一套代码。"
+    "description": "构建面向 WASI 的完整 Web 应用——前后端共享同一套可移植运行时。用 Rust 编写界面与服务端逻辑，编译为 WASI 组件，部署到浏览器、服务器或边缘端。一个运行时，一种语言，一套代码。",
+    "shortLabel": "WASI Full-Stack Framework"
   },
   "hikari": {
     "name": "Hikari",
     "tagline": "WASI 原生的 UI 框架",
-    "description": "专为 WASI 打造的 UI 组件库。精美的现成组件，与你的后端运行在同一 WASI 运行时之上——无需 wasm-bindgen，无需 JavaScript 胶水代码。一次构建界面，随处渲染。"
+    "description": "专为 WASI 打造的 UI 组件库。精美的现成组件，与你的后端运行在同一 WASI 运行时之上——无需 wasm-bindgen，无需 JavaScript 胶水代码。一次构建界面，随处渲染。",
+    "shortLabel": "WASI UI Component Library"
   },
   "aoba": {
     "name": "Aoba",
     "tagline": "工业协议调试，信手拈来",
-    "description": "在终端中检测、测试和模拟 Modbus 工业设备。连接真实硬件，快速创建虚拟设备用于测试，在不同协议之间桥接数据——无论在生产现场还是 CI 流水线中，都是自动化工程师的得力助手。"
+    "description": "在终端中检测、测试和模拟 Modbus 工业设备。连接真实硬件，快速创建虚拟设备用于测试，在不同协议之间桥接数据——无论在生产现场还是 CI 流水线中，都是自动化工程师的得力助手。",
+    "shortLabel": "Modbus Debugging Tool"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "生产级 RBAC，以约束为设计",
-    "description": "将 ANSI INCITS 359-2004 RBAC 标准及其完整约束体系——职责分离、基数约束、时效控制、角色继承——系统性地带入 Rust 生态的一次尝试。不止于谁能做什么，更在于什么条件下能做。真实世界的授权逻辑，化为可组合的模块。"
+    "description": "将 ANSI INCITS 359-2004 RBAC 标准及其完整约束体系——职责分离、基数约束、时效控制、角色继承——系统性地带入 Rust 生态的一次尝试。不止于谁能做什么，更在于什么条件下能做。真实世界的授权逻辑，化为可组合的模块。",
+    "shortLabel": "RBAC Library"
   }
 }
