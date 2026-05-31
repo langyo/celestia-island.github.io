@@ -1,7 +1,7 @@
 <template>
   <div ref="snapContainer" class="snap-container">
     <!-- Page 1: Hero -->
-    <section class="snap-section">
+    <section ref="heroSection" class="snap-section">
       <div class="h-full flex items-center justify-center px-4 pt-16">
         <div class="text-center max-w-3xl mx-auto">
           <div
@@ -128,6 +128,21 @@
       </footer>
     </section>
   </div>
+
+  <!-- Scroll Indicator -->
+  <nav class="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3">
+    <button
+      v-for="i in 5"
+      :key="i"
+      class="w-1 rounded-full transition-all duration-300 cursor-pointer border-none p-0"
+      :style="{
+        height: currentPage === i - 1 ? '2rem' : '1.5rem',
+        background: currentPage === i - 1 ? '#a78bfa' : 'var(--text-muted)',
+      }"
+      :title="pageLabels[i - 1]"
+      @click="scrollToPage(i - 1)"
+    />
+  </nav>
 </template>
 
 <script setup lang="ts">
@@ -153,10 +168,34 @@ const renderedAboutText = computed(() => {
 })
 
 const snapContainer = ref<HTMLDivElement>()
+const heroSection = ref<HTMLElement>()
 const platformSection = ref<HTMLElement>()
 const frameworkSection = ref<HTMLElement>()
 const toolsSection = ref<HTMLElement>()
 const aboutSection = ref<HTMLElement>()
+
+const currentPage = ref(0)
+
+const pageLabels = computed(() => [
+  t('site.nav.home'),
+  t('group.amphoreus'),
+  t('group.arcaea'),
+  t('group.decagrammaton'),
+  t('site.nav.about'),
+])
+
+const sections = computed(() => [
+  heroSection.value,
+  platformSection.value,
+  frameworkSection.value,
+  toolsSection.value,
+  aboutSection.value,
+])
+
+function scrollToPage(index: number) {
+  const el = sections.value[index]
+  if (el) snapContainer.value?.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+}
 
 const heroVisible = ref(false)
 const platformVisible = ref(false)
@@ -188,13 +227,16 @@ onMounted(() => {
 
   observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
-      if (!entry.isIntersecting) continue
-      const fn = sectionMap[entry.target.id]
-      if (fn) fn()
+      if (entry.isIntersecting) {
+        const fn = sectionMap[entry.target.id]
+        if (fn) fn()
+        const idx = sections.value.indexOf(entry.target as HTMLElement)
+        if (idx !== -1) currentPage.value = idx
+      }
     }
   }, { root: snapContainer.value, threshold: 0.25 })
 
-  for (const el of [platformSection.value, frameworkSection.value, toolsSection.value, aboutSection.value]) {
+  for (const el of sections.value) {
     if (el) observer.observe(el)
   }
 })
@@ -206,6 +248,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .snap-container {
+  position: relative;
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
