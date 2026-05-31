@@ -17,7 +17,6 @@ let starPoints: THREE.Points
 let starTwinkle: THREE.Points
 let animationId: number
 let clock: THREE.Clock
-let visible = true
 
 function createStarfield() {
   const count = 1200
@@ -53,13 +52,13 @@ function createStarfield() {
   texture.magFilter = THREE.LinearFilter
 
   starMaterial = new THREE.PointsMaterial({
-    size: 0.035,
+    size: 0.04,
     map: texture,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
-    opacity: 0.45,
+    opacity: 0.55,
   })
 
   starPoints = new THREE.Points(geometry, starMaterial)
@@ -90,13 +89,13 @@ function createStarfield() {
   ctx2.fillRect(0, 0, 32, 32)
 
   twinkleMaterial = new THREE.PointsMaterial({
-    size: 0.022,
+    size: 0.026,
     map: new THREE.CanvasTexture(canvas2),
     blending: THREE.AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
-    opacity: 0.28,
+    opacity: 0.35,
   })
 
   starTwinkle = new THREE.Points(geometry2, twinkleMaterial)
@@ -127,8 +126,6 @@ function init() {
 function animate() {
   animationId = requestAnimationFrame(animate)
 
-  if (!visible) return
-
   const t = clock.getElapsedTime()
 
   starPoints.rotation.y += 0.00018
@@ -150,12 +147,6 @@ function onResize() {
 onMounted(() => {
   init()
   window.addEventListener('resize', onResize)
-
-  const observer = new IntersectionObserver(
-    ([entry]) => { visible = entry.isIntersecting },
-    { threshold: 0 }
-  )
-  if (containerRef.value) observer.observe(containerRef.value)
 })
 
 onBeforeUnmount(() => {
