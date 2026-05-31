@@ -1,7 +1,6 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "Les otakus de la tech sauvent le monde",
     "description": "Une organisation open source indépendante explorant les frontières de l'ingénierie système.",
     "slogan": "Les otakus de la tech sauvent le monde",
     "nav": {
@@ -18,10 +17,19 @@
       "preview": "Bientôt disponible"
     },
     "footer": {
-      "copyright": "© 2025 Celestia Island. Tous droits réservés.",
-      "domain": "celestia.world",
-      "icp": "Made in Celestia Project"
+      "copyright": "© {year} Celestia Island. Tous droits réservés."
     }
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "Plateforme Principale",
+    "platformDesc": "Orchestration multi-agents et IA conversationnelle",
+    "framework": "Frameworks d'Application",
+    "frameworkDesc": "Frameworks web natifs WASI et bibliothèques de composants UI",
+    "tools": "Outils et Bibliothèques",
+    "toolsDesc": "Outils de protocole industriel et contrôle d'accès zéro confiance"
   },
   "entelecheia": {
     "name": "Entelecheia",
@@ -52,10 +60,5 @@
     "name": "Kirino",
     "tagline": "RBAC de Qualité Production, Conçu par Contraintes",
     "description": "Une tentative ambitieuse d'apporter le standard ANSI INCITS 359-2004 RBAC — avec tout son appareil de contraintes : séparation des tâches, limites de cardinalité, contraintes temporelles et hiérarchies de rôles — dans une bibliothèque Rust réutilisable. Pas seulement qui peut faire quoi, mais sous quelles conditions. De l'autorisation du monde réel, rendue composable."
-  },
-  "group": {
-    "platform": "Plateforme Principale",
-    "framework": "Frameworks d'Application",
-    "tools": "Outils et Bibliothèques"
   }
 }

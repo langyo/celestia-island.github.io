@@ -1,7 +1,6 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "Tech Otakus Save the World",
     "description": "An independent open-source organization exploring the frontiers of systems engineering.",
     "slogan": "Tech Otakus Save the World",
     "nav": {
@@ -18,10 +17,19 @@
       "preview": "Coming Soon"
     },
     "footer": {
-      "copyright": "© 2025 Celestia Island. All rights reserved.",
-      "domain": "celestia.world",
-      "icp": "Made in Celestia Project"
+      "copyright": "© {year} Celestia Island. All rights reserved."
     }
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "Core Platform",
+    "platformDesc": "Multi-agent orchestration and conversational AI",
+    "framework": "Application Frameworks",
+    "frameworkDesc": "WASI-native web frameworks and UI component libraries",
+    "tools": "Tools & Libraries",
+    "toolsDesc": "Industrial protocol tooling and zero-trust access control"
   },
   "entelecheia": {
     "name": "Entelecheia",
@@ -52,10 +60,5 @@
     "name": "Kirino",
     "tagline": "Production-Grade RBAC, Constrained by Design",
     "description": "An ambitious attempt to bring ANSI INCITS 359-2004 RBAC — with its full constraint apparatus: separation of duties, cardinality enforcement, temporal bounds, and role hierarchies — into a reusable Rust library. Not just who can do what, but under what conditions. Real-world authorization, made composable."
-  },
-  "group": {
-    "platform": "Core Platform",
-    "framework": "Application Frameworks",
-    "tools": "Tools & Libraries"
   }
 }

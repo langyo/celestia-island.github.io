@@ -1,7 +1,6 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "技术宅拯救世界",
     "description": "探索前沿系统工程的独立开源组织。",
     "slogan": "技术宅拯救世界",
     "nav": {
@@ -18,10 +17,19 @@
       "preview": "敬请期待"
     },
     "footer": {
-      "copyright": "© 2025 Celestia Island. 保留所有权利。",
-      "domain": "celestia.world",
-      "icp": "Made in Celestia Project"
+      "copyright": "© {year} Celestia Island. 保留所有权利。"
     }
+  },
+  "group": {
+    "amphoreus": "安菲琉斯",
+    "arcaea": "弧光",
+    "decagrammaton": "十诫",
+    "platform": "核心平台",
+    "platformDesc": "多智能体编排与会话式 AI",
+    "framework": "应用框架",
+    "frameworkDesc": "WASI 原生 Web 框架与 UI 组件库",
+    "tools": "工具与库",
+    "toolsDesc": "工业协议工具与零信任访问控制"
   },
   "entelecheia": {
     "name": "玄枢 / Entelecheia",
@@ -52,10 +60,5 @@
     "name": "Kirino",
     "tagline": "生产级 RBAC，以约束为设计",
     "description": "将 ANSI INCITS 359-2004 RBAC 标准及其完整约束体系——职责分离、基数约束、时效控制、角色继承——系统性地带入 Rust 生态的一次尝试。不止于谁能做什么，更在于什么条件下能做。真实世界的授权逻辑，化为可组合的模块。"
-  },
-  "group": {
-    "platform": "核心平台",
-    "framework": "应用框架",
-    "tools": "工具与库"
   }
 }

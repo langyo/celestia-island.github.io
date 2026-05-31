@@ -1,7 +1,6 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "技術オタクが世界を救う",
     "description": "最先端のシステムエンジニアリングを探求する独立系オープンソース組織。",
     "slogan": "技術オタクが世界を救う",
     "nav": {
@@ -18,10 +17,19 @@
       "preview": "近日公開"
     },
     "footer": {
-      "copyright": "© 2025 Celestia Island. All rights reserved.",
-      "domain": "celestia.world",
-      "icp": "Made in Celestia Project"
+      "copyright": "© {year} Celestia Island. All rights reserved."
     }
+  },
+  "group": {
+    "amphoreus": "アンフォレウス",
+    "arcaea": "アーケア",
+    "decagrammaton": "デカグラマトン",
+    "platform": "コアプラットフォーム",
+    "platformDesc": "マルチエージェントオーケストレーションと対話型AI",
+    "framework": "アプリケーションフレームワーク",
+    "frameworkDesc": "WASIネイティブなWebフレームワークとUIコンポーネントライブラリ",
+    "tools": "ツール & ライブラリ",
+    "toolsDesc": "産業プロトコルツールとゼロトラストアクセス制御"
   },
   "entelecheia": {
     "name": "Entelecheia",
@@ -52,10 +60,5 @@
     "name": "Kirino",
     "tagline": "プロダクショングレードRBAC、制約による設計",
     "description": "ANSI INCITS 359-2004 RBACとその完全な制約体系——職務分離、基数制限、時間的制約、ロール階層——を再利用可能なRustライブラリとして提供する野心的な試み。単に誰が何をできるかではなく、どのような条件下でできるか。実世界の認可ロジックを、組み合わせ可能な形で。"
-  },
-  "group": {
-    "platform": "コアプラットフォーム",
-    "framework": "アプリケーションフレームワーク",
-    "tools": "ツール & ライブラリ"
   }
 }

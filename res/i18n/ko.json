@@ -1,7 +1,6 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "기술 오타쿠가 세계를 구한다",
     "description": "첨단 시스템 엔지니어링을 탐구하는 독립 오픈소스 조직.",
     "slogan": "기술 오타쿠가 세계를 구한다",
     "nav": {
@@ -18,10 +17,19 @@
       "preview": "곧 공개"
     },
     "footer": {
-      "copyright": "© 2025 Celestia Island. All rights reserved.",
-      "domain": "celestia.world",
-      "icp": "Made in Celestia Project"
+      "copyright": "© {year} Celestia Island. All rights reserved."
     }
+  },
+  "group": {
+    "amphoreus": "암포레우스",
+    "arcaea": "아르케아",
+    "decagrammaton": "데카그라마톤",
+    "platform": "코어 플랫폼",
+    "platformDesc": "멀티 에이전트 오케스트레이션과 대화형 AI",
+    "framework": "애플리케이션 프레임워크",
+    "frameworkDesc": "WASI 네이티브 웹 프레임워크와 UI 컴포넌트 라이브러리",
+    "tools": "도구 & 라이브러리",
+    "toolsDesc": "산업 프로토콜 도구와 제로 트러스트 접근 제어"
   },
   "entelecheia": {
     "name": "Entelecheia",
@@ -52,10 +60,5 @@
     "name": "Kirino",
     "tagline": "프로덕션급 RBAC, 제약으로 설계",
     "description": "ANSI INCITS 359-2004 RBAC과 그 완전한 제약 체계——직무 분리, 기수 제한, 시간적 제약, 역할 계층——를 재사용 가능한 Rust 라이브러리로 제공하려는 야심찬 시도. 단순히 누가 무엇을 할 수 있는지가 아니라, 어떤 조건에서 가능한지를 다룹니다. 실제 세계의 인가 로직을 조합 가능한 형태로."
-  },
-  "group": {
-    "platform": "코어 플랫폼",
-    "framework": "애플리케이션 프레임워크",
-    "tools": "도구 & 라이브러리"
   }
 }

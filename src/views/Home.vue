@@ -108,9 +108,6 @@
             :style="{ color: 'var(--text-secondary)' }"
             v-html="renderedAboutText"
           ></div>
-          <p class="mt-3 text-xs" :style="{ color: 'var(--text-muted)' }">
-            {{ t('site.footer.icp') }}
-          </p>
         </div>
       </div>
 
@@ -126,8 +123,7 @@
           <span class="text-lg font-bold tracking-wider" :style="{ color: 'var(--text-tertiary)' }">
             「{{ t('site.slogan') }}」
           </span>
-          <span>{{ t('site.footer.copyright') }}</span>
-          <span class="text-xs" :style="{ color: 'var(--text-muted)', opacity: 0.6 }">{{ t('site.footer.icp') }}</span>
+          <span>{{ t('site.footer.copyright', { year: new Date().getFullYear() }) }}</span>
         </div>
       </footer>
     </section>
@@ -174,10 +170,8 @@ const toolProjects = computed(() => projects.filter(p => ['aoba', 'kirino'].incl
 
 const heroItems = computed(() => [
   `<div class="text-6xl sm:text-8xl font-bold tracking-tight mb-4"><span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">Celestia Island</span></div>`,
-  `<p class="text-xl sm:text-2xl font-light mb-2" style="color: var(--text-secondary)">${t('site.subtitle')}</p>`,
   `<p class="text-base max-w-xl mx-auto" style="color: var(--text-tertiary)">${t('site.description')}</p>`,
   `<div class="flex flex-wrap items-center justify-center gap-4 mt-8"><button class="btn-primary" onclick="document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'})">${t('site.nav.projects')} <span class="i-lucide-chevron-down w-4 h-4 ml-1"></span></button><a href="https://github.com/celestia-island" target="_blank" class="btn-ghost no-underline group"><span class="i-lucide-github w-4 h-4 mr-1.5 opacity-70 group-hover:opacity-100 transition-opacity"></span> GitHub</a></div>`,
-  `<p class="text-xs mt-6 opacity-30" style="color: var(--text-tertiary)">6 projects · 3 teams · AI agents to WASM frameworks and industrial tools</p>`,
   `<div class="mt-10 animate-float opacity-20"><span class="i-lucide-chevrons-down inline-block w-6 h-6" style="color: var(--text-primary)"></span></div>`,
 ])
 
