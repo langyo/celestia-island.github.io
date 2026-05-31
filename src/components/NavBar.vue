@@ -9,37 +9,37 @@
           </span>
         </a>
 
-        <div class="flex items-center gap-2">
-          <a href="https://github.com/celestia-island" target="_blank" class="btn-ghost text-sm" :style="{ color: 'var(--text-secondary)' }">
-            <div class="i-lucide-github w-4 h-4" />
-            GitHub
+        <div class="flex items-center gap-1.5">
+          <a href="https://github.com/celestia-island" target="_blank" class="nav-icon-btn no-underline group" title="GitHub">
+            <div class="i-lucide-github w-5 h-5 group-hover:text-[var(--text-primary)] transition-colors" />
           </a>
 
-          <button @click="toggleTheme" class="btn-ghost text-sm px-2.5 rounded-lg hover:bg-[var(--bg-secondary)]" :style="{ color: 'var(--text-secondary)' }" :title="theme === 'dark' ? 'Light mode' : 'Dark mode'">
-            <div v-if="theme === 'dark'" class="i-lucide-sun w-4 h-4" />
-            <div v-else class="i-lucide-moon w-4 h-4" />
+          <button @click="toggleTheme" class="nav-icon-btn" :title="theme === 'dark' ? 'Light mode' : 'Dark mode'">
+            <div v-if="theme === 'dark'" class="i-lucide-sun w-5 h-5 transition-transform hover:rotate-45" />
+            <div v-else class="i-lucide-moon w-5 h-5 transition-transform hover:-rotate-12" />
           </button>
 
-          <div class="relative ml-1">
-            <button @click.stop="showLangMenu = !showLangMenu" class="btn-ghost text-sm px-3" :style="{ color: 'var(--text-secondary)' }">
-              <div class="i-lucide-globe w-4 h-4" />
-              <span class="hidden sm:inline ml-1">{{ currentLangLabel }}</span>
+          <div class="relative">
+            <button @click.stop="showLangMenu = !showLangMenu" class="nav-lang-btn">
+              <div class="i-lucide-globe w-5 h-5" />
+              <span class="hidden sm:inline ml-0.5">{{ currentLangLabel }}</span>
+              <div class="i-lucide-chevron-down w-3.5 h-3.5 ml-0.5 opacity-60 transition-transform" :class="showLangMenu ? 'rotate-180' : ''" />
             </button>
             <transition name="fade">
               <div
                 v-if="showLangMenu"
-                class="absolute right-0 top-full mt-2 glass p-2 rounded-xl min-w-36 shadow-xl z-50"
-                style="background: var(--bg-glass); border-color: var(--border-subtle);"
+                class="absolute right-0 top-full mt-2 backdrop-blur-xl bg-[var(--bg-glass)] border border-[var(--border-subtle)] p-2 rounded-xl min-w-[140px] shadow-2xl z-50 flex flex-col gap-1"
               >
                 <button
                   v-for="lang in langs"
                   :key="lang.code"
                   @click="switchLang(lang.code)"
-                  class="w-full text-left px-4 py-2 rounded-lg text-sm transition-colors duration-150 hover:bg-[var(--bg-glass-hover)]"
-                  :class="{ 'text-violet-400 bg-[var(--bg-secondary)]': locale === lang.code }"
+                  class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 hover:bg-[var(--bg-glass-hover)] flex items-center justify-between group"
+                  :class="{ 'text-[var(--text-primary)] font-medium bg-[var(--bg-secondary)]': locale === lang.code }"
                   :style="{ color: locale === lang.code ? '' : 'var(--text-secondary)' }"
                 >
-                  {{ lang.label }}
+                  <span class="group-hover:text-[var(--text-primary)] transition-colors">{{ lang.label }}</span>
+                  <div v-if="locale === lang.code" class="i-lucide-check w-3.5 h-3.5 text-violet-400" />
                 </button>
               </div>
             </transition>

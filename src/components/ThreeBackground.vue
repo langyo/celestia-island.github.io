@@ -5,15 +5,12 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import * as THREE from 'three'
-import logoVert from '../../shaders/logo.vert?raw'
-import logoFrag from '../../shaders/logo.frag?raw'
 
 const containerRef = ref<HTMLDivElement>()
 
 let renderer: THREE.WebGLRenderer
 let scene: THREE.Scene
 let camera: THREE.OrthographicCamera
-let logoMaterial: THREE.ShaderMaterial
 let starMaterial: THREE.PointsMaterial
 let twinkleMaterial: THREE.PointsMaterial
 let starPoints: THREE.Points
@@ -106,27 +103,6 @@ function createStarfield() {
   scene.add(starTwinkle)
 }
 
-function createLogoPlane() {
-  const geometry = new THREE.PlaneGeometry(1.8, 1.8)
-
-  logoMaterial = new THREE.ShaderMaterial({
-    uniforms: {
-      u_time: { value: 0 },
-      u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-    },
-    vertexShader: logoVert,
-    fragmentShader: logoFrag,
-    transparent: true,
-    depthTest: false,
-    depthWrite: false,
-    blending: THREE.NormalBlending,
-  })
-
-  const mesh = new THREE.Mesh(geometry, logoMaterial)
-  mesh.position.z = -1
-  scene.add(mesh)
-}
-
 function init() {
   if (!containerRef.value) return
 
@@ -144,9 +120,6 @@ function init() {
   camera.position.z = 1
 
   createStarfield()
-  createLogoPlane()
-
-  logoMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
 
   animate()
 }
@@ -157,8 +130,6 @@ function animate() {
   if (!visible) return
 
   const t = clock.getElapsedTime()
-
-  logoMaterial.uniforms.u_time.value = t
 
   starPoints.rotation.y += 0.00018
   starPoints.rotation.x += 0.00006
@@ -174,9 +145,6 @@ function animate() {
 function onResize() {
   if (!renderer) return
   renderer.setSize(window.innerWidth, window.innerHeight)
-  if (logoMaterial) {
-    logoMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
-  }
 }
 
 onMounted(() => {
@@ -201,6 +169,5 @@ onBeforeUnmount(() => {
   starMaterial?.dispose()
   starTwinkle?.geometry.dispose()
   twinkleMaterial?.dispose()
-  logoMaterial?.dispose()
 })
 </script>

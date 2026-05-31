@@ -123,6 +123,9 @@
           <a href="https://github.com/celestia-island" target="_blank" class="nav-icon-btn no-underline group" title="GitHub">
             <div class="i-lucide-github w-5 h-5 group-hover:text-[var(--text-primary)] transition-colors" />
           </a>
+          <span class="text-lg font-bold tracking-wider" :style="{ color: 'var(--text-tertiary)' }">
+            「{{ t('site.slogan') }}」
+          </span>
           <span>{{ t('site.footer.copyright') }}</span>
           <span class="text-xs" :style="{ color: 'var(--text-muted)', opacity: 0.6 }">{{ t('site.footer.icp') }}</span>
         </div>
