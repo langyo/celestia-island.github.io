@@ -28,13 +28,13 @@
             <transition name="fade">
               <div
                 v-if="showLangMenu"
-                class="absolute right-0 top-full mt-2 backdrop-blur-xl bg-[var(--bg-glass)] border border-[var(--border-subtle)] p-2 rounded-xl min-w-[140px] shadow-2xl z-50 flex flex-col gap-1"
+                class="absolute right-0 top-full mt-2 bg-[var(--bg-primary)] border border-[var(--border-subtle)] p-2 rounded-xl min-w-[140px] shadow-2xl z-50 flex flex-col gap-1"
               >
                 <button
                   v-for="lang in langs"
                   :key="lang.code"
                   @click="switchLang(lang.code)"
-                  class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 hover:bg-[var(--bg-glass-hover)] flex items-center justify-between group"
+                  class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 hover:bg-[var(--bg-secondary)] flex items-center justify-between group"
                   :class="{ 'text-[var(--text-primary)] font-medium bg-[var(--bg-secondary)]': locale === lang.code }"
                   :style="{ color: locale === lang.code ? '' : 'var(--text-secondary)' }"
                 >
