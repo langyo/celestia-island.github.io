@@ -247,7 +247,7 @@ function scrollToolsBy(direction: number) {
 function onToolsWheel(e: WheelEvent) {
   const el = toolsScrollRef.value
   if (!el) return
-  el.scrollBy({ left: e.deltaY || e.deltaX, behavior: 'instant' })
+  el.scrollBy({ left: e.deltaY || e.deltaX, behavior: 'smooth' })
   requestAnimationFrame(updateToolsScrollState)
 }
 
@@ -411,7 +411,7 @@ onBeforeUnmount(() => {
 }
 
 .tool-card-wrapper {
-  flex: 0 0 280px;
-  min-width: 280px;
+  flex: 0 0 calc((100% - 48px) / 3.2);
+  min-width: calc((100% - 48px) / 3.2);
 }
 </style>
