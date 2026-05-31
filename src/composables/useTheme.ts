@@ -33,9 +33,6 @@ export function useTheme() {
     if (stored) {
       theme.value = stored
       apply(stored)
-    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      theme.value = 'light'
-      apply('light')
     } else {
       apply('dark')
     }
