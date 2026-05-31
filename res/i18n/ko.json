@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Celestia Island",
-    "description": "첨단 시스템 엔지니어링을 탐구하는 독립 오픈소스 조직.",
+    "description": "첨단 시스템 엔지니어링을 탐구하는 독립 오픈소스 조직",
     "slogan": "기술 오타쿠가 세계를 구한다",
     "nav": {
       "home": "홈",
@@ -25,46 +25,46 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "코어 플랫폼",
-    "platformDesc": "Vibe coding 에이전트 플랫폼",
+    "platformDesc": "Harness engineering 에이전트 플랫폼",
     "framework": "애플리케이션 프레임워크",
-    "frameworkDesc": "에이전트 세계로의 입구",
+    "frameworkDesc": "WASI 네이티브 애플리케이션 프레임워크",
     "tools": "실용 도구",
     "toolsDesc": "에이전트가 현실 세계와 소통하도록"
   },
   "entelecheia": {
     "name": "Entelecheia",
     "tagline": "다중 에이전트 협업 플랫폼",
-    "description": "AI 에이전트 팀을 구성하여 작업을 분담하고 협력하여 결과를 도출합니다. 연구 분석부터 코드 생성, 워크플로 자동화까지——목표를 설명하면 전문 에이전트가 함께 달성합니다.",
-    "shortLabel": "Multi-Agent Platform"
+    "description": "Rust 기반 다중 에이전트 협업 플랫폼. exec-only 마이크로커널 설계를 채택하여, 에이전트는 IEPL TypeScript 레이어의 ES 모듈 임포트를 통해 상호 작용합니다.",
+    "shortLabel": "다중 에이전트 협업 플랫폼"
   },
   "shittim": {
     "name": "시딤 궤",
     "tagline": "AI 에이전트와 대화하세요",
     "description": "Entelecheia의 대화형 인터페이스——AI 에이전트와 실시간으로 대화하는 채팅 UI, 시스템 구성 및 권한 관리용 제어판, 데스크톱 및 모바일 앱. 사용자가 보고 만지는 모든 것입니다.",
-    "shortLabel": "Agent Chat & Control Panel"
+    "shortLabel": "에이전트 사용자 인터페이스"
   },
   "tairitsu": {
     "name": "Tairitsu",
     "tagline": "풀스택, WASI 네이티브",
     "description": "WASI를 대상으로 하는 완전한 웹 애플리케이션 구축——프론트엔드와 백엔드가 단일 이식 가능한 런타임을 공유합니다. Rust로 UI와 서버 로직을 작성하고, WASI 컴포넌트로 컴파일하여 브라우저, 서버, 엣지에 배포하세요. 하나의 런타임, 하나의 언어, 하나의 코드베이스.",
-    "shortLabel": "WASI Full-Stack Framework"
+    "shortLabel": "WASI 풀스택 기반 프레임워크"
   },
   "hikari": {
     "name": "Hikari",
     "tagline": "WASI 네이티브 UI 프레임워크",
     "description": "WASI 전용으로 구축된 UI 컴포넌트 라이브러리. 백엔드와 동일한 WASI 런타임에서 실행되는 세련된 컴포넌트——wasm-bindgen 불필요, JavaScript 글루 코드 불필요. 인터페이스를 한 번 구축하면 어디서든 렌더링됩니다.",
-    "shortLabel": "WASI UI Component Library"
+    "shortLabel": "WASI UI 컴포넌트 라이브러리"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "산업 프로토콜 디버깅을 손쉽게",
+    "tagline": "Modbus RTU 멀티 프로토콜 디버깅 및 시뮬레이션",
     "description": "터미널에서 Modbus 산업용 기기를 검사, 테스트, 시뮬레이션하세요. 실제 하드웨어에 연결하고, 테스트용 가상 장치를 실행하며, 프로토콜 간 데이터를 브리징——생산 현장과 CI 파이프라인에서 자동화 엔지니어의 필수 도구입니다.",
-    "shortLabel": "Modbus Debugging Tool"
+    "shortLabel": "Modbus RTU 디버깅 및 시뮬레이션 도구"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "프로덕션급 RBAC, 제약으로 설계",
-    "description": "ANSI INCITS 359-2004 RBAC과 그 완전한 제약 체계——직무 분리, 기수 제한, 시간적 제약, 역할 계층——를 재사용 가능한 Rust 라이브러리로 제공하려는 야심찬 시도. 단순히 누가 무엇을 할 수 있는지가 아니라, 어떤 조건에서 가능한지를 다룹니다. 실제 세계의 인가 로직을 조합 가능한 형태로.",
-    "shortLabel": "RBAC Library"
+    "description": "커스터마이징 가능한 제로 트러스트 인증 및 RBAC 프레임워크. ANSI INCITS 359-2004 역할 계층, 직무 분리, 시간적 제약을 지원합니다.",
+    "shortLabel": "제로 트러스트 인증 및 RBAC 프레임워크"
   }
 }

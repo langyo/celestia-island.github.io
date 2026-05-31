@@ -1,9 +1,9 @@
-**Celestia Island** es una organización independiente de código abierto que explora las fronteras de la ingeniería de sistemas.
+"Los otakus de la tecnología salvan el mundo."
 
-El nombre se inspira en la isla flotante en el cielo — un símbolo de trascender límites. Nuestro credo, **"Los otakus tecnológicos salvan el mundo,"** refleja la convicción de que ingenieros dedicados y profundamente capacitados pueden impulsar un cambio significativo a través de la colaboración abierta.
+**Celestia Island** es una organización independiente de código abierto que explora las fronteras de la ingeniería de sistemas, con base en la ingeniería de software, investigando y avanzando en inteligencia artificial, nuevas energías, IoT y campos relacionados.
 
 Cada proyecto está diseñado con esmero, ampliando los límites de lo que puede lograr el software de sistemas modernos.
 
-Aunque nuestros proyectos abarcan diferentes dominios, comparten una filosofía de diseño común: prioridad a Rust, composabilidad modular y pragmatismo de ingeniería sobre perfección académica. Desde frameworks de bajo nivel hasta aplicaciones de usuario final, estamos construyendo un ecosistema cohesivo pieza por pieza.
+Nuestros proyectos resuenan entre sí, cada uno creciendo a su propio ritmo.
 
 *Esta organización no tiene afiliación directa con las fuentes de ninguna inspiración de propiedad intelectual ficticia.*

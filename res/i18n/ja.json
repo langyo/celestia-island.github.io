@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Celestia Island",
-    "description": "最先端のシステムエンジニアリングを探求する独立系オープンソース組織。",
+    "description": "最先端のシステムエンジニアリングを探求する独立系オープンソース組織",
     "slogan": "技術オタクが世界を救う",
     "nav": {
       "home": "ホーム",
@@ -25,46 +25,46 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "コアプラットフォーム",
-    "platformDesc": "Vibe coding エージェントプラットフォーム",
+    "platformDesc": "Harness engineering エージェントプラットフォーム",
     "framework": "アプリケーションフレームワーク",
-    "frameworkDesc": "エージェントの世界への入り口",
+    "frameworkDesc": "WASIネイティブアプリケーションフレームワーク",
     "tools": "実用ツール",
     "toolsDesc": "エージェントが現実世界と関わるために"
   },
   "entelecheia": {
     "name": "Entelecheia",
     "tagline": "マルチエージェント協調プラットフォーム",
-    "description": "AIエージェントのチームを編成し、タスクを分担・協調して成果を届けます。調査・分析からコード生成、ワークフロー自動化まで——目標を伝えるだけで、専門エージェントが協力して達成します。",
-    "shortLabel": "Multi-Agent Platform"
+    "description": "Rustベースのマルチエージェント協調プラットフォーム。exec-onlyマイクロカーネル設計を採用し、エージェントはIEPL TypeScript層のESモジュールインポートを通じて相互作用します。",
+    "shortLabel": "マルチエージェント協調プラットフォーム"
   },
   "shittim": {
     "name": "什亭の箱",
     "tagline": "AIエージェントと会話しよう",
     "description": "Entelecheiaの対話インターフェース——AIエージェントとリアルタイム会話ができるチャットUI、システム設定と権限管理のコントロールパネル、さらにデスクトップ・モバイルアプリ。ユーザーが見て触れるすべて。",
-    "shortLabel": "Agent Chat & Control Panel"
+    "shortLabel": "エージェント対話フロントエンド"
   },
   "tairitsu": {
     "name": "Tairitsu",
     "tagline": "フルスタック、WASIネイティブ",
     "description": "WASIをターゲットとする完全なWebアプリケーションを構築——フロントエンドとバックエンドで単一のポータブルランタイムを共有。RustでUIとサーバーロジックを記述し、WASIコンポーネントにコンパイルして、ブラウザ、サーバー、エッジにデプロイ。一つのランタイム、一つの言語、一つのコードベース。",
-    "shortLabel": "WASI Full-Stack Framework"
+    "shortLabel": "WASI フルスタック基盤フレームワーク"
   },
   "hikari": {
     "name": "Hikari",
     "tagline": "WASIネイティブUIフレームワーク",
     "description": "WASI専用に構築されたUIコンポーネントライブラリ。バックエンドと同じWASIランタイム上で動作する洗練されたコンポーネント群——wasm-bindgen不要、JavaScriptグルーコード不要。一度インターフェースを構築すれば、どこでもレンダリング。",
-    "shortLabel": "WASI UI Component Library"
+    "shortLabel": "WASI UI コンポーネントライブラリ"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "産業プロトコルデバッグを簡単に",
+    "tagline": "Modbus RTU マルチプロトコルデバッグ・シミュレーション",
     "description": "Modbus産業用デバイスの検査・テスト・シミュレーションをターミナル上で。実機への接続、テスト用仮想デバイスの起動、プロトコル間のデータブリッジ——生産現場でもCIパイプラインでも、自動化エンジニアの頼れる相棒です。",
-    "shortLabel": "Modbus Debugging Tool"
+    "shortLabel": "Modbus RTU デバッグ・シミュレーションツール"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "プロダクショングレードRBAC、制約による設計",
-    "description": "ANSI INCITS 359-2004 RBACとその完全な制約体系——職務分離、基数制限、時間的制約、ロール階層——を再利用可能なRustライブラリとして提供する野心的な試み。単に誰が何をできるかではなく、どのような条件下でできるか。実世界の認可ロジックを、組み合わせ可能な形で。",
-    "shortLabel": "RBAC Library"
+    "description": "カスタマイズ可能なゼロトラスト認証・RBACフレームワーク。ANSI INCITS 359-2004 のロール階層、職務分離、時間的制約をサポート。",
+    "shortLabel": "ゼロトラスト認証・RBACフレームワーク"
   }
 }

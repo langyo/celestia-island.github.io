@@ -1,8 +1,8 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-[var(--border-subtle)]" :style="{ background: 'var(--nav-bg)' }">
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-[var(--border-subtle)] bg-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-3 no-underline group" :style="{ color: 'var(--text-primary)' }" @click.prevent="scrollToTop">
+        <a href="#" class="flex items-center gap-3 no-underline group text-primary" @click.prevent="scrollToTop">
           <img :src="celestiaLogo" alt="Celestia Island" class="w-8 h-8 object-contain rounded-lg animate-glow" draggable="false" />
           <span class="text-lg font-semibold tracking-wide bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
             {{ t('site.title') }}
@@ -35,8 +35,7 @@
                   :key="lang.code"
                   @click="switchLang(lang.code)"
                   class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-[var(--bg-secondary)] flex items-center justify-between group"
-                  :class="{ 'text-[var(--text-primary)] font-medium bg-[var(--bg-secondary)]': locale === lang.code }"
-                  :style="{ color: locale === lang.code ? '' : 'var(--text-secondary)' }"
+                  :class="{ 'text-[var(--text-primary)] font-medium bg-[var(--bg-secondary)]': locale === lang.code, 'text-secondary': locale !== lang.code }"
                 >
                   <span class="group-hover:text-[var(--text-primary)] transition-colors">{{ lang.label }}</span>
                   <div v-if="locale === lang.code" class="i-lucide-check w-3.5 h-3.5 text-violet-400" />

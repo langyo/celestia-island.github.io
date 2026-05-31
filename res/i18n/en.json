@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Celestia Island",
-    "description": "An independent open-source organization exploring the frontiers of systems engineering.",
+    "description": "An independent open-source organization exploring the frontiers of systems engineering",
     "slogan": "Tech Otakus Save the World",
     "nav": {
       "home": "Home",
@@ -25,23 +25,23 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "Core Platform",
-    "platformDesc": "Vibe coding agents' platform",
+    "platformDesc": "Harness engineering agents' platform",
     "framework": "Application Frameworks",
-    "frameworkDesc": "Ways to access the agents' world",
+    "frameworkDesc": "WASI-Native Application Frameworks",
     "tools": "Toolchain",
     "toolsDesc": "Allowing agents to engage with the real world"
   },
   "entelecheia": {
     "name": "Entelecheia",
     "tagline": "Multi-Agent Collaboration Platform",
-    "description": "Assemble teams of AI agents that divide tasks, collaborate, and deliver results. Harness engineering in practice — constrain agents to their domains, and they excel. From research and analysis to code generation and workflow automation — describe your goal, and specialized agents work together to achieve it.",
-    "shortLabel": "Multi-Agent Platform"
+    "description": "A Rust-based multi-agent collaboration platform with an exec-only microkernel design. Agents interact through ES module imports in an IEPL TypeScript layer, keeping the LLM surface minimal and composable.",
+    "shortLabel": "Multi-Agent Collaboration Platform"
   },
   "shittim": {
     "name": "Shittim Chest",
     "tagline": "Chat With Your AI Agents",
     "description": "The interactive face of Entelecheia — a streaming chat interface to converse with AI agents, a control panel to configure systems and manage permissions, plus desktop and mobile apps. Everything the user sees and touches.",
-    "shortLabel": "Agent Chat & Control Panel"
+    "shortLabel": "User-Facing Agent Shell"
   },
   "tairitsu": {
     "name": "Tairitsu",
@@ -57,14 +57,14 @@
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "Industrial Protocol Debugging, Made Effortless",
+    "tagline": "Multi-Protocol Debugging & Simulation for Modbus RTU",
     "description": "Inspect, test, and simulate Modbus industrial devices right from your terminal. Connect to real hardware, spin up virtual devices for testing, and bridge data between protocols — an indispensable companion for automation engineers on the factory floor and in CI pipelines.",
-    "shortLabel": "Modbus Debugging Tool"
+    "shortLabel": "Modbus RTU Debug & Simulation Tool"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "Production-Grade RBAC, Constrained by Design",
-    "description": "An ambitious attempt to bring ANSI INCITS 359-2004 RBAC — with its full constraint apparatus: separation of duties, cardinality enforcement, temporal bounds, and role hierarchies — into a reusable Rust library. Not just who can do what, but under what conditions. Real-world authorization, made composable.",
-    "shortLabel": "RBAC Library"
+    "description": "Customizable zero-trust authentication & RBAC framework in Rust. Supports ANSI INCITS 359-2004 role hierarchies, separation of duties, and temporal constraints.",
+    "shortLabel": "Zero-Trust Auth & RBAC Framework"
   }
 }

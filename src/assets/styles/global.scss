@@ -96,3 +96,11 @@ body {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-muted { color: var(--text-muted); }
+.border-subtle { border-color: var(--border-subtle); }
+.bg-nav { background: var(--nav-bg); }
+.bg-footer { background: var(--footer-bg); }

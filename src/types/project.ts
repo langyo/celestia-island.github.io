@@ -10,7 +10,7 @@ export interface Project {
   descriptionKey: string
   techStack: string[]
   status: 'active' | 'stable' | 'research' | 'legacy' | 'preview'
-  repo: string
+  repo?: string
   color: string
   icon: string
 }
@@ -24,11 +24,10 @@ export const projects: Project[] = [
     shortLabelKey: 'entelecheia.shortLabel',
     tagline: 'Multi-Agent Collaboration Platform',
     taglineKey: 'entelecheia.tagline',
-    description: 'Assemble teams of AI agents that divide tasks, collaborate, and deliver results. Harness engineering in practice — constrain agents to their domains, and they excel. From research and analysis to code generation and workflow automation — describe your goal, and specialized agents work together to achieve it.',
+    description: 'A Rust-based multi-agent collaboration platform with an exec-only microkernel design. Agents interact through ES module imports in an IEPL TypeScript layer, keeping the LLM surface minimal and composable.',
     descriptionKey: 'entelecheia.description',
-    techStack: ['Rust', 'TypeScript', 'Axum', 'SeaORM', 'ratatui', 'Boa JS', 'MCP', 'pgvector'],
+    techStack: ['Rust', 'TypeScript', 'Boa JS', 'SQL', 'MCP'],
     status: 'preview',
-    repo: 'celestia-island/entelecheia',
     color: '#8b5cf6',
     icon: 'i-lucide-bot',
   },
@@ -42,9 +41,8 @@ export const projects: Project[] = [
     taglineKey: 'shittim.tagline',
     description: 'The interactive face of Entelecheia — a streaming chat interface to converse with AI agents, a control panel to configure systems and manage permissions, plus desktop and mobile apps. Everything the user sees and touches.',
     descriptionKey: 'shittim.description',
-    techStack: ['Vue 3', 'TypeScript', 'Rust', 'Axum', 'Pinia', 'UnoCSS', 'Tauri 2', 'vue-i18n'],
+    techStack: ['Vue 3', 'TypeScript', 'Rust', 'CSS'],
     status: 'preview',
-    repo: 'celestia-island/shittim-chest',
     color: '#06b6d4',
     icon: 'i-lucide-message-square',
   },
@@ -58,7 +56,7 @@ export const projects: Project[] = [
     taglineKey: 'tairitsu.tagline',
     description: 'Build complete web applications that target WASI — a single, portable runtime for both frontend and backend. Write your UI and server logic in Rust, compile to WASI components, and deploy to browser, server, or edge. One runtime, one language, one codebase.',
     descriptionKey: 'tairitsu.description',
-    techStack: ['Rust', 'WASI', 'WIT', 'VDOM', 'SSR', 'wasmtime', 'TypeScript', 'Wry/Tao'],
+    techStack: ['Rust', 'WASI', 'TypeScript', 'CSS', 'WIT'],
     status: 'active',
     repo: 'celestia-island/tairitsu',
     color: '#ec4899',
@@ -74,7 +72,7 @@ export const projects: Project[] = [
     taglineKey: 'hikari.tagline',
     description: 'A UI component library purpose-built for WASI. Polished, ready-made components that run on the same WASI runtime as your backend — no wasm-bindgen, no JavaScript glue. Build interfaces once, render them anywhere.',
     descriptionKey: 'hikari.description',
-    techStack: ['Rust', 'WASI', 'WIT', 'SCSS', 'Tairitsu vdom', 'VDOM + hooks'],
+    techStack: ['Rust', 'WASI', 'SCSS', 'CSS', 'WIT'],
     status: 'active',
     repo: 'celestia-island/hikari',
     color: '#f59e0b',
@@ -90,7 +88,7 @@ export const projects: Project[] = [
     taglineKey: 'aoba.tagline',
     description: 'Inspect, test, and simulate Modbus industrial devices right from your terminal. Connect to real hardware, spin up virtual devices for testing, and bridge data between protocols — an indispensable companion for automation engineers on the factory floor and in CI pipelines.',
     descriptionKey: 'aoba.description',
-    techStack: ['Rust', 'ratatui', 'tokio', 'serialport', 'Modbus RTU', 'CLI', 'TUI'],
+    techStack: ['Rust', 'Shell', 'SCSS'],
     status: 'stable',
     repo: 'celestia-island/aoba',
     color: '#22c55e',
@@ -104,9 +102,9 @@ export const projects: Project[] = [
     shortLabelKey: 'kirino.shortLabel',
     tagline: 'Production-Grade RBAC, Constrained by Design',
     taglineKey: 'kirino.tagline',
-    description: 'An ambitious attempt to bring ANSI INCITS 359-2004 RBAC — with its full constraint apparatus: separation of duties, cardinality enforcement, temporal bounds, and role hierarchies — into a reusable Rust library. Not just who can do what, but under what conditions. Real-world authorization, made composable.',
+    description: 'Customizable zero-trust authentication & RBAC framework in Rust. Supports ANSI INCITS 359-2004 role hierarchies, separation of duties, and temporal constraints.',
     descriptionKey: 'kirino.description',
-    techStack: ['Rust', 'Argon2', 'JWT', 'RBAC', 'SQL', 'Redis', 'crates.io'],
+    techStack: ['Rust', 'SQL'],
     status: 'stable',
     repo: 'celestia-island/kirino',
     color: '#ef4444',
