@@ -28,7 +28,7 @@
     "platformDesc": "Vibe coding agents' platform",
     "framework": "Application Frameworks",
     "frameworkDesc": "Ways to access the agents' world",
-    "tools": "Tools & Libraries",
+    "tools": "Toolchain",
     "toolsDesc": "Allowing agents to engage with the real world"
   },
   "entelecheia": {
