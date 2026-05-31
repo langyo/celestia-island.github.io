@@ -86,21 +86,21 @@
     </section>
 
     <!-- Page 5: About + Footer -->
-    <section id="about" class="snap-start h-screen flex flex-col" ref="aboutSection">
-      <div class="flex-1 flex items-center justify-center px-4">
+    <section id="about" class="snap-start min-h-screen flex flex-col" ref="aboutSection">
+      <div class="flex-1 flex items-center justify-center px-4 py-8">
         <div
-          class="glass-card text-center p-10 max-w-3xl mx-auto reveal"
+          class="glass-card text-center p-6 sm:p-8 max-w-3xl mx-auto reveal"
           :class="{ 'is-visible': aboutVisible }"
         >
-          <div class="mb-6 flex justify-center">
+          <div class="mb-4 flex justify-center">
             <img
               :src="celestiaLogo"
               alt="Celestia Island Logo"
-              class="w-16 h-16 object-contain rounded-2xl animate-glow"
+              class="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded-2xl animate-glow"
               draggable="false"
             />
           </div>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 class="text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
             {{ t('site.nav.about') }}
           </h2>
           <div
@@ -108,14 +108,14 @@
             :style="{ color: 'var(--text-secondary)' }"
             v-html="renderedAboutText"
           ></div>
-          <p class="mt-4 text-sm" :style="{ color: 'var(--text-muted)' }">
+          <p class="mt-3 text-xs" :style="{ color: 'var(--text-muted)' }">
             {{ t('site.footer.icp') }}
           </p>
         </div>
       </div>
 
       <footer
-        class="border-t backdrop-blur-md reveal py-10"
+        class="border-t backdrop-blur-md reveal py-6"
         :class="{ 'is-visible': aboutVisible }"
         :style="{ borderColor: 'var(--border-subtle)', background: 'var(--footer-bg)', transitionDelay: '0.3s' }"
       >
