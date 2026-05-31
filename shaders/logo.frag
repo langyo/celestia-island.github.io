@@ -1,7 +1,7 @@
 #define PI 3.14159265358979323846
 #define TAU 6.28318530717958647692
-#define CURVE_SAMPLES 200
-#define STROKE_COUNT 40
+#define CURVE_SAMPLES 120
+#define STROKE_COUNT 30
 #define RIBBON_W 0.075
 
 precision highp float;

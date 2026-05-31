@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "description": "探索前沿系統工程的獨立開源組織",
+    "slogan": "技術宅拯救世界",
+    "nav": {
+      "home": "首頁",
+      "projects": "專案",
+      "about": "關於",
+      "language": "語言"
+    },
+    "status": {
+      "active": "活躍開發中",
+      "stable": "穩定版",
+      "research": "研究中",
+      "legacy": "舊版",
+      "preview": "敬請期待"
+    },
+    "footer": {
+      "copyright": "© {year} Celestia Island. 保留所有權利。"
+    }
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "核心平台",
+    "platformDesc": "Harness engineering 智能體平台",
+    "framework": "應用框架",
+    "frameworkDesc": "WASI 原生應用框架",
+    "tools": "實用工具",
+    "toolsDesc": "讓智能體觸及真實世界"
+  },
+  "entelecheia": {
+    "name": "玄樞 / Entelecheia",
+    "tagline": "多智能體協作平台",
+    "description": "基於 Rust 的多智能體協作平台，採用 exec-only 微核心設計。智能體透過 IEPL TypeScript 層的 ES 模組匯入進行互動，保持 LLM 介面最小化與可組合性。",
+    "shortLabel": "多智能體協作平台"
+  },
+  "shittim": {
+    "name": "什亭之匣",
+    "tagline": "與你的 AI 智能體對話",
+    "description": "Entelecheia 的互動入口——與 AI 智能體即時對話的聊天介面，用於系統設定與權限管理的控制面板，加上桌面與行動端應用。使用者所見所觸，盡在於此。",
+    "shortLabel": "智能體互動前端"
+  },
+  "tairitsu": {
+    "name": "Tairitsu",
+    "tagline": "WASI 原生，全端一體",
+    "description": "構建面向 WASI 的完整 Web 應用——前後端共享同一套可移植執行時。用 Rust 編寫介面與服務端邏輯，編譯為 WASI 組件，部署到瀏覽器、伺服器或邊緣端。一個執行時，一種語言，一套程式碼。",
+    "shortLabel": "WASI 全端基礎框架"
+  },
+  "hikari": {
+    "name": "Hikari",
+    "tagline": "WASI 原生的 UI 框架",
+    "description": "專為 WASI 打造的 UI 組件庫。精美的現成組件，與你的後端執行在同一 WASI 執行時之上——無需 wasm-bindgen，無需 JavaScript 膠水程式碼。一次構建介面，隨處渲染。",
+    "shortLabel": "WASI 介面組件庫"
+  },
+  "aoba": {
+    "name": "Aoba",
+    "tagline": "Modbus RTU 多協定除錯與模擬",
+    "description": "在終端中檢測、測試和模擬 Modbus 工業裝置。連接真實硬體，快速建立虛擬裝置進行測試，在不同協定之間橋接資料——無論在生產現場還是 CI 管線中，都是自動化工程師的得力助手。",
+    "shortLabel": "Modbus RTU 除錯與模擬工具"
+  },
+  "kirino": {
+    "name": "Kirino",
+    "tagline": "生產級 RBAC，以約束為設計",
+    "description": "可自訂的零信任認證與 RBAC 框架。支援 ANSI INCITS 359-2004 角色繼承、職責分離與時效約束。",
+    "shortLabel": "零信任認證與 RBAC 框架"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "終端應用中的富文字 Markdown 與圖表",
+    "description": "基於 ratatui 建構的 Markdown 渲染、語法高亮、Mermaid 圖表、可摺疊 JSON/TOML 樹檢視及混合捲動系統。全部功能透過 feature gate 按需引入。",
+    "shortLabel": "TUI Markdown 渲染器"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "一次巨集呼叫，生成完整巢狀型別",
+    "description": "一個 proc-macro 程式庫，透過緊湊的 DSL 生成複雜深層巢狀的 struct 與 enum。內聯型別自動展平、衍生並接入 serde——一次巨集呼叫，獲得整個型別層級。",
+    "shortLabel": "巢狀型別生成器"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "透過巨集宣告式構建執行緒池管線",
+    "description": "用閉包宣告式定義多階段處理管線。pipe! 巨集自動生成全部執行緒連線與通道管線——支援混合同步/非同步步驟、分支路由、重試策略和優雅關閉。",
+    "shortLabel": "管線執行緒庫"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "版本化你的結構體，遷移你的資料",
+    "description": "用於在不同版本間遷移資料的序列化庫。用版本屬性和遷移規則標註你的型別——Hifumi 自動生成所有舊版結構體和 From 實作，還提供 CLI 跨 git 歷史比對結構體。",
+    "shortLabel": "資料遷移庫"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI 驅動的 Rust 原始碼文件生成",
+    "description": "Rust crate 的文件產生器，從原始碼和文件註解中產生 Markdown、靜態 HTML 站台，以及 AI 驅動的多語言翻譯。",
+    "shortLabel": "Rust 文件產生器"
+  }
+}

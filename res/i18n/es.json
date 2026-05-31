@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "description": "Una organización independiente de código abierto que explora las fronteras de la ingeniería de sistemas",
+    "slogan": "Los otakus de la tecnología salvan el mundo",
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "about": "Acerca de",
+      "language": "Idioma"
+    },
+    "status": {
+      "active": "En desarrollo",
+      "stable": "Estable",
+      "research": "Investigación",
+      "legacy": "Legado",
+      "preview": "Próximamente"
+    },
+    "footer": {
+      "copyright": "© {year} Celestia Island. Todos los derechos reservados."
+    }
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "Plataforma Principal",
+    "platformDesc": "Plataforma de agentes de harness engineering",
+    "framework": "Frameworks de Aplicación",
+    "frameworkDesc": "Frameworks de Aplicación Nativos WASI",
+    "tools": "Herramientas",
+    "toolsDesc": "Permitiendo a los agentes interactuar con el mundo real"
+  },
+  "entelecheia": {
+    "name": "Entelecheia",
+    "tagline": "Plataforma de Colaboración Multi-Agente",
+    "description": "Plataforma de colaboración multi-agente basada en Rust con diseño de microkernel exec-only. Los agentes interactúan mediante importaciones de módulos ES en una capa IEPL TypeScript.",
+    "shortLabel": "Plataforma de Colaboración Multi-Agente"
+  },
+  "shittim": {
+    "name": "Shittim Chest",
+    "tagline": "Chatea con tus agentes IA",
+    "description": "La cara interactiva de Entelecheia — una interfaz de chat con streaming para conversar con agentes IA, un panel de control para configurar sistemas y gestionar permisos, además de apps de escritorio y móviles. Todo lo que el usuario ve y toca.",
+    "shortLabel": "Interfaz de Usuario para Agentes"
+  },
+  "tairitsu": {
+    "name": "Tairitsu",
+    "tagline": "Full-Stack, Nativo WASI",
+    "description": "Construye aplicaciones web completas orientadas a WASI — un único runtime portable para frontend y backend. Escribe tu UI y lógica de servidor en Rust, compila a componentes WASI y despliega en navegador, servidor o edge. Un runtime, un lenguaje, un código base.",
+    "shortLabel": "Framework Full-Stack WASI"
+  },
+  "hikari": {
+    "name": "Hikari",
+    "tagline": "Framework UI Nativo WASI",
+    "description": "Una biblioteca de componentes UI creada específicamente para WASI. Componentes pulidos que se ejecutan en el mismo runtime WASI que tu backend — sin wasm-bindgen, sin código glue JavaScript. Construye interfaces una vez, renderízalas en cualquier lugar.",
+    "shortLabel": "Biblioteca de Componentes UI WASI"
+  },
+  "aoba": {
+    "name": "Aoba",
+    "tagline": "Depuración y Simulación Multi-Protocolo para Modbus RTU",
+    "description": "Inspecciona, prueba y simula dispositivos industriales Modbus directamente desde tu terminal. Conéctate a hardware real, crea dispositivos virtuales para pruebas y conecta datos entre protocolos — un compañero indispensable para ingenieros de automatización, tanto en planta como en pipelines CI.",
+    "shortLabel": "Herramienta de Depuración y Simulación Modbus RTU"
+  },
+  "kirino": {
+    "name": "Kirino",
+    "tagline": "RBAC de Grado Producción, Diseñado con Restricciones",
+    "description": "Framework de autenticación zero-trust y RBAC personalizable en Rust. Soporta jerarquías de roles, separación de funciones y restricciones temporales según ANSI INCITS 359-2004.",
+    "shortLabel": "Framework de Autenticación Zero-Trust y RBAC"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "Markdown enriquecido y diagramas para apps de terminal",
+    "description": "Renderizado Markdown, resaltado de sintaxis, diagramas Mermaid, árboles JSON/TOML colapsables y un sistema de scroll híbrido — todo sobre ratatui. Funciones seleccionables vía feature gates.",
+    "shortLabel": "Renderizador TUI de Markdown"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "Define tipos anidados profundos de una sola vez",
+    "description": "Biblioteca proc-macro que genera structs y enums complejos y profundamente anidados desde un DSL compacto. Los tipos inline se aplanan, derivan e integran con serde automáticamente — una sola macro, toda la jerarquía de tipos.",
+    "shortLabel": "Generador de Tipos Anidados"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "Pipelines declarativos de thread pool vía macro",
+    "description": "Define pipelines de procesamiento multi-etapa declarativamente desde closures. La macro pipe! genera automáticamente todo el cableado de hilos y canales — soporta pasos sync/async mixtos, branching, políticas de reintento y apagado graceful.",
+    "shortLabel": "Biblioteca de Threading por Pipelines"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "Versiona tus structs, migra tus datos",
+    "description": "Biblioteca de serialización para migrar datos entre versiones de structs. Anota tus tipos con atributos de versión y reglas de migración — Hifumi auto-genera todos los structs de versiones anteriores e impls From, más un CLI para diff de structs en el historial git.",
+    "shortLabel": "Biblioteca de Migración de Datos"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "Documentación Rust con IA desde el código fuente",
+    "description": "Generador de documentación para crates Rust que produce Markdown, sitios HTML estáticos y traducciones multilingües potenciadas por IA — todo desde tu código fuente y comentarios de documentación.",
+    "shortLabel": "Generador de Docs Rust"
+  }
+}

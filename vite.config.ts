@@ -11,6 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@res': fileURLToPath(new URL('./res', import.meta.url)),
     },
   },
   server: {
@@ -18,6 +19,5 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsInlineLimit: 0,
   },
 })
