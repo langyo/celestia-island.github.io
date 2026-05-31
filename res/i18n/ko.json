@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "description": "첨단 시스템 엔지니어링을 탐구하는 독립 오픈소스 조직",
+    "slogan": "기술 오타쿠가 세계를 구한다",
+    "nav": {
+      "home": "홈",
+      "projects": "프로젝트",
+      "about": "소개",
+      "language": "언어"
+    },
+    "status": {
+      "active": "개발 중",
+      "stable": "안정판",
+      "research": "연구 중",
+      "legacy": "구버전",
+      "preview": "곧 공개"
+    },
+    "footer": {
+      "copyright": "© {year} Celestia Island. All rights reserved."
+    }
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "코어 플랫폼",
+    "platformDesc": "Harness engineering 에이전트 플랫폼",
+    "framework": "애플리케이션 프레임워크",
+    "frameworkDesc": "WASI 네이티브 애플리케이션 프레임워크",
+    "tools": "실용 도구",
+    "toolsDesc": "에이전트가 현실 세계와 소통하도록"
+  },
+  "entelecheia": {
+    "name": "Entelecheia",
+    "tagline": "다중 에이전트 협업 플랫폼",
+    "description": "Rust 기반 다중 에이전트 협업 플랫폼. exec-only 마이크로커널 설계를 채택하여, 에이전트는 IEPL TypeScript 레이어의 ES 모듈 임포트를 통해 상호 작용합니다.",
+    "shortLabel": "다중 에이전트 협업 플랫폼"
+  },
+  "shittim": {
+    "name": "시딤 궤",
+    "tagline": "AI 에이전트와 대화하세요",
+    "description": "Entelecheia의 대화형 인터페이스——AI 에이전트와 실시간으로 대화하는 채팅 UI, 시스템 구성 및 권한 관리용 제어판, 데스크톱 및 모바일 앱. 사용자가 보고 만지는 모든 것입니다.",
+    "shortLabel": "에이전트 사용자 인터페이스"
+  },
+  "tairitsu": {
+    "name": "Tairitsu",
+    "tagline": "풀스택, WASI 네이티브",
+    "description": "WASI를 대상으로 하는 완전한 웹 애플리케이션 구축——프론트엔드와 백엔드가 단일 이식 가능한 런타임을 공유합니다. Rust로 UI와 서버 로직을 작성하고, WASI 컴포넌트로 컴파일하여 브라우저, 서버, 엣지에 배포하세요. 하나의 런타임, 하나의 언어, 하나의 코드베이스.",
+    "shortLabel": "WASI 풀스택 기반 프레임워크"
+  },
+  "hikari": {
+    "name": "Hikari",
+    "tagline": "WASI 네이티브 UI 프레임워크",
+    "description": "WASI 전용으로 구축된 UI 컴포넌트 라이브러리. 백엔드와 동일한 WASI 런타임에서 실행되는 세련된 컴포넌트——wasm-bindgen 불필요, JavaScript 글루 코드 불필요. 인터페이스를 한 번 구축하면 어디서든 렌더링됩니다.",
+    "shortLabel": "WASI UI 컴포넌트 라이브러리"
+  },
+  "aoba": {
+    "name": "Aoba",
+    "tagline": "Modbus RTU 멀티 프로토콜 디버깅 및 시뮬레이션",
+    "description": "터미널에서 Modbus 산업용 기기를 검사, 테스트, 시뮬레이션하세요. 실제 하드웨어에 연결하고, 테스트용 가상 장치를 실행하며, 프로토콜 간 데이터를 브리징——생산 현장과 CI 파이프라인에서 자동화 엔지니어의 필수 도구입니다.",
+    "shortLabel": "Modbus RTU 디버깅 및 시뮬레이션 도구"
+  },
+  "kirino": {
+    "name": "Kirino",
+    "tagline": "프로덕션급 RBAC, 제약으로 설계",
+    "description": "커스터마이징 가능한 제로 트러스트 인증 및 RBAC 프레임워크. ANSI INCITS 359-2004 역할 계층, 직무 분리, 시간적 제약을 지원합니다.",
+    "shortLabel": "제로 트러스트 인증 및 RBAC 프레임워크"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "터미널 앱을 위한 리치 마크다운과 다이어그램",
+    "description": "ratatui 기반의 마크다운 렌더링, 구문 강조, Mermaid 다이어그램, 접기 가능한 JSON/TOML 트리, 하이브리드 스크롤 시스템. feature gate로 필요한 기능만 선택 가능.",
+    "shortLabel": "TUI 마크다운 렌더러"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "하나의 매크로로 깊게 중첩된 타입 일괄 생성",
+    "description": "간결한 DSL에서 복잡하고 깊게 중첩된 struct와 enum을 생성하는 proc-macro 라이브러리. 인라인 타입이 자동으로 평탄화·derive·serde 통합——매크로 한 번의 호출로 전체 타입 계층을 얻습니다.",
+    "shortLabel": "중첩 타입 제너레이터"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "매크로로 선언적 스레드 풀 파이프라인 구축",
+    "description": "클로저로 다단계 처리 파이프라인을 선언적으로 정의. pipe! 매크로가 스레드 연결과 채널 배선을 자동 생성——혼합 동기/비동기 단계, 분기 라우팅, 재시도 정책, 우아한 종료를 지원.",
+    "shortLabel": "파이프라인 스레딩 라이브러리"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "구조체를 버전 관리하고, 데이터를 마이그레이션",
+    "description": "다른 버전 간 데이터 마이그레이션을 위한 직렬화 라이브러리. 타입에 버전 속성과 마이그레이션 규칙을 주석으로 달면, Hifumi가 이전 버전 구조체와 From 구현을 자동 생성. git 히스토리 전체에서 구조체를 비교하는 CLI도 포함.",
+    "shortLabel": "데이터 마이그레이션 라이브러리"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI 기반 Rust 소스 코드 문서 생성",
+    "description": "Rust 크레이트용 문서 생성기. 소스 코드와 문서 주석에서 마크다운, 정적 HTML 사이트, AI 기반 다국어 번역을 생성합니다.",
+    "shortLabel": "Rust 문서 생성기"
+  }
+}

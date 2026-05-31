@@ -1,41 +1,44 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/5">
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-[var(--border-subtle)] bg-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-3 text-white no-underline group" @click.prevent="scrollToTop">
-          <div class="text-2xl animate-glow">✦</div>
+        <a href="#" class="flex items-center gap-3 no-underline group text-primary" @click.prevent="scrollToTop">
+          <img :src="celestiaLogo" alt="Celestia Island" class="w-8 h-8 object-contain rounded-lg animate-glow" draggable="false" />
           <span class="text-lg font-semibold tracking-wide bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
             {{ t('site.title') }}
           </span>
         </a>
 
-        <div class="flex items-center gap-2">
-          <button class="btn-ghost text-sm" @click="scrollToProjects">
-            {{ t('site.nav.projects') }}
-          </button>
-          <a href="https://github.com/celestia-island" target="_blank" class="btn-ghost text-sm">
-            <div class="i-lucide-github w-4 h-4" />
-            GitHub
+        <div class="flex items-center gap-1.5">
+          <a href="https://github.com/celestia-island" target="_blank" class="nav-icon-btn no-underline group" title="GitHub">
+            <div class="i-lucide-github w-5 h-5 group-hover:text-[var(--text-primary)] transition-colors" />
           </a>
 
-          <div class="relative ml-2">
-            <button @click.stop="showLangMenu = !showLangMenu" class="btn-ghost text-sm px-3">
-              <div class="i-lucide-globe w-4 h-4" />
-              <span class="hidden sm:inline ml-1">{{ currentLangLabel }}</span>
+          <button @click="toggleTheme" class="nav-icon-btn" :title="theme === 'dark' ? 'Light mode' : 'Dark mode'">
+            <div v-if="theme === 'dark'" class="i-lucide-sun w-5 h-5 transition-transform hover:rotate-45" />
+            <div v-else class="i-lucide-moon w-5 h-5 transition-transform hover:-rotate-12" />
+          </button>
+
+          <div class="relative">
+            <button @click.stop="showLangMenu = !showLangMenu" class="nav-lang-btn">
+              <div class="i-lucide-globe w-5 h-5" />
+              <span class="hidden sm:inline ml-0.5">{{ currentLangLabel }}</span>
+              <div class="i-lucide-chevron-down w-3.5 h-3.5 ml-0.5 opacity-60 transition-transform" :class="showLangMenu ? 'rotate-180' : ''" />
             </button>
             <transition name="fade">
               <div
                 v-if="showLangMenu"
-                class="absolute right-0 top-full mt-2 glass p-2 rounded-xl min-w-36 shadow-xl shadow-black/50 z-50"
+                class="absolute right-0 top-full mt-2 bg-[var(--bg-primary)] border border-[var(--border-subtle)] p-2 rounded-xl min-w-[140px] shadow-2xl z-50 flex flex-col gap-1"
               >
                 <button
                   v-for="lang in langs"
                   :key="lang.code"
                   @click="switchLang(lang.code)"
-                  class="w-full text-left px-4 py-2 rounded-lg text-sm transition-colors hover:bg-white/10"
-                  :class="{ 'text-violet-400 bg-white/5': locale === lang.code }"
+                  class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-[var(--bg-secondary)] flex items-center justify-between group"
+                  :class="{ 'text-[var(--text-primary)] font-medium bg-[var(--bg-secondary)]': locale === lang.code, 'text-secondary': locale !== lang.code }"
                 >
-                  {{ lang.label }}
+                  <span class="group-hover:text-[var(--text-primary)] transition-colors">{{ lang.label }}</span>
+                  <div v-if="locale === lang.code" class="i-lucide-check w-3.5 h-3.5 text-violet-400" />
                 </button>
               </div>
             </transition>
@@ -49,8 +52,11 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useTheme } from '@/composables/useTheme'
+import celestiaLogo from '@res/logos/celestia.webp'
 
 const { t, locale } = useI18n()
+const { theme, toggleTheme } = useTheme()
 const showLangMenu = ref(false)
 
 const langs = [
@@ -100,7 +106,7 @@ onBeforeUnmount(() => window.removeEventListener('click', onClickOutside))
 
 <style scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;

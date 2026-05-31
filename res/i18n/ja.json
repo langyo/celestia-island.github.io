@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "Celestia Island",
+    "description": "最先端のシステムエンジニアリングを探求する独立系オープンソース組織",
+    "slogan": "技術オタクが世界を救う",
+    "nav": {
+      "home": "ホーム",
+      "projects": "プロジェクト",
+      "about": "概要",
+      "language": "言語"
+    },
+    "status": {
+      "active": "開発中",
+      "stable": "安定版",
+      "research": "研究中",
+      "legacy": "旧版",
+      "preview": "近日公開"
+    },
+    "footer": {
+      "copyright": "© {year} Celestia Island. All rights reserved."
+    }
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "コアプラットフォーム",
+    "platformDesc": "Harness engineering エージェントプラットフォーム",
+    "framework": "アプリケーションフレームワーク",
+    "frameworkDesc": "WASIネイティブアプリケーションフレームワーク",
+    "tools": "実用ツール",
+    "toolsDesc": "エージェントが現実世界と関わるために"
+  },
+  "entelecheia": {
+    "name": "Entelecheia",
+    "tagline": "マルチエージェント協調プラットフォーム",
+    "description": "Rustベースのマルチエージェント協調プラットフォーム。exec-onlyマイクロカーネル設計を採用し、エージェントはIEPL TypeScript層のESモジュールインポートを通じて相互作用します。",
+    "shortLabel": "マルチエージェント協調プラットフォーム"
+  },
+  "shittim": {
+    "name": "什亭の箱",
+    "tagline": "AIエージェントと会話しよう",
+    "description": "Entelecheiaの対話インターフェース——AIエージェントとリアルタイム会話ができるチャットUI、システム設定と権限管理のコントロールパネル、さらにデスクトップ・モバイルアプリ。ユーザーが見て触れるすべて。",
+    "shortLabel": "エージェント対話フロントエンド"
+  },
+  "tairitsu": {
+    "name": "Tairitsu",
+    "tagline": "フルスタック、WASIネイティブ",
+    "description": "WASIをターゲットとする完全なWebアプリケーションを構築——フロントエンドとバックエンドで単一のポータブルランタイムを共有。RustでUIとサーバーロジックを記述し、WASIコンポーネントにコンパイルして、ブラウザ、サーバー、エッジにデプロイ。一つのランタイム、一つの言語、一つのコードベース。",
+    "shortLabel": "WASI フルスタック基盤フレームワーク"
+  },
+  "hikari": {
+    "name": "Hikari",
+    "tagline": "WASIネイティブUIフレームワーク",
+    "description": "WASI専用に構築されたUIコンポーネントライブラリ。バックエンドと同じWASIランタイム上で動作する洗練されたコンポーネント群——wasm-bindgen不要、JavaScriptグルーコード不要。一度インターフェースを構築すれば、どこでもレンダリング。",
+    "shortLabel": "WASI UI コンポーネントライブラリ"
+  },
+  "aoba": {
+    "name": "Aoba",
+    "tagline": "Modbus RTU マルチプロトコルデバッグ・シミュレーション",
+    "description": "Modbus産業用デバイスの検査・テスト・シミュレーションをターミナル上で。実機への接続、テスト用仮想デバイスの起動、プロトコル間のデータブリッジ——生産現場でもCIパイプラインでも、自動化エンジニアの頼れる相棒です。",
+    "shortLabel": "Modbus RTU デバッグ・シミュレーションツール"
+  },
+  "kirino": {
+    "name": "Kirino",
+    "tagline": "プロダクショングレードRBAC、制約による設計",
+    "description": "カスタマイズ可能なゼロトラスト認証・RBACフレームワーク。ANSI INCITS 359-2004 のロール階層、職務分離、時間的制約をサポート。",
+    "shortLabel": "ゼロトラスト認証・RBACフレームワーク"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "ターミナルアプリ向けリッチMarkdown＆ダイアグラム",
+    "description": "ratatui上に構築されたMarkdownレンダリング、シンタックスハイライト、Mermaidダイアグラム、折りたたみ可能なJSON/TOMLツリー、ハイブリッドスクロールシステム。フィーチャーゲートで必要な機能だけを選択可能。",
+    "shortLabel": "TUI Markdownレンダラー"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "一つのマクロで、深くネストされた型を一括生成",
+    "description": "コンパクトなDSLから複雑で深くネストされたstructとenumを生成するproc-macroライブラリ。インライン型は自動的にフラット化・derive・serde統合——マクロ一回の呼び出しで、型階層全体を取得。",
+    "shortLabel": "ネスト型ジェネレーター"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "マクロで宣言的にスレッドプールパイプラインを構築",
+    "description": "クロージャから多段処理パイプラインを宣言的に定義。pipe!マクロがスレッド接続とチャンネル配線を自動生成——同期/非同期混在、分岐ルーティング、リトライポリシー、グレースフルシャットダウンをサポート。",
+    "shortLabel": "パイプラインスレッドライブラリ"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "構造体をバージョン管理、データをマイグレーション",
+    "description": "異なるバージョン間でデータをマイグレーションするためのシリアライゼーションライブラリ。型にバージョン属性とマイグレーションルールを付与——Hifumiが古いバージョンの構造体とFrom実装を自動生成。git履歴全体の構造体diffを行うCLIも付属。",
+    "shortLabel": "データマイグレーションライブラリ"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI駆動のRustソースコードドキュメント生成",
+    "description": "Rustクレート向けドキュメントジェネレーター。ソースコードとドックコメントからMarkdown、静的HTMLサイト、AIによる多言語翻訳を生成。",
+    "shortLabel": "Rustドキュメントジェネレーター"
+  }
+}

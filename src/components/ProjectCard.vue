@@ -1,28 +1,36 @@
 <template>
   <div
-    class="glass-card group cursor-pointer"
+    class="glass-card-static group cursor-default flex flex-col pb-3"
     :style="{ '--card-color': project.color }"
   >
-    <div class="flex items-start gap-4 mb-4">
+    <div class="flex items-center gap-4 mb-4">
       <div
-        class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-        :style="{ background: `${project.color}15`, color: project.color }"
+        class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+        :style="{ background: `${project.color}10` }"
       >
-        <div :class="`${project.icon} w-6 h-6`" />
+        <img
+          v-if="logoUrl"
+          :src="logoUrl"
+          :alt="project.name"
+          class="w-11 h-11 object-contain"
+          draggable="false"
+        />
+        <div v-else :class="`${project.icon} w-6 h-6`" :style="{ color: project.color }" />
       </div>
       <div class="flex-1 min-w-0">
-        <h3 class="text-lg font-semibold text-white mb-1 truncate">{{ project.name }}</h3>
-        <p class="text-sm font-medium" :style="{ color: project.color }">
+        <h3 class="text-lg font-semibold truncate text-primary">{{ t(project.shortLabelKey, project.shortLabel) }}</h3>
+        <p class="text-xs font-medium mt-0.5 text-tertiary">{{ t(project.nameKey, project.name) }}</p>
+        <p class="text-sm font-medium mt-1" :style="{ color: project.color }">
           {{ t(project.taglineKey) || project.tagline }}
         </p>
       </div>
     </div>
 
-    <p class="text-white/50 text-sm leading-relaxed mb-4 line-clamp-3">
+    <p class="text-sm leading-relaxed mb-4 line-clamp-3 text-secondary">
       {{ t(project.descriptionKey, { en: project.description }) }}
     </p>
 
-    <div class="flex flex-wrap gap-1.5 mb-4">
+    <div class="flex flex-wrap gap-1.5 content-start min-h-8">
       <span
         v-for="tech in project.techStack"
         :key="tech"
@@ -37,7 +45,7 @@
       </span>
     </div>
 
-    <div class="flex items-center justify-between pt-3 border-t border-white/5">
+    <div class="flex items-center justify-between pt-2 mt-auto border-t border-subtle">
       <span
         class="text-xs px-2 py-0.5 rounded-full"
         :style="{
@@ -48,9 +56,10 @@
         {{ t(`site.status.${project.status}`) }}
       </span>
       <a
+        v-if="project.repo"
         :href="`https://github.com/${project.repo}`"
         target="_blank"
-        class="text-white/30 hover:text-white/70 transition-colors text-sm flex items-center gap-1 no-underline"
+        class="github-link transition-colors duration-300 text-sm flex items-center gap-1 no-underline text-secondary"
       >
         <div class="i-lucide-external-link w-3.5 h-3.5" />
         GitHub
@@ -64,20 +73,45 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types/project'
 
+import entelecheiaLogo from '@res/logos/entelecheia.webp'
+import shittimLogo from '@res/logos/shittim-chest.webp'
+import tairitsuLogo from '@res/logos/tairitsu.webp'
+import hikariLogo from '@res/logos/hikari.webp'
+import aobaLogo from '@res/logos/aoba.webp'
+import kirinoLogo from '@res/logos/kirino.webp'
+
 const props = defineProps<{
   project: Project
 }>()
 
 const { t } = useI18n()
 
+const logoMap: Record<string, string> = {
+  entelecheia: entelecheiaLogo,
+  'shittim-chest': shittimLogo,
+  tairitsu: tairitsuLogo,
+  hikari: hikariLogo,
+  aoba: aobaLogo,
+  kirino: kirinoLogo,
+}
+
+const logoUrl = computed(() => logoMap[props.project.id])
+
 const statusMap: Record<string, { bg: string; color: string }> = {
   active: { bg: 'rgba(34, 197, 94, 0.1)', color: '#22c55e' },
   stable: { bg: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6' },
   research: { bg: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b' },
   legacy: { bg: 'rgba(156, 163, 175, 0.1)', color: '#9ca3af' },
+  preview: { bg: 'rgba(168, 85, 247, 0.1)', color: '#a855f7' },
 }
 
 const statusStyle = computed(() => statusMap[props.project.status] || statusMap.stable)
 const statusBg = computed(() => statusStyle.value.bg)
 const statusColor = computed(() => statusStyle.value.color)
 </script>
+
+<style scoped>
+.github-link:hover {
+  color: var(--text-primary);
+}
+</style>
