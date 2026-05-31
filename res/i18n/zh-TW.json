@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "開源專案的星座群",
-    "description": "開源專案的星座群——AI 智能體、Web 框架、UI 庫、認證授權與工業工具。",
+    "subtitle": "技術宅拯救世界",
+    "description": "探索前沿系統工程的獨立開源組織。源於天空島——超越邊界，以技術改變世界。",
     "nav": {
       "home": "首頁",
       "projects": "專案",
@@ -13,7 +13,8 @@
       "active": "活躍開發中",
       "stable": "穩定版",
       "research": "研究中",
-      "legacy": "舊版"
+      "legacy": "舊版",
+      "preview": "敬請期待"
     },
     "footer": {
       "copyright": "© 2025 Celestia Island. 保留所有權利。",
@@ -22,34 +23,50 @@
     }
   },
   "entelecheia": {
-    "name": "玄樞 Entelecheia",
+    "name": "玄樞 / Entelecheia",
+    "shortLabel": "多智能體平台",
     "tagline": "多智能體協作平台",
     "description": "組建 AI 智能體團隊，分工協作，交付成果。從研究分析到程式碼生成再到工作流程自動化——描述你的目標，專業智能體各司其職、共同達成。"
   },
   "shittim": {
     "name": "什亭之匣",
+    "shortLabel": "智能體聊天與管控面板",
     "tagline": "與你的 AI 智能體對話",
     "description": "Entelecheia 的互動入口——與 AI 智能體即時對話的聊天介面，用於系統設定與權限管理的控制面板，加上桌面與行動端應用。使用者所見所觸，盡在於此。"
   },
   "tairitsu": {
+    "name": "Tairitsu",
+    "shortLabel": "WASI 全棧框架",
     "tagline": "WASI 原生，全端一體",
     "description": "構建面向 WASI 的完整 Web 應用——前後端共享同一套可移植執行時。用 Rust 編寫介面與服務端邏輯，編譯為 WASI 組件，部署到瀏覽器、伺服器或邊緣端。一個執行時，一種語言，一套程式碼。"
   },
   "hikari": {
+    "name": "Hikari",
+    "shortLabel": "WASI 組件庫",
     "tagline": "WASI 原生的 UI 框架",
     "description": "專為 WASI 打造的 UI 組件庫。精美的現成組件，與你的後端執行在同一 WASI 執行時之上——無需 wasm-bindgen，無需 JavaScript 膠水程式碼。一次構建介面，隨處渲染。"
   },
   "aoba": {
+    "name": "Aoba",
+    "shortLabel": "Modbus 調試工具",
     "tagline": "工業協定除錯，信手拈來",
     "description": "在終端中檢測、測試和模擬 Modbus 工業裝置。連接真實硬體，快速建立虛擬裝置進行測試，在不同協定之間橋接資料——無論在生產現場還是 CI 管線中，都是自動化工程師的得力助手。"
   },
-    "group": {
-      "platform": "核心平台",
-      "framework": "應用框架",
-      "tools": "工具與庫"
-    },
-    "kirino": {
+  "kirino": {
+    "name": "Kirino",
+    "shortLabel": "RBAC 權限庫",
     "tagline": "生產級 RBAC，以約束為設計",
     "description": "將 ANSI INCITS 359-2004 RBAC 標準及其完整約束體系——職責分離、基數約束、時效控制、角色繼承——系統性地帶入 Rust 生態的一次嘗試。不止於誰能做什麼，更在於什麼條件下能做。真實世界的授權邏輯，化為可組合的模組。"
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "核心平台",
+    "platformDesc": "Entelecheia 是編排引擎，Shittim Chest 是面向用戶的外殼——兩者構成完整的多智能體平台。",
+    "framework": "應用框架",
+    "frameworkDesc": "Tairitsu 提供 VDOM 運行時，Hikari 提供 UI 組件——兩者互補，構成 WASI 原生前端生態。",
+    "tools": "工具與庫",
+    "toolsDesc": "面向不同場景的獨立工具——Aoba 服務工業自動化工程師，Kirino 服務後端安全需求。"
   }
 }

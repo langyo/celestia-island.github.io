@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "Una constelación de proyectos de código abierto",
-    "description": "Una constelación de proyectos de código abierto — agentes IA, frameworks web, bibliotecas UI, autenticación y herramientas industriales.",
+    "subtitle": "Los otakus tecnológicos salvan el mundo",
+    "description": "Una organización independiente de código abierto que explora las fronteras de la ingeniería de sistemas. Nombrada en honor a la isla flotante en el cielo — trascendiendo fronteras a través de la tecnología.",
     "nav": {
       "home": "Inicio",
       "projects": "Proyectos",
@@ -13,7 +13,8 @@
       "active": "En desarrollo",
       "stable": "Estable",
       "research": "Investigación",
-      "legacy": "Legado"
+      "legacy": "Legado",
+      "preview": "Próximamente"
     },
     "footer": {
       "copyright": "© 2025 Celestia Island. Todos los derechos reservados.",
@@ -22,32 +23,50 @@
     }
   },
   "entelecheia": {
+    "name": "Entelecheia",
+    "shortLabel": "Plataforma Multiagente",
     "tagline": "Plataforma de Colaboración Multi-Agente",
     "description": "Forma equipos de agentes IA que dividen tareas, colaboran y entregan resultados. Desde investigación y análisis hasta generación de código y automatización de flujos — describe tu objetivo y los agentes especializados trabajarán juntos para lograrlo."
   },
   "shittim": {
+    "name": "Shittim Chest",
+    "shortLabel": "Chat y Panel de Control",
     "tagline": "Chatea con tus agentes IA",
     "description": "La cara interactiva de Entelecheia — una interfaz de chat con streaming para conversar con agentes IA, un panel de control para configurar sistemas y gestionar permisos, además de apps de escritorio y móviles. Todo lo que el usuario ve y toca."
   },
   "tairitsu": {
+    "name": "Tairitsu",
+    "shortLabel": "Framework WASI Full-Stack",
     "tagline": "Full-Stack, Nativo WASI",
     "description": "Construye aplicaciones web completas orientadas a WASI — un único runtime portable para frontend y backend. Escribe tu UI y lógica de servidor en Rust, compila a componentes WASI y despliega en navegador, servidor o edge. Un runtime, un lenguaje, un código base."
   },
   "hikari": {
+    "name": "Hikari",
+    "shortLabel": "Librería UI WASI",
     "tagline": "Framework UI Nativo WASI",
     "description": "Una biblioteca de componentes UI creada específicamente para WASI. Componentes pulidos que se ejecutan en el mismo runtime WASI que tu backend — sin wasm-bindgen, sin código glue JavaScript. Construye interfaces una vez, renderízalas en cualquier lugar."
   },
   "aoba": {
+    "name": "Aoba",
+    "shortLabel": "Herramienta Modbus",
     "tagline": "Depuración de protocolos industriales, sin esfuerzo",
     "description": "Inspecciona, prueba y simula dispositivos industriales Modbus directamente desde tu terminal. Conéctate a hardware real, crea dispositivos virtuales para pruebas y conecta datos entre protocolos — un compañero indispensable para ingenieros de automatización, tanto en planta como en pipelines CI."
   },
-    "group": {
-      "platform": "Plataforma Principal",
-      "framework": "Frameworks de Aplicación",
-      "tools": "Herramientas y Bibliotecas"
-    },
-    "kirino": {
+  "kirino": {
+    "name": "Kirino",
+    "shortLabel": "Librería RBAC",
     "tagline": "RBAC de Grado Producción, Diseñado con Restricciones",
     "description": "Un intento ambicioso de llevar ANSI INCITS 359-2004 RBAC — con todo su aparato de restricciones: separación de funciones, límites de cardinalidad, restricciones temporales y jerarquías de roles — a una biblioteca Rust reutilizable. No solo quién puede hacer qué, sino bajo qué condiciones. Autorización del mundo real, hecha componible."
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "Plataforma Principal",
+    "platformDesc": "Entelecheia es el motor de orquestación; Shittim Chest es la interfaz de usuario — juntos forman una plataforma multiagente completa.",
+    "framework": "Frameworks de Aplicación",
+    "frameworkDesc": "Tairitsu proporciona el runtime VDOM; Hikari proporciona los componentes UI — dos piezas complementarias de un ecosistema frontend nativo WASI.",
+    "tools": "Herramientas y Bibliotecas",
+    "toolsDesc": "Herramientas independientes para diferentes dominios — Aoba para ingenieros de automatización industrial, Kirino para seguridad backend."
   }
 }

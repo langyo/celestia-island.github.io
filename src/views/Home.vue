@@ -16,19 +16,18 @@
       </div>
     </section>
 
-    <!-- Page 2: Core Platform — Entelecheia + Shittim Chest -->
+    <!-- Page 2: Amphoreus — Core Platform -->
     <section id="projects" class="snap-section" ref="platformSection">
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
-          <div class="text-center mb-8 reveal" :class="{ 'is-visible': platformVisible }">
-            <span class="inline-block text-sm font-semibold tracking-widest uppercase mb-2" :style="{ color: 'var(--text-secondary)' }">{{ t('group.platform') }}</span>
-            <h2
-              class="text-3xl sm:text-4xl font-bold"
-            >
+          <div class="text-center mb-6 reveal" :class="{ 'is-visible': platformVisible }">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
               <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                {{ t('site.nav.projects') }}
+                {{ t('group.amphoreus') }}
               </span>
             </h2>
+            <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2" :style="{ color: 'var(--text-tertiary)' }">{{ t('group.platform') }}</p>
+            <p class="text-sm mt-3 max-w-lg mx-auto" :style="{ color: 'var(--text-secondary)' }">{{ t('group.platformDesc') }}</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <ProjectCard v-for="(p, i) in platformProjects" :key="p.id" :project="p"
@@ -40,19 +39,18 @@
       </div>
     </section>
 
-    <!-- Page 3: WASM / UI Framework — Tairitsu + Hikari -->
+    <!-- Page 3: Arcaea — Application Frameworks -->
     <section id="framework" class="snap-section" ref="frameworkSection">
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
-          <div class="text-center mb-8 reveal" :class="{ 'is-visible': frameworkVisible }">
-            <span class="inline-block text-sm font-semibold tracking-widest uppercase mb-2" :style="{ color: 'var(--text-secondary)' }">{{ t('group.framework') }}</span>
-            <h2
-              class="text-3xl sm:text-4xl font-bold"
-            >
+          <div class="text-center mb-6 reveal" :class="{ 'is-visible': frameworkVisible }">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
               <span class="bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
-                {{ t('site.nav.projects') }}
+                {{ t('group.arcaea') }}
               </span>
             </h2>
+            <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2" :style="{ color: 'var(--text-tertiary)' }">{{ t('group.framework') }}</p>
+            <p class="text-sm mt-3 max-w-lg mx-auto" :style="{ color: 'var(--text-secondary)' }">{{ t('group.frameworkDesc') }}</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <ProjectCard v-for="(p, i) in frameworkProjects" :key="p.id" :project="p"
@@ -64,19 +62,18 @@
       </div>
     </section>
 
-    <!-- Page 4: Tools & Libraries — Aoba + Kirino -->
+    <!-- Page 4: Decagrammaton — Tools & Libraries -->
     <section id="tools" class="snap-section" ref="toolsSection">
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8">
         <div class="max-w-5xl mx-auto w-full">
-          <div class="text-center mb-8 reveal" :class="{ 'is-visible': toolsVisible }">
-            <span class="inline-block text-sm font-semibold tracking-widest uppercase mb-2" :style="{ color: 'var(--text-secondary)' }">{{ t('group.tools') }}</span>
-            <h2
-              class="text-3xl sm:text-4xl font-bold"
-            >
+          <div class="text-center mb-6 reveal" :class="{ 'is-visible': toolsVisible }">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
               <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                {{ t('site.nav.projects') }}
+                {{ t('group.decagrammaton') }}
               </span>
             </h2>
+            <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2" :style="{ color: 'var(--text-tertiary)' }">{{ t('group.tools') }}</p>
+            <p class="text-sm mt-3 max-w-lg mx-auto" :style="{ color: 'var(--text-secondary)' }">{{ t('group.toolsDesc') }}</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <ProjectCard v-for="(p, i) in toolProjects" :key="p.id" :project="p"
@@ -95,36 +92,37 @@
           class="glass-card text-center p-10 max-w-3xl mx-auto reveal"
           :class="{ 'is-visible': aboutVisible }"
         >
-          <div class="text-4xl mb-6 animate-glow">✦</div>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+          <div class="mb-6 flex justify-center">
+            <img
+              :src="celestiaLogo"
+              alt="Celestia Island Logo"
+              class="w-16 h-16 object-contain rounded-2xl animate-glow"
+              draggable="false"
+            />
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
             {{ t('site.nav.about') }}
           </h2>
-          <p class="leading-relaxed max-w-2xl mx-auto" :style="{ color: 'var(--text-secondary)' }">
-            Celestia Island is a constellation of open-source Rust projects exploring the frontiers of multi-agent orchestration,
-            WebAssembly component models, and zero-trust authentication.
-            Each project is crafted with care, pushing the boundaries of what modern systems software can achieve.
-          </p>
+          <div
+            class="leading-relaxed max-w-2xl mx-auto about-content prose prose-zinc dark:prose-invert"
+            :style="{ color: 'var(--text-secondary)' }"
+            v-html="renderedAboutText"
+          ></div>
           <p class="mt-4 text-sm" :style="{ color: 'var(--text-muted)' }">
-            All projects are in active preparation · <code class="text-violet-400/60">celestia.world</code>
+            {{ t('site.footer.icp') }}
           </p>
         </div>
       </div>
 
       <footer
-        class="border-t backdrop-blur-md reveal"
+        class="border-t backdrop-blur-md reveal py-10"
         :class="{ 'is-visible': aboutVisible }"
-        :style="{ borderColor: 'var(--border-subtle)', background: 'var(--footer-bg)', transitionDelay: '0.3s', height: '30vh' }"
+        :style="{ borderColor: 'var(--border-subtle)', background: 'var(--footer-bg)', transitionDelay: '0.3s' }"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col items-center justify-center gap-3 text-sm" :style="{ color: 'var(--text-muted)' }">
-          <div class="flex items-center gap-3">
-            <a href="https://github.com/celestia-island" target="_blank" class="transition-colors duration-200 no-underline" :style="{ color: 'var(--text-muted)' }" @mouseenter="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-secondary)' }" @mouseleave="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-muted)' }">
-              <div class="i-lucide-github w-4 h-4" />
-            </a>
-            <span :style="{ color: 'var(--text-muted)' }">|</span>
-            <span class="font-mono" :style="{ color: 'var(--text-tertiary)' }">{{ t('site.footer.domain') }}</span>
-            <span :style="{ color: 'var(--text-muted)' }">|</span>
-            <span class="font-mono" :style="{ color: 'var(--text-muted)' }">celestia-island.github.io</span>
-          </div>
+          <a href="https://github.com/celestia-island" target="_blank" class="nav-icon-btn no-underline group" title="GitHub">
+            <div class="i-lucide-github w-5 h-5 group-hover:text-[var(--text-primary)] transition-colors" />
+          </a>
           <span>{{ t('site.footer.copyright') }}</span>
           <span class="text-xs" :style="{ color: 'var(--text-muted)', opacity: 0.6 }">{{ t('site.footer.icp') }}</span>
         </div>
@@ -136,10 +134,24 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { marked } from 'marked'
 import { projects } from '@/types/project'
 import ProjectCard from '@/components/ProjectCard.vue'
+import celestiaLogo from '@res/logos/celestia.webp'
 
-const { t } = useI18n()
+const aboutDocs = import.meta.glob('../../docs/**/about.md', { query: '?raw', import: 'default', eager: true })
+
+const { t, locale } = useI18n()
+
+const renderedAboutText = computed(() => {
+  const currentLang = locale.value
+  const fallbackLang = 'en'
+  const docPath = `../../docs/${currentLang}/about.md`
+  const fallbackPath = `../../docs/${fallbackLang}/about.md`
+
+  const mdContent = (aboutDocs[docPath] as string) || (aboutDocs[fallbackPath] as string) || ''
+  return marked.parse(mdContent)
+})
 
 const snapContainer = ref<HTMLDivElement>()
 const platformSection = ref<HTMLElement>()
@@ -161,8 +173,9 @@ const heroItems = computed(() => [
   `<div class="text-6xl sm:text-8xl font-bold tracking-tight mb-4"><span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">Celestia Island</span></div>`,
   `<p class="text-xl sm:text-2xl font-light mb-2" style="color: var(--text-secondary)">${t('site.subtitle')}</p>`,
   `<p class="text-base max-w-xl mx-auto" style="color: var(--text-tertiary)">${t('site.description')}</p>`,
-  `<div class="flex items-center justify-center gap-4 mt-8"><button class="glass px-8 py-2.5 rounded-xl font-medium cursor-pointer inline-flex items-center gap-2 transition-all duration-300 hover:bg-[var(--bg-glass-hover)] hover:border-[var(--border-hover)]" style="color: var(--text-primary); border: 1px solid var(--border-subtle);" onclick="document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'})">${t('site.nav.projects')} <span class="i-lucide-chevron-down inline-block w-4 h-4"></span></button><a href="https://github.com/celestia-island" target="_blank" class="btn-ghost" style="color: var(--text-secondary)"><span class="i-lucide-github inline-block w-4 h-4"></span> GitHub</a></div>`,
-  `<div class="mt-14 animate-float opacity-20"><span class="i-lucide-chevrons-down inline-block w-6 h-6" style="color: var(--text-primary)"></span></div>`,
+  `<div class="flex flex-wrap items-center justify-center gap-4 mt-8"><button class="btn-primary" onclick="document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'})">${t('site.nav.projects')} <span class="i-lucide-chevron-down w-4 h-4 ml-1"></span></button><a href="https://github.com/celestia-island" target="_blank" class="btn-ghost no-underline group"><span class="i-lucide-github w-4 h-4 mr-1.5 opacity-70 group-hover:opacity-100 transition-opacity"></span> GitHub</a></div>`,
+  `<p class="text-xs mt-6 opacity-30" style="color: var(--text-tertiary)">6 projects · 3 teams · AI agents to WASM frameworks and industrial tools</p>`,
+  `<div class="mt-10 animate-float opacity-20"><span class="i-lucide-chevrons-down inline-block w-6 h-6" style="color: var(--text-primary)"></span></div>`,
 ])
 
 let observer: IntersectionObserver
@@ -218,5 +231,33 @@ onBeforeUnmount(() => {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+.about-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  text-align: center;
+}
+.about-content :deep(p) {
+  margin-bottom: 1.2em;
+  color: var(--text-secondary);
+}
+.about-content :deep(p:last-child) {
+  margin-bottom: 0;
+}
+.about-content :deep(a) {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-subtle);
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
+}
+.about-content :deep(a:hover) {
+  color: #a78bfa;
+  text-decoration-color: #a78bfa;
+}
+.about-content :deep(strong) {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 </style>

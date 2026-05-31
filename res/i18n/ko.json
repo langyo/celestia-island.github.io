@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Celestia Island",
-    "subtitle": "오픈소스 프로젝트의 별자리",
-    "description": "오픈소스 프로젝트의 별자리——AI 에이전트, 웹 프레임워크, UI 라이브러리, 인증, 산업 도구.",
+    "subtitle": "기술 오타쿠가 세계를 구한다",
+    "description": "첨단 시스템 엔지니어링을 탐구하는 독립 오픈소스 조직. 하늘섬에서 이름을 따와——기술로 경계를 넘어갑니다.",
     "nav": {
       "home": "홈",
       "projects": "프로젝트",
@@ -13,7 +13,8 @@
       "active": "개발 중",
       "stable": "안정판",
       "research": "연구 중",
-      "legacy": "구버전"
+      "legacy": "구버전",
+      "preview": "곧 공개"
     },
     "footer": {
       "copyright": "© 2025 Celestia Island. All rights reserved.",
@@ -22,33 +23,50 @@
     }
   },
   "entelecheia": {
+    "name": "Entelecheia",
+    "shortLabel": "멀티 에이전트 플랫폼",
     "tagline": "다중 에이전트 협업 플랫폼",
     "description": "AI 에이전트 팀을 구성하여 작업을 분담하고 협력하여 결과를 도출합니다. 연구 분석부터 코드 생성, 워크플로 자동화까지——목표를 설명하면 전문 에이전트가 함께 달성합니다."
   },
   "shittim": {
     "name": "시딤 궤",
+    "shortLabel": "에이전트 채팅 UI",
     "tagline": "AI 에이전트와 대화하세요",
     "description": "Entelecheia의 대화형 인터페이스——AI 에이전트와 실시간으로 대화하는 채팅 UI, 시스템 구성 및 권한 관리용 제어판, 데스크톱 및 모바일 앱. 사용자가 보고 만지는 모든 것입니다."
   },
   "tairitsu": {
+    "name": "Tairitsu",
+    "shortLabel": "WASI 풀스택 프레임워크",
     "tagline": "풀스택, WASI 네이티브",
     "description": "WASI를 대상으로 하는 완전한 웹 애플리케이션 구축——프론트엔드와 백엔드가 단일 이식 가능한 런타임을 공유합니다. Rust로 UI와 서버 로직을 작성하고, WASI 컴포넌트로 컴파일하여 브라우저, 서버, 엣지에 배포하세요. 하나의 런타임, 하나의 언어, 하나의 코드베이스."
   },
   "hikari": {
+    "name": "Hikari",
+    "shortLabel": "WASI UI 컴포넌트 라이브러리",
     "tagline": "WASI 네이티브 UI 프레임워크",
     "description": "WASI 전용으로 구축된 UI 컴포넌트 라이브러리. 백엔드와 동일한 WASI 런타임에서 실행되는 세련된 컴포넌트——wasm-bindgen 불필요, JavaScript 글루 코드 불필요. 인터페이스를 한 번 구축하면 어디서든 렌더링됩니다."
   },
   "aoba": {
+    "name": "Aoba",
+    "shortLabel": "Modbus 디버깅 도구",
     "tagline": "산업 프로토콜 디버깅을 손쉽게",
     "description": "터미널에서 Modbus 산업용 기기를 검사, 테스트, 시뮬레이션하세요. 실제 하드웨어에 연결하고, 테스트용 가상 장치를 실행하며, 프로토콜 간 데이터를 브리징——생산 현장과 CI 파이프라인에서 자동화 엔지니어의 필수 도구입니다."
   },
-    "group": {
-      "platform": "코어 플랫폼",
-      "framework": "애플리케이션 프레임워크",
-      "tools": "도구 & 라이브러리"
-    },
-    "kirino": {
+  "kirino": {
+    "name": "Kirino",
+    "shortLabel": "RBAC 라이브러리",
     "tagline": "프로덕션급 RBAC, 제약으로 설계",
     "description": "ANSI INCITS 359-2004 RBAC과 그 완전한 제약 체계——직무 분리, 기수 제한, 시간적 제약, 역할 계층——를 재사용 가능한 Rust 라이브러리로 제공하려는 야심찬 시도. 단순히 누가 무엇을 할 수 있는지가 아니라, 어떤 조건에서 가능한지를 다룹니다. 실제 세계의 인가 로직을 조합 가능한 형태로."
+  },
+  "group": {
+    "amphoreus": "Amphoreus",
+    "arcaea": "Arcaea",
+    "decagrammaton": "Decagrammaton",
+    "platform": "코어 플랫폼",
+    "platformDesc": "Entelecheia는 오케스트레이션 엔진, Shittim Chest는 사용자 셸——함께 완전한 멀티 에이전트 플랫폼을 구성합니다.",
+    "framework": "애플리케이션 프레임워크",
+    "frameworkDesc": "Tairitsu는 VDOM 런타임을, Hikari는 UI 컴포넌트를 제공——WASI 네이티브 프론트엔드 생태계의 두 축입니다.",
+    "tools": "도구 & 라이브러리",
+    "toolsDesc": "다양한 도메인을 위한 독립 도구——Aoba는 산업 자동화 엔지니어, Kirino는 백엔드 보안을 위한 도구입니다."
   }
 }

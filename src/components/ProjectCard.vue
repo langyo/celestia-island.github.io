@@ -18,8 +18,9 @@
         <div v-else :class="`${project.icon} w-6 h-6`" :style="{ color: project.color }" />
       </div>
       <div class="flex-1 min-w-0">
-        <h3 class="text-lg font-semibold mb-1 truncate" :style="{ color: 'var(--text-primary)' }">{{ t(project.nameKey, project.name) }}</h3>
-        <p class="text-sm font-medium" :style="{ color: project.color }">
+        <h3 class="text-lg font-semibold truncate" :style="{ color: 'var(--text-primary)' }">{{ t(project.shortLabelKey) || project.shortLabel }}</h3>
+        <p class="text-xs font-medium mt-0.5" :style="{ color: 'var(--text-tertiary)' }">{{ t(project.nameKey, project.name) }}</p>
+        <p class="text-sm font-medium mt-1" :style="{ color: project.color }">
           {{ t(project.taglineKey) || project.tagline }}
         </p>
       </div>
@@ -103,6 +104,7 @@ const statusMap: Record<string, { bg: string; color: string }> = {
   stable: { bg: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6' },
   research: { bg: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b' },
   legacy: { bg: 'rgba(156, 163, 175, 0.1)', color: '#9ca3af' },
+  preview: { bg: 'rgba(168, 85, 247, 0.1)', color: '#a855f7' },
 }
 
 const statusStyle = computed(() => statusMap[props.project.status] || statusMap.stable)
