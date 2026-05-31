@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
@@ -46,6 +46,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pnpm install --ignore-scripts
+      - run: pip install Pillow
       - run: python3 scripts/build.py
 
       - uses: actions/configure-pages@v5
