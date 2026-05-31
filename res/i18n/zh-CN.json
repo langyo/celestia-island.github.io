@@ -66,5 +66,35 @@
     "tagline": "生产级 RBAC，以约束为设计",
     "description": "可定制的零信任认证与 RBAC 框架。支持 ANSI INCITS 359-2004 角色继承、职责分离与时效约束。",
     "shortLabel": "零信任认证与 RBAC 框架"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "终端应用中的富文本 Markdown 与图表",
+    "description": "基于 ratatui 构建的 Markdown 渲染、语法高亮、Mermaid 图表、可折叠 JSON/TOML 树视图及混合滚动系统。全部功能通过 feature gate 按需引入。",
+    "shortLabel": "TUI Markdown 渲染器"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "一次宏调用，生成完整嵌套类型",
+    "description": "一个 proc-macro 库，通过紧凑的 DSL 生成复杂深层嵌套的 struct 和 enum。内联类型自动展平、派生并接入 serde——一次宏调用，获得整个类型层级。",
+    "shortLabel": "嵌套类型生成器"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "通过宏声明式构建线程池管道",
+    "description": "用闭包声明式定义多阶段处理管道。pipe! 宏自动生成全部线程连接与通道管线——支持混合同步/异步步骤、分支路由、重试策略和优雅关闭。",
+    "shortLabel": "管道线程库"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "版本化你的结构体，迁移你的数据",
+    "description": "用于在不同版本间迁移数据的序列化库。用版本属性和迁移规则标注你的类型——Hifumi 自动生成所有旧版结构体和 From 实现，还提供 CLI 跨 git 历史对比结构体。",
+    "shortLabel": "数据迁移库"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI 驱动的 Rust 源码文档生成",
+    "description": "Rust crate 的文档生成器，从源码和文档注释中生成 Markdown、静态 HTML 站点，以及 AI 驱动的多语言翻译。",
+    "shortLabel": "Rust 文档生成器"
   }
 }

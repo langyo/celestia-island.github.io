@@ -66,5 +66,35 @@
     "tagline": "RBAC de Grado Producción, Diseñado con Restricciones",
     "description": "Framework de autenticación zero-trust y RBAC personalizable en Rust. Soporta jerarquías de roles, separación de funciones y restricciones temporales según ANSI INCITS 359-2004.",
     "shortLabel": "Framework de Autenticación Zero-Trust y RBAC"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "Markdown enriquecido y diagramas para apps de terminal",
+    "description": "Renderizado Markdown, resaltado de sintaxis, diagramas Mermaid, árboles JSON/TOML colapsables y un sistema de scroll híbrido — todo sobre ratatui. Funciones seleccionables vía feature gates.",
+    "shortLabel": "Renderizador TUI de Markdown"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "Define tipos anidados profundos de una sola vez",
+    "description": "Biblioteca proc-macro que genera structs y enums complejos y profundamente anidados desde un DSL compacto. Los tipos inline se aplanan, derivan e integran con serde automáticamente — una sola macro, toda la jerarquía de tipos.",
+    "shortLabel": "Generador de Tipos Anidados"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "Pipelines declarativos de thread pool vía macro",
+    "description": "Define pipelines de procesamiento multi-etapa declarativamente desde closures. La macro pipe! genera automáticamente todo el cableado de hilos y canales — soporta pasos sync/async mixtos, branching, políticas de reintento y apagado graceful.",
+    "shortLabel": "Biblioteca de Threading por Pipelines"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "Versiona tus structs, migra tus datos",
+    "description": "Biblioteca de serialización para migrar datos entre versiones de structs. Anota tus tipos con atributos de versión y reglas de migración — Hifumi auto-genera todos los structs de versiones anteriores e impls From, más un CLI para diff de structs en el historial git.",
+    "shortLabel": "Biblioteca de Migración de Datos"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "Documentación Rust con IA desde el código fuente",
+    "description": "Generador de documentación para crates Rust que produce Markdown, sitios HTML estáticos y traducciones multilingües potenciadas por IA — todo desde tu código fuente y comentarios de documentación.",
+    "shortLabel": "Generador de Docs Rust"
   }
 }

@@ -66,5 +66,35 @@
     "tagline": "Production-Grade RBAC, Constrained by Design",
     "description": "Customizable zero-trust authentication & RBAC framework in Rust. Supports ANSI INCITS 359-2004 role hierarchies, separation of duties, and temporal constraints.",
     "shortLabel": "Zero-Trust Auth & RBAC Framework"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "Rich markdown and diagrams for terminal apps",
+    "description": "Markdown rendering, syntax highlighting, Mermaid diagrams, collapsible JSON/TOML trees, and a hybrid scroll system — all built on ratatui. Feature-gated for selective inclusion in any TUI application.",
+    "shortLabel": "TUI Markdown Renderer"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "Define deeply nested types in one sweep",
+    "description": "A proc-macro library that generates complex, deeply nested structs and enums from a compact DSL. Inline types are automatically flattened, derived, and wired up with serde — write one macro invocation, get an entire type hierarchy.",
+    "shortLabel": "Nested Type Generator"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "Declarative thread-pool pipelines via macro",
+    "description": "Declaratively define multi-stage processing pipelines from closures. The pipe! macro generates all thread wiring and channel plumbing automatically — supporting mixed sync/async steps, branching, retry policies, and graceful shutdown.",
+    "shortLabel": "Pipeline Threading Library"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "Version your structs, migrate your data",
+    "description": "A serialization library for migrating data between struct versions. Annotate your types with version attributes and migration rules — Hifumi auto-generates all older-version structs and From impls, plus a CLI to diff structs across git history.",
+    "shortLabel": "Data Migration Library"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI-powered Rust documentation from source",
+    "description": "A document generator for Rust crates that produces Markdown, static HTML sites, and AI-powered multi-language translations — all from your source code and doc comments.",
+    "shortLabel": "Rust Doc Generator"
   }
 }

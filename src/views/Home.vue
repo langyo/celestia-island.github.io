@@ -65,7 +65,7 @@
     <!-- Page 4: Decagrammaton — Tools & Libraries -->
     <section id="tools" class="snap-section" ref="toolsSection">
       <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8 -mt-16">
-        <div class="max-w-5xl mx-auto w-full">
+        <div class="max-w-6xl mx-auto w-full">
           <div class="text-center mb-6 reveal" :class="{ 'is-visible': toolsVisible }">
             <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
               <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -75,11 +75,18 @@
             <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.tools') }}</p>
             <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.toolsDesc') }}</p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <ProjectCard v-for="(p, i) in toolProjects" :key="p.id" :project="p"
-              class="reveal" :class="{ 'is-visible': toolsVisible }"
-              :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
-            />
+          <div class="tools-scroll-container">
+            <div class="tools-scroll-track">
+              <div
+                v-for="(p, i) in toolProjects"
+                :key="p.id"
+                class="tool-card-wrapper reveal"
+                :class="{ 'is-visible': toolsVisible }"
+                :style="{ transitionDelay: `${0.08 + i * 0.06}s` }"
+              >
+                <ProjectCard :project="p" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -200,7 +207,7 @@ const aboutVisible = ref(false)
 
 const platformProjects = computed(() => projects.filter(p => ['entelecheia', 'shittim-chest'].includes(p.id)))
 const frameworkProjects = computed(() => projects.filter(p => ['tairitsu', 'hikari'].includes(p.id)))
-const toolProjects = computed(() => projects.filter(p => ['aoba', 'kirino'].includes(p.id)))
+const toolProjects = computed(() => projects.filter(p => ['aoba', 'kirino', 'ratatui-markdown', 'yuuka', 'ichika', 'hifumi', 'noa'].includes(p.id)))
 
 const heroItems = computed(() => [
   `<div class="text-6xl sm:text-8xl font-bold tracking-tight mb-4"><span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">Celestia Island</span></div>`,
@@ -302,5 +309,39 @@ onBeforeUnmount(() => {
 
 .delay-300 {
   transition-delay: 0.3s;
+}
+
+.tools-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(167, 139, 250, 0.3) transparent;
+  padding-bottom: 8px;
+  mask-image: linear-gradient(to right, transparent, black 24px, black calc(100% - 24px), transparent);
+}
+
+.tools-scroll-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tools-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tools-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.3);
+  border-radius: 2px;
+}
+
+.tools-scroll-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.tool-card-wrapper {
+  flex: 0 0 280px;
+  min-width: 280px;
 }
 </style>

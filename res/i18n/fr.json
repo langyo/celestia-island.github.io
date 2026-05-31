@@ -66,5 +66,35 @@
     "tagline": "RBAC de Qualité Production, Conçu par Contraintes",
     "description": "Framework d'authentification zero-trust et RBAC personnalisable en Rust. Prend en charge les hiérarchies de rôles, la séparation des tâches et les contraintes temporelles ANSI INCITS 359-2004.",
     "shortLabel": "Framework d'Authentification Zero-Trust et RBAC"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "Markdown enrichi et diagrammes pour applis terminal",
+    "description": "Rendu Markdown, coloration syntaxique, diagrammes Mermaid, arbres JSON/TOML repliables et un système de scroll hybride — le tout construit sur ratatui. Fonctionnalités sélectionnables via feature gates.",
+    "shortLabel": "Rendeur TUI Markdown"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "Définissez des types imbriqués profonds en un seul coup",
+    "description": "Bibliothèque proc-macro générant des structs et enums complexes profondément imbriqués depuis un DSL compact. Les types inline sont automatiquement aplanis, dérivés et intégrés à serde — une seule macro, toute la hiérarchie de types.",
+    "shortLabel": "Générateur de Types Imbriqués"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "Pipelines déclaratifs de thread pool via macro",
+    "description": "Définissez déclarativement des pipelines de traitement multi-étapes depuis des closures. La macro pipe! génère automatiquement tout le câblage de threads et de canaux — supportant les étapes sync/async mixtes, le branching, les politiques de retry et l'arrêt gracieux.",
+    "shortLabel": "Bibliothèque de Threading Pipeline"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "Versionnez vos structs, migrez vos données",
+    "description": "Bibliothèque de sérialisation pour migrer des données entre versions de structs. Annotez vos types avec des attributs de version et des règles de migration — Hifumi auto-génère tous les structs des versions antérieures et les impls From, plus un CLI pour comparer les structs dans l'historique git.",
+    "shortLabel": "Bibliothèque de Migration de Données"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "Documentation Rust par IA depuis le code source",
+    "description": "Générateur de documentation pour crates Rust produisant du Markdown, des sites HTML statiques et des traductions multilingues alimentées par l'IA — le tout à partir de votre code source et commentaires de documentation.",
+    "shortLabel": "Générateur de Docs Rust"
   }
 }

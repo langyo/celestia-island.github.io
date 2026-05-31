@@ -66,5 +66,35 @@
     "tagline": "生產級 RBAC，以約束為設計",
     "description": "可自訂的零信任認證與 RBAC 框架。支援 ANSI INCITS 359-2004 角色繼承、職責分離與時效約束。",
     "shortLabel": "零信任認證與 RBAC 框架"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "終端應用中的富文字 Markdown 與圖表",
+    "description": "基於 ratatui 建構的 Markdown 渲染、語法高亮、Mermaid 圖表、可摺疊 JSON/TOML 樹檢視及混合捲動系統。全部功能透過 feature gate 按需引入。",
+    "shortLabel": "TUI Markdown 渲染器"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "一次巨集呼叫，生成完整巢狀型別",
+    "description": "一個 proc-macro 程式庫，透過緊湊的 DSL 生成複雜深層巢狀的 struct 與 enum。內聯型別自動展平、衍生並接入 serde——一次巨集呼叫，獲得整個型別層級。",
+    "shortLabel": "巢狀型別生成器"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "透過巨集宣告式構建執行緒池管線",
+    "description": "用閉包宣告式定義多階段處理管線。pipe! 巨集自動生成全部執行緒連線與通道管線——支援混合同步/非同步步驟、分支路由、重試策略和優雅關閉。",
+    "shortLabel": "管線執行緒庫"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "版本化你的結構體，遷移你的資料",
+    "description": "用於在不同版本間遷移資料的序列化庫。用版本屬性和遷移規則標註你的型別——Hifumi 自動生成所有舊版結構體和 From 實作，還提供 CLI 跨 git 歷史比對結構體。",
+    "shortLabel": "資料遷移庫"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI 驅動的 Rust 原始碼文件生成",
+    "description": "Rust crate 的文件產生器，從原始碼和文件註解中產生 Markdown、靜態 HTML 站台，以及 AI 驅動的多語言翻譯。",
+    "shortLabel": "Rust 文件產生器"
   }
 }

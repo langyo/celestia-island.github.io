@@ -66,5 +66,35 @@
     "tagline": "プロダクショングレードRBAC、制約による設計",
     "description": "カスタマイズ可能なゼロトラスト認証・RBACフレームワーク。ANSI INCITS 359-2004 のロール階層、職務分離、時間的制約をサポート。",
     "shortLabel": "ゼロトラスト認証・RBACフレームワーク"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "ターミナルアプリ向けリッチMarkdown＆ダイアグラム",
+    "description": "ratatui上に構築されたMarkdownレンダリング、シンタックスハイライト、Mermaidダイアグラム、折りたたみ可能なJSON/TOMLツリー、ハイブリッドスクロールシステム。フィーチャーゲートで必要な機能だけを選択可能。",
+    "shortLabel": "TUI Markdownレンダラー"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "一つのマクロで、深くネストされた型を一括生成",
+    "description": "コンパクトなDSLから複雑で深くネストされたstructとenumを生成するproc-macroライブラリ。インライン型は自動的にフラット化・derive・serde統合——マクロ一回の呼び出しで、型階層全体を取得。",
+    "shortLabel": "ネスト型ジェネレーター"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "マクロで宣言的にスレッドプールパイプラインを構築",
+    "description": "クロージャから多段処理パイプラインを宣言的に定義。pipe!マクロがスレッド接続とチャンネル配線を自動生成——同期/非同期混在、分岐ルーティング、リトライポリシー、グレースフルシャットダウンをサポート。",
+    "shortLabel": "パイプラインスレッドライブラリ"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "構造体をバージョン管理、データをマイグレーション",
+    "description": "異なるバージョン間でデータをマイグレーションするためのシリアライゼーションライブラリ。型にバージョン属性とマイグレーションルールを付与——Hifumiが古いバージョンの構造体とFrom実装を自動生成。git履歴全体の構造体diffを行うCLIも付属。",
+    "shortLabel": "データマイグレーションライブラリ"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI駆動のRustソースコードドキュメント生成",
+    "description": "Rustクレート向けドキュメントジェネレーター。ソースコードとドックコメントからMarkdown、静的HTMLサイト、AIによる多言語翻訳を生成。",
+    "shortLabel": "Rustドキュメントジェネレーター"
   }
 }

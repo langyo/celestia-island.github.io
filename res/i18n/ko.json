@@ -66,5 +66,35 @@
     "tagline": "프로덕션급 RBAC, 제약으로 설계",
     "description": "커스터마이징 가능한 제로 트러스트 인증 및 RBAC 프레임워크. ANSI INCITS 359-2004 역할 계층, 직무 분리, 시간적 제약을 지원합니다.",
     "shortLabel": "제로 트러스트 인증 및 RBAC 프레임워크"
+  },
+  "ratatui-markdown": {
+    "name": "Ratatui Markdown",
+    "tagline": "터미널 앱을 위한 리치 마크다운과 다이어그램",
+    "description": "ratatui 기반의 마크다운 렌더링, 구문 강조, Mermaid 다이어그램, 접기 가능한 JSON/TOML 트리, 하이브리드 스크롤 시스템. feature gate로 필요한 기능만 선택 가능.",
+    "shortLabel": "TUI 마크다운 렌더러"
+  },
+  "yuuka": {
+    "name": "Yuuka",
+    "tagline": "하나의 매크로로 깊게 중첩된 타입 일괄 생성",
+    "description": "간결한 DSL에서 복잡하고 깊게 중첩된 struct와 enum을 생성하는 proc-macro 라이브러리. 인라인 타입이 자동으로 평탄화·derive·serde 통합——매크로 한 번의 호출로 전체 타입 계층을 얻습니다.",
+    "shortLabel": "중첩 타입 제너레이터"
+  },
+  "ichika": {
+    "name": "Ichika",
+    "tagline": "매크로로 선언적 스레드 풀 파이프라인 구축",
+    "description": "클로저로 다단계 처리 파이프라인을 선언적으로 정의. pipe! 매크로가 스레드 연결과 채널 배선을 자동 생성——혼합 동기/비동기 단계, 분기 라우팅, 재시도 정책, 우아한 종료를 지원.",
+    "shortLabel": "파이프라인 스레딩 라이브러리"
+  },
+  "hifumi": {
+    "name": "Hifumi",
+    "tagline": "구조체를 버전 관리하고, 데이터를 마이그레이션",
+    "description": "다른 버전 간 데이터 마이그레이션을 위한 직렬화 라이브러리. 타입에 버전 속성과 마이그레이션 규칙을 주석으로 달면, Hifumi가 이전 버전 구조체와 From 구현을 자동 생성. git 히스토리 전체에서 구조체를 비교하는 CLI도 포함.",
+    "shortLabel": "데이터 마이그레이션 라이브러리"
+  },
+  "noa": {
+    "name": "Noa",
+    "tagline": "AI 기반 Rust 소스 코드 문서 생성",
+    "description": "Rust 크레이트용 문서 생성기. 소스 코드와 문서 주석에서 마크다운, 정적 HTML 사이트, AI 기반 다국어 번역을 생성합니다.",
+    "shortLabel": "Rust 문서 생성기"
   }
 }
