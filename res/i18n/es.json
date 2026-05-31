@@ -25,11 +25,11 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "Plataforma Principal",
-    "platformDesc": "Orquestación multiagente e IA conversacional",
+    "platformDesc": "Plataforma de agentes vibe coding",
     "framework": "Frameworks de Aplicación",
-    "frameworkDesc": "Frameworks web nativos WASI y bibliotecas de componentes UI",
+    "frameworkDesc": "Vías de acceso al mundo de los agentes",
     "tools": "Herramientas y Bibliotecas",
-    "toolsDesc": "Herramientas de protocolo industrial y control de acceso de confianza cero"
+    "toolsDesc": "Permitiendo a los agentes interactuar con el mundo real"
   },
   "entelecheia": {
     "name": "Entelecheia",

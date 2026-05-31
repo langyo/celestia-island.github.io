@@ -25,11 +25,11 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "コアプラットフォーム",
-    "platformDesc": "マルチエージェントオーケストレーションと対話型AI",
+    "platformDesc": "Vibe coding エージェントプラットフォーム",
     "framework": "アプリケーションフレームワーク",
-    "frameworkDesc": "WASIネイティブなWebフレームワークとUIコンポーネントライブラリ",
+    "frameworkDesc": "エージェントの世界への入り口",
     "tools": "ツール & ライブラリ",
-    "toolsDesc": "産業プロトコルツールとゼロトラストアクセス制御"
+    "toolsDesc": "エージェントが現実世界と関わるために"
   },
   "entelecheia": {
     "name": "Entelecheia",

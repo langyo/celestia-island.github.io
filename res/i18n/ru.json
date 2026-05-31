@@ -25,11 +25,11 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "Основная платформа",
-    "platformDesc": "Мульти-агентная оркестровка и диалоговый ИИ",
+    "platformDesc": "Платформа vibe coding агентов",
     "framework": "Прикладные фреймворки",
-    "frameworkDesc": "Нативные WASI веб-фреймворки и библиотеки UI-компонентов",
+    "frameworkDesc": "Способы доступа к миру агентов",
     "tools": "Инструменты и библиотеки",
-    "toolsDesc": "Инструменты промышленных протоколов и контроль доступа с нулевым доверием"
+    "toolsDesc": "Позволяя агентам взаимодействовать с реальным миром"
   },
   "entelecheia": {
     "name": "Entelecheia",

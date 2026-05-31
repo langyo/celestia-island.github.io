@@ -25,11 +25,11 @@
     "arcaea": "Arcaea",
     "decagrammaton": "Decagrammaton",
     "platform": "核心平台",
-    "platformDesc": "多智能體編排與會話式 AI",
+    "platformDesc": "Vibe coding 智能體平台",
     "framework": "應用框架",
-    "frameworkDesc": "WASI 原生 Web 框架與 UI 組件庫",
+    "frameworkDesc": "通往智能體世界的入口",
     "tools": "工具與庫",
-    "toolsDesc": "工業協議工具與零信任訪問控制"
+    "toolsDesc": "讓智能體觸及真實世界"
   },
   "entelecheia": {
     "name": "玄樞 / Entelecheia",
