@@ -34,7 +34,7 @@
                   v-for="lang in langs"
                   :key="lang.code"
                   @click="switchLang(lang.code)"
-                  class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 hover:bg-[var(--bg-secondary)] flex items-center justify-between group"
+                  class="w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-[var(--bg-secondary)] flex items-center justify-between group"
                   :class="{ 'text-[var(--text-primary)] font-medium bg-[var(--bg-secondary)]': locale === lang.code }"
                   :style="{ color: locale === lang.code ? '' : 'var(--text-secondary)' }"
                 >
@@ -107,7 +107,7 @@ onBeforeUnmount(() => window.removeEventListener('click', onClickOutside))
 
 <style scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;

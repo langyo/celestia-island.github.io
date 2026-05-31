@@ -58,7 +58,7 @@
       <a
         :href="`https://github.com/${project.repo}`"
         target="_blank"
-        class="transition-colors duration-200 text-sm flex items-center gap-1 no-underline"
+        class="transition-colors duration-300 text-sm flex items-center gap-1 no-underline"
         :style="{ color: 'var(--text-muted)' }"
         @mouseenter="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-secondary)' }"
         @mouseleave="(e) => { const el = e.currentTarget as HTMLElement; el.style.color = 'var(--text-muted)' }"
