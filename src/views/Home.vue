@@ -2,7 +2,7 @@
   <div ref="snapContainer" class="snap-container">
     <!-- Page 1: Hero -->
     <section ref="heroSection" class="snap-section">
-      <div class="h-full flex items-center justify-center px-4 pt-16">
+      <div class="section-inner">
         <div class="text-center max-w-3xl mx-auto">
           <div
             v-for="(item, i) in heroItems"
@@ -18,7 +18,7 @@
 
     <!-- Page 2: Amphoreus — Core Platform -->
     <section id="projects" class="snap-section" ref="platformSection">
-      <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8 -mt-16">
+      <div class="section-inner">
         <div class="max-w-5xl mx-auto w-full">
           <div class="text-center mb-6 reveal" :class="{ 'is-visible': platformVisible }">
             <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
@@ -29,7 +29,7 @@
             <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.platform') }}</p>
             <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.platformDesc') }}</p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="card-grid">
             <ProjectCard v-for="(p, i) in platformProjects" :key="p.id" :project="p"
               class="reveal" :class="{ 'is-visible': platformVisible }"
               :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
@@ -41,7 +41,7 @@
 
     <!-- Page 3: Arcaea — Application Frameworks -->
     <section id="framework" class="snap-section" ref="frameworkSection">
-      <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8 -mt-16">
+      <div class="section-inner">
         <div class="max-w-5xl mx-auto w-full">
           <div class="text-center mb-6 reveal" :class="{ 'is-visible': frameworkVisible }">
             <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
@@ -52,7 +52,7 @@
             <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.framework') }}</p>
             <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.frameworkDesc') }}</p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="card-grid">
             <ProjectCard v-for="(p, i) in frameworkProjects" :key="p.id" :project="p"
               class="reveal" :class="{ 'is-visible': frameworkVisible }"
               :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
@@ -64,7 +64,7 @@
 
     <!-- Page 4: Decagrammaton — Tools & Libraries -->
     <section id="tools" class="snap-section" ref="toolsSection">
-      <div class="h-full flex flex-col items-center justify-center px-4 pt-16 pb-8 -mt-16">
+      <div class="section-inner">
         <div class="max-w-6xl mx-auto w-full">
           <div class="text-center mb-6 reveal" :class="{ 'is-visible': toolsVisible }">
             <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
@@ -111,8 +111,8 @@
     </section>
 
     <!-- Page 5: About + Footer -->
-    <section id="about" class="snap-start min-h-screen flex flex-col" ref="aboutSection">
-      <div class="flex-1 flex items-center justify-center px-4 py-8">
+    <section id="about" class="snap-start flex flex-col about-section" ref="aboutSection">
+      <div class="flex-1 flex items-center justify-center px-4 py-6 sm:py-8">
         <div
           class="glass-card-static text-center p-5 sm:p-6 max-w-xl mx-auto reveal"
           :class="{ 'is-visible': aboutVisible }"
@@ -236,7 +236,8 @@ function updateToolsCardWidth() {
   const el = toolsScrollRef.value
   if (!el) return
   const gap = 16
-  const visible = 3.2
+  const isMobile = window.innerWidth < 640
+  const visible = isMobile ? 1.2 : 3.2
   const w = (el.clientWidth - Math.ceil(visible - 1) * gap) / visible
   toolsCardWidth.value = `${w}px`
 }
@@ -348,6 +349,7 @@ onBeforeUnmount(() => {
 .snap-container {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -356,6 +358,7 @@ onBeforeUnmount(() => {
 .snap-section {
   scroll-snap-align: start;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 
@@ -446,6 +449,7 @@ onBeforeUnmount(() => {
   scrollbar-width: none;
   flex: 1;
   min-width: 0;
+  overscroll-behavior-x: contain;
 }
 
 .tools-scroll-container::-webkit-scrollbar {
@@ -465,5 +469,71 @@ onBeforeUnmount(() => {
 
 .tool-card-wrapper :deep(> *) {
   height: 100%;
+}
+
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 4rem 1rem 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 639px) {
+  .card-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .card-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .card-grid > :deep(*) {
+    flex-shrink: 0;
+    width: calc((100% - 12px) / 1.2);
+    min-width: calc((100% - 12px) / 1.2);
+  }
+
+  .section-inner {
+    padding: 4.5rem 0.75rem 1rem;
+  }
+
+  .tools-scroll-arrow {
+    display: none;
+  }
+
+  .tools-scroll-track {
+    gap: 12px;
+  }
+
+  .tool-card-wrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 639px) and (max-height: 500px) {
+  .section-inner {
+    padding: 3.75rem 0.75rem 0.5rem;
+  }
+
+  .tool-card-wrapper {
+    height: min(180px, 50dvh);
+  }
+}
+
+.about-section {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 </style>
