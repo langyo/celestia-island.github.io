@@ -111,7 +111,7 @@
     </section>
 
     <!-- Page 5: About + Footer -->
-    <section id="about" class="snap-start min-h-screen flex flex-col" ref="aboutSection">
+    <section id="about" class="snap-start flex flex-col about-section" ref="aboutSection">
       <div class="flex-1 flex items-center justify-center px-4 py-8">
         <div
           class="glass-card-static text-center p-5 sm:p-6 max-w-xl mx-auto reveal"
@@ -236,7 +236,8 @@ function updateToolsCardWidth() {
   const el = toolsScrollRef.value
   if (!el) return
   const gap = 16
-  const visible = 3.2
+  const isMobile = window.innerWidth < 640
+  const visible = isMobile ? 1.2 : 3.2
   const w = (el.clientWidth - Math.ceil(visible - 1) * gap) / visible
   toolsCardWidth.value = `${w}px`
 }
@@ -348,6 +349,7 @@ onBeforeUnmount(() => {
 .snap-container {
   position: relative;
   height: 100vh;
+  height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -356,6 +358,7 @@ onBeforeUnmount(() => {
 .snap-section {
   scroll-snap-align: start;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 
@@ -446,6 +449,7 @@ onBeforeUnmount(() => {
   scrollbar-width: none;
   flex: 1;
   min-width: 0;
+  overscroll-behavior-x: contain;
 }
 
 .tools-scroll-container::-webkit-scrollbar {
@@ -465,5 +469,40 @@ onBeforeUnmount(() => {
 
 .tool-card-wrapper :deep(> *) {
   height: 100%;
+}
+
+@media (max-width: 639px) {
+  .snap-container {
+    scroll-snap-type: y proximity;
+  }
+
+  .snap-section {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .tools-scroll-arrow {
+    display: none;
+  }
+
+  .tools-scroll-track {
+    gap: 12px;
+  }
+
+  .tool-card-wrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 639px) and (orientation: landscape) {
+  .tool-card-wrapper {
+    height: min(200px, 55dvh);
+  }
+}
+
+.about-section {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 </style>
