@@ -59,19 +59,19 @@
     "name": "Aoba",
     "tagline": "Depuración y Simulación Multi-Protocolo para Modbus RTU",
     "description": "Inspecciona, prueba y simula dispositivos industriales Modbus directamente desde tu terminal. Conéctate a hardware real, crea dispositivos virtuales para pruebas y conecta datos entre protocolos — un compañero indispensable para ingenieros de automatización, tanto en planta como en pipelines CI.",
-    "shortLabel": "Herramienta de Depuración y Simulación Modbus RTU"
+    "shortLabel": "Herramienta de Depuración Modbus"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "RBAC de Grado Producción, Diseñado con Restricciones",
     "description": "Framework de autenticación zero-trust y RBAC personalizable en Rust. Soporta jerarquías de roles, separación de funciones y restricciones temporales según ANSI INCITS 359-2004.",
-    "shortLabel": "Framework de Autenticación Zero-Trust y RBAC"
+    "shortLabel": "Framework RBAC"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
     "tagline": "Markdown enriquecido y diagramas para apps de terminal",
     "description": "Renderizado Markdown, resaltado de sintaxis, diagramas Mermaid, árboles JSON/TOML colapsables y un sistema de scroll híbrido — todo sobre ratatui. Funciones seleccionables vía feature gates.",
-    "shortLabel": "Renderizador TUI de Markdown"
+    "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",

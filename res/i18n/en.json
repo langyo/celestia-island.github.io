@@ -59,19 +59,19 @@
     "name": "Aoba",
     "tagline": "Multi-Protocol Debugging & Simulation for Modbus RTU",
     "description": "Inspect, test, and simulate Modbus industrial devices right from your terminal. Connect to real hardware, spin up virtual devices for testing, and bridge data between protocols — an indispensable companion for automation engineers on the factory floor and in CI pipelines.",
-    "shortLabel": "Modbus RTU Debug & Simulation Tool"
+    "shortLabel": "Modbus Debug Tool"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "Production-Grade RBAC, Constrained by Design",
     "description": "Customizable zero-trust authentication & RBAC framework in Rust. Supports ANSI INCITS 359-2004 role hierarchies, separation of duties, and temporal constraints.",
-    "shortLabel": "Zero-Trust Auth & RBAC Framework"
+    "shortLabel": "RBAC Framework"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
     "tagline": "Rich markdown and diagrams for terminal apps",
     "description": "Markdown rendering, syntax highlighting, Mermaid diagrams, collapsible JSON/TOML trees, and a hybrid scroll system — all built on ratatui. Feature-gated for selective inclusion in any TUI application.",
-    "shortLabel": "TUI Markdown Renderer"
+    "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",

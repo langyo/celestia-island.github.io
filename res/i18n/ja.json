@@ -59,19 +59,19 @@
     "name": "Aoba",
     "tagline": "Modbus RTU マルチプロトコルデバッグ・シミュレーション",
     "description": "Modbus産業用デバイスの検査・テスト・シミュレーションをターミナル上で。実機への接続、テスト用仮想デバイスの起動、プロトコル間のデータブリッジ——生産現場でもCIパイプラインでも、自動化エンジニアの頼れる相棒です。",
-    "shortLabel": "Modbus RTU デバッグ・シミュレーションツール"
+    "shortLabel": "Modbus デバッグツール"
   },
   "kirino": {
     "name": "Kirino",
     "tagline": "プロダクショングレードRBAC、制約による設計",
     "description": "カスタマイズ可能なゼロトラスト認証・RBACフレームワーク。ANSI INCITS 359-2004 のロール階層、職務分離、時間的制約をサポート。",
-    "shortLabel": "ゼロトラスト認証・RBACフレームワーク"
+    "shortLabel": "RBAC フレームワーク"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
     "tagline": "ターミナルアプリ向けリッチMarkdown＆ダイアグラム",
     "description": "ratatui上に構築されたMarkdownレンダリング、シンタックスハイライト、Mermaidダイアグラム、折りたたみ可能なJSON/TOMLツリー、ハイブリッドスクロールシステム。フィーチャーゲートで必要な機能だけを選択可能。",
-    "shortLabel": "TUI Markdownレンダラー"
+    "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",
