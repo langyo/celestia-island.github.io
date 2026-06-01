@@ -75,18 +75,36 @@
             <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.tools') }}</p>
             <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.toolsDesc') }}</p>
           </div>
-          <div class="tools-scroll-container">
-            <div class="tools-scroll-track">
-              <div
-                v-for="(p, i) in toolProjects"
-                :key="p.id"
-                class="tool-card-wrapper reveal"
-                :class="{ 'is-visible': toolsVisible }"
-                :style="{ transitionDelay: `${0.08 + i * 0.06}s` }"
-              >
-                <ProjectCard :project="p" />
+          <div class="tools-scroll-outer">
+            <button
+              class="tools-scroll-arrow tools-scroll-arrow-left"
+              :class="{ 'is-hidden': !toolsCanScrollLeft }"
+              @click="scrollToolsBy(-1)"
+              aria-label="Scroll left"
+            >
+              <div class="i-lucide-chevron-left w-5 h-5" />
+            </button>
+            <div class="tools-scroll-container" ref="toolsScrollRef" @wheel="onToolsWheel">
+              <div class="tools-scroll-track">
+                <div
+                  v-for="(p, i) in toolProjects"
+                  :key="p.id"
+                  class="tool-card-wrapper reveal"
+                  :class="{ 'is-visible': toolsVisible }"
+                  :style="{ width: toolsCardWidth, minWidth: toolsCardWidth, transitionDelay: `${0.08 + i * 0.06}s` }"
+                >
+                  <ProjectCard :project="p" />
+                </div>
               </div>
             </div>
+            <button
+              class="tools-scroll-arrow tools-scroll-arrow-right"
+              :class="{ 'is-hidden': !toolsCanScrollRight }"
+              @click="scrollToolsBy(1)"
+              aria-label="Scroll right"
+            >
+              <div class="i-lucide-chevron-right w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
@@ -148,7 +166,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { marked } from 'marked'
 import { projects } from '@/types/project'
@@ -209,6 +227,70 @@ const platformProjects = computed(() => projects.filter(p => ['entelecheia', 'sh
 const frameworkProjects = computed(() => projects.filter(p => ['tairitsu', 'hikari'].includes(p.id)))
 const toolProjects = computed(() => projects.filter(p => ['aoba', 'kirino', 'ratatui-markdown', 'yuuka', 'ichika', 'hifumi', 'noa'].includes(p.id)))
 
+const toolsScrollRef = ref<HTMLDivElement>()
+const toolsCanScrollLeft = ref(false)
+const toolsCanScrollRight = ref(false)
+const toolsCardWidth = ref('280px')
+
+function updateToolsCardWidth() {
+  const el = toolsScrollRef.value
+  if (!el) return
+  const gap = 16
+  const visible = 3.2
+  const w = (el.clientWidth - Math.ceil(visible - 1) * gap) / visible
+  toolsCardWidth.value = `${w}px`
+}
+
+function updateToolsScrollState() {
+  const el = toolsScrollRef.value
+  if (!el) return
+  toolsCanScrollLeft.value = el.scrollLeft > 2
+  toolsCanScrollRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 2
+}
+
+function scrollToolsBy(direction: number) {
+  const el = toolsScrollRef.value
+  if (!el) return
+  el.scrollBy({ left: direction * parseFloat(toolsCardWidth.value) * 1.1, behavior: 'smooth' })
+}
+
+let _wheelAccum = 0
+let _wheelRaf = 0
+
+function onToolsWheel(e: WheelEvent) {
+  const el = toolsScrollRef.value
+  if (!el) return
+
+  const delta = e.deltaY || e.deltaX
+  if (delta === 0) return
+
+  const atStart = el.scrollLeft <= 0 && delta < 0
+  const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0
+
+  if (atStart || atEnd) {
+    _wheelAccum = 0
+    return
+  }
+
+  e.preventDefault()
+
+  _wheelAccum += delta
+
+  if (!_wheelRaf) {
+    _wheelRaf = requestAnimationFrame(function step() {
+      if (Math.abs(_wheelAccum) < 0.5) {
+        _wheelRaf = 0
+        updateToolsScrollState()
+        return
+      }
+      const consume = _wheelAccum * 0.25
+      _wheelAccum -= consume
+      el.scrollLeft += consume
+      _wheelRaf = requestAnimationFrame(step)
+    })
+  }
+}
+
 const heroItems = computed(() => [
   `<div class="text-6xl sm:text-8xl font-bold tracking-tight mb-4"><span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">Celestia Island</span></div>`,
   `<p class="text-base max-w-xl mx-auto" style="color: var(--text-tertiary)">${t('site.description')}</p>`,
@@ -241,10 +323,24 @@ onMounted(() => {
   for (const el of sections.value) {
     if (el) observer.observe(el)
   }
+
+  nextTick(() => {
+    updateToolsCardWidth()
+    updateToolsScrollState()
+    toolsScrollRef.value?.addEventListener('scroll', updateToolsScrollState, { passive: true })
+    window.addEventListener('resize', onToolsResize)
+  })
 })
+
+function onToolsResize() {
+  updateToolsCardWidth()
+  updateToolsScrollState()
+}
 
 onBeforeUnmount(() => {
   observer?.disconnect()
+  toolsScrollRef.value?.removeEventListener('scroll', updateToolsScrollState)
+  window.removeEventListener('resize', onToolsResize)
 })
 </script>
 
@@ -311,27 +407,49 @@ onBeforeUnmount(() => {
   transition-delay: 0.3s;
 }
 
+.tools-scroll-outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tools-scroll-arrow {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+.tools-scroll-arrow:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+.tools-scroll-arrow.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .tools-scroll-container {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(167, 139, 250, 0.3) transparent;
-  padding-bottom: 8px;
-  mask-image: linear-gradient(to right, transparent, black 24px, black calc(100% - 24px), transparent);
+  scrollbar-width: none;
+  flex: 1;
+  min-width: 0;
 }
 
 .tools-scroll-container::-webkit-scrollbar {
-  height: 4px;
-}
-
-.tools-scroll-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.tools-scroll-container::-webkit-scrollbar-thumb {
-  background: rgba(167, 139, 250, 0.3);
-  border-radius: 2px;
+  display: none;
 }
 
 .tools-scroll-track {
@@ -341,7 +459,11 @@ onBeforeUnmount(() => {
 }
 
 .tool-card-wrapper {
-  flex: 0 0 280px;
-  min-width: 280px;
+  flex-shrink: 0;
+  height: 280px;
+}
+
+.tool-card-wrapper :deep(> *) {
+  height: 100%;
 }
 </style>
