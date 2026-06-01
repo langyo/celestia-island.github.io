@@ -8,6 +8,7 @@ precision highp float;
 
 uniform float u_time;
 uniform vec2 u_resolution;
+uniform float u_scale;
 varying vec2 vUv;
 
 float hash(float n) { return fract(sin(n * 127.1) * 43758.5453); }
@@ -162,7 +163,7 @@ void main() {
     
     float anim = u_time;
     float breath = 1.0 + sin(anim * PI / 15.0) * 0.015;
-    vec2 p = uv / breath;
+    vec2 p = uv / breath / u_scale;
     
     float color_flow = anim * (PI / 30.0);
     float stroke_flow = anim * 0.15;

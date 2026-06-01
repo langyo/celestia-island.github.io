@@ -3,11 +3,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useTheme } from '@/composables/useTheme'
 import * as THREE from 'three'
 import logoVert from '../../shaders/logo.vert?raw'
 import logoFrag from '../../shaders/logo.frag?raw'
+import logoLightFrag from '../../shaders/logo-light.frag?raw'
+import entelecheiaLogo from '@res/logos/entelecheia.webp'
 
 const containerRef = ref<HTMLDivElement>()
 const { theme } = useTheme()
@@ -15,7 +17,9 @@ const { theme } = useTheme()
 let renderer: THREE.WebGLRenderer
 let scene: THREE.Scene
 let camera: THREE.OrthographicCamera
+let logoMesh: THREE.Mesh
 let logoMaterial: THREE.ShaderMaterial
+let lightMaterial: THREE.ShaderMaterial
 let starMaterial: THREE.PointsMaterial
 let twinkleMaterial: THREE.PointsMaterial
 let starPoints: THREE.Points
@@ -23,6 +27,21 @@ let starTwinkle: THREE.Points
 let animationId: number
 let clock: THREE.Clock
 let visible = true
+
+watch(theme, (t) => {
+  if (!logoMesh) return
+  if (t === 'dark') {
+    logoMesh.material = logoMaterial
+    starPoints.visible = true
+    starTwinkle.visible = true
+    clock = new THREE.Clock()
+    clock.start()
+  } else {
+    logoMesh.material = lightMaterial
+    starPoints.visible = false
+    starTwinkle.visible = false
+  }
+})
 
 function createStarfield() {
   const count = 1200
@@ -109,12 +128,13 @@ function createStarfield() {
 }
 
 function createLogoPlane() {
-  const geometry = new THREE.PlaneGeometry(1.8, 1.8)
+  const geometry = new THREE.PlaneGeometry(2.4, 2.4)
 
   logoMaterial = new THREE.ShaderMaterial({
     uniforms: {
       u_time: { value: 0 },
       u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+      u_scale: { value: 1.0 },
     },
     vertexShader: logoVert,
     fragmentShader: logoFrag,
@@ -124,9 +144,29 @@ function createLogoPlane() {
     blending: THREE.NormalBlending,
   })
 
-  const mesh = new THREE.Mesh(geometry, logoMaterial)
-  mesh.position.z = -1
-  scene.add(mesh)
+  const lightTex = new THREE.TextureLoader().load(entelecheiaLogo)
+  lightTex.generateMipmaps = false
+  lightTex.minFilter = THREE.LinearFilter
+  lightTex.magFilter = THREE.LinearFilter
+
+  lightMaterial = new THREE.ShaderMaterial({
+    uniforms: {
+      u_time: { value: 0 },
+      u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+      u_scale: { value: 1.0 },
+      u_texture: { value: lightTex },
+    },
+    vertexShader: logoVert,
+    fragmentShader: logoLightFrag,
+    transparent: true,
+    depthTest: false,
+    depthWrite: false,
+    blending: THREE.NormalBlending,
+  })
+
+  logoMesh = new THREE.Mesh(geometry, theme.value === 'dark' ? logoMaterial : lightMaterial)
+  logoMesh.position.z = -1
+  scene.add(logoMesh)
 }
 
 function init() {
@@ -148,7 +188,14 @@ function init() {
   createStarfield()
   createLogoPlane()
 
+  if (theme.value !== 'dark') {
+    starPoints.visible = false
+    starTwinkle.visible = false
+  }
+
   logoMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
+
+  updateScale()
 
   animate()
 }
@@ -157,21 +204,38 @@ function animate() {
   animationId = requestAnimationFrame(animate)
 
   if (!visible) return
-  if (theme.value !== 'dark') return
 
-  const t = clock.getElapsedTime()
+  if (theme.value === 'dark') {
+    const t = clock.getElapsedTime()
 
-  logoMaterial.uniforms.u_time.value = t
+    logoMaterial.uniforms.u_time.value = t
 
-  starPoints.rotation.y += 0.00018
-  starPoints.rotation.x += 0.00006
-  starMaterial.opacity = 0.38 + 0.12 * Math.sin(t * 0.7)
+    starPoints.rotation.y += 0.00018
+    starPoints.rotation.x += 0.00006
+    starMaterial.opacity = 0.38 + 0.12 * Math.sin(t * 0.7)
 
-  starTwinkle.rotation.y -= 0.00012
-  starTwinkle.rotation.z += 0.00004
-  twinkleMaterial.opacity = 0.22 + 0.12 * Math.sin(t * 0.5 + 1)
+    starTwinkle.rotation.y -= 0.00012
+    starTwinkle.rotation.z += 0.00004
+    twinkleMaterial.opacity = 0.22 + 0.12 * Math.sin(t * 0.5 + 1)
+  } else {
+    const t = clock.getElapsedTime()
+    lightMaterial.uniforms.u_time.value = t
+  }
 
   renderer.render(scene, camera)
+}
+
+function getScale(w: number, h: number) {
+  const aspect = w / h
+  if (aspect < 1.0) return Math.min(5.0, 1.6 / aspect)
+  return 1.0
+}
+
+function updateScale() {
+  if (!renderer || !logoMaterial || !lightMaterial) return
+  const s = getScale(window.innerWidth, window.innerHeight)
+  logoMaterial.uniforms.u_scale.value = s
+  lightMaterial.uniforms.u_scale.value = s
 }
 
 function onResize() {
@@ -179,7 +243,9 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight)
   if (logoMaterial) {
     logoMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
+    lightMaterial!.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
   }
+  updateScale()
 }
 
 onMounted(() => {
@@ -205,5 +271,7 @@ onBeforeUnmount(() => {
   starTwinkle?.geometry.dispose()
   twinkleMaterial?.dispose()
   logoMaterial?.dispose()
+  lightMaterial?.dispose()
+  logoMesh?.geometry.dispose()
 })
 </script>
