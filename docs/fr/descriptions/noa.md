@@ -1,5 +1,5 @@
 # Noa
 
-Documentation pour crates Rust, générée depuis le code source.
+Système de contrôle de version distribué natif pour l'IA — git pour le code source, noa pour les données d'itération des agents IA.
 
-Un générateur de documentation qui analyse le code source Rust et les commentaires de documentation pour produire des pages Markdown, des sites HTML statiques et des traductions multilingues alimentées par l'IA. Fonctionnalités prévues : cache basé sur RON, génération incrémentale et intégration avec les outils de documentation existants.
+Coexiste avec `.git` dans le même arbre de travail. Les journaux JSONL en ajout seul par agent, sans verrou, permettent à des centaines d'agents d'écrire simultanément. Historique immuable basé sur des snapshots préservant la trace complète des itérations. Fusion à trois voies entre espaces de travail avec détection de conflits au niveau des fichiers. Compatibilité totale avec le protocole git via le pont CLI système `git`. Multiplateforme (Linux, macOS), publié sur crates.io sous le nom `libnoa`.

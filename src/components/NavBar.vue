@@ -61,8 +61,8 @@ const showLangMenu = ref(false)
 
 const langs = [
   { code: 'en', label: 'English' },
-  { code: 'zh-CN', label: '简体中文' },
-  { code: 'zh-TW', label: '繁體中文' },
+  { code: 'zhs', label: '简体中文' },
+  { code: 'zht', label: '繁體中文' },
   { code: 'ja', label: '日本語' },
   { code: 'ko', label: '한국어' },
   { code: 'es', label: 'Español' },
