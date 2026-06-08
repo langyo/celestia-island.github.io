@@ -50,14 +50,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, inject } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTheme } from '@/composables/useTheme'
+import { SNAP_CONTAINER_KEY } from '@/composables/useSnapContainer'
 import celestiaLogo from '@res/logos/celestia.webp'
 
 const { t, locale } = useI18n()
 const { theme, toggleTheme } = useTheme()
 const showLangMenu = ref(false)
+const snapContainer = inject<HTMLDivElement | null>(SNAP_CONTAINER_KEY, null)
 
 const langs = [
   { code: 'en', label: 'English' },
@@ -81,17 +83,8 @@ function switchLang(code: string) {
   showLangMenu.value = false
 }
 
-function getSnapContainer(): HTMLDivElement | null {
-  return document.querySelector('.snap-container')
-}
-
 function scrollToTop() {
-  getSnapContainer()?.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
-function scrollToProjects() {
-  const el = document.querySelector('#projects')
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
+  snapContainer?.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function onClickOutside(e: MouseEvent) {

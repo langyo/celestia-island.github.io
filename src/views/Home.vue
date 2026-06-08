@@ -170,6 +170,7 @@ import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { marked } from 'marked'
 import { projects } from '@/types/project'
+import { setSnapContainer } from '@/composables/useSnapContainer'
 import ProjectCard from '@/components/ProjectCard.vue'
 import celestiaLogo from '@res/logos/celestia.webp'
 
@@ -302,6 +303,7 @@ const heroItems = computed(() => [
 let observer: IntersectionObserver
 
 onMounted(() => {
+  setSnapContainer(snapContainer.value ?? null)
   heroVisible.value = true
 
   const sectionMap: Record<string, () => void> = {}
@@ -339,6 +341,7 @@ function onToolsResize() {
 }
 
 onBeforeUnmount(() => {
+  setSnapContainer(null)
   observer?.disconnect()
   toolsScrollRef.value?.removeEventListener('scroll', updateToolsScrollState)
   window.removeEventListener('resize', onToolsResize)
