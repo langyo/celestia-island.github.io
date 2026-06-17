@@ -1,11 +1,25 @@
 <template>
-  <div ref="containerRef" class="fixed inset-0 z-0 pointer-events-none" />
+  <div ref="containerRef" class="fixed inset-0 z-0 pointer-events-none" aria-hidden="true" />
 </template>
 
 <script setup lang="ts">
 import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useTheme } from '@/composables/useTheme'
-import * as THREE from 'three'
+import { WebGLRenderer } from 'three/src/renderers/WebGLRenderer.js'
+import { Scene } from 'three/src/scenes/Scene.js'
+import { OrthographicCamera } from 'three/src/cameras/OrthographicCamera.js'
+import { Mesh } from 'three/src/objects/Mesh.js'
+import { ShaderMaterial } from 'three/src/materials/ShaderMaterial.js'
+import { PointsMaterial } from 'three/src/materials/PointsMaterial.js'
+import { Points } from 'three/src/objects/Points.js'
+import { PlaneGeometry } from 'three/src/geometries/PlaneGeometry.js'
+import { BufferGeometry } from 'three/src/core/BufferGeometry.js'
+import { BufferAttribute } from 'three/src/core/BufferAttribute.js'
+import { CanvasTexture } from 'three/src/textures/CanvasTexture.js'
+import { TextureLoader } from 'three/src/loaders/TextureLoader.js'
+import { Clock } from 'three/src/core/Clock.js'
+import { Vector2 } from 'three/src/math/Vector2.js'
+import { AdditiveBlending, NormalBlending, LinearFilter } from 'three/src/constants.js'
 import logoVert from '../../shaders/logo.vert?raw'
 import logoFrag from '../../shaders/logo.frag?raw'
 import logoLightFrag from '../../shaders/logo-light.frag?raw'
@@ -14,18 +28,18 @@ import entelecheiaLogo from '@res/logos/entelecheia.webp'
 const containerRef = ref<HTMLDivElement>()
 const { theme } = useTheme()
 
-let renderer: THREE.WebGLRenderer
-let scene: THREE.Scene
-let camera: THREE.OrthographicCamera
-let logoMesh: THREE.Mesh
-let logoMaterial: THREE.ShaderMaterial
-let lightMaterial: THREE.ShaderMaterial
-let starMaterial: THREE.PointsMaterial
-let twinkleMaterial: THREE.PointsMaterial
-let starPoints: THREE.Points
-let starTwinkle: THREE.Points
+let renderer: WebGLRenderer
+let scene: Scene
+let camera: OrthographicCamera
+let logoMesh: Mesh
+let logoMaterial: ShaderMaterial
+let lightMaterial: ShaderMaterial
+let starMaterial: PointsMaterial
+let twinkleMaterial: PointsMaterial
+let starPoints: Points
+let starTwinkle: Points
 let animationId: number
-let clock: THREE.Clock
+let clock: Clock
 let visible = true
 
 watch(theme, (t) => {
@@ -34,7 +48,7 @@ watch(theme, (t) => {
     logoMesh.material = logoMaterial
     starPoints.visible = true
     starTwinkle.visible = true
-    clock = new THREE.Clock()
+    clock = new Clock()
     clock.start()
   } else {
     logoMesh.material = lightMaterial
@@ -56,8 +70,8 @@ function createStarfield() {
     positions[i * 3 + 2] = -r * Math.cos(phi)
   }
 
-  const geometry = new THREE.BufferGeometry()
-  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+  const geometry = new BufferGeometry()
+  geometry.setAttribute('position', new BufferAttribute(positions, 3))
 
   const canvas = document.createElement('canvas')
   canvas.width = 64
@@ -71,22 +85,22 @@ function createStarfield() {
   ctx.fillStyle = gradient
   ctx.fillRect(0, 0, 64, 64)
 
-  const texture = new THREE.CanvasTexture(canvas)
+  const texture = new CanvasTexture(canvas)
   texture.generateMipmaps = false
-  texture.minFilter = THREE.LinearFilter
-  texture.magFilter = THREE.LinearFilter
+  texture.minFilter = LinearFilter
+  texture.magFilter = LinearFilter
 
-  starMaterial = new THREE.PointsMaterial({
+  starMaterial = new PointsMaterial({
     size: 0.035,
     map: texture,
-    blending: THREE.AdditiveBlending,
+    blending: AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
     opacity: 0.45,
   })
 
-  starPoints = new THREE.Points(geometry, starMaterial)
+  starPoints = new Points(geometry, starMaterial)
   scene.add(starPoints)
 
   const count2 = 600
@@ -99,8 +113,8 @@ function createStarfield() {
     positions2[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta)
     positions2[i * 3 + 2] = -r * Math.cos(phi)
   }
-  const geometry2 = new THREE.BufferGeometry()
-  geometry2.setAttribute('position', new THREE.BufferAttribute(positions2, 3))
+  const geometry2 = new BufferGeometry()
+  geometry2.setAttribute('position', new BufferAttribute(positions2, 3))
 
   const canvas2 = document.createElement('canvas')
   canvas2.width = 32
@@ -113,27 +127,27 @@ function createStarfield() {
   ctx2.fillStyle = gradient2
   ctx2.fillRect(0, 0, 32, 32)
 
-  twinkleMaterial = new THREE.PointsMaterial({
+  twinkleMaterial = new PointsMaterial({
     size: 0.022,
-    map: new THREE.CanvasTexture(canvas2),
-    blending: THREE.AdditiveBlending,
+    map: new CanvasTexture(canvas2),
+    blending: AdditiveBlending,
     depthWrite: false,
     depthTest: false,
     transparent: true,
     opacity: 0.28,
   })
 
-  starTwinkle = new THREE.Points(geometry2, twinkleMaterial)
+  starTwinkle = new Points(geometry2, twinkleMaterial)
   scene.add(starTwinkle)
 }
 
 function createLogoPlane() {
-  const geometry = new THREE.PlaneGeometry(2.4, 2.4)
+  const geometry = new PlaneGeometry(2.4, 2.4)
 
-  logoMaterial = new THREE.ShaderMaterial({
+  logoMaterial = new ShaderMaterial({
     uniforms: {
       u_time: { value: 0 },
-      u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+      u_resolution: { value: new Vector2(window.innerWidth, window.innerHeight) },
       u_scale: { value: 1.0 },
     },
     vertexShader: logoVert,
@@ -141,18 +155,18 @@ function createLogoPlane() {
     transparent: true,
     depthTest: false,
     depthWrite: false,
-    blending: THREE.NormalBlending,
+    blending: NormalBlending,
   })
 
-  const lightTex = new THREE.TextureLoader().load(entelecheiaLogo)
+  const lightTex = new TextureLoader().load(entelecheiaLogo)
   lightTex.generateMipmaps = false
-  lightTex.minFilter = THREE.LinearFilter
-  lightTex.magFilter = THREE.LinearFilter
+  lightTex.minFilter = LinearFilter
+  lightTex.magFilter = LinearFilter
 
-  lightMaterial = new THREE.ShaderMaterial({
+  lightMaterial = new ShaderMaterial({
     uniforms: {
       u_time: { value: 0 },
-      u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+      u_resolution: { value: new Vector2(window.innerWidth, window.innerHeight) },
       u_scale: { value: 1.0 },
       u_texture: { value: lightTex },
     },
@@ -161,10 +175,10 @@ function createLogoPlane() {
     transparent: true,
     depthTest: false,
     depthWrite: false,
-    blending: THREE.NormalBlending,
+    blending: NormalBlending,
   })
 
-  logoMesh = new THREE.Mesh(geometry, theme.value === 'dark' ? logoMaterial : lightMaterial)
+  logoMesh = new Mesh(geometry, theme.value === 'dark' ? logoMaterial : lightMaterial)
   logoMesh.position.z = -1
   scene.add(logoMesh)
 }
@@ -172,17 +186,17 @@ function createLogoPlane() {
 function init() {
   if (!containerRef.value) return
 
-  clock = new THREE.Clock()
+  clock = new Clock()
   clock.start()
 
-  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'low-power' })
+  renderer = new WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'low-power' })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setClearColor(0x000000, 0)
   containerRef.value.appendChild(renderer.domElement)
 
-  scene = new THREE.Scene()
-  camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10)
+  scene = new Scene()
+  camera = new OrthographicCamera(-1, 1, 1, -1, 0.1, 10)
   camera.position.z = 1
 
   createStarfield()

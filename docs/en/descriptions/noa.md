@@ -1,5 +1,5 @@
 # Noa
 
-Documentation for Rust crates, generated from source.
+AI-native distributed version control system — git for source code, noa for AI agent iteration data.
 
-A document generator that parses Rust source code and doc comments to produce Markdown pages, static HTML sites, and AI-powered multi-language translations. Planned features include RON-based caching, incremental generation, and integration with existing doc tooling.
+Coexists with `.git` in the same working tree. Per-agent zero-lock JSONL append-only logs enable hundreds of agents to write concurrently. Snapshot-based immutable history preserves full iteration trace. Three-way workspace merge with file-level conflict detection. Full git protocol compatibility via system `git` CLI bridge. Cross-platform (Linux, macOS), published on crates.io as `libnoa`.
