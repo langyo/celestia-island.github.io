@@ -1,7 +1,7 @@
 import type { InjectionKey, App, Ref } from 'vue'
 import { ref, provide } from 'vue'
 
-export const SNAP_CONTAINER_KEY: InjectionKey<HTMLDivElement | null> = Symbol('snap-container')
+export const SNAP_CONTAINER_KEY: InjectionKey<Ref<HTMLDivElement | null>> = Symbol('snap-container')
 
 const snapContainerRef = ref<HTMLDivElement | null>(null)
 

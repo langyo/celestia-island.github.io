@@ -1,0 +1,107 @@
+<template>
+  <section id="about" class="snap-start flex flex-col about-section" ref="el">
+    <div class="flex-1 flex items-center justify-center px-4 py-6 sm:py-8">
+      <div
+        class="glass-card-static text-center p-5 sm:p-6 max-w-xl mx-auto reveal"
+        :class="{ 'is-visible': visible }"
+      >
+        <div class="mb-2 flex justify-center">
+          <img
+            :src="celestiaLogo"
+            alt="Celestia Island Logo"
+            class="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-xl animate-glow"
+            draggable="false"
+          />
+        </div>
+        <div
+          class="about-text leading-normal max-w-lg mx-auto about-content prose prose-sm prose-zinc dark:prose-invert text-secondary"
+          v-html="renderedAboutText"
+        ></div>
+      </div>
+    </div>
+
+    <footer
+      class="border-t backdrop-blur-md reveal py-6 border-subtle bg-footer delay-300"
+      :class="{ 'is-visible': visible }"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col items-center justify-center gap-3 text-sm text-muted">
+        <a href="https://github.com/celestia-island" target="_blank" class="nav-icon-btn no-underline group" title="GitHub">
+          <div class="i-lucide-github w-5 h-5 group-hover:text-[var(--text-primary)] transition-colors" />
+        </a>
+        <span class="text-tertiary">
+          「{{ t('site.slogan') }}」
+        </span>
+        <span>{{ t('site.footer.copyright', { year: new Date().getFullYear() }) }}</span>
+      </div>
+    </footer>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { marked } from 'marked'
+import { useReveal } from '@/composables/useReveal'
+import celestiaLogo from '@res/logos/celestia.webp'
+
+const aboutDocs = import.meta.glob('../../../docs/**/about.md', { query: '?raw', import: 'default', eager: true })
+
+const { t, locale } = useI18n()
+const { visible, triggerReveal } = useReveal()
+const el = ref<HTMLElement>()
+
+const renderedAboutText = computed(() => {
+  const currentLang = locale.value
+  const fallbackLang = 'en'
+  const docPath = `../../../docs/${currentLang}/about.md`
+  const fallbackPath = `../../../docs/${fallbackLang}/about.md`
+
+  const mdContent = (aboutDocs[docPath] as string) || (aboutDocs[fallbackPath] as string) || ''
+  return marked.parse(mdContent)
+})
+
+defineExpose({ el, triggerReveal })
+</script>
+
+<style scoped>
+.about-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  text-align: center;
+}
+.about-content :deep(p) {
+  margin-bottom: 1.2em;
+  color: var(--text-secondary);
+}
+.about-content :deep(p:last-child) {
+  margin-bottom: 0;
+}
+.about-content :deep(a) {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-subtle);
+  text-underline-offset: 4px;
+  transition: all 0.3s ease;
+}
+.about-content :deep(a:hover) {
+  color: #a78bfa;
+  text-decoration-color: #a78bfa;
+}
+.about-content :deep(strong) {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-text {
+  font-size: 0.8125rem;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.about-section {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+</style>

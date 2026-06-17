@@ -1,156 +1,13 @@
 <template>
   <div ref="snapContainer" class="snap-container">
-    <!-- Page 1: Hero -->
-    <section ref="heroSection" class="snap-section">
-      <div class="section-inner">
-        <div class="text-center max-w-3xl mx-auto">
-          <div
-            v-for="(item, i) in heroItems"
-            :key="i"
-            class="reveal"
-            :class="{ 'is-visible': heroVisible }"
-            :style="{ transitionDelay: `${0.1 + i * 0.15}s` }"
-            v-html="item"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Page 2: Amphoreus — Core Platform -->
-    <section id="projects" class="snap-section" ref="platformSection">
-      <div class="section-inner">
-        <div class="max-w-5xl mx-auto w-full">
-          <div class="text-center mb-6 reveal" :class="{ 'is-visible': platformVisible }">
-            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
-              <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                {{ t('group.amphoreus') }}
-              </span>
-            </h2>
-            <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.platform') }}</p>
-            <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.platformDesc') }}</p>
-          </div>
-          <div class="card-grid">
-            <ProjectCard v-for="(p, i) in platformProjects" :key="p.id" :project="p"
-              class="reveal" :class="{ 'is-visible': platformVisible }"
-              :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Page 3: Arcaea — Application Frameworks -->
-    <section id="framework" class="snap-section" ref="frameworkSection">
-      <div class="section-inner">
-        <div class="max-w-5xl mx-auto w-full">
-          <div class="text-center mb-6 reveal" :class="{ 'is-visible': frameworkVisible }">
-            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
-              <span class="bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
-                {{ t('group.arcaea') }}
-              </span>
-            </h2>
-            <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.framework') }}</p>
-            <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.frameworkDesc') }}</p>
-          </div>
-          <div class="card-grid">
-            <ProjectCard v-for="(p, i) in frameworkProjects" :key="p.id" :project="p"
-              class="reveal" :class="{ 'is-visible': frameworkVisible }"
-              :style="{ transitionDelay: `${0.12 + i * 0.08}s` }"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Page 4: Decagrammaton — Tools & Libraries -->
-    <section id="tools" class="snap-section" ref="toolsSection">
-      <div class="section-inner">
-        <div class="max-w-6xl mx-auto w-full">
-          <div class="text-center mb-6 reveal" :class="{ 'is-visible': toolsVisible }">
-            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight">
-              <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                {{ t('group.decagrammaton') }}
-              </span>
-            </h2>
-            <p class="text-xs sm:text-sm font-medium tracking-widest uppercase mt-2 text-tertiary">{{ t('group.tools') }}</p>
-            <p class="text-sm mt-3 max-w-lg mx-auto text-secondary">{{ t('group.toolsDesc') }}</p>
-          </div>
-          <div class="tools-scroll-outer">
-            <button
-              class="tools-scroll-arrow tools-scroll-arrow-left"
-              :class="{ 'is-hidden': !toolsCanScrollLeft }"
-              @click="scrollToolsBy(-1)"
-              aria-label="Scroll left"
-            >
-              <div class="i-lucide-chevron-left w-5 h-5" />
-            </button>
-            <div class="tools-scroll-container" ref="toolsScrollRef" @wheel="onToolsWheel">
-              <div class="tools-scroll-track">
-                <div
-                  v-for="(p, i) in toolProjects"
-                  :key="p.id"
-                  class="tool-card-wrapper reveal"
-                  :class="{ 'is-visible': toolsVisible }"
-                  :style="{ width: toolsCardWidth, minWidth: toolsCardWidth, transitionDelay: `${0.08 + i * 0.06}s` }"
-                >
-                  <ProjectCard :project="p" />
-                </div>
-              </div>
-            </div>
-            <button
-              class="tools-scroll-arrow tools-scroll-arrow-right"
-              :class="{ 'is-hidden': !toolsCanScrollRight }"
-              @click="scrollToolsBy(1)"
-              aria-label="Scroll right"
-            >
-              <div class="i-lucide-chevron-right w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Page 5: About + Footer -->
-    <section id="about" class="snap-start flex flex-col about-section" ref="aboutSection">
-      <div class="flex-1 flex items-center justify-center px-4 py-6 sm:py-8">
-        <div
-          class="glass-card-static text-center p-5 sm:p-6 max-w-xl mx-auto reveal"
-          :class="{ 'is-visible': aboutVisible }"
-        >
-          <div class="mb-2 flex justify-center">
-            <img
-              :src="celestiaLogo"
-              alt="Celestia Island Logo"
-              class="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-xl animate-glow"
-              draggable="false"
-            />
-          </div>
-          <div
-            class="about-text leading-normal max-w-lg mx-auto about-content prose prose-sm prose-zinc dark:prose-invert text-secondary"
-            v-html="renderedAboutText"
-          ></div>
-        </div>
-      </div>
-
-      <footer
-        class="border-t backdrop-blur-md reveal py-6 border-subtle bg-footer delay-300"
-        :class="{ 'is-visible': aboutVisible }"
-      >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col items-center justify-center gap-3 text-sm text-muted">
-          <a href="https://github.com/celestia-island" target="_blank" class="nav-icon-btn no-underline group" title="GitHub">
-            <div class="i-lucide-github w-5 h-5 group-hover:text-[var(--text-primary)] transition-colors" />
-          </a>
-          <span class="text-tertiary">
-            「{{ t('site.slogan') }}」
-          </span>
-          <span>{{ t('site.footer.copyright', { year: new Date().getFullYear() }) }}</span>
-        </div>
-      </footer>
-    </section>
+    <HeroSection ref="heroRef" />
+    <PlatformSection ref="platformRef" />
+    <FrameworkSection ref="frameworkRef" />
+    <ToolsSection ref="toolsRef" />
+    <AboutSection ref="aboutRef" />
   </div>
 
-  <!-- Scroll Indicator -->
-  <nav class="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3">
+  <nav class="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3" role="navigation" :aria-label="t('site.nav.home')">
     <button
       v-for="i in 5"
       :key="i"
@@ -160,40 +17,32 @@
         background: currentPage === i - 1 ? '#a78bfa' : 'var(--text-muted)',
       }"
       :title="pageLabels[i - 1]"
+      :aria-label="pageLabels[i - 1]"
       @click="scrollToPage(i - 1)"
     />
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { marked } from 'marked'
-import { projects } from '@/types/project'
 import { setSnapContainer } from '@/composables/useSnapContainer'
-import ProjectCard from '@/components/ProjectCard.vue'
-import celestiaLogo from '@res/logos/celestia.webp'
+import HeroSection from '@/components/sections/HeroSection.vue'
+import PlatformSection from '@/components/sections/PlatformSection.vue'
+import FrameworkSection from '@/components/sections/FrameworkSection.vue'
+import ToolsSection from '@/components/sections/ToolsSection.vue'
+import AboutSection from '@/components/sections/AboutSection.vue'
 
-const aboutDocs = import.meta.glob('../../docs/**/about.md', { query: '?raw', import: 'default', eager: true })
+import '@/assets/styles/snap.scss'
 
-const { t, locale } = useI18n()
-
-const renderedAboutText = computed(() => {
-  const currentLang = locale.value
-  const fallbackLang = 'en'
-  const docPath = `../../docs/${currentLang}/about.md`
-  const fallbackPath = `../../docs/${fallbackLang}/about.md`
-
-  const mdContent = (aboutDocs[docPath] as string) || (aboutDocs[fallbackPath] as string) || ''
-  return marked.parse(mdContent)
-})
+const { t } = useI18n()
 
 const snapContainer = ref<HTMLDivElement>()
-const heroSection = ref<HTMLElement>()
-const platformSection = ref<HTMLElement>()
-const frameworkSection = ref<HTMLElement>()
-const toolsSection = ref<HTMLElement>()
-const aboutSection = ref<HTMLElement>()
+const heroRef = ref<InstanceType<typeof HeroSection>>()
+const platformRef = ref<InstanceType<typeof PlatformSection>>()
+const frameworkRef = ref<InstanceType<typeof FrameworkSection>>()
+const toolsRef = ref<InstanceType<typeof ToolsSection>>()
+const aboutRef = ref<InstanceType<typeof AboutSection>>()
 
 const currentPage = ref(0)
 
@@ -205,338 +54,52 @@ const pageLabels = computed(() => [
   t('site.nav.about'),
 ])
 
-const sections = computed(() => [
-  heroSection.value,
-  platformSection.value,
-  frameworkSection.value,
-  toolsSection.value,
-  aboutSection.value,
+const sectionRefs = computed(() => [
+  heroRef.value?.$el as HTMLElement | undefined,
+  platformRef.value?.$el as HTMLElement | undefined,
+  frameworkRef.value?.$el as HTMLElement | undefined,
+  toolsRef.value?.$el as HTMLElement | undefined,
+  aboutRef.value?.$el as HTMLElement | undefined,
+])
+
+const sectionTriggers = computed(() => [
+  null,
+  platformRef.value?.triggerReveal,
+  frameworkRef.value?.triggerReveal,
+  toolsRef.value?.triggerReveal,
+  aboutRef.value?.triggerReveal,
 ])
 
 function scrollToPage(index: number) {
-  const el = sections.value[index]
-  if (el) snapContainer.value?.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+  const el = sectionRefs.value[index]
+  if (el) snapContainer.value?.scrollTo({ top: (el as HTMLElement).offsetTop, behavior: 'smooth' })
 }
-
-const heroVisible = ref(false)
-const platformVisible = ref(false)
-const frameworkVisible = ref(false)
-const toolsVisible = ref(false)
-const aboutVisible = ref(false)
-
-const platformProjects = computed(() => projects.filter(p => ['entelecheia', 'shittim-chest'].includes(p.id)))
-const frameworkProjects = computed(() => projects.filter(p => ['tairitsu', 'hikari'].includes(p.id)))
-const toolProjects = computed(() => projects.filter(p => ['aoba', 'kirino', 'ratatui-markdown', 'yuuka', 'ichika', 'hifumi', 'noa'].includes(p.id)))
-
-const toolsScrollRef = ref<HTMLDivElement>()
-const toolsCanScrollLeft = ref(false)
-const toolsCanScrollRight = ref(false)
-const toolsCardWidth = ref('280px')
-
-function updateToolsCardWidth() {
-  const el = toolsScrollRef.value
-  if (!el) return
-  const gap = 16
-  const isMobile = window.innerWidth < 640
-  const visible = isMobile ? 1.2 : 3.2
-  const w = (el.clientWidth - Math.ceil(visible - 1) * gap) / visible
-  toolsCardWidth.value = `${w}px`
-}
-
-function updateToolsScrollState() {
-  const el = toolsScrollRef.value
-  if (!el) return
-  toolsCanScrollLeft.value = el.scrollLeft > 2
-  toolsCanScrollRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 2
-}
-
-function scrollToolsBy(direction: number) {
-  const el = toolsScrollRef.value
-  if (!el) return
-  el.scrollBy({ left: direction * parseFloat(toolsCardWidth.value) * 1.1, behavior: 'smooth' })
-}
-
-let _wheelAccum = 0
-let _wheelRaf = 0
-
-function onToolsWheel(e: WheelEvent) {
-  const el = toolsScrollRef.value
-  if (!el) return
-
-  const delta = e.deltaY || e.deltaX
-  if (delta === 0) return
-
-  const atStart = el.scrollLeft <= 0 && delta < 0
-  const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0
-
-  if (atStart || atEnd) {
-    _wheelAccum = 0
-    return
-  }
-
-  e.preventDefault()
-
-  _wheelAccum += delta
-
-  if (!_wheelRaf) {
-    _wheelRaf = requestAnimationFrame(function step() {
-      if (Math.abs(_wheelAccum) < 0.5) {
-        _wheelRaf = 0
-        updateToolsScrollState()
-        return
-      }
-      const consume = _wheelAccum * 0.25
-      _wheelAccum -= consume
-      el.scrollLeft += consume
-      _wheelRaf = requestAnimationFrame(step)
-    })
-  }
-}
-
-const heroItems = computed(() => [
-  `<div class="text-6xl sm:text-8xl font-bold tracking-tight mb-4"><span class="bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">Celestia Island</span></div>`,
-  `<p class="text-base max-w-xl mx-auto" style="color: var(--text-tertiary)">${t('site.description')}</p>`,
-  `<div class="flex flex-wrap items-center justify-center gap-4 mt-8"><a href="https://github.com/celestia-island" target="_blank" class="btn-ghost no-underline group"><span class="i-lucide-github w-4 h-4 mr-1.5 opacity-70 group-hover:opacity-100 transition-opacity"></span> GitHub</a></div>`,
-  `<div class="mt-10 animate-float opacity-20"><span class="i-lucide-chevrons-down inline-block w-6 h-6" style="color: var(--text-primary)"></span></div>`,
-])
 
 let observer: IntersectionObserver
 
 onMounted(() => {
   setSnapContainer(snapContainer.value ?? null)
-  heroVisible.value = true
-
-  const sectionMap: Record<string, () => void> = {}
-  if (platformSection.value) sectionMap[platformSection.value.id || 'platform'] = () => { platformVisible.value = true }
-  if (frameworkSection.value) sectionMap[frameworkSection.value.id || 'framework'] = () => { frameworkVisible.value = true }
-  if (toolsSection.value) sectionMap[toolsSection.value.id || 'tools'] = () => { toolsVisible.value = true }
-  if (aboutSection.value) sectionMap[aboutSection.value.id || 'about'] = () => { aboutVisible.value = true }
 
   observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        const fn = sectionMap[entry.target.id]
-        if (fn) fn()
-        const idx = sections.value.indexOf(entry.target as HTMLElement)
-        if (idx !== -1) currentPage.value = idx
+        const idx = sectionRefs.value.indexOf(entry.target as HTMLElement)
+        if (idx !== -1) {
+          currentPage.value = idx
+          const trigger = sectionTriggers.value[idx]
+          if (trigger) trigger()
+        }
       }
     }
   }, { root: snapContainer.value, threshold: 0.25 })
 
-  for (const el of sections.value) {
-    if (el) observer.observe(el)
+  for (const el of sectionRefs.value) {
+    if (el) observer.observe(el as HTMLElement)
   }
-
-  nextTick(() => {
-    updateToolsCardWidth()
-    updateToolsScrollState()
-    toolsScrollRef.value?.addEventListener('scroll', updateToolsScrollState, { passive: true })
-    window.addEventListener('resize', onToolsResize)
-  })
 })
-
-function onToolsResize() {
-  updateToolsCardWidth()
-  updateToolsScrollState()
-}
 
 onBeforeUnmount(() => {
   setSnapContainer(null)
   observer?.disconnect()
-  toolsScrollRef.value?.removeEventListener('scroll', updateToolsScrollState)
-  window.removeEventListener('resize', onToolsResize)
 })
 </script>
-
-<style scoped>
-.snap-container {
-  position: relative;
-  height: 100vh;
-  height: 100dvh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-.snap-section {
-  scroll-snap-align: start;
-  height: 100vh;
-  height: 100dvh;
-  width: 100%;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(28px) scale(0.97);
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.about-content {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  text-align: center;
-}
-.about-content :deep(p) {
-  margin-bottom: 1.2em;
-  color: var(--text-secondary);
-}
-.about-content :deep(p:last-child) {
-  margin-bottom: 0;
-}
-.about-content :deep(a) {
-  color: var(--text-primary);
-  text-decoration: underline;
-  text-decoration-color: var(--border-subtle);
-  text-underline-offset: 4px;
-  transition: all 0.3s ease;
-}
-.about-content :deep(a:hover) {
-  color: #a78bfa;
-  text-decoration-color: #a78bfa;
-}
-.about-content :deep(strong) {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.about-text {
-  font-size: 0.8125rem;
-}
-
-.delay-300 {
-  transition-delay: 0.3s;
-}
-
-.tools-scroll-outer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.tools-scroll-arrow {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-glass);
-  backdrop-filter: blur(12px);
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 2;
-}
-.tools-scroll-arrow:hover {
-  color: var(--text-primary);
-  border-color: var(--text-secondary);
-}
-.tools-scroll-arrow.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.tools-scroll-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  flex: 1;
-  min-width: 0;
-  overscroll-behavior-x: contain;
-}
-
-.tools-scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
-.tools-scroll-track {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-}
-
-.tool-card-wrapper {
-  flex-shrink: 0;
-  height: 280px;
-}
-
-.tool-card-wrapper :deep(> *) {
-  height: 100%;
-}
-
-.section-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 4rem 1rem 2rem;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 639px) {
-  .card-grid {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-  }
-  .card-grid::-webkit-scrollbar {
-    display: none;
-  }
-  .card-grid > :deep(*) {
-    flex-shrink: 0;
-    width: calc((100% - 12px) / 1.2);
-    min-width: calc((100% - 12px) / 1.2);
-  }
-
-  .section-inner {
-    padding: 4.5rem 0.75rem 1rem;
-  }
-
-  .tools-scroll-arrow {
-    display: none;
-  }
-
-  .tools-scroll-track {
-    gap: 12px;
-  }
-
-  .tool-card-wrapper {
-    height: 220px;
-  }
-}
-
-@media (max-width: 639px) and (max-height: 500px) {
-  .section-inner {
-    padding: 3.75rem 0.75rem 0.5rem;
-  }
-
-  .tool-card-wrapper {
-    height: min(180px, 50dvh);
-  }
-}
-
-.about-section {
-  min-height: 100vh;
-  min-height: 100dvh;
-}
-</style>
