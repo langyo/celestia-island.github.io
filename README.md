@@ -25,4 +25,4 @@ python3 scripts/build.py
 
 ## License
 
-Licensed under either of Apache License, Version 2.0 or MIT license at your option.
+Licensed under the [Synthetic Source License (SySL), Version 1.0](./LICENSE.txt).

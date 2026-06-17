@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n'
 import en from '../../res/i18n/en.json'
-import zhCN from '../../res/i18n/zh-CN.json'
-import zhTW from '../../res/i18n/zh-TW.json'
+import zhs from '../../res/i18n/zhs.json'
+import zht from '../../res/i18n/zht.json'
 import ja from '../../res/i18n/ja.json'
 import ko from '../../res/i18n/ko.json'
 import es from '../../res/i18n/es.json'
@@ -12,11 +12,11 @@ const savedLocale = localStorage.getItem('celestia-locale')
 const browserLocale = navigator.language
 
 function detectLocale(): string {
-  if (savedLocale && ['en', 'zh-CN', 'zh-TW', 'ja', 'ko', 'es', 'fr', 'ru'].includes(savedLocale)) {
+  if (savedLocale && ['en', 'zhs', 'zht', 'ja', 'ko', 'es', 'fr', 'ru'].includes(savedLocale)) {
     return savedLocale
   }
   if (browserLocale.startsWith('zh')) {
-    return browserLocale.includes('TW') || browserLocale.includes('HK') ? 'zh-TW' : 'zh-CN'
+    return browserLocale.includes('TW') || browserLocale.includes('HK') ? 'zht' : 'zhs'
   }
   if (browserLocale.startsWith('ja')) return 'ja'
   if (browserLocale.startsWith('ko')) return 'ko'
@@ -32,8 +32,8 @@ const i18n = createI18n({
   fallbackLocale: 'en',
   messages: {
     en,
-    'zh-CN': zhCN,
-    'zh-TW': zhTW,
+    zhs,
+    zht,
     ja,
     ko,
     es,
