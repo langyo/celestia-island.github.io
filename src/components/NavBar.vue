@@ -63,7 +63,8 @@ import celestiaLogo from '@res/logos/celestia.webp'
 const { t, locale } = useI18n()
 const { theme, toggleTheme } = useTheme()
 const showLangMenu = ref(false)
-const snapContainer = inject<HTMLDivElement | null>(SNAP_CONTAINER_KEY, null)
+const snapContainerRef = inject(SNAP_CONTAINER_KEY, null)
+const snapContainer = computed(() => snapContainerRef?.value ?? null)
 
 const langs = [
   { code: 'en', label: 'English' },
@@ -88,7 +89,7 @@ function switchLang(code: string) {
 }
 
 function scrollToTop() {
-  snapContainer?.scrollTo({ top: 0, behavior: 'smooth' })
+  snapContainer.value?.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function onClickOutside(e: MouseEvent) {
