@@ -8,7 +8,8 @@ import es from '../../res/i18n/es.json'
 import fr from '../../res/i18n/fr.json'
 import ru from '../../res/i18n/ru.json'
 
-const savedLocale = localStorage.getItem('celestia-locale')
+let savedLocale: string | null = null
+try { savedLocale = localStorage.getItem('celestia-locale') } catch { /* localStorage 不可用时优雅降级 */ }
 const browserLocale = navigator.language
 
 function detectLocale(): string {
