@@ -7,7 +7,8 @@
       "home": "首页",
       "projects": "项目",
       "about": "关于",
-      "language": "语言"
+      "language": "语言",
+      "languageList": "可用语言"
     },
     "status": {
       "active": "活跃开发中",

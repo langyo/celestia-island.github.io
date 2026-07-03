@@ -7,7 +7,8 @@
       "home": "Главная",
       "projects": "Проекты",
       "about": "О проекте",
-      "language": "Язык"
+      "language": "Язык",
+      "languageList": "Доступные языки"
     },
     "status": {
       "active": "В разработке",

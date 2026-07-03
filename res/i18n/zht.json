@@ -7,7 +7,8 @@
       "home": "首頁",
       "projects": "專案",
       "about": "關於",
-      "language": "語言"
+      "language": "語言",
+      "languageList": "可用語言"
     },
     "status": {
       "active": "活躍開發中",

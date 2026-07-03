@@ -7,7 +7,8 @@
       "home": "ホーム",
       "projects": "プロジェクト",
       "about": "概要",
-      "language": "言語"
+      "language": "言語",
+      "languageList": "利用可能な言語"
     },
     "status": {
       "active": "開発中",

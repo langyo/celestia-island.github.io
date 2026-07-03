@@ -7,7 +7,8 @@
       "home": "Inicio",
       "projects": "Proyectos",
       "about": "Acerca de",
-      "language": "Idioma"
+      "language": "Idioma",
+      "languageList": "Idiomas disponibles"
     },
     "status": {
       "active": "En desarrollo",

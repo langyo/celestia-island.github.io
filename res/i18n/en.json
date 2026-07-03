@@ -7,7 +7,8 @@
       "home": "Home",
       "projects": "Projects",
       "about": "About",
-      "language": "Language"
+      "language": "Language",
+      "languageList": "Available languages"
     },
     "status": {
       "active": "Active Development",

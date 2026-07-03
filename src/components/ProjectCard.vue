@@ -21,13 +21,13 @@
         <h3 class="text-lg font-semibold truncate text-primary">{{ t(project.shortLabelKey, project.shortLabel) }}</h3>
         <p class="text-xs font-medium mt-0.5 text-tertiary">{{ t(project.nameKey, project.name) }}</p>
         <p class="text-sm font-medium mt-1 truncate" :style="{ color: project.color }">
-          {{ t(project.taglineKey) || project.tagline }}
+          {{ t(project.taglineKey, project.tagline) }}
         </p>
       </div>
     </div>
 
     <p class="text-sm leading-relaxed mb-4 line-clamp-3 text-secondary">
-      {{ t(project.descriptionKey, { en: project.description }) }}
+      {{ t(project.descriptionKey, project.description) }}
     </p>
 
     <div class="flex flex-wrap gap-1.5 content-start min-h-8">
