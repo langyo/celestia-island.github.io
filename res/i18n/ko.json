@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "WASI 렌더링 다국어 Markdown 정적 사이트",
-    "description": "Markdown 폴더를 정적이고 다국어인 문서 사이트로 바꿉니다——WASI 렌더링, 내장 언어 전환과 루트 리다이렉트 포함. JavaScript 프레임워크도 mdBook도 Node 툴체인도 필요 없습니다. Lagrange는 자체 문서를 스스로 빌드합니다.",
-    "shortLabel": "WASI Markdown 사이트 생성기"
+    "tagline": "다국어 Markdown 정적 사이트",
+    "description": "Markdown 폴더를 정적이고 다국어인 문서 사이트로 바꿉니다——내장 언어 전환과 루트 리다이렉트 포함. JavaScript 프레임워크도 mdBook도 Node 툴체인도 필요 없습니다. Lagrange는 자체 문서를 스스로 빌드합니다.",
+    "shortLabel": "Markdown 사이트 생성기"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "독립형 가상 터미널 엔진",
     "description": "PTY 관리, VT100/ANSI 스크린 에뮬레이터, 글리프 렌더링 스크린 출력을 하나의 라이브러리와 CLI로 묶었습니다. tairitsu 패키저에서 추출한 vtty 코어——단순한 PTY 래퍼가 아닌, CSI/SGR을 올바르게 처리하는 진짜 스크린입니다.",
     "shortLabel": "가상 터미널 엔진"
@@ -135,13 +135,13 @@
     "shortLabel": "서비스 감독 툴킷"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "다중 엔진 웹 검색 라이브러리 및 CLI",
     "description": "다양한 검색 백엔드를 질의하는 통합 인터페이스입니다. 인증이 필요 없는 엔진은 설정 없이 바로 작동하며——하나의 질의를 여러 프로바이더로 라우팅하고 결과를 병합하는 라이브러리와 CLI입니다.",
     "shortLabel": "다중 엔진 웹 검색"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Rust 네이티브 헤드리스 브라우저 자동화",
     "description": "가벼운 Rust 네이티브 브라우저 자동화 라이브러리와 디버그 서버입니다. CDP를 말하는 모든 브라우저——Chrome, Chromium, Edge——를 하나의 수제 엔진으로 구동하며, Chrome for Testing 빌드를 자동으로 가져와 고정하므로 브라우저를 직접 설치할 필요가 없습니다.",
     "shortLabel": "헤드리스 브라우저 자동화"

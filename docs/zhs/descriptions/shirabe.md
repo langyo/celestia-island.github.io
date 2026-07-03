@@ -1,4 +1,4 @@
-# shirabe
+# Shirabe
 
 轻量的 **Rust 原生浏览器自动化**库与调试服务器。
 

@@ -1,4 +1,4 @@
-# shirabe
+# Shirabe
 
 A lightweight **Rust-native browser automation** library and debug server.
 
