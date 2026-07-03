@@ -1,4 +1,4 @@
-# kou
+# Kou
 
 A standalone **virtual-terminal engine** — PTY management, a VT100/ANSI screen emulator, and glyph rendering in one library.
 

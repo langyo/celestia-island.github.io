@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "WASI 渲染的多語言 Markdown 靜態站台",
-    "description": "把一個 Markdown 資料夾變成靜態、多語言的文件站台——WASI 渲染，內建語言切換與根路徑重新導向。無需 JavaScript 框架、無需 mdBook、無需 Node 工具鏈。Lagrange 用自己建構自己的文件。",
-    "shortLabel": "WASI Markdown 站台產生器"
+    "tagline": "多語言 Markdown 靜態站台",
+    "description": "把一個 Markdown 資料夾變成靜態、多語言的文件站台，內建語言切換與根路徑重新導向。無需 JavaScript 框架、無需 mdBook、無需 Node 工具鏈。Lagrange 用自己建構自己的文件。",
+    "shortLabel": "Markdown 站台產生器"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "獨立的虛擬終端引擎",
     "description": "PTY 管理、VT100/ANSI 螢幕模擬器與字形渲染螢幕輸出，集於一個函式庫與 CLI 之中。從 tairitsu 打包器中抽出的 vtty 核心——真正遵循 CSI/SGR 的螢幕，而非裸 PTY 包裝。",
     "shortLabel": "虛擬終端引擎"
@@ -135,13 +135,13 @@
     "shortLabel": "服務監管工具包"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "多引擎網路搜尋函式庫與 CLI",
     "description": "查詢多樣搜尋後端的統一介面。無需鑑別的引擎開箱即用、零設定——一個把單一查詢路由到多個供應商並合併結果的函式庫與 CLI。",
     "shortLabel": "多引擎網路搜尋"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Rust 原生的無頭瀏覽器自動化",
     "description": "輕量的 Rust 原生瀏覽器自動化函式庫與除錯伺服器。它透過一個手寫的引擎驅動任何會說 CDP 的瀏覽器——Chrome、Chromium、Edge——並自動拉取、固定一個 Chrome for Testing 建置，讓你永遠不必手動安裝瀏覽器。",
     "shortLabel": "無頭瀏覽器自動化"

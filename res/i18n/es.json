@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "Sitio estático Markdown multilingüe renderizado por WASI",
-    "description": "Convierte una carpeta de Markdown en un sitio de documentación estático y multilingüe — renderizado por WASI, con selector de idioma integrado y redirección raíz. Sin framework JavaScript, sin mdBook, sin toolchain de Node. Lagrange construye su propia documentación.",
-    "shortLabel": "Generador de Sitio Markdown WASI"
+    "tagline": "Sitio estático Markdown multilingüe",
+    "description": "Convierte una carpeta de Markdown en un sitio de documentación estático y multilingüe con selector de idioma integrado y redirección raíz. Sin framework JavaScript, sin mdBook, sin toolchain de Node. Lagrange construye su propia documentación.",
+    "shortLabel": "Generador de sitio Markdown"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "Motor de terminal virtual autónomo",
     "description": "Gestión de PTY, emulador de pantalla VT100/ANSI y salida de pantalla por renderizado de glifos reunidos en una biblioteca y un CLI. El núcleo vtty extraído del empaquetador tairitsu — una pantalla real que respeta CSI/SGR, no un simple wrapper de PTY.",
     "shortLabel": "Motor de Terminal Virtual"
@@ -135,13 +135,13 @@
     "shortLabel": "Kit de Supervisión de Servicios"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "Biblioteca y CLI de búsqueda web multi-motor",
     "description": "Una interfaz unificada para consultar diversos backends de búsqueda. Los motores que no requieren autenticación funcionan de inmediato sin configuración — una biblioteca y un CLI para enrutar una sola consulta a muchos proveedores y fusionar los resultados.",
     "shortLabel": "Búsqueda Web Multi-Motor"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Automatización de navegador headless nativa de Rust",
     "description": "Una biblioteca ligera de automatización de navegador nativa de Rust y un servidor de depuración. Conduce cualquier navegador que hable CDP — Chrome, Chromium, Edge — mediante un motor hecho a mano, y obtiene y fija un build de Chrome for Testing para que nunca instales un navegador a mano.",
     "shortLabel": "Automatización de Navegador Headless"

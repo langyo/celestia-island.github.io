@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "WASIレンダリングの多言語Markdown静的サイト",
-    "description": "Markdownのフォルダを静的かつ多言語のドキュメントサイトに変えます——WASIレンダリング、内蔵の言語切替とルートリダイレクト付き。JavaScriptフレームワークもmdBookもNodeツールチェーンも不要。Lagrangeは自身のドキュメントを自分でビルドします。",
-    "shortLabel": "WASI Markdownサイト生成器"
+    "tagline": "多言語Markdown静的サイト",
+    "description": "Markdownのフォルダを静的かつ多言語のドキュメントサイトに変えます——内蔵の言語切替とルートリダイレクト付き。JavaScriptフレームワークもmdBookもNodeツールチェーンも不要。Lagrangeは自身のドキュメントを自分でビルドします。",
+    "shortLabel": "Markdownサイト生成器"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "単体の仮想ターミナルエンジン",
     "description": "PTY管理、VT100/ANSIスクリーンエミュレータ、グリフレンダリングのスクリーン出力を一つのライブラリとCLIに集約。tairitsuパッケージャから抽出したvttyコア——生のPTYラッパではなく、CSI/SGRを正しく解釈する本物のスクリーンです。",
     "shortLabel": "仮想ターミナルエンジン"
@@ -135,13 +135,13 @@
     "shortLabel": "サービススーパビジョンツールキット"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "マルチエンジンWeb検索ライブラリ＆CLI",
     "description": "多様な検索バックエンドを照会する統一インターフェース。認証不要のエンジンは設定ゼロで即利用可能——一つのクエリを複数のプロバイダにルーティングし結果を統合するライブラリとCLIです。",
     "shortLabel": "マルチエンジンWeb検索"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Rustネイティブのヘッドレスブラウザ自動化",
     "description": "軽量なRustネイティブのブラウザ自動化ライブラリとデバッグサーバ。CDPを話す任意のブラウザ——Chrome、Chromium、Edge——を一つの手作りエンジンで駆動し、Chrome for Testingビルドを自動で取得・固定するため、ブラウザを手動でインストールする必要がありません。",
     "shortLabel": "ヘッドレスブラウザ自動化"

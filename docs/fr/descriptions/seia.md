@@ -1,4 +1,4 @@
-# seia
+# Seia
 
 Une bibliothèque et un CLI de **recherche web multi-moteurs** — une requête, de nombreux backends, des résultats unifiés.
 

@@ -1,4 +1,4 @@
-# shirabe
+# Shirabe
 
 Una biblioteca ligera de **automatización de navegador nativa de Rust** y un servidor de depuración.
 

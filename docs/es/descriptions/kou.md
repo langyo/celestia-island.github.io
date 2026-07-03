@@ -1,4 +1,4 @@
-# kou
+# Kou
 
 Un **motor de terminal virtual** autónomo — gestión de PTY, emulador de pantalla VT100/ANSI y renderizado de glifos en una sola biblioteca.
 
