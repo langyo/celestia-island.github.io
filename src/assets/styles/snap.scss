@@ -35,31 +35,7 @@
   padding: 4rem 1rem 2rem;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
 @media (max-width: 639px) {
-  .card-grid {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-  }
-  .card-grid::-webkit-scrollbar {
-    display: none;
-  }
-  .card-grid > * {
-    flex-shrink: 0;
-    width: calc((100% - 12px) / 1.2);
-    min-width: calc((100% - 12px) / 1.2);
-  }
-
   .section-inner {
     padding: 4.5rem 0.75rem 1rem;
   }
