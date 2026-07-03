@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "Site statique Markdown multilingue rendu par WASI",
-    "description": "Transformez un dossier de Markdown en un site de documentation statique et multilingue — rendu par WASI, avec sélecteur de langue intégré et redirection racine. Sans framework JavaScript, sans mdBook, sans toolchain Node. Lagrange construit sa propre documentation.",
-    "shortLabel": "Générateur de Site Markdown WASI"
+    "tagline": "Site statique Markdown multilingue",
+    "description": "Transformez un dossier de Markdown en un site de documentation statique et multilingue avec sélecteur de langue intégré et redirection racine. Sans framework JavaScript, sans mdBook, sans toolchain Node. Lagrange construit sa propre documentation.",
+    "shortLabel": "Générateur de site Markdown"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "Moteur de terminal virtuel autonome",
     "description": "Gestion PTY, émulateur d'écran VT100/ANSI et sortie d'écran par rendu de glyphes réunis dans une bibliothèque et un CLI. Le cœur vtty extrait du packager tairitsu — un véritable écran respectant CSI/SGR, pas un simple wrapper PTY.",
     "shortLabel": "Moteur de Terminal Virtuel"
@@ -135,13 +135,13 @@
     "shortLabel": "Boîte à Outils de Supervision de Services"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "Bibliothèque et CLI de recherche web multi-moteurs",
     "description": "Une interface unifiée pour interroger divers backends de recherche. Les moteurs sans authentification fonctionnent immédiatement sans configuration — une bibliothèque et un CLI pour router une seule requête vers de nombreux fournisseurs et fusionner les résultats.",
     "shortLabel": "Recherche Web Multi-Moteurs"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Automatisation de navigateur headless native Rust",
     "description": "Une bibliothèque légère d'automatisation de navigateur native Rust et un serveur de débogage. Elle pilote tout navigateur parlant CDP — Chrome, Chromium, Edge — via un moteur écrit à la main, et récupère et épingle un build Chrome for Testing afin que vous n'installiez jamais un navigateur à la main.",
     "shortLabel": "Automatisation de Navigateur Headless"

@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "WASI 渲染的多语言 Markdown 静态站点",
-    "description": "把一个 Markdown 文件夹变成静态、多语言的文档站点——WASI 渲染，内置语言切换与根路径重定向。无需 JavaScript 框架、无需 mdBook、无需 Node 工具链。Lagrange 用自己构建自己的文档。",
-    "shortLabel": "WASI Markdown 站点生成器"
+    "tagline": "多语言 Markdown 静态站点",
+    "description": "把一个 Markdown 文件夹变成静态、多语言的文档站点，内置语言切换与根路径重定向。无需 JavaScript 框架、无需 mdBook、无需 Node 工具链。Lagrange 用自己构建自己的文档。",
+    "shortLabel": "Markdown 站点生成器"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "独立的虚拟终端引擎",
     "description": "PTY 管理、VT100/ANSI 屏幕模拟器与字形渲染屏幕输出，集于一个库与 CLI 之中。从 tairitsu 打包器中抽出的 vtty 核心——真正遵循 CSI/SGR 的屏幕，而非裸 PTY 包装。",
     "shortLabel": "虚拟终端引擎"
@@ -135,13 +135,13 @@
     "shortLabel": "服务监管工具包"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "多引擎网络搜索库与 CLI",
     "description": "查询多样搜索后端的统一接口。无需鉴权的引擎开箱即用、零配置——一个把单条查询路由到多个提供商并合并结果的库与 CLI。",
     "shortLabel": "多引擎网络搜索"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Rust 原生的无头浏览器自动化",
     "description": "轻量的 Rust 原生浏览器自动化库与调试服务器。它通过一个手写的引擎驱动任何会说 CDP 的浏览器——Chrome、Chromium、Edge——并自动拉取、固定一个 Chrome for Testing 构建，让你永远不必手动安装浏览器。",
     "shortLabel": "无头浏览器自动化"

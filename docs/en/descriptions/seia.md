@@ -1,4 +1,4 @@
-# seia
+# Seia
 
 A **multi-engine web search** library and CLI — one query, many backends, unified results.
 

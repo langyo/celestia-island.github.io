@@ -118,12 +118,12 @@
   },
   "lagrange": {
     "name": "Lagrange",
-    "tagline": "WASI-rendered multilingual Markdown static site",
-    "description": "Turn a folder of Markdown into a static, multilingual documentation site — WASI-rendered, with a built-in language switcher and root redirect. No JavaScript framework, no mdBook, no Node toolchain. Lagrange builds its own documentation.",
-    "shortLabel": "WASI Markdown Site Generator"
+    "tagline": "Multilingual Markdown static site",
+    "description": "Turn a folder of Markdown into a static, multilingual documentation site with a built-in language switcher and root redirect. No JavaScript framework, no mdBook, no Node toolchain. Lagrange builds its own documentation.",
+    "shortLabel": "Markdown Site Generator"
   },
   "kou": {
-    "name": "kou",
+    "name": "Kou",
     "tagline": "Standalone virtual-terminal engine",
     "description": "PTY management, a VT100/ANSI screen emulator, and glyph-rendering screen output in one library and CLI. The vtty core extracted from the tairitsu packager — a real CSI/SGR-honouring screen, not a bare PTY wrapper.",
     "shortLabel": "Virtual Terminal Engine"
@@ -135,13 +135,13 @@
     "shortLabel": "Service Supervision Toolkit"
   },
   "seia": {
-    "name": "seia",
+    "name": "Seia",
     "tagline": "Multi-engine web search library and CLI",
     "description": "A unified interface to query diverse search backends. Engines that need no authentication work out of the box with zero configuration — a library and CLI for routing one query across many providers and merging the results.",
     "shortLabel": "Multi-Engine Web Search"
   },
   "shirabe": {
-    "name": "shirabe",
+    "name": "Shirabe",
     "tagline": "Rust-native headless browser automation",
     "description": "A lightweight, Rust-native browser automation library and debug server. It drives any CDP-speaking browser — Chrome, Chromium, Edge — through one hand-rolled engine, fetching and pinning a Chrome for Testing build so you never install a browser by hand.",
     "shortLabel": "Headless Browser Automation"
