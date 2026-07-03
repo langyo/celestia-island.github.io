@@ -34,9 +34,9 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "다중 에이전트 협업 플랫폼",
-    "description": "Rust 기반 다중 에이전트 협업 플랫폼. exec-only 마이크로커널 설계를 채택하여, 에이전트는 IEPL TypeScript 레이어의 ES 모듈 임포트를 통해 상호 작용합니다.",
-    "shortLabel": "다중 에이전트 협업 플랫폼"
+    "tagline": "산업 AI 제어용 다중 에이전트 플랫폼",
+    "description": "안전이 중요한 산업 제어를 위해 구축된 exec-only 마이크로커널 다중 에이전트 플랫폼입니다. LLM은 소수의 프리미티브만 보며, 모든 실제 작업은 IEPL TypeScript 파이프라인 안에서 실행되어 수많은 에이전트에 걸친 방대한 MCP 도구 영역으로 디스패치됩니다. 크로스 벤더 프로토콜 지원(Modbus, S7comm, OPC UA)과 다층 안전 게이트를 갖추고 있습니다.",
+    "shortLabel": "다중 에이전트 플랫폼"
   },
   "shittim": {
     "name": "시딤 궤",
@@ -64,9 +64,9 @@
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "프로덕션급 RBAC, 제약으로 설계",
-    "description": "커스터마이징 가능한 제로 트러스트 인증 및 RBAC 프레임워크. ANSI INCITS 359-2004 역할 계층, 직무 분리, 시간적 제약을 지원합니다.",
-    "shortLabel": "RBAC 프레임워크"
+    "tagline": "제로 트러스트 인증·RBAC, 신뢰 점수 포함",
+    "description": "완전히 제네릭하고 trait 기반의 Rust 인증·인가 프레임워크입니다. ANSI INCITS 359-2004를 구현하는 완전한 RBAC(RBAC0/1/2)에 더해, 신뢰 점수 책정, 이상 탐지, DO-178C에서 영감받은 자율 등급(L0–L4)을 갖춘 동적 인가 레이어를 제공합니다.",
+    "shortLabel": "인증·RBAC 프레임워크"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
@@ -94,8 +94,56 @@
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI 기반 Rust 소스 코드 문서 생성",
-    "description": "Rust 크레이트용 문서 생성기. 소스 코드와 문서 주석에서 마크다운, 정적 HTML 사이트, AI 기반 다국어 번역을 생성합니다.",
-    "shortLabel": "Rust 문서 생성기"
+    "tagline": "AI 네이티브 분산 버전 관리",
+    "description": "에이전트별 워크스페이스 격리, 추가 전용 JSONL 로그, 스냅샷 기반 히스토리, 완전한 git 프로토콜 호환성——끊임없이 브랜치를 만들고 히스토리를 다시 쓰는 AI 에이전트를 위해 처음부터 설계된 버전 관리 시스템입니다.",
+    "shortLabel": "분산 버전 관리"
+  },
+  "evernight": {
+    "name": "Evernight",
+    "tagline": "크로스 플랫폼 원격 제어 및 산업 프로토콜 브로커",
+    "description": "화면 스트리밍, SSH/VNC/RDP, 하드웨어 원격 측정, 그리고 산업 프로토콜——Modbus, S7comm, OPC UA, CAN, EtherCAT. 클라우드 AI 에이전트를 물리 기기에 연결하고 엣지에서 컨테이너와 VM을 오케스트레이션하는 계층입니다.",
+    "shortLabel": "프로토콜 브로커 및 원격 제어"
+  },
+  "aris": {
+    "name": "ARIS",
+    "tagline": "산업 IoT 게이트웨이용 임베디드 OS",
+    "description": "Entelecheia 산업 IoT 게이트웨이의 임베디드 OS 및 펌웨어입니다. ARM/RISC-V 엣지 기기에서 evernight를 실행하며, 최소화되고 안전한 커널 계층을 통해 프로토콜 브로커를 물리 하드웨어——PLC, 센서, 밸브——로 연결합니다.",
+    "shortLabel": "IoT 게이트웨이 임베디드 OS"
+  },
+  "kei": {
+    "name": "KEI",
+    "tagline": "산업 IoT 게이트웨이용 Asterinas ARM64 포크",
+    "description": "ARM64 지원과 산업 IoT 게이트웨이용 보드 지원 패키지(BSP)를 갖춘 asterinas의 독립 포크입니다. aris가 사용하는 kei-kernel.bin을 제공하며——추적 브랜치가 아닌, 자체 일정에 따라 업스트림 변경 사항을 흡수합니다.",
+    "shortLabel": "ARM64 산업 커널"
+  },
+  "lagrange": {
+    "name": "Lagrange",
+    "tagline": "WASI 렌더링 다국어 Markdown 정적 사이트",
+    "description": "Markdown 폴더를 정적이고 다국어인 문서 사이트로 바꿉니다——WASI 렌더링, 내장 언어 전환과 루트 리다이렉트 포함. JavaScript 프레임워크도 mdBook도 Node 툴체인도 필요 없습니다. Lagrange는 자체 문서를 스스로 빌드합니다.",
+    "shortLabel": "WASI Markdown 사이트 생성기"
+  },
+  "kou": {
+    "name": "kou",
+    "tagline": "독립형 가상 터미널 엔진",
+    "description": "PTY 관리, VT100/ANSI 스크린 에뮬레이터, 글리프 렌더링 스크린 출력을 하나의 라이브러리와 CLI로 묶었습니다. tairitsu 패키저에서 추출한 vtty 코어——단순한 PTY 래퍼가 아닌, CSI/SGR을 올바르게 처리하는 진짜 스크린입니다.",
+    "shortLabel": "가상 터미널 엔진"
+  },
+  "malkuth": {
+    "name": "Malkuth",
+    "tagline": "Rust용 컴포저블 서비스 감독 툴킷",
+    "description": "장기 실행되는 Rust 프로그램에 우아한 종료, 헬스 프로브, 조정 잠금, 롤링 업데이트를 제공합니다. 플러그형 트랜스포트(TCP/WebSocket/IPC 기반 JSON-RPC), 감독 대상 워커, 그리고 파일 감시와 스티키 리버스 프록시로 모든 프로그램을 감싸는 watchdog CLI.",
+    "shortLabel": "서비스 감독 툴킷"
+  },
+  "seia": {
+    "name": "seia",
+    "tagline": "다중 엔진 웹 검색 라이브러리 및 CLI",
+    "description": "다양한 검색 백엔드를 질의하는 통합 인터페이스입니다. 인증이 필요 없는 엔진은 설정 없이 바로 작동하며——하나의 질의를 여러 프로바이더로 라우팅하고 결과를 병합하는 라이브러리와 CLI입니다.",
+    "shortLabel": "다중 엔진 웹 검색"
+  },
+  "shirabe": {
+    "name": "shirabe",
+    "tagline": "Rust 네이티브 헤드리스 브라우저 자동화",
+    "description": "가벼운 Rust 네이티브 브라우저 자동화 라이브러리와 디버그 서버입니다. CDP를 말하는 모든 브라우저——Chrome, Chromium, Edge——를 하나의 수제 엔진으로 구동하며, Chrome for Testing 빌드를 자동으로 가져와 고정하므로 브라우저를 직접 설치할 필요가 없습니다.",
+    "shortLabel": "헤드리스 브라우저 자동화"
   }
 }

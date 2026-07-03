@@ -34,9 +34,9 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "マルチエージェント協調プラットフォーム",
-    "description": "Rustベースのマルチエージェント協調プラットフォーム。exec-onlyマイクロカーネル設計を採用し、エージェントはIEPL TypeScript層のESモジュールインポートを通じて相互作用します。",
-    "shortLabel": "マルチエージェント協調プラットフォーム"
+    "tagline": "産業AI制御向けマルチエージェントプラットフォーム",
+    "description": "安全クリティカルな産業制御向けに構築されたexec-onlyマイクロカーネルのマルチエージェントプラットフォーム。LLMが見るのは少数のプリミティブのみ——すべての実際の処理はIEPL TypeScriptパイプライン内で実行され、多数のエージェントにまたがる広大なMCPツール群へディスパッチします。クロスベンダーのプロトコル対応（Modbus、S7comm、OPC UA）と多層の安全ゲートを備えます。",
+    "shortLabel": "マルチエージェントプラットフォーム"
   },
   "shittim": {
     "name": "什亭の箱",
@@ -64,9 +64,9 @@
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "プロダクショングレードRBAC、制約による設計",
-    "description": "カスタマイズ可能なゼロトラスト認証・RBACフレームワーク。ANSI INCITS 359-2004 のロール階層、職務分離、時間的制約をサポート。",
-    "shortLabel": "RBAC フレームワーク"
+    "tagline": "ゼロトラスト認証・RBAC、信頼スコア付き",
+    "description": "完全にジェネリックでtraitベースのRust認証・認可フレームワーク。ANSI INCITS 359-2004に準拠した完全なRBAC（RBAC0/1/2）に加え、信頼スコアリング、異常検出、DO-178Cに着想を得た自律レベル（L0–L4）を持つ動的認可レイヤーを備えます。",
+    "shortLabel": "認証・RBACフレームワーク"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
@@ -94,8 +94,56 @@
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI駆動のRustソースコードドキュメント生成",
-    "description": "Rustクレート向けドキュメントジェネレーター。ソースコードとドックコメントからMarkdown、静的HTMLサイト、AIによる多言語翻訳を生成。",
-    "shortLabel": "Rustドキュメントジェネレーター"
+    "tagline": "AIネイティブな分散バージョン管理",
+    "description": "エージェントごとのワークスペース分離、追記型のJSONLログ、スナップショットベースの履歴、完全なgitプロトコル互換性——頻繁にブランチを切り、履歴を書き換えるAIエージェントのためにゼロから設計されたバージョン管理システム。",
+    "shortLabel": "分散バージョン管理"
+  },
+  "evernight": {
+    "name": "Evernight",
+    "tagline": "クロスプラットフォーム・リモート制御＆産業プロトコルブローカー",
+    "description": "画面ストリーミング、SSH/VNC/RDP、ハードウェアテレメトリ、そして産業プロトコル——Modbus、S7comm、OPC UA、CAN、EtherCAT。クラウドのAIエージェントを物理デバイスに接続し、エッジでコンテナとVMをオーケストレーションするレイヤーです。",
+    "shortLabel": "プロトコルブローカー＆リモート制御"
+  },
+  "aris": {
+    "name": "ARIS",
+    "tagline": "産業IoTゲートウェイ向け組込みOS",
+    "description": "Entelecheia産業IoTゲートウェイの組込みOSおよびファームウェア。ARM/RISC-Vエッジデバイス上でevernightを実行し、最小限で安全なカーネル層を通じてプロトコルブローカーを物理ハードウェア——PLC、センサー、バルブ——に橋渡しします。",
+    "shortLabel": "IoTゲートウェイ組込みOS"
+  },
+  "kei": {
+    "name": "KEI",
+    "tagline": "産業IoTゲートウェイ向けAsterinas ARM64フォーク",
+    "description": "ARM64対応と産業IoTゲートウェイ向けボードサポートパッケージを備えた、asterinasの独立フォーク。arisが消費するkei-kernel.binを提供します——追跡ブランチとしてではなく、独自のスケジュールで上流の変更を取り込みます。",
+    "shortLabel": "ARM64産業カーネル"
+  },
+  "lagrange": {
+    "name": "Lagrange",
+    "tagline": "WASIレンダリングの多言語Markdown静的サイト",
+    "description": "Markdownのフォルダを静的かつ多言語のドキュメントサイトに変えます——WASIレンダリング、内蔵の言語切替とルートリダイレクト付き。JavaScriptフレームワークもmdBookもNodeツールチェーンも不要。Lagrangeは自身のドキュメントを自分でビルドします。",
+    "shortLabel": "WASI Markdownサイト生成器"
+  },
+  "kou": {
+    "name": "kou",
+    "tagline": "単体の仮想ターミナルエンジン",
+    "description": "PTY管理、VT100/ANSIスクリーンエミュレータ、グリフレンダリングのスクリーン出力を一つのライブラリとCLIに集約。tairitsuパッケージャから抽出したvttyコア——生のPTYラッパではなく、CSI/SGRを正しく解釈する本物のスクリーンです。",
+    "shortLabel": "仮想ターミナルエンジン"
+  },
+  "malkuth": {
+    "name": "Malkuth",
+    "tagline": "Rust向けコンポーザブルなサービススーパビジョンツールキット",
+    "description": "長時間稼働するRustプログラムにグレースフルシャットダウン、ヘルスプローブ、調整ロック、ローリングアップデートを提供。プラガブルなトランスポート（TCP/WebSocket/IPC上のJSON-RPC）、監視下のワーカー、そしてファイル監視とスティッキーリバースプロキシで任意のプログラムを包むwatchdog CLI。",
+    "shortLabel": "サービススーパビジョンツールキット"
+  },
+  "seia": {
+    "name": "seia",
+    "tagline": "マルチエンジンWeb検索ライブラリ＆CLI",
+    "description": "多様な検索バックエンドを照会する統一インターフェース。認証不要のエンジンは設定ゼロで即利用可能——一つのクエリを複数のプロバイダにルーティングし結果を統合するライブラリとCLIです。",
+    "shortLabel": "マルチエンジンWeb検索"
+  },
+  "shirabe": {
+    "name": "shirabe",
+    "tagline": "Rustネイティブのヘッドレスブラウザ自動化",
+    "description": "軽量なRustネイティブのブラウザ自動化ライブラリとデバッグサーバ。CDPを話す任意のブラウザ——Chrome、Chromium、Edge——を一つの手作りエンジンで駆動し、Chrome for Testingビルドを自動で取得・固定するため、ブラウザを手動でインストールする必要がありません。",
+    "shortLabel": "ヘッドレスブラウザ自動化"
   }
 }

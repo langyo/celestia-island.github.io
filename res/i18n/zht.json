@@ -34,9 +34,9 @@
   },
   "entelecheia": {
     "name": "玄樞 / Entelecheia",
-    "tagline": "多智能體協作平台",
-    "description": "基於 Rust 的多智能體協作平台，採用 exec-only 微核心設計。智能體透過 IEPL TypeScript 層的 ES 模組匯入進行互動，保持 LLM 介面最小化與可組合性。",
-    "shortLabel": "多智能體協作平台"
+    "tagline": "面向工業 AI 控制的多智能體平台",
+    "description": "面向安全關鍵工業控制的 exec-only 微核心多智能體平台。LLM 只能看到少數原語——所有真正的工作都執行在 IEPL TypeScript 管線中，跨多個智能體調度龐大的 MCP 工具面，並具備跨廠商協定支援（Modbus、S7comm、OPC UA）與多層安全關卡。",
+    "shortLabel": "多智能體平台"
   },
   "shittim": {
     "name": "什亭之匣",
@@ -64,9 +64,9 @@
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "生產級 RBAC，以約束為設計",
-    "description": "可自訂的零信任認證與 RBAC 框架。支援 ANSI INCITS 359-2004 角色繼承、職責分離與時效約束。",
-    "shortLabel": "RBAC 框架"
+    "tagline": "零信任認證與 RBAC，帶信任評分",
+    "description": "完全泛型化、基於 trait 的 Rust 認證與授權框架。實作 ANSI INCITS 359-2004 的完整 RBAC（RBAC0/1/2），外加帶信任評分、異常偵測及受 DO-178C 啟發的自治等級（L0–L4）的動態授權層。",
+    "shortLabel": "認證與 RBAC 框架"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
@@ -94,8 +94,56 @@
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI 驅動的 Rust 原始碼文件生成",
-    "description": "Rust crate 的文件產生器，從原始碼和文件註解中產生 Markdown、靜態 HTML 站台，以及 AI 驅動的多語言翻譯。",
-    "shortLabel": "Rust 文件產生器"
+    "tagline": "AI 原生的分散式版本控制",
+    "description": "按智能體隔離工作區、僅追加的 JSONL 日誌、基於快照的歷史記錄，以及完整的 git 協定相容性——為不斷分叉、頻繁重寫歷史的 AI 智能體從頭設計的版本控制系統。",
+    "shortLabel": "分散式版本控制"
+  },
+  "evernight": {
+    "name": "Evernight",
+    "tagline": "跨平台遠端控制與工業協定代理",
+    "description": "螢幕串流、SSH/VNC/RDP、硬體遙測，以及工業協定——Modbus、S7comm、OPC UA、CAN、EtherCAT。它是連接雲端 AI 智能體與實體裝置、並在邊緣編排容器與虛擬機的那一層。",
+    "shortLabel": "協定代理與遠端控制"
+  },
+  "aris": {
+    "name": "ARIS",
+    "tagline": "工業物聯網閘道嵌入式系統",
+    "description": "Entelecheia 工業物聯網閘道的嵌入式作業系統與韌體。它在 ARM/RISC-V 邊緣裝置上執行 evernight，透過最小化、安全的核心層把協定代理橋接到實體硬體——PLC、感測器、閥門。",
+    "shortLabel": "物聯網閘道嵌入式系統"
+  },
+  "kei": {
+    "name": "KEI",
+    "tagline": "面向工業物聯網閘道的 Asterinas ARM64 分支",
+    "description": "asterinas 的獨立分支，提供 ARM64 支援與工業物聯網閘道的板級支援包（BSP）。它產出 aris 所消費的 kei-kernel.bin——按自身節奏吸收上游變更，而非作為追蹤分支。",
+    "shortLabel": "ARM64 工業核心"
+  },
+  "lagrange": {
+    "name": "Lagrange",
+    "tagline": "WASI 渲染的多語言 Markdown 靜態站台",
+    "description": "把一個 Markdown 資料夾變成靜態、多語言的文件站台——WASI 渲染，內建語言切換與根路徑重新導向。無需 JavaScript 框架、無需 mdBook、無需 Node 工具鏈。Lagrange 用自己建構自己的文件。",
+    "shortLabel": "WASI Markdown 站台產生器"
+  },
+  "kou": {
+    "name": "kou",
+    "tagline": "獨立的虛擬終端引擎",
+    "description": "PTY 管理、VT100/ANSI 螢幕模擬器與字形渲染螢幕輸出，集於一個函式庫與 CLI 之中。從 tairitsu 打包器中抽出的 vtty 核心——真正遵循 CSI/SGR 的螢幕，而非裸 PTY 包裝。",
+    "shortLabel": "虛擬終端引擎"
+  },
+  "malkuth": {
+    "name": "Malkuth",
+    "tagline": "Rust 的可組合服務監管工具包",
+    "description": "為長期執行的 Rust 程式提供優雅關閉、健康探針、協調鎖與滾動更新。可插拔傳輸（基於 TCP/WebSocket/IPC 的 JSON-RPC）、受監管工作處理序，以及一個用檔案監看與黏性反向代理包裹任意程式的 watchdog CLI。",
+    "shortLabel": "服務監管工具包"
+  },
+  "seia": {
+    "name": "seia",
+    "tagline": "多引擎網路搜尋函式庫與 CLI",
+    "description": "查詢多樣搜尋後端的統一介面。無需鑑別的引擎開箱即用、零設定——一個把單一查詢路由到多個供應商並合併結果的函式庫與 CLI。",
+    "shortLabel": "多引擎網路搜尋"
+  },
+  "shirabe": {
+    "name": "shirabe",
+    "tagline": "Rust 原生的無頭瀏覽器自動化",
+    "description": "輕量的 Rust 原生瀏覽器自動化函式庫與除錯伺服器。它透過一個手寫的引擎驅動任何會說 CDP 的瀏覽器——Chrome、Chromium、Edge——並自動拉取、固定一個 Chrome for Testing 建置，讓你永遠不必手動安裝瀏覽器。",
+    "shortLabel": "無頭瀏覽器自動化"
   }
 }

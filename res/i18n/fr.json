@@ -34,9 +34,9 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "Plateforme de Collaboration Multi-Agent",
-    "description": "Plateforme de collaboration multi-agent basée sur Rust avec un design micro-noyau exec-only. Les agents interagissent via des imports de modules ES dans une couche IEPL TypeScript.",
-    "shortLabel": "Plateforme de Collaboration Multi-Agent"
+    "tagline": "Plateforme Multi-Agent pour le Contrôle IA Industriel",
+    "description": "Une plateforme multi-agent à micro-noyau exec-only, conçue pour le contrôle industriel critique en matière de sécurité. Le LLM ne voit qu'une poignée de primitives — tout le travail réel s'exécute dans le pipeline IEPL TypeScript, dispatchant vers une vaste surface d'outils MCP répartie sur de nombreux agents, avec support multi-fournisseurs de protocoles (Modbus, S7comm, OPC UA) et des portes de sécurité multi-niveaux.",
+    "shortLabel": "Plateforme Multi-Agent"
   },
   "shittim": {
     "name": "Shittim Chest",
@@ -64,9 +64,9 @@
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "RBAC de Qualité Production, Conçu par Contraintes",
-    "description": "Framework d'authentification zero-trust et RBAC personnalisable en Rust. Prend en charge les hiérarchies de rôles, la séparation des tâches et les contraintes temporelles ANSI INCITS 359-2004.",
-    "shortLabel": "Framework RBAC"
+    "tagline": "Auth zero-trust & RBAC, avec scoring de confiance",
+    "description": "Un framework d'authentification et d'autorisation Rust entièrement générique et basé sur des traits. RBAC complet (RBAC0/1/2) implémentant ANSI INCITS 359-2004, plus une couche d'autorisation dynamique avec scoring de confiance, détection d'anomalies et niveaux d'autonomie inspirés du DO-178C (L0–L4).",
+    "shortLabel": "Framework Auth & RBAC"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
@@ -94,8 +94,56 @@
   },
   "noa": {
     "name": "Noa",
-    "tagline": "Documentation Rust par IA depuis le code source",
-    "description": "Générateur de documentation pour crates Rust produisant du Markdown, des sites HTML statiques et des traductions multilingues alimentées par l'IA — le tout à partir de votre code source et commentaires de documentation.",
-    "shortLabel": "Générateur de Docs Rust"
+    "tagline": "Contrôle de version distribué natif IA",
+    "description": "Isolation d'espace de travail par agent, logs JSONL en ajout seul, historique à base de snapshots et compatibilité complète avec le protocole git — un contrôle de version conçu dès le départ pour les agents IA qui créent constamment des branches et réécrivent l'historique.",
+    "shortLabel": "Contrôle de Version Distribué"
+  },
+  "evernight": {
+    "name": "Evernight",
+    "tagline": "Contrôle à distance multiplateforme & courtier de protocoles industriels",
+    "description": "Streaming d'écran, SSH/VNC/RDP, télémétrie matérielle et protocoles industriels — Modbus, S7comm, OPC UA, CAN, EtherCAT. La couche qui connecte les agents IA cloud aux appareils physiques et orchestre conteneurs et VM en périphérie.",
+    "shortLabel": "Courtier de Protocoles & Contrôle à Distance"
+  },
+  "aris": {
+    "name": "ARIS",
+    "tagline": "OS embarqué pour passerelles IoT industrielles",
+    "description": "L'OS embarqué et le firmware de la passerelle IoT industrielle d'Entelecheia. Il exécute evernight sur des appareils périphériques ARM/RISC-V, reliant le courtier de protocoles au matériel physique — automates, capteurs, vannes — via une couche noyau minimale et sécurisée.",
+    "shortLabel": "OS Embarqué pour Passerelle IoT"
+  },
+  "kei": {
+    "name": "KEI",
+    "tagline": "Fork ARM64 d'Asterinas pour passerelles IoT industrielles",
+    "description": "Un fork indépendant d'asterinas avec support ARM64 et des Board Support Packages pour les passerelles IoT industrielles. Il fournit le kei-kernel.bin consommé par aris — absorbant les changements amont selon son propre calendrier plutôt qu'en tant que branche de suivi.",
+    "shortLabel": "Noyau Industriel ARM64"
+  },
+  "lagrange": {
+    "name": "Lagrange",
+    "tagline": "Site statique Markdown multilingue rendu par WASI",
+    "description": "Transformez un dossier de Markdown en un site de documentation statique et multilingue — rendu par WASI, avec sélecteur de langue intégré et redirection racine. Sans framework JavaScript, sans mdBook, sans toolchain Node. Lagrange construit sa propre documentation.",
+    "shortLabel": "Générateur de Site Markdown WASI"
+  },
+  "kou": {
+    "name": "kou",
+    "tagline": "Moteur de terminal virtuel autonome",
+    "description": "Gestion PTY, émulateur d'écran VT100/ANSI et sortie d'écran par rendu de glyphes réunis dans une bibliothèque et un CLI. Le cœur vtty extrait du packager tairitsu — un véritable écran respectant CSI/SGR, pas un simple wrapper PTY.",
+    "shortLabel": "Moteur de Terminal Virtuel"
+  },
+  "malkuth": {
+    "name": "Malkuth",
+    "tagline": "Boîte à outils de supervision de services composable pour Rust",
+    "description": "Arrêt gracieux, sondes de santé, verrous de coordination et mises à jour en continu pour les programmes Rust longue durée. Transport enfichable (JSON-RPC sur TCP/WebSocket/IPC), workers supervisés, et un CLI watchdog qui enveloppe n'importe quel programme avec veille de fichiers et proxy inverse persistant.",
+    "shortLabel": "Boîte à Outils de Supervision de Services"
+  },
+  "seia": {
+    "name": "seia",
+    "tagline": "Bibliothèque et CLI de recherche web multi-moteurs",
+    "description": "Une interface unifiée pour interroger divers backends de recherche. Les moteurs sans authentification fonctionnent immédiatement sans configuration — une bibliothèque et un CLI pour router une seule requête vers de nombreux fournisseurs et fusionner les résultats.",
+    "shortLabel": "Recherche Web Multi-Moteurs"
+  },
+  "shirabe": {
+    "name": "shirabe",
+    "tagline": "Automatisation de navigateur headless native Rust",
+    "description": "Une bibliothèque légère d'automatisation de navigateur native Rust et un serveur de débogage. Elle pilote tout navigateur parlant CDP — Chrome, Chromium, Edge — via un moteur écrit à la main, et récupère et épingle un build Chrome for Testing afin que vous n'installiez jamais un navigateur à la main.",
+    "shortLabel": "Automatisation de Navigateur Headless"
   }
 }

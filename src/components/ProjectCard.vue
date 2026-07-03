@@ -75,8 +75,12 @@ import type { Project } from '@/types/project'
 
 import entelecheiaLogo from '@res/logos/entelecheia.webp'
 import shittimLogo from '@res/logos/shittim-chest.webp'
+import evernightLogo from '@res/logos/evernight.webp'
+import arisLogo from '@res/logos/aris.webp'
+import keiLogo from '@res/logos/kei.webp'
 import tairitsuLogo from '@res/logos/tairitsu.webp'
 import hikariLogo from '@res/logos/hikari.webp'
+import lagrangeLogo from '@res/logos/lagrange.webp'
 import aobaLogo from '@res/logos/aoba.webp'
 import kirinoLogo from '@res/logos/kirino.webp'
 import ratatuiMarkdownLogo from '@res/logos/ratatui-markdown.webp'
@@ -84,6 +88,10 @@ import yuukaLogo from '@res/logos/yuuka.webp'
 import ichikaLogo from '@res/logos/ichika.webp'
 import hifumiLogo from '@res/logos/hifumi.webp'
 import noaLogo from '@res/logos/noa.webp'
+import kouLogo from '@res/logos/kou.webp'
+import malkuthLogo from '@res/logos/malkuth.webp'
+import seiaLogo from '@res/logos/seia.webp'
+import shirabeLogo from '@res/logos/shirabe.webp'
 
 const props = defineProps<{
   project: Project
@@ -94,8 +102,12 @@ const { t } = useI18n()
 const logoMap: Record<string, string> = {
   entelecheia: entelecheiaLogo,
   'shittim-chest': shittimLogo,
+  evernight: evernightLogo,
+  aris: arisLogo,
+  kei: keiLogo,
   tairitsu: tairitsuLogo,
   hikari: hikariLogo,
+  lagrange: lagrangeLogo,
   aoba: aobaLogo,
   kirino: kirinoLogo,
   'ratatui-markdown': ratatuiMarkdownLogo,
@@ -103,6 +115,10 @@ const logoMap: Record<string, string> = {
   ichika: ichikaLogo,
   hifumi: hifumiLogo,
   noa: noaLogo,
+  kou: kouLogo,
+  malkuth: malkuthLogo,
+  seia: seiaLogo,
+  shirabe: shirabeLogo,
 }
 
 const logoUrl = computed(() => logoMap[props.project.id])

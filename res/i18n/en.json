@@ -34,9 +34,9 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "Multi-Agent Collaboration Platform",
-    "description": "A Rust-based multi-agent collaboration platform with an exec-only microkernel design. Agents interact through ES module imports in an IEPL TypeScript layer, keeping the LLM surface minimal and composable.",
-    "shortLabel": "Multi-Agent Collaboration Platform"
+    "tagline": "Multi-Agent Platform for Industrial AI Control",
+    "description": "An exec-only microkernel multi-agent platform built for safety-critical industrial control. The LLM sees only a handful of primitives — all real work runs inside the IEPL TypeScript pipeline, dispatching to a large MCP tool surface across many agents, with cross-vendor protocol support (Modbus, S7comm, OPC UA) and multi-layer safety gates.",
+    "shortLabel": "Multi-Agent Platform"
   },
   "shittim": {
     "name": "Shittim Chest",
@@ -64,9 +64,9 @@
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "Production-Grade RBAC, Constrained by Design",
-    "description": "Customizable zero-trust authentication & RBAC framework in Rust. Supports ANSI INCITS 359-2004 role hierarchies, separation of duties, and temporal constraints.",
-    "shortLabel": "RBAC Framework"
+    "tagline": "Zero-trust auth & RBAC, with trust scoring",
+    "description": "A fully generic, trait-based authentication and authorization framework for Rust. Complete RBAC (RBAC0/1/2) implementing ANSI INCITS 359-2004, plus a dynamic authorization layer with trust scoring, anomaly detection, and DO-178C-inspired autonomy levels (L0–L4).",
+    "shortLabel": "Auth & RBAC Framework"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
@@ -94,8 +94,56 @@
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI-powered Rust documentation from source",
-    "description": "A document generator for Rust crates that produces Markdown, static HTML sites, and AI-powered multi-language translations — all from your source code and doc comments.",
-    "shortLabel": "Rust Doc Generator"
+    "tagline": "AI-native distributed version control",
+    "description": "Per-agent workspace isolation, append-only JSONL logs, snapshot-based history, and full git protocol compatibility — version control designed from the ground up for AI agents that branch constantly and rewrite history.",
+    "shortLabel": "Distributed Version Control"
+  },
+  "evernight": {
+    "name": "Evernight",
+    "tagline": "Cross-platform remote control & industrial-protocol broker",
+    "description": "Screen streaming, SSH/VNC/RDP, hardware telemetry, and industrial protocols — Modbus, S7comm, OPC UA, CAN, EtherCAT. The layer that connects cloud AI agents to physical devices and orchestrates containers and VMs at the edge.",
+    "shortLabel": "Protocol Broker & Remote Control"
+  },
+  "aris": {
+    "name": "ARIS",
+    "tagline": "Embedded OS for industrial IoT gateways",
+    "description": "The embedded OS and firmware for the Entelecheia industrial IoT gateway. It runs evernight on ARM/RISC-V edge devices, bridging the protocol broker to physical hardware — PLCs, sensors, valves — through a minimal, secure kernel layer.",
+    "shortLabel": "Embedded IoT Gateway OS"
+  },
+  "kei": {
+    "name": "KEI",
+    "tagline": "Asterinas ARM64 fork for industrial IoT gateways",
+    "description": "An independent fork of asterinas with ARM64 support and board support packages for industrial IoT gateways. It provides the kei-kernel.bin consumed by aris — absorbing upstream changes on its own schedule rather than tracking them as a branch.",
+    "shortLabel": "ARM64 Industrial Kernel"
+  },
+  "lagrange": {
+    "name": "Lagrange",
+    "tagline": "WASI-rendered multilingual Markdown static site",
+    "description": "Turn a folder of Markdown into a static, multilingual documentation site — WASI-rendered, with a built-in language switcher and root redirect. No JavaScript framework, no mdBook, no Node toolchain. Lagrange builds its own documentation.",
+    "shortLabel": "WASI Markdown Site Generator"
+  },
+  "kou": {
+    "name": "kou",
+    "tagline": "Standalone virtual-terminal engine",
+    "description": "PTY management, a VT100/ANSI screen emulator, and glyph-rendering screen output in one library and CLI. The vtty core extracted from the tairitsu packager — a real CSI/SGR-honouring screen, not a bare PTY wrapper.",
+    "shortLabel": "Virtual Terminal Engine"
+  },
+  "malkuth": {
+    "name": "Malkuth",
+    "tagline": "Composable service-supervision toolkit for Rust",
+    "description": "Graceful shutdown, health probes, coordination locks, and rolling updates for long-running Rust programs. Pluggable transport (JSON-RPC over TCP/WebSocket/IPC), supervised workers, and a watchdog CLI that wraps any program with file watching and a sticky reverse proxy.",
+    "shortLabel": "Service Supervision Toolkit"
+  },
+  "seia": {
+    "name": "seia",
+    "tagline": "Multi-engine web search library and CLI",
+    "description": "A unified interface to query diverse search backends. Engines that need no authentication work out of the box with zero configuration — a library and CLI for routing one query across many providers and merging the results.",
+    "shortLabel": "Multi-Engine Web Search"
+  },
+  "shirabe": {
+    "name": "shirabe",
+    "tagline": "Rust-native headless browser automation",
+    "description": "A lightweight, Rust-native browser automation library and debug server. It drives any CDP-speaking browser — Chrome, Chromium, Edge — through one hand-rolled engine, fetching and pinning a Chrome for Testing build so you never install a browser by hand.",
+    "shortLabel": "Headless Browser Automation"
   }
 }
