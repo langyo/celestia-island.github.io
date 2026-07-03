@@ -1,5 +1,9 @@
 node_modules/
 dist/
-public/
+target/
 
 *.tsbuildinfo
+
+# Python cache
+__pycache__/
+*.py[cod]

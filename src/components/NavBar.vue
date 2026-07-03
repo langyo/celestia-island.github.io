@@ -19,7 +19,7 @@
             <div v-else class="i-lucide-moon w-5 h-5 transition-transform hover:-rotate-12" />
           </button>
 
-          <div class="relative" role="listbox" aria-label="Language selector">
+          <div ref="langRef" class="relative">
             <button @click.stop="showLangMenu = !showLangMenu" class="nav-lang-btn" :aria-expanded="showLangMenu" aria-haspopup="listbox">
               <div class="i-lucide-globe w-5 h-5" />
               <span class="hidden sm:inline ml-0.5">{{ currentLangLabel }}</span>
@@ -30,7 +30,7 @@
                 v-if="showLangMenu"
                 class="absolute right-0 top-full mt-2 bg-[var(--bg-primary)] border border-[var(--border-subtle)] p-2 rounded-xl min-w-[140px] shadow-2xl z-50 flex flex-col gap-1"
                 role="listbox"
-                aria-label="Available languages"
+                :aria-label="t('site.nav.languageList')"
               >
                 <button
                   v-for="lang in langs"
@@ -63,7 +63,9 @@ import celestiaLogo from '@res/logos/celestia.webp'
 const { t, locale } = useI18n()
 const { theme, toggleTheme } = useTheme()
 const showLangMenu = ref(false)
-const snapContainer = inject<HTMLDivElement | null>(SNAP_CONTAINER_KEY, null)
+const langRef = ref<HTMLDivElement>()
+const snapContainerRef = inject(SNAP_CONTAINER_KEY, null)
+const snapContainer = computed(() => snapContainerRef?.value ?? null)
 
 const langs = [
   { code: 'en', label: 'English' },
@@ -83,16 +85,16 @@ const currentLangLabel = computed(() => {
 
 function switchLang(code: string) {
   locale.value = code
-  localStorage.setItem('celestia-locale', code)
+  try { localStorage.setItem('celestia-locale', code) } catch { /* guard */ }
   showLangMenu.value = false
 }
 
 function scrollToTop() {
-  snapContainer?.scrollTo({ top: 0, behavior: 'smooth' })
+  snapContainer.value?.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function onClickOutside(e: MouseEvent) {
-  if (!(e.target as HTMLElement).closest('.relative')) {
+  if (langRef.value && !langRef.value.contains(e.target as Node)) {
     showLangMenu.value = false
   }
 }

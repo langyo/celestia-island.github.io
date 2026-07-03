@@ -1,4 +1,4 @@
-import { ref, watch, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
 type Theme = 'dark' | 'light'
 
@@ -11,7 +11,7 @@ export function useTheme() {
   function apply(t: Theme) {
     document.documentElement.classList.toggle('dark', t === 'dark')
     document.documentElement.setAttribute('data-theme', t)
-    localStorage.setItem('celestia-theme', t)
+    try { localStorage.setItem('celestia-theme', t) } catch { /* quota / private-browsing */ }
   }
 
   function setTheme(t: Theme) {
@@ -29,7 +29,8 @@ export function useTheme() {
   }
 
   onMounted(() => {
-    const stored = localStorage.getItem('celestia-theme') as Theme | null
+    let stored: Theme | null = null
+    try { stored = localStorage.getItem('celestia-theme') as Theme | null } catch { /* guard */ }
     if (stored) {
       theme.value = stored
       apply(stored)

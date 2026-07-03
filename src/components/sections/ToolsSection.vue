@@ -58,7 +58,7 @@ const { t } = useI18n()
 const { visible, triggerReveal } = useReveal()
 const el = ref<HTMLElement>()
 
-const items = projects.filter(p => ['aoba', 'kirino', 'ratatui-markdown', 'yuuka', 'ichika', 'hifumi', 'noa'].includes(p.id))
+const items = projects.filter(p => ['aoba', 'kirino', 'ratatui-markdown', 'yuuka', 'ichika', 'hifumi', 'noa', 'kou', 'malkuth', 'seia', 'shirabe'].includes(p.id))
 
 const scrollRef = ref<HTMLDivElement>()
 const canScrollLeft = ref(false)

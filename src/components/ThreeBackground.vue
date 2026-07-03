@@ -41,6 +41,7 @@ let starTwinkle: Points
 let animationId: number
 let clock: Clock
 let visible = true
+let observer: IntersectionObserver
 
 watch(theme, (t) => {
   if (!logoMesh) return
@@ -257,7 +258,9 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight)
   if (logoMaterial) {
     logoMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
-    lightMaterial!.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
+  }
+  if (lightMaterial) {
+    lightMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight)
   }
   updateScale()
 }
@@ -266,7 +269,7 @@ onMounted(() => {
   init()
   window.addEventListener('resize', onResize)
 
-  const observer = new IntersectionObserver(
+  observer = new IntersectionObserver(
     ([entry]) => { visible = entry.isIntersecting },
     { threshold: 0 }
   )
@@ -276,15 +279,19 @@ onMounted(() => {
 onBeforeUnmount(() => {
   cancelAnimationFrame(animationId)
   window.removeEventListener('resize', onResize)
+  observer?.disconnect()
   if (renderer) {
     renderer.dispose()
     containerRef.value?.removeChild(renderer.domElement)
   }
+  starMaterial?.map?.dispose()
   starPoints?.geometry.dispose()
   starMaterial?.dispose()
+  twinkleMaterial?.map?.dispose()
   starTwinkle?.geometry.dispose()
   twinkleMaterial?.dispose()
   logoMaterial?.dispose()
+  lightMaterial?.uniforms?.u_texture?.value?.dispose()
   lightMaterial?.dispose()
   logoMesh?.geometry.dispose()
 })
