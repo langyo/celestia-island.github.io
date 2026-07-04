@@ -1,8 +1,10 @@
 import "./celestia-devtools.just"
 
 # `which()` from the vendored celestia-devtools recipes is still an unstable
-# just builtin, so the whole file must opt in.
+# just builtin, so the whole file must opt in (`set lists` gates `which()`
+# itself on current just releases).
 set unstable
+set lists := true
 set shell := ["bash", "-c"]
 
 default:
