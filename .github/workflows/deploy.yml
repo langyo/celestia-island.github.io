@@ -52,4 +52,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        # v5 is the Node 24-native build; @v4 (Node 20) gets forced onto
+        # Node 24 by current runners and fails the deployment.
+        uses: actions/deploy-pages@v5
