@@ -60,7 +60,6 @@ export const projects: Project[] = [
     descriptionKey: 'evernight.description',
     techStack: ['Rust', 'Modbus', 'S7comm', 'OPC UA'],
     status: 'preview',
-    repo: 'celestia-island/evernight',
     color: '#4f46e5',
     icon: 'i-lucide-network',
   },
