@@ -51,7 +51,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         # v5 is the Node 24-native build; @v4 (Node 20) gets forced onto
-        # Node 24 by current runners and fails the deployment.
+        # Node 24 by current runners and fails the deployment. Retried once
+        # below — deploy-pages intermittently fails with "Deployment failed,
+        # try again later" on transient GitHub Pages backend hiccups.
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+      - name: Wait before retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+      - name: Retry deployment
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5

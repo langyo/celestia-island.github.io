@@ -15,8 +15,6 @@ on:
       - 'uno.config.ts'
       - 'index.html'
       - 'justfile'
-  push:
-    branches: [main, dev]
 
 jobs:
   build:
