@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/build.yml'
+      - 'src/**'
+      - 'scripts/**'
+      - 'shaders/**'
+      - 'res/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'tsconfig.json'
+      - 'vite.config.ts'
+      - 'uno.config.ts'
+      - 'index.html'
+      - 'justfile'
+  push:
+    branches: [main, dev]
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: 'pnpm'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: extractions/setup-just@v2
+        with:
+          version: "1.40.0"
+      - run: just install
+      - run: just build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+          retention-days: 7
