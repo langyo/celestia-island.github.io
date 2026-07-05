@@ -106,14 +106,14 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "OS embarqué pour passerelles IoT industrielles",
-    "description": "L'OS embarqué et le firmware de la passerelle IoT industrielle d'Entelecheia. Il exécute evernight sur des appareils périphériques ARM/RISC-V, reliant le courtier de protocoles au matériel physique — automates, capteurs, vannes — via une couche noyau minimale et sécurisée.",
+    "tagline": "Distribution Linux-standard avec un bureau pour evernight & shittim-chest",
+    "description": "Une distribution Linux-standard (compatible LSB) qui embarque un environnement de bureau conçu spécifiquement pour evernight et shittim-chest. Sa référence est le panneau HMI industriel et le poste hôte (上位机) — la machine face à l'opérateur, pas la passerelle edge. Elle exécute un noyau Linux standard et est indépendante de kei.",
     "shortLabel": "OS Embarqué pour Passerelle IoT"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "Fork ARM64 d'Asterinas pour passerelles IoT industrielles",
-    "description": "Un fork indépendant d'asterinas avec support ARM64 et des Board Support Packages pour les passerelles IoT industrielles. Il fournit le kei-kernel.bin consommé par aris — absorbant les changements amont selon son propre calendrier plutôt qu'en tant que branche de suivi.",
+    "tagline": "Noyau OS orienté IoT — RTOS sur Asterinas, accès Linux",
+    "description": "Un noyau de système d'exploitation orienté IoT qui prend Asterinas et le façonne en une installation de type RTOS — petit, temps réel, auditable — tout en conservant un pont vers l'écosystème Linux. Ni une distribution Linux ni un Asterinas standard : déterminisme temps réel là où c'est nécessaire, compatibilité logicielle de niveau Linux ailleurs. Indépendant de aris.",
     "shortLabel": "Noyau Industriel ARM64"
   },
   "lagrange": {

@@ -106,14 +106,14 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "産業IoTゲートウェイ向け組込みOS",
-    "description": "Entelecheia産業IoTゲートウェイの組込みOSおよびファームウェア。ARM/RISC-Vエッジデバイス上でevernightを実行し、最小限で安全なカーネル層を通じてプロトコルブローカーを物理ハードウェア——PLC、センサー、バルブ——に橋渡しします。",
+    "tagline": "evernight と shittim-chest 向けデスクトップを備えた Linux 標準ディストリビューション",
+    "description": "evernight と shittim-chest のために専用構築されたデスクトップ環境を同梱する Linux 標準（LSB 互換）ディストリビューション。そのベンチマークは産業用 HMI パネルと上位機（スーパバイザホスト）——すなわちエッジゲートウェイではなく、オペレータが向き合う機械です。ストックの Linux カーネルを実行し、kei から独立しています。",
     "shortLabel": "IoTゲートウェイ組込みOS"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "産業IoTゲートウェイ向けAsterinas ARM64フォーク",
-    "description": "ARM64対応と産業IoTゲートウェイ向けボードサポートパッケージを備えた、asterinasの独立フォーク。arisが消費するkei-kernel.binを提供します——追跡ブランチとしてではなく、独自のスケジュールで上流の変更を取り込みます。",
+    "tagline": "IoT 向け OS カーネル — Asterinas 上の RTOS、Linux アクセス",
+    "description": "Asterinas を取り込み、それを RTOS 風の施設へと形作る —— 小さく、リアルタイムで、監査可能 —— 一方で Linux エコシステムへの橋を保つ、IoT 向けの OS カーネル。Linux ディストリビューションでも、ストックの Asterinas でもありません。必要な箇所ではリアルタイムの決定性を、それ以外では Linux グレードのソフトウェア互換性を提供します。aris から独立しています。",
     "shortLabel": "ARM64産業カーネル"
   },
   "lagrange": {
