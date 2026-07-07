@@ -106,14 +106,14 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "工業物聯網閘道嵌入式系統",
-    "description": "Entelecheia 工業物聯網閘道的嵌入式作業系統與韌體。它在 ARM/RISC-V 邊緣裝置上執行 evernight，透過最小化、安全的核心層把協定代理橋接到實體硬體——PLC、感測器、閥門。",
+    "tagline": "相容 Linux 標準、附帶 evernight 與 shittim-chest 桌面的發行版",
+    "description": "一套相容 Linux 標準（LSB）的發行版，附帶為 evernight 與 shittim-chest 客製化的桌面環境。它對標的是工業 HMI 面板與上位機——操作員面前的機器，而非邊緣閘道。它執行原生 Linux 核心，與 kei 相互獨立。",
     "shortLabel": "物聯網閘道嵌入式系統"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "面向工業物聯網閘道的 Asterinas ARM64 分支",
-    "description": "asterinas 的獨立分支，提供 ARM64 支援與工業物聯網閘道的板級支援包（BSP）。它產出 aris 所消費的 kei-kernel.bin——按自身節奏吸收上游變更，而非作為追蹤分支。",
+    "tagline": "面向物聯網的作業系統核心 —— 基於 Asterinas 的 RTOS，兼顧 Linux 接入",
+    "description": "面向物聯網的作業系統核心，在 Asterinas 之上做成一套 RTOS 風格的設施——小、即時、可稽核——同時保留通往 Linux 生態的橋樑。它既不是 Linux 發行版，也不是原版 Asterinas：需要即時確定性的地方得到即時確定性，其餘則享有 Linux 級的軟體相容性。與 aris 相互獨立。",
     "shortLabel": "ARM64 工業核心"
   },
   "lagrange": {

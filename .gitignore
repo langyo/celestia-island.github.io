@@ -2,6 +2,12 @@ node_modules/
 dist/
 target/
 
+# pnpm-lock.yaml IS committed — it pins resolved versions so devtools
+# `prefetch` picks pnpm (not npm) and CI caching works.
+# Only foreign lock files are kept out of this pnpm-only repo.
+package-lock.json
+yarn.lock
+
 *.tsbuildinfo
 
 # Python cache

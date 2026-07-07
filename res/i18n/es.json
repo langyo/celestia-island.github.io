@@ -106,14 +106,14 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "SO embebido para gateways IoT industriales",
-    "description": "El SO embebido y firmware del gateway IoT industrial de Entelecheia. Ejecuta evernight en dispositivos edge ARM/RISC-V, conectando el broker de protocolos al hardware físico — PLCs, sensores, válvulas — a través de una capa de kernel mínima y segura.",
+    "tagline": "Distribución estándar Linux con un escritorio para evernight y shittim-chest",
+    "description": "Una distribución estándar Linux (compatible con LSB) que incluye un entorno de escritorio diseñado específicamente para evernight y shittim-chest. Su referencia es el panel HMI industrial y la estación host (上位机) — la máquina orientada al operador, no la pasarela edge. Ejecuta un núcleo Linux estándar y es independiente de kei.",
     "shortLabel": "SO Embebido para Gateway IoT"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "Fork ARM64 de Asterinas para gateways IoT industriales",
-    "description": "Un fork independiente de asterinas con soporte ARM64 y Board Support Packages para gateways IoT industriales. Proporciona el kei-kernel.bin que consume aris — absorbiendo cambios upstream según su propio calendario en lugar de como rama de seguimiento.",
+    "tagline": "Núcleo de SO orientado a IoT — RTOS sobre Asterinas, acceso Linux",
+    "description": "Un núcleo de sistema operativo orientado a IoT que toma Asterinas y lo conforma en una instalación de estilo RTOS — pequeño, en tiempo real, auditable — manteniendo un puente hacia el ecosistema Linux. Ni una distribución Linux ni Asterinas sin modificar: determinismo en tiempo real donde se necesita, compatibilidad de software de grado Linux en el resto. Independiente de aris.",
     "shortLabel": "Kernel Industrial ARM64"
   },
   "lagrange": {

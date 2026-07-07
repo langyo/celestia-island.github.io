@@ -106,15 +106,15 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "Embedded OS for industrial IoT gateways",
-    "description": "The embedded OS and firmware for the Entelecheia industrial IoT gateway. It runs evernight on ARM/RISC-V edge devices, bridging the protocol broker to physical hardware — PLCs, sensors, valves — through a minimal, secure kernel layer.",
-    "shortLabel": "Embedded IoT Gateway OS"
+    "tagline": "Linux-standard distribution with a desktop for evernight & shittim-chest",
+    "description": "A Linux-standard (LSB-compatible) distribution that ships a desktop environment purpose-built for evernight and shittim-chest. Its benchmark is the industrial HMI panel and the supervisory host (上位机) — the operator-facing machine, not the edge gateway. It runs a stock Linux kernel and is independent of kei.",
+    "shortLabel": "Linux HMI / Host Distribution"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "Asterinas ARM64 fork for industrial IoT gateways",
-    "description": "An independent fork of asterinas with ARM64 support and board support packages for industrial IoT gateways. It provides the kei-kernel.bin consumed by aris — absorbing upstream changes on its own schedule rather than tracking them as a branch.",
-    "shortLabel": "ARM64 Industrial Kernel"
+    "tagline": "IoT-oriented OS kernel — RTOS on Asterinas, Linux access",
+    "description": "An IoT-oriented operating-system kernel that takes Asterinas and shapes it into an RTOS-style facility — small, real-time, auditable — while keeping a bridge into the Linux ecosystem. Neither a Linux distribution nor stock Asterinas: real-time determinism where needed, Linux-grade software compatibility elsewhere. Independent of aris.",
+    "shortLabel": "RTOS-grade IoT Kernel"
   },
   "lagrange": {
     "name": "Lagrange",

@@ -1,6 +1,7 @@
 <template>
   <div class="scroll-outer">
     <button
+      v-if="!compact"
       class="scroll-arrow scroll-arrow-left"
       :class="{ 'is-hidden': !canScrollLeft }"
       @click="scrollByCards(-1)"
@@ -9,19 +10,22 @@
       <div class="i-lucide-chevron-left w-5 h-5" />
     </button>
     <div class="scroll-container" ref="scrollRef" @wheel="onWheel">
-      <div class="scroll-track">
+      <div class="scroll-track" :class="{ 'is-compact': compact }">
         <div
           v-for="(p, i) in items"
           :key="p.id"
           class="card-wrapper reveal"
-          :class="{ 'is-visible': visible }"
-          :style="{ width: cardWidth, minWidth: cardWidth, transitionDelay: `${0.08 + i * 0.06}s` }"
+          :class="{ 'is-visible': visible, 'is-compact': compact }"
+          :style="compact
+            ? { transitionDelay: `${0.08 + i * 0.06}s` }
+            : { width: cardWidth, minWidth: cardWidth, transitionDelay: `${0.08 + i * 0.06}s` }"
         >
           <ProjectCard :project="p" />
         </div>
       </div>
     </div>
     <button
+      v-if="!compact"
       class="scroll-arrow scroll-arrow-right"
       :class="{ 'is-hidden': !canScrollRight }"
       @click="scrollByCards(1)"
@@ -33,14 +37,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import type { Project } from '@/types/project'
 import ProjectCard from '@/components/ProjectCard.vue'
 
-defineProps<{
+const props = defineProps<{
   items: Project[]
   visible: boolean
 }>()
+
+const compact = computed(() => props.items.length <= 3)
 
 const scrollRef = ref<HTMLDivElement>()
 const canScrollLeft = ref(false)
@@ -49,7 +55,7 @@ const cardWidth = ref('280px')
 
 function updateCardWidth() {
   const el = scrollRef.value
-  if (!el) return
+  if (!el || compact.value) return
   const gap = 16
   const isMobile = window.innerWidth < 640
   const visibleCount = isMobile ? 1.2 : 3.2
@@ -75,7 +81,7 @@ let _wheelRaf = 0
 
 function onWheel(e: WheelEvent) {
   const el = scrollRef.value
-  if (!el) return
+  if (!el || compact.value) return
 
   const delta = e.deltaY || e.deltaX
   if (delta === 0) return
@@ -181,9 +187,18 @@ onBeforeUnmount(() => {
   width: max-content;
 }
 
+.scroll-track.is-compact {
+  width: 100%;
+}
+
 .card-wrapper {
   flex-shrink: 0;
   height: 280px;
+}
+
+.card-wrapper.is-compact {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .card-wrapper :deep(> *) {
