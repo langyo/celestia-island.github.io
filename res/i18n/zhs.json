@@ -106,14 +106,14 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "工业物联网网关嵌入式系统",
-    "description": "Entelecheia 工业物联网网关的嵌入式操作系统与固件。它在 ARM/RISC-V 边缘设备上运行 evernight，通过最小化、安全的内核层把协议代理桥接到物理硬件——PLC、传感器、阀门。",
+    "tagline": "兼容 Linux 标准的发行版，附带面向 evernight 与 shittim-chest 的桌面环境",
+    "description": "一套兼容 Linux 标准（LSB 兼容）的发行版，附带为 evernight 与 shittim-chest 定制的桌面环境。它对标的是工业 HMI 面板与上位机——操作员面前的机器，而非边缘网关。它运行原版 Linux 内核，且独立于 kei。",
     "shortLabel": "物联网网关嵌入式系统"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "面向工业物联网网关的 Asterinas ARM64 分支",
-    "description": "asterinas 的独立分支，提供 ARM64 支持与工业物联网网关的板级支持包（BSP）。它产出 aris 所消费的 kei-kernel.bin——按自身节奏吸收上游变更，而非作为追踪分支。",
+    "tagline": "面向物联网的操作系统内核 —— Asterinas 上的 RTOS，兼顾 Linux 接入",
+    "description": "一套面向物联网的操作系统内核，将 Asterinas 塑造成 RTOS 风格的设施——小、实时、可审计——同时保留通往 Linux 生态的桥梁。它既不是 Linux 发行版，也不是原版 Asterinas：需要之处提供实时确定性，其余一切享有 Linux 级的软件兼容性。独立于 aris。",
     "shortLabel": "ARM64 工业内核"
   },
   "lagrange": {
