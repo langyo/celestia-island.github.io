@@ -10,6 +10,16 @@ yarn.lock
 
 *.tsbuildinfo
 
+# Logs
+*.log
+
+# Editor / OS cruft
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
 # Python cache
 __pycache__/
 *.py[cod]
