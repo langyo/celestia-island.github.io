@@ -4,8 +4,9 @@ import "./celestia-devtools.just"
 # just builtin, so the whole file must opt in (`set lists` gates `which()`
 # itself on current just releases).
 set unstable
-set lists := true
+set lists
 set shell := ["bash", "-c"]
+set windows-shell := ["bash.exe", "-c"]
 
 default:
     @just --list
