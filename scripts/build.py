@@ -2,6 +2,7 @@
 """Build celestia-island.github.io — install deps, typecheck, bundle, generate favicons, copy assets."""
 
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -22,7 +23,11 @@ SOURCE_LOGO = LOGOS / "celestia.webp"
 
 def run(cmd: list[str], *, cwd: Path | None = None) -> None:
     print(f"> {' '.join(cmd)}")
-    r = subprocess.run(cmd, cwd=cwd or ROOT)
+    # On Windows, pnpm/npx/vue-tsc are .cmd batch files that subprocess.run
+    # cannot launch directly (CreateProcess can't find them without the
+    # .cmd extension); shell=True lets the shell resolve them. On Unix the
+    # bare executable names resolve fine without a shell.
+    r = subprocess.run(cmd, cwd=cwd or ROOT, shell=os.name == "nt")
     if r.returncode != 0:
         sys.exit(r.returncode)
 
