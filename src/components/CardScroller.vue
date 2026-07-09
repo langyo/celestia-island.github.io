@@ -46,16 +46,33 @@ const props = defineProps<{
   visible: boolean
 }>()
 
-const compact = computed(() => props.items.length <= 3)
+// Minimum readable width a card may shrink to. Below this, a compact
+// (no-scrollbar) layout would crush the cards, so we fall back to the
+// horizontal scrolling mode instead.
+const MIN_CARD_WIDTH = 210
 
 const scrollRef = ref<HTMLDivElement>()
+const containerWidth = ref(0)
 const canScrollLeft = ref(false)
 const canScrollRight = ref(false)
 const cardWidth = ref('280px')
 
+// Compact = no-scrollbar, cards share the track width evenly.
+// Only safe when there are few cards AND the container is wide enough to
+// give every card at least MIN_CARD_WIDTH; otherwise scroll instead.
+const compact = computed(() => {
+  const n = props.items.length
+  if (n === 0 || n > 3) return false
+  const gap = window.innerWidth < 640 ? 12 : 16
+  const perCard = (containerWidth.value - (n - 1) * gap) / n
+  return containerWidth.value > 0 && perCard >= MIN_CARD_WIDTH
+})
+
 function updateCardWidth() {
   const el = scrollRef.value
-  if (!el || compact.value) return
+  if (!el) return
+  containerWidth.value = el.clientWidth
+  if (compact.value) return
   const gap = 16
   const isMobile = window.innerWidth < 640
   const visibleCount = isMobile ? 1.2 : 3.2
