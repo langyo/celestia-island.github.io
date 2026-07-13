@@ -1,5 +1,5 @@
 # Ichika
 
-Declara tu pipeline, deja que la macro conecte los hilos.
+Pipelines declarativos de thread pool
 
-La macro pipe! toma una secuencia de closures — sync o async, nombrados o anónimos — y genera un pool de hilos completo con todo el cableado de canales. Branching vía match despacha datos a diferentes ramas del pipeline. Políticas de reintento con backoff configurable. Recuperación de errores que mantiene el pool en ejecución. Apagado graceful en Drop.
+Define pipelines de procesamiento multi-etapa desde closures — la macro genera todo el threading y los canales.

@@ -34,116 +34,116 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "산업 AI 제어용 다중 에이전트 플랫폼",
-    "description": "안전이 중요한 산업 제어를 위해 구축된 exec-only 마이크로커널 다중 에이전트 플랫폼입니다. LLM은 소수의 프리미티브만 보며, 모든 실제 작업은 IEPL TypeScript 파이프라인 안에서 실행되어 수많은 에이전트에 걸친 방대한 MCP 도구 영역으로 디스패치됩니다. 크로스 벤더 프로토콜 지원(Modbus, S7comm, OPC UA)과 다층 안전 게이트를 갖추고 있습니다.",
+    "tagline": "산업 AI 제어 플랫폼",
+    "description": "안전이 중요한 산업 제어를 위한 exec-only 다중 에이전트 플랫폼——LLM은 오케스트레이션만 담당하며, 모든 실제 작업은 타입 파이프라인과 MCP 도구를 통해 실행됩니다.",
     "shortLabel": "다중 에이전트 플랫폼"
   },
   "shittim": {
     "name": "시딤 궤",
     "tagline": "AI 에이전트와 대화하세요",
-    "description": "Entelecheia의 대화형 인터페이스——AI 에이전트와 실시간으로 대화하는 채팅 UI, 시스템 구성 및 권한 관리용 제어판, 데스크톱 및 모바일 앱. 사용자가 보고 만지는 모든 것입니다.",
-    "shortLabel": "에이전트 사용자 인터페이스"
+    "description": "Entelecheia의 대화형 프런트엔드——스트리밍 채팅 UI, 권한 및 구성 제어판, 데스크톱과 모바일 클라이언트.",
+    "shortLabel": "에이전트 채팅·제어"
   },
   "tairitsu": {
     "name": "Tairitsu",
-    "tagline": "풀스택, WASI 네이티브",
-    "description": "WASI를 대상으로 하는 완전한 웹 애플리케이션 구축——프론트엔드와 백엔드가 단일 이식 가능한 런타임을 공유합니다. Rust로 UI와 서버 로직을 작성하고, WASI 컴포넌트로 컴파일하여 브라우저, 서버, 엣지에 배포하세요. 하나의 런타임, 하나의 언어, 하나의 코드베이스.",
-    "shortLabel": "WASI 풀스택 기반 프레임워크"
+    "tagline": "하나의 런타임, 프런트엔드부터 백엔드까지",
+    "description": "단일 WASI 런타임에서 완전한 웹 앱 구축——Rust로 UI와 서버를 작성하고, WASI 컴포넌트로 컴파일하여 어디든 배포.",
+    "shortLabel": "WASI 풀스택 프레임워크"
   },
   "hikari": {
     "name": "Hikari",
-    "tagline": "WASI 네이티브 UI 프레임워크",
-    "description": "WASI 전용으로 구축된 UI 컴포넌트 라이브러리. 백엔드와 동일한 WASI 런타임에서 실행되는 세련된 컴포넌트——wasm-bindgen 불필요, JavaScript 글루 코드 불필요. 인터페이스를 한 번 구축하면 어디서든 렌더링됩니다.",
-    "shortLabel": "WASI UI 컴포넌트 라이브러리"
+    "tagline": "WASI용 UI 컴포넌트",
+    "description": "백엔드와 동일한 WASI 런타임에서 동작하는 세련된 컴포넌트 라이브러리——wasm-bindgen 불필요, JS 글루 코드 불필요.",
+    "shortLabel": "WASI UI 컴포넌트"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "Modbus RTU 멀티 프로토콜 디버깅 및 시뮬레이션",
-    "description": "터미널에서 Modbus 산업용 기기를 검사, 테스트, 시뮬레이션하세요. 실제 하드웨어에 연결하고, 테스트용 가상 장치를 실행하며, 프로토콜 간 데이터를 브리징——생산 현장과 CI 파이프라인에서 자동화 엔지니어의 필수 도구입니다.",
+    "tagline": "터미널에서 Modbus 디버깅",
+    "description": "터미널에서 Modbus 기기를 검사, 테스트, 시뮬레이션——실제 하드웨어에 연결하거나 가상 장치를 실행하세요.",
     "shortLabel": "Modbus 디버깅 도구"
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "제로 트러스트 인증·RBAC, 신뢰 점수 포함",
-    "description": "완전히 제네릭하고 trait 기반의 Rust 인증·인가 프레임워크입니다. ANSI INCITS 359-2004를 구현하는 완전한 RBAC(RBAC0/1/2)에 더해, 신뢰 점수 책정, 이상 탐지, DO-178C에서 영감받은 자율 등급(L0–L4)을 갖춘 동적 인가 레이어를 제공합니다.",
+    "tagline": "trait 기반 인증·RBAC·신뢰 점수",
+    "description": "완전한 RBAC과 동적 신뢰 점수 레이어를 갖춘 범용 Rust 인증·인가 프레임워크.",
     "shortLabel": "인증·RBAC 프레임워크"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
-    "tagline": "터미널 앱을 위한 리치 마크다운과 다이어그램",
-    "description": "ratatui 기반의 마크다운 렌더링, 구문 강조, Mermaid 다이어그램, 접기 가능한 JSON/TOML 트리, 하이브리드 스크롤 시스템. feature gate로 필요한 기능만 선택 가능.",
+    "tagline": "TUI 앱을 위한 Markdown과 다이어그램",
+    "description": "마크다운 렌더링, 구문 강조, Mermaid 다이어그램, 접기 가능 트리——모두 ratatui 위에서.",
     "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",
-    "tagline": "하나의 매크로로 깊게 중첩된 타입 일괄 생성",
-    "description": "간결한 DSL에서 복잡하고 깊게 중첩된 struct와 enum을 생성하는 proc-macro 라이브러리. 인라인 타입이 자동으로 평탄화·derive·serde 통합——매크로 한 번의 호출로 전체 타입 계층을 얻습니다.",
+    "tagline": "하나의 매크로로 중첩 타입 생성",
+    "description": "간결한 DSL에서 깊게 중첩된 struct와 enum을 생성하는 proc-macro. serde 통합 포함.",
     "shortLabel": "중첩 타입 제너레이터"
   },
   "ichika": {
     "name": "Ichika",
-    "tagline": "매크로로 선언적 스레드 풀 파이프라인 구축",
-    "description": "클로저로 다단계 처리 파이프라인을 선언적으로 정의. pipe! 매크로가 스레드 연결과 채널 배선을 자동 생성——혼합 동기/비동기 단계, 분기 라우팅, 재시도 정책, 우아한 종료를 지원.",
+    "tagline": "선언적 스레드 풀 파이프라인",
+    "description": "클로저로 다단계 처리 파이프라인을 정의——매크로가 스레드와 채널을 자동 생성합니다.",
     "shortLabel": "파이프라인 스레딩 라이브러리"
   },
   "hifumi": {
     "name": "Hifumi",
     "tagline": "구조체를 버전 관리하고, 데이터를 마이그레이션",
-    "description": "다른 버전 간 데이터 마이그레이션을 위한 직렬화 라이브러리. 타입에 버전 속성과 마이그레이션 규칙을 주석으로 달면, Hifumi가 이전 버전 구조체와 From 구현을 자동 생성. git 히스토리 전체에서 구조체를 비교하는 CLI도 포함.",
+    "description": "버전 속성에서 이전 버전 구조체와 마이그레이션을 생성하는 직렬화 라이브러리.",
     "shortLabel": "데이터 마이그레이션 라이브러리"
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI 네이티브 분산 버전 관리",
-    "description": "에이전트별 워크스페이스 격리, 추가 전용 JSONL 로그, 스냅샷 기반 히스토리, 완전한 git 프로토콜 호환성——끊임없이 브랜치를 만들고 히스토리를 다시 쓰는 AI 에이전트를 위해 처음부터 설계된 버전 관리 시스템입니다.",
+    "tagline": "AI 에이전트용 버전 관리",
+    "description": "에이전트별 워크스페이스, 추가 전용 로그, git 프로토콜 호환성——끊임없이 브랜치를 만들고 히스토리를 다시 쓰는 에이전트를 위해 설계.",
     "shortLabel": "분산 버전 관리"
   },
   "evernight": {
     "name": "Evernight",
-    "tagline": "크로스 플랫폼 원격 제어 및 산업 프로토콜 브로커",
-    "description": "화면 스트리밍, SSH/VNC/RDP, 하드웨어 원격 측정, 그리고 산업 프로토콜——Modbus, S7comm, OPC UA, CAN, EtherCAT. 클라우드 AI 에이전트를 물리 기기에 연결하고 엣지에서 컨테이너와 VM을 오케스트레이션하는 계층입니다.",
+    "tagline": "산업 프로토콜, 클라우드로 브리징",
+    "description": "화면 스트리밍, SSH/VNC/RDP, 산업 프로토콜(Modbus, OPC UA, CAN)——클라우드 에이전트와 물리 기기를 잇는 다리.",
     "shortLabel": "프로토콜 브로커 및 원격 제어"
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "servo에서 파생된 순수 Rust 브라우저 엔진.",
-    "description": "servo에서 파생된 브라우저 엔진입니다. 라이브러리로 임의의 Rust 애플리케이션에 임베드하거나, 단독 데스크톱 브라우저로 실행할 수 있습니다 — servo의 C++ 컴포넌트는 순수 Rust 대안으로 교체되었습니다.",
+    "tagline": "servo 기반 순수 Rust 브라우저 엔진",
+    "description": "servo에서 파생된 브라우저 엔진——Rust 라이브러리로 임베드하거나 단독으로 실행할 수 있으며, C++ 컴포넌트는 순수 Rust로 교체되었습니다.",
     "shortLabel": "순수 Rust 브라우저 엔진"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "산업 IoT용 Rust OS 커널 — Asterinas에서 파생",
-    "description": "ARM64 및 RISC-V 엣지 디바이스를 위한 Rust OS 커널로, Asterinas에서 파생하여 실시간·감사 가능한 설비로 다듬어졌고 ARM64 보드 지원, virtio-gpu 디스플레이, 산업 드라이버를 갖추고 있습니다. embassy 센서 노드용 no_std 라이브러리도 포함하며, 상위 릴리스 주기와 독립적으로 유지됩니다.",
-    "shortLabel": "RTOS급 IoT 커널"
+    "tagline": "엣지 디바이스용 Rust OS 커널",
+    "description": "ARM64 및 RISC-V 엣지 디바이스용 Rust OS 커널. Asterinas에서 파생되었으며, 산업 드라이버와 no_std 센서 라이브러리를 포함합니다.",
+    "shortLabel": "IoT OS 커널"
   },
   "lagrange": {
     "name": "Lagrange",
     "tagline": "다국어 Markdown 정적 사이트",
-    "description": "Markdown 폴더를 정적이고 다국어인 문서 사이트로 바꿉니다——내장 언어 전환과 루트 리다이렉트 포함. JavaScript 프레임워크도 mdBook도 Node 툴체인도 필요 없습니다. Lagrange는 자체 문서를 스스로 빌드합니다.",
+    "description": "Markdown 폴더를 정적이고 다국어인 문서 사이트로 바꿉니다——JS 프레임워크도 Node 툴체인도 필요 없습니다.",
     "shortLabel": "Markdown 사이트 생성기"
   },
   "kou": {
     "name": "Kou",
     "tagline": "독립형 가상 터미널 엔진",
-    "description": "PTY 관리, VT100/ANSI 스크린 에뮬레이터, 글리프 렌더링 스크린 출력을 하나의 라이브러리와 CLI로 묶었습니다. tairitsu 패키저에서 추출한 vtty 코어——단순한 PTY 래퍼가 아닌, CSI/SGR을 올바르게 처리하는 진짜 스크린입니다.",
+    "description": "PTY 관리와 VT100/ANSI 스크린 에뮬레이터를 하나의 라이브러리와 CLI로 묶었습니다.",
     "shortLabel": "가상 터미널 엔진"
   },
   "malkuth": {
     "name": "Malkuth",
-    "tagline": "Rust용 컴포저블 서비스 감독 툴킷",
-    "description": "장기 실행되는 Rust 프로그램에 우아한 종료, 헬스 프로브, 조정 잠금, 롤링 업데이트를 제공합니다. 플러그형 트랜스포트(TCP/WebSocket/IPC 기반 JSON-RPC), 감독 대상 워커, 그리고 파일 감시와 스티키 리버스 프록시로 모든 프로그램을 감싸는 watchdog CLI.",
+    "tagline": "우아한 종료와 헬스 프로브",
+    "description": "장기 실행되는 Rust 서비스에 우아한 종료, 헬스 프로브, 조정 잠금, 롤링 업데이트를 제공합니다.",
     "shortLabel": "서비스 감독 툴킷"
   },
   "seia": {
     "name": "Seia",
-    "tagline": "다중 엔진 웹 검색 라이브러리 및 CLI",
-    "description": "다양한 검색 백엔드를 질의하는 통합 인터페이스입니다. 인증이 필요 없는 엔진은 설정 없이 바로 작동하며——하나의 질의를 여러 프로바이더로 라우팅하고 결과를 병합하는 라이브러리와 CLI입니다.",
+    "tagline": "하나의 질의, 여러 검색 엔진",
+    "description": "단일 질의를 여러 검색 백엔드로 라우팅하고 결과를 병합하는 통합 라이브러리와 CLI.",
     "shortLabel": "다중 엔진 웹 검색"
   },
   "shirabe": {
     "name": "Shirabe",
-    "tagline": "Rust 네이티브 헤드리스 브라우저 자동화",
-    "description": "가벼운 Rust 네이티브 브라우저 자동화 라이브러리와 디버그 서버입니다. CDP를 말하는 모든 브라우저——Chrome, Chromium, Edge——를 하나의 수제 엔진으로 구동하며, Chrome for Testing 빌드를 자동으로 가져와 고정하므로 브라우저를 직접 설치할 필요가 없습니다.",
+    "tagline": "Rust 네이티브 브라우저 자동화",
+    "description": "하나의 Rust 엔진으로 CDP를 지원하는 모든 브라우저를 구동——Chrome 빌드까지 고정해 줍니다.",
     "shortLabel": "헤드리스 브라우저 자동화"
   }
 }

@@ -1,5 +1,5 @@
 # Tairitsu
 
-Un framework web full-stack **nativo WASI**. Escribe tu aplicación completa — interfaz de usuario y lógica del servidor — en Rust, compílala a componentes WASI y despliégala en el navegador, servidor o edge.
+Un runtime, del frontend al backend
 
-A diferencia de los enfoques tradicionales de WebAssembly que dependen de código glue JavaScript y `wasm-bindgen`, Tairitsu apunta directamente a WASI a través del Modelo de Componentes WebAssembly. El frontend y el backend comparten un único runtime portable con interfaces tipadas. Un runtime, un lenguaje, un código base.
+Construye apps web completas sobre un único runtime WASI — escribe UI y servidor en Rust, compila a componentes WASI, despliega donde quieras.

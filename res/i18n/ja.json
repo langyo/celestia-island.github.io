@@ -34,116 +34,116 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "産業AI制御向けマルチエージェントプラットフォーム",
-    "description": "安全クリティカルな産業制御向けに構築されたexec-onlyマイクロカーネルのマルチエージェントプラットフォーム。LLMが見るのは少数のプリミティブのみ——すべての実際の処理はIEPL TypeScriptパイプライン内で実行され、多数のエージェントにまたがる広大なMCPツール群へディスパッチします。クロスベンダーのプロトコル対応（Modbus、S7comm、OPC UA）と多層の安全ゲートを備えます。",
+    "tagline": "産業AI制御プラットフォーム",
+    "description": "安全クリティカルな産業制御向けのexec-onlyマルチエージェントプラットフォーム——LLMはオーケストレーションのみを行い、実際の処理はすべて型付きパイプラインとMCPツール経由で実行されます。",
     "shortLabel": "マルチエージェントプラットフォーム"
   },
   "shittim": {
     "name": "什亭の箱",
     "tagline": "AIエージェントと会話しよう",
-    "description": "Entelecheiaの対話インターフェース——AIエージェントとリアルタイム会話ができるチャットUI、システム設定と権限管理のコントロールパネル、さらにデスクトップ・モバイルアプリ。ユーザーが見て触れるすべて。",
-    "shortLabel": "エージェント対話フロントエンド"
+    "description": "Entelecheiaの対話フロントエンド——ストリーミングチャットUI、権限と設定のコントロールパネル、デスクトップとモバイルクライアント。",
+    "shortLabel": "エージェントチャット＆制御"
   },
   "tairitsu": {
     "name": "Tairitsu",
-    "tagline": "フルスタック、WASIネイティブ",
-    "description": "WASIをターゲットとする完全なWebアプリケーションを構築——フロントエンドとバックエンドで単一のポータブルランタイムを共有。RustでUIとサーバーロジックを記述し、WASIコンポーネントにコンパイルして、ブラウザ、サーバー、エッジにデプロイ。一つのランタイム、一つの言語、一つのコードベース。",
-    "shortLabel": "WASI フルスタック基盤フレームワーク"
+    "tagline": "ひとつのランタイム、フロントからバックエンドまで",
+    "description": "単一のWASIランタイム上で完全なWebアプリを構築——RustでUIとサーバーを書き、WASIコンポーネントにコンパイルして、どこにでもデプロイ。",
+    "shortLabel": "WASI フルスタックフレームワーク"
   },
   "hikari": {
     "name": "Hikari",
-    "tagline": "WASIネイティブUIフレームワーク",
-    "description": "WASI専用に構築されたUIコンポーネントライブラリ。バックエンドと同じWASIランタイム上で動作する洗練されたコンポーネント群——wasm-bindgen不要、JavaScriptグルーコード不要。一度インターフェースを構築すれば、どこでもレンダリング。",
-    "shortLabel": "WASI UI コンポーネントライブラリ"
+    "tagline": "WASI向けUIコンポーネント",
+    "description": "バックエンドと同じWASIランタイム上で動く洗練されたコンポーネントライブラリ——wasm-bindgen不要、JSグルーコード不要。",
+    "shortLabel": "WASI UIコンポーネント"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "Modbus RTU マルチプロトコルデバッグ・シミュレーション",
-    "description": "Modbus産業用デバイスの検査・テスト・シミュレーションをターミナル上で。実機への接続、テスト用仮想デバイスの起動、プロトコル間のデータブリッジ——生産現場でもCIパイプラインでも、自動化エンジニアの頼れる相棒です。",
+    "tagline": "ターミナルでModbusデバッグ",
+    "description": "ターミナルからModbusデバイスの検査、テスト、シミュレーション——実機に接続、または仮想デバイスを起動。",
     "shortLabel": "Modbus デバッグツール"
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "ゼロトラスト認証・RBAC、信頼スコア付き",
-    "description": "完全にジェネリックでtraitベースのRust認証・認可フレームワーク。ANSI INCITS 359-2004に準拠した完全なRBAC（RBAC0/1/2）に加え、信頼スコアリング、異常検出、DO-178Cに着想を得た自律レベル（L0–L4）を持つ動的認可レイヤーを備えます。",
+    "tagline": "traitベースの認証・RBAC・信頼スコアリング",
+    "description": "完全なRBACと動的信頼スコアリング層を備えた、汎用Rust認証・認可フレームワーク。",
     "shortLabel": "認証・RBACフレームワーク"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
-    "tagline": "ターミナルアプリ向けリッチMarkdown＆ダイアグラム",
-    "description": "ratatui上に構築されたMarkdownレンダリング、シンタックスハイライト、Mermaidダイアグラム、折りたたみ可能なJSON/TOMLツリー、ハイブリッドスクロールシステム。フィーチャーゲートで必要な機能だけを選択可能。",
+    "tagline": "TUIアプリ向けのMarkdownとダイアグラム",
+    "description": "Markdownレンダリング、シンタックスハイライト、Mermaidダイアグラム、折りたたみツリー——すべてratatui上で。",
     "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",
-    "tagline": "一つのマクロで、深くネストされた型を一括生成",
-    "description": "コンパクトなDSLから複雑で深くネストされたstructとenumを生成するproc-macroライブラリ。インライン型は自動的にフラット化・derive・serde統合——マクロ一回の呼び出しで、型階層全体を取得。",
+    "tagline": "ひとつのマクロでネスト型を生成",
+    "description": "コンパクトなDSLから深くネストされたstructとenumを生成するproc-macro。serde統合付き。",
     "shortLabel": "ネスト型ジェネレーター"
   },
   "ichika": {
     "name": "Ichika",
-    "tagline": "マクロで宣言的にスレッドプールパイプラインを構築",
-    "description": "クロージャから多段処理パイプラインを宣言的に定義。pipe!マクロがスレッド接続とチャンネル配線を自動生成——同期/非同期混在、分岐ルーティング、リトライポリシー、グレースフルシャットダウンをサポート。",
+    "tagline": "宣言的スレッドプールパイプライン",
+    "description": "クロージャから多段処理パイプラインを定義——マクロがスレッドとチャンネルを自動生成。",
     "shortLabel": "パイプラインスレッドライブラリ"
   },
   "hifumi": {
     "name": "Hifumi",
     "tagline": "構造体をバージョン管理、データをマイグレーション",
-    "description": "異なるバージョン間でデータをマイグレーションするためのシリアライゼーションライブラリ。型にバージョン属性とマイグレーションルールを付与——Hifumiが古いバージョンの構造体とFrom実装を自動生成。git履歴全体の構造体diffを行うCLIも付属。",
+    "description": "バージョン属性から古いバージョンの構造体とマイグレーションを生成するシリアライゼーションライブラリ。",
     "shortLabel": "データマイグレーションライブラリ"
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AIネイティブな分散バージョン管理",
-    "description": "エージェントごとのワークスペース分離、追記型のJSONLログ、スナップショットベースの履歴、完全なgitプロトコル互換性——頻繁にブランチを切り、履歴を書き換えるAIエージェントのためにゼロから設計されたバージョン管理システム。",
+    "tagline": "AIエージェント向けのバージョン管理",
+    "description": "エージェントごとのワークスペース、追記型ログ、gitプロトコル互換性——頻繁にブランチを切り、履歴を書き換えるエージェント向けに設計。",
     "shortLabel": "分散バージョン管理"
   },
   "evernight": {
     "name": "Evernight",
-    "tagline": "クロスプラットフォーム・リモート制御＆産業プロトコルブローカー",
-    "description": "画面ストリーミング、SSH/VNC/RDP、ハードウェアテレメトリ、そして産業プロトコル——Modbus、S7comm、OPC UA、CAN、EtherCAT。クラウドのAIエージェントを物理デバイスに接続し、エッジでコンテナとVMをオーケストレーションするレイヤーです。",
+    "tagline": "産業プロトコル、クラウドへ橋渡し",
+    "description": "画面ストリーミング、SSH/VNC/RDP、産業プロトコル（Modbus、OPC UA、CAN）——クラウドのエージェントと物理デバイスを結ぶ橋。",
     "shortLabel": "プロトコルブローカー＆リモート制御"
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "servo から派生した純 Rust のブラウザエンジン。",
-    "description": "servo から派生したブラウザエンジンです。ライブラリとして任意の Rust アプリに組み込むことも、スタンドアロンのデスクトップブラウザとして実行することもできます——servo の C++ コンポーネントは純 Rust の代替に置き換えられています。",
-    "shortLabel": "純 Rust ブラウザエンジン"
+    "tagline": "servo由来の純Rustブラウザエンジン",
+    "description": "servo由来のブラウザエンジン——Rustライブラリとして組み込む、または単体で実行可能。C++コンポーネントは純Rustに置き換え済み。",
+    "shortLabel": "純Rustブラウザエンジン"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "産業 IoT 向けの Rust OS カーネル——Asterinas 由来",
-    "description": "ARM64 および RISC-V エッジデバイス向けの Rust OS カーネルで、Asterinas に由来し、リアルタイムかつ監査可能な設備に仕上げられ、ARM64 ボードサポート、virtio-gpu 表示、産業ドライバを備えています。embassy センサーノード向けの no_std ライブラリも同梱し、上流のリリースサイクルから独立しています。",
-    "shortLabel": "RTOS 級 IoT カーネル"
+    "tagline": "エッジデバイス向けのRust OSカーネル",
+    "description": "ARM64およびRISC-Vエッジデバイス向けのRust OSカーネル。Asterinas由来で、産業ドライバとno_stdセンサライブラリを同梱。",
+    "shortLabel": "IoT OSカーネル"
   },
   "lagrange": {
     "name": "Lagrange",
     "tagline": "多言語Markdown静的サイト",
-    "description": "Markdownのフォルダを静的かつ多言語のドキュメントサイトに変えます——内蔵の言語切替とルートリダイレクト付き。JavaScriptフレームワークもmdBookもNodeツールチェーンも不要。Lagrangeは自身のドキュメントを自分でビルドします。",
+    "description": "Markdownのフォルダを静的かつ多言語のドキュメントサイトに変える——JSフレームワークもNodeツールチェーンも不要。",
     "shortLabel": "Markdownサイト生成器"
   },
   "kou": {
     "name": "Kou",
     "tagline": "単体の仮想ターミナルエンジン",
-    "description": "PTY管理、VT100/ANSIスクリーンエミュレータ、グリフレンダリングのスクリーン出力を一つのライブラリとCLIに集約。tairitsuパッケージャから抽出したvttyコア——生のPTYラッパではなく、CSI/SGRを正しく解釈する本物のスクリーンです。",
+    "description": "PTY管理とVT100/ANSIスクリーンエミュレータを一つのライブラリとCLIに集約。",
     "shortLabel": "仮想ターミナルエンジン"
   },
   "malkuth": {
     "name": "Malkuth",
-    "tagline": "Rust向けコンポーザブルなサービススーパビジョンツールキット",
-    "description": "長時間稼働するRustプログラムにグレースフルシャットダウン、ヘルスプローブ、調整ロック、ローリングアップデートを提供。プラガブルなトランスポート（TCP/WebSocket/IPC上のJSON-RPC）、監視下のワーカー、そしてファイル監視とスティッキーリバースプロキシで任意のプログラムを包むwatchdog CLI。",
+    "tagline": "グレースフルシャットダウンとヘルスプローブ",
+    "description": "長時間稼働するRustサービスに、グレースフルシャットダウン、ヘルスプローブ、調整ロック、ローリングアップデートを提供。",
     "shortLabel": "サービススーパビジョンツールキット"
   },
   "seia": {
     "name": "Seia",
-    "tagline": "マルチエンジンWeb検索ライブラリ＆CLI",
-    "description": "多様な検索バックエンドを照会する統一インターフェース。認証不要のエンジンは設定ゼロで即利用可能——一つのクエリを複数のプロバイダにルーティングし結果を統合するライブラリとCLIです。",
+    "tagline": "ひとつのクエリ、多くの検索エンジン",
+    "description": "単一のクエリを複数の検索バックエンドにルーティングし、結果を統合するライブラリとCLI。",
     "shortLabel": "マルチエンジンWeb検索"
   },
   "shirabe": {
     "name": "Shirabe",
-    "tagline": "Rustネイティブのヘッドレスブラウザ自動化",
-    "description": "軽量なRustネイティブのブラウザ自動化ライブラリとデバッグサーバ。CDPを話す任意のブラウザ——Chrome、Chromium、Edge——を一つの手作りエンジンで駆動し、Chrome for Testingビルドを自動で取得・固定するため、ブラウザを手動でインストールする必要がありません。",
+    "tagline": "Rustネイティブなブラウザ自動化",
+    "description": "一つのRustエンジンでCDP対応のあらゆるブラウザを駆動——Chromeビルドまで固定してくれます。",
     "shortLabel": "ヘッドレスブラウザ自動化"
   }
 }

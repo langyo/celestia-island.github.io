@@ -1,5 +1,5 @@
 # ARIS
 
-**Un moteur de navigateur en Rust pur dérivé de servo.**
+Moteur de navigateur en Rust pur sur servo
 
-ARIS est un moteur de navigateur dérivé de servo. Embarquez-le comme bibliothèque dans n'importe quelle application Rust, ou exécutez-le comme navigateur de bureau autonome — les composants C++ de servo sont remplacés par des alternatives en Rust pur.
+Un moteur de navigateur dérivé de servo — embarquez-le comme bibliothèque Rust ou lancez-le standalone, avec les composants C++ remplacés par du Rust pur.
