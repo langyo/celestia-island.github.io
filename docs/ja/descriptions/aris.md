@@ -1,5 +1,5 @@
 # ARIS
 
-**servo 派生の純 Rust ブラウザエンジン**——組込み可能、単体実行可能。
+**servo から派生した純 Rust のブラウザエンジン。**
 
-ARIS は servo から派生したブラウザエンジンです。任意の Rust アプリにライブラリとして組み込むことも、単体のデスクトップブラウザとして実行することもできます。レンダリングパイプラインは純 Rust クレート——html5ever、stylo、taffy、parley、Vello CPU——で構成され、servo 本来の SpiderMonkey、WebRender、SWGL を Boa（JS）、Vello CPU（ラスタライズ）、Wasmtime（WASM）に置き換えています。
+ARIS は servo から派生したブラウザエンジンです。ライブラリとして任意の Rust アプリに組み込むことも、スタンドアロンのデスクトップブラウザとして実行することもできます——servo の C++ コンポーネントは純 Rust の代替に置き換えられています。
