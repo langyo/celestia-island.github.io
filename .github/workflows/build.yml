@@ -21,8 +21,8 @@ jobs:
     name: Build site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 9
       - uses: actions/setup-node@v4
@@ -38,7 +38,7 @@ jobs:
           sudo install just /usr/local/bin
       - run: just install
       - run: just build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: site-dist
           path: dist
