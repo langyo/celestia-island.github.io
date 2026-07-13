@@ -34,116 +34,116 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "Plateforme Multi-Agent pour le Contrôle IA Industriel",
-    "description": "Une plateforme multi-agent à micro-noyau exec-only, conçue pour le contrôle industriel critique en matière de sécurité. Le LLM ne voit qu'une poignée de primitives — tout le travail réel s'exécute dans le pipeline IEPL TypeScript, dispatchant vers une vaste surface d'outils MCP répartie sur de nombreux agents, avec support multi-fournisseurs de protocoles (Modbus, S7comm, OPC UA) et des portes de sécurité multi-niveaux.",
+    "tagline": "Plateforme de contrôle IA industriel",
+    "description": "Une plateforme multi-agent exec-only pour le contrôle industriel critique — le LLM n'orchestre que, tout le travail réel passe par des pipelines typés et des outils MCP.",
     "shortLabel": "Plateforme Multi-Agent"
   },
   "shittim": {
     "name": "Shittim Chest",
     "tagline": "Discutez avec vos agents IA",
-    "description": "Le visage interactif d'Entelecheia — une interface de chat en streaming pour converser avec les agents IA, un panneau de contrôle pour configurer les systèmes et gérer les permissions, ainsi que des applications desktop et mobiles. Tout ce que l'utilisateur voit et touche.",
-    "shortLabel": "Interface Utilisateur pour Agents"
+    "description": "Le visage interactif d'Entelecheia — un chat en streaming, un panneau de contrôle pour les permissions et la configuration, et des clients desktop et mobiles.",
+    "shortLabel": "Chat & Contrôle d'Agents"
   },
   "tairitsu": {
     "name": "Tairitsu",
-    "tagline": "Full-Stack, Natif WASI",
-    "description": "Construisez des applications web complètes ciblant WASI — un runtime portable unique pour le frontend et le backend. Écrivez votre UI et votre logique serveur en Rust, compilez en composants WASI, et déployez sur navigateur, serveur ou edge. Un runtime, un langage, une base de code.",
+    "tagline": "Un runtime, du frontend au backend",
+    "description": "Construisez des apps web complètes sur un seul runtime WASI — écrivez l'UI et le serveur en Rust, compilez en composants WASI, déployez partout.",
     "shortLabel": "Framework Full-Stack WASI"
   },
   "hikari": {
     "name": "Hikari",
-    "tagline": "Framework UI Natif WASI",
-    "description": "Une bibliothèque de composants UI conçue spécifiquement pour WASI. Des composants soignés qui s'exécutent sur le même runtime WASI que votre backend — sans wasm-bindgen, sans code glue JavaScript. Construisez vos interfaces une fois, affichez-les partout.",
-    "shortLabel": "Bibliothèque de Composants UI WASI"
+    "tagline": "Composants UI pour WASI",
+    "description": "Une bibliothèque de composants soignée qui tourne sur le même runtime WASI que votre backend — sans wasm-bindgen, sans glue JS.",
+    "shortLabel": "Composants UI WASI"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "Débogage et Simulation Multi-Protocole pour Modbus RTU",
-    "description": "Inspectez, testez et simulez des appareils industriels Modbus directement depuis votre terminal. Connectez-vous à du matériel réel, créez des appareils virtuels pour les tests et faites le pont entre les protocoles — un compagnon indispensable pour les ingénieurs en automatisation, en atelier comme dans les pipelines CI.",
+    "tagline": "Débogage Modbus, dans votre terminal",
+    "description": "Inspectez, testez et simulez des appareils Modbus depuis le terminal — connectez-vous à du matériel réel ou lancez des appareils virtuels.",
     "shortLabel": "Outil de Débogage Modbus"
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "Auth zero-trust & RBAC, avec scoring de confiance",
-    "description": "Un framework d'authentification et d'autorisation Rust entièrement générique et basé sur des traits. RBAC complet (RBAC0/1/2) implémentant ANSI INCITS 359-2004, plus une couche d'autorisation dynamique avec scoring de confiance, détection d'anomalies et niveaux d'autonomie inspirés du DO-178C (L0–L4).",
+    "tagline": "Auth par traits, RBAC et scoring de confiance",
+    "description": "Un framework générique d'authentification et d'autorisation en Rust avec RBAC complet et une couche dynamique de scoring de confiance.",
     "shortLabel": "Framework Auth & RBAC"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
-    "tagline": "Markdown enrichi et diagrammes pour applis terminal",
-    "description": "Rendu Markdown, coloration syntaxique, diagrammes Mermaid, arbres JSON/TOML repliables et un système de scroll hybride — le tout construit sur ratatui. Fonctionnalités sélectionnables via feature gates.",
+    "tagline": "Markdown et diagrammes pour apps TUI",
+    "description": "Rendu Markdown, coloration syntaxique, diagrammes Mermaid et arbres repliables — le tout sur ratatui.",
     "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",
-    "tagline": "Définissez des types imbriqués profonds en un seul coup",
-    "description": "Bibliothèque proc-macro générant des structs et enums complexes profondément imbriqués depuis un DSL compact. Les types inline sont automatiquement aplanis, dérivés et intégrés à serde — une seule macro, toute la hiérarchie de types.",
+    "tagline": "Types imbriqués depuis une seule macro",
+    "description": "Une proc-macro qui génère des structs et enums profondément imbriqués depuis un DSL compact, avec câblage serde.",
     "shortLabel": "Générateur de Types Imbriqués"
   },
   "ichika": {
     "name": "Ichika",
-    "tagline": "Pipelines déclaratifs de thread pool via macro",
-    "description": "Définissez déclarativement des pipelines de traitement multi-étapes depuis des closures. La macro pipe! génère automatiquement tout le câblage de threads et de canaux — supportant les étapes sync/async mixtes, le branching, les politiques de retry et l'arrêt gracieux.",
+    "tagline": "Pipelines déclaratifs de thread pool",
+    "description": "Définissez des pipelines de traitement multi-étapes depuis des closures — la macro génère tout le threading et les canaux.",
     "shortLabel": "Bibliothèque de Threading Pipeline"
   },
   "hifumi": {
     "name": "Hifumi",
-    "tagline": "Versionnez vos structs, migrez vos données",
-    "description": "Bibliothèque de sérialisation pour migrer des données entre versions de structs. Annotez vos types avec des attributs de version et des règles de migration — Hifumi auto-génère tous les structs des versions antérieures et les impls From, plus un CLI pour comparer les structs dans l'historique git.",
+    "tagline": "Versionnez vos structs, migrez les données",
+    "description": "Une bibliothèque de sérialisation qui génère les structs des versions antérieures et les migrations depuis des attributs de version.",
     "shortLabel": "Bibliothèque de Migration de Données"
   },
   "noa": {
     "name": "Noa",
-    "tagline": "Contrôle de version distribué natif IA",
-    "description": "Isolation d'espace de travail par agent, logs JSONL en ajout seul, historique à base de snapshots et compatibilité complète avec le protocole git — un contrôle de version conçu dès le départ pour les agents IA qui créent constamment des branches et réécrivent l'historique.",
+    "tagline": "Contrôle de version pour agents IA",
+    "description": "Espaces de travail par agent, logs en ajout seul et compatibilité avec le protocole git — pensé pour les agents qui créent des branches et réécrivent constamment.",
     "shortLabel": "Contrôle de Version Distribué"
   },
   "evernight": {
     "name": "Evernight",
-    "tagline": "Contrôle à distance multiplateforme & courtier de protocoles industriels",
-    "description": "Streaming d'écran, SSH/VNC/RDP, télémétrie matérielle et protocoles industriels — Modbus, S7comm, OPC UA, CAN, EtherCAT. La couche qui connecte les agents IA cloud aux appareils physiques et orchestre conteneurs et VM en périphérie.",
+    "tagline": "Protocoles industriels, reliés au cloud",
+    "description": "Streaming d'écran, SSH/VNC/RDP et protocoles industriels (Modbus, OPC UA, CAN) — le pont entre les agents cloud et les appareils physiques.",
     "shortLabel": "Courtier de Protocoles & Contrôle à Distance"
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "Un moteur de navigateur en Rust pur dérivé de servo.",
-    "description": "Un moteur de navigateur dérivé de servo. Embarquez-le comme bibliothèque dans n'importe quelle application Rust, ou exécutez-le comme navigateur de bureau autonome — les composants C++ de servo sont remplacés par des alternatives en Rust pur.",
-    "shortLabel": "Moteur de navigateur en Rust pur"
+    "tagline": "Moteur de navigateur en Rust pur sur servo",
+    "description": "Un moteur de navigateur dérivé de servo — embarquez-le comme bibliothèque Rust ou lancez-le standalone, avec les composants C++ remplacés par du Rust pur.",
+    "shortLabel": "Moteur de Navigateur"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "Noyau OS en Rust pour l'IoT industriel — dérivé d'Asterinas",
-    "description": "Un noyau OS en Rust pour appareils edge ARM64 et RISC-V, dérivé d'Asterinas et façonné en une installation temps réel et auditable, avec support de cartes ARM64, affichage virtio-gpu et pilotes industriels. Il inclut aussi une bibliothèque no_std pour les nœuds capteurs embassy, en restant indépendant des cycles de publication amont.",
-    "shortLabel": "Noyau IoT de grade RTOS"
+    "tagline": "Noyau OS en Rust pour appareils edge",
+    "description": "Un noyau OS en Rust pour appareils edge ARM64 et RISC-V, dérivé d'Asterinas, avec pilotes industriels et une bibliothèque de capteurs no_std.",
+    "shortLabel": "Noyau OS IoT"
   },
   "lagrange": {
     "name": "Lagrange",
     "tagline": "Site statique Markdown multilingue",
-    "description": "Transformez un dossier de Markdown en un site de documentation statique et multilingue avec sélecteur de langue intégré et redirection racine. Sans framework JavaScript, sans mdBook, sans toolchain Node. Lagrange construit sa propre documentation.",
-    "shortLabel": "Générateur de site Markdown"
+    "description": "Transformez un dossier de Markdown en un site de documentation statique et multilingue — sans framework JS, sans toolchain Node.",
+    "shortLabel": "Générateur de Sites Markdown"
   },
   "kou": {
     "name": "Kou",
-    "tagline": "Moteur de terminal virtuel autonome",
-    "description": "Gestion PTY, émulateur d'écran VT100/ANSI et sortie d'écran par rendu de glyphes réunis dans une bibliothèque et un CLI. Le cœur vtty extrait du packager tairitsu — un véritable écran respectant CSI/SGR, pas un simple wrapper PTY.",
+    "tagline": "Moteur de terminal autonome",
+    "description": "Gestion PTY et un émulateur d'écran VT100/ANSI dans une seule bibliothèque et CLI.",
     "shortLabel": "Moteur de Terminal Virtuel"
   },
   "malkuth": {
     "name": "Malkuth",
-    "tagline": "Boîte à outils de supervision de services composable pour Rust",
-    "description": "Arrêt gracieux, sondes de santé, verrous de coordination et mises à jour en continu pour les programmes Rust longue durée. Transport enfichable (JSON-RPC sur TCP/WebSocket/IPC), workers supervisés, et un CLI watchdog qui enveloppe n'importe quel programme avec veille de fichiers et proxy inverse persistant.",
+    "tagline": "Arrêt gracieux et sondes de santé",
+    "description": "Arrêt gracieux, sondes de santé, verrous de coordination et mises à jour en continu pour les services Rust longue durée.",
     "shortLabel": "Boîte à Outils de Supervision de Services"
   },
   "seia": {
     "name": "Seia",
-    "tagline": "Bibliothèque et CLI de recherche web multi-moteurs",
-    "description": "Une interface unifiée pour interroger divers backends de recherche. Les moteurs sans authentification fonctionnent immédiatement sans configuration — une bibliothèque et un CLI pour router une seule requête vers de nombreux fournisseurs et fusionner les résultats.",
+    "tagline": "Une requête, plusieurs moteurs de recherche",
+    "description": "Une bibliothèque et CLI unifiés pour router une requête à travers de nombreux backends de recherche et fusionner les résultats.",
     "shortLabel": "Recherche Web Multi-Moteurs"
   },
   "shirabe": {
     "name": "Shirabe",
-    "tagline": "Automatisation de navigateur headless native Rust",
-    "description": "Une bibliothèque légère d'automatisation de navigateur native Rust et un serveur de débogage. Elle pilote tout navigateur parlant CDP — Chrome, Chromium, Edge — via un moteur écrit à la main, et récupère et épingle un build Chrome for Testing afin que vous n'installiez jamais un navigateur à la main.",
+    "tagline": "Automatisation de navigateur native Rust",
+    "description": "Pilotez tout navigateur parlant CDP via un seul moteur Rust — il épingle même un build de Chrome pour vous.",
     "shortLabel": "Automatisation de Navigateur Headless"
   }
 }

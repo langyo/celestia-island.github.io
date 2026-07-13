@@ -34,116 +34,116 @@
   },
   "entelecheia": {
     "name": "Entelecheia",
-    "tagline": "Multi-Agent Platform for Industrial AI Control",
-    "description": "An exec-only microkernel multi-agent platform built for safety-critical industrial control. The LLM sees only a handful of primitives — all real work runs inside the IEPL TypeScript pipeline, dispatching to a large MCP tool surface across many agents, with cross-vendor protocol support (Modbus, S7comm, OPC UA) and multi-layer safety gates.",
+    "tagline": "Industrial AI control platform",
+    "description": "An exec-only multi-agent platform for safety-critical industrial control — the LLM only orchestrates, all real work runs through typed pipelines and MCP tools.",
     "shortLabel": "Multi-Agent Platform"
   },
   "shittim": {
     "name": "Shittim Chest",
-    "tagline": "Chat With Your AI Agents",
-    "description": "The interactive face of Entelecheia — a streaming chat interface to converse with AI agents, a control panel to configure systems and manage permissions, plus desktop and mobile apps. Everything the user sees and touches.",
-    "shortLabel": "User-Facing Agent Shell"
+    "tagline": "Chat with your AI agents",
+    "description": "The interactive face of Entelecheia — a streaming chat UI, a control panel for permissions and config, and desktop and mobile clients.",
+    "shortLabel": "Agent Chat & Control"
   },
   "tairitsu": {
     "name": "Tairitsu",
-    "tagline": "Full-Stack, WASI-Native",
-    "description": "Build complete web applications that target WASI — a single, portable runtime for both frontend and backend. Write your UI and server logic in Rust, compile to WASI components, and deploy to browser, server, or edge. One runtime, one language, one codebase.",
+    "tagline": "One runtime, frontend to backend",
+    "description": "Build full web apps on a single WASI runtime — write UI and server in Rust, compile to WASI components, deploy anywhere.",
     "shortLabel": "WASI Full-Stack Framework"
   },
   "hikari": {
     "name": "Hikari",
-    "tagline": "WASI-Native UI Framework",
-    "description": "A UI component library purpose-built for WASI. Polished, ready-made components that run on the same WASI runtime as your backend — no wasm-bindgen, no JavaScript glue. Build interfaces once, render them anywhere.",
-    "shortLabel": "WASI UI Component Library"
+    "tagline": "UI components for WASI",
+    "description": "A polished component library that runs on the same WASI runtime as your backend — no wasm-bindgen, no JS glue.",
+    "shortLabel": "WASI UI Components"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "Multi-Protocol Debugging & Simulation for Modbus RTU",
-    "description": "Inspect, test, and simulate Modbus industrial devices right from your terminal. Connect to real hardware, spin up virtual devices for testing, and bridge data between protocols — an indispensable companion for automation engineers on the factory floor and in CI pipelines.",
+    "tagline": "Modbus debugging, in your terminal",
+    "description": "Inspect, test, and simulate Modbus devices from the terminal — connect to real hardware or spin up virtual ones.",
     "shortLabel": "Modbus Debug Tool"
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "Zero-trust auth & RBAC, with trust scoring",
-    "description": "A fully generic, trait-based authentication and authorization framework for Rust. Complete RBAC (RBAC0/1/2) implementing ANSI INCITS 359-2004, plus a dynamic authorization layer with trust scoring, anomaly detection, and DO-178C-inspired autonomy levels (L0–L4).",
+    "tagline": "Trait-based auth, RBAC, and trust scoring",
+    "description": "A generic Rust auth and authorization framework with full RBAC and a dynamic trust-scoring layer.",
     "shortLabel": "Auth & RBAC Framework"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
-    "tagline": "Rich markdown and diagrams for terminal apps",
-    "description": "Markdown rendering, syntax highlighting, Mermaid diagrams, collapsible JSON/TOML trees, and a hybrid scroll system — all built on ratatui. Feature-gated for selective inclusion in any TUI application.",
+    "tagline": "Markdown and diagrams for TUI apps",
+    "description": "Markdown rendering, syntax highlighting, Mermaid diagrams, and collapsible trees — all on ratatui.",
     "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",
-    "tagline": "Define deeply nested types in one sweep",
-    "description": "A proc-macro library that generates complex, deeply nested structs and enums from a compact DSL. Inline types are automatically flattened, derived, and wired up with serde — write one macro invocation, get an entire type hierarchy.",
+    "tagline": "Nested types from one macro",
+    "description": "A proc-macro that generates deeply nested structs and enums from a compact DSL, with serde wiring.",
     "shortLabel": "Nested Type Generator"
   },
   "ichika": {
     "name": "Ichika",
-    "tagline": "Declarative thread-pool pipelines via macro",
-    "description": "Declaratively define multi-stage processing pipelines from closures. The pipe! macro generates all thread wiring and channel plumbing automatically — supporting mixed sync/async steps, branching, retry policies, and graceful shutdown.",
+    "tagline": "Declarative thread-pool pipelines",
+    "description": "Define multi-stage processing pipelines from closures — the macro generates all threading and channels.",
     "shortLabel": "Pipeline Threading Library"
   },
   "hifumi": {
     "name": "Hifumi",
-    "tagline": "Version your structs, migrate your data",
-    "description": "A serialization library for migrating data between struct versions. Annotate your types with version attributes and migration rules — Hifumi auto-generates all older-version structs and From impls, plus a CLI to diff structs across git history.",
+    "tagline": "Version your structs, migrate data",
+    "description": "A serialization library that generates older-version structs and migrations from version attributes.",
     "shortLabel": "Data Migration Library"
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI-native distributed version control",
-    "description": "Per-agent workspace isolation, append-only JSONL logs, snapshot-based history, and full git protocol compatibility — version control designed from the ground up for AI agents that branch constantly and rewrite history.",
+    "tagline": "Version control for AI agents",
+    "description": "Per-agent workspaces, append-only logs, and git protocol compatibility — designed for agents that branch and rewrite constantly.",
     "shortLabel": "Distributed Version Control"
   },
   "evernight": {
     "name": "Evernight",
-    "tagline": "Cross-platform remote control & industrial-protocol broker",
-    "description": "Screen streaming, SSH/VNC/RDP, hardware telemetry, and industrial protocols — Modbus, S7comm, OPC UA, CAN, EtherCAT. The layer that connects cloud AI agents to physical devices and orchestrates containers and VMs at the edge.",
+    "tagline": "Industrial protocols, bridged to the cloud",
+    "description": "Screen streaming, SSH/VNC/RDP, and industrial protocols (Modbus, OPC UA, CAN) — the bridge between cloud agents and physical devices.",
     "shortLabel": "Protocol Broker & Remote Control"
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "A pure-Rust browser engine derived from servo.",
-    "description": "A browser engine derived from servo. Embed it as a library in any Rust application, or run it as a standalone desktop browser — servo's C++ components are replaced with pure-Rust alternatives.",
-    "shortLabel": "Pure-Rust Browser Engine"
+    "tagline": "Pure-Rust browser engine on servo",
+    "description": "A browser engine derived from servo — embed it as a Rust library or run it standalone, with C++ components replaced by pure Rust.",
+    "shortLabel": "Browser Engine"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "Rust OS kernel for industrial IoT — derived from Asterinas",
-    "description": "A Rust OS kernel for ARM64 and RISC-V edge devices, derived from Asterinas and shaped into a real-time, auditable facility with ARM64 board support, virtio-gpu display, and industrial drivers. It also ships a no_std library for embassy sensor nodes, while staying independent of upstream release cycles.",
-    "shortLabel": "RTOS-grade IoT Kernel"
+    "tagline": "Rust OS kernel for edge devices",
+    "description": "A Rust OS kernel for ARM64 and RISC-V edge devices, derived from Asterinas, with industrial drivers and a no_std sensor library.",
+    "shortLabel": "IoT OS Kernel"
   },
   "lagrange": {
     "name": "Lagrange",
     "tagline": "Multilingual Markdown static site",
-    "description": "Turn a folder of Markdown into a static, multilingual documentation site with a built-in language switcher and root redirect. No JavaScript framework, no mdBook, no Node toolchain. Lagrange builds its own documentation.",
+    "description": "Turn a folder of Markdown into a static, multilingual docs site — no JS framework, no Node toolchain.",
     "shortLabel": "Markdown Site Generator"
   },
   "kou": {
     "name": "Kou",
-    "tagline": "Standalone virtual-terminal engine",
-    "description": "PTY management, a VT100/ANSI screen emulator, and glyph-rendering screen output in one library and CLI. The vtty core extracted from the tairitsu packager — a real CSI/SGR-honouring screen, not a bare PTY wrapper.",
+    "tagline": "Standalone terminal engine",
+    "description": "PTY management and a VT100/ANSI screen emulator in one library and CLI.",
     "shortLabel": "Virtual Terminal Engine"
   },
   "malkuth": {
     "name": "Malkuth",
-    "tagline": "Composable service-supervision toolkit for Rust",
-    "description": "Graceful shutdown, health probes, coordination locks, and rolling updates for long-running Rust programs. Pluggable transport (JSON-RPC over TCP/WebSocket/IPC), supervised workers, and a watchdog CLI that wraps any program with file watching and a sticky reverse proxy.",
+    "tagline": "Graceful shutdown and health probes",
+    "description": "Graceful shutdown, health probes, coordination locks, and rolling updates for long-running Rust services.",
     "shortLabel": "Service Supervision Toolkit"
   },
   "seia": {
     "name": "Seia",
-    "tagline": "Multi-engine web search library and CLI",
-    "description": "A unified interface to query diverse search backends. Engines that need no authentication work out of the box with zero configuration — a library and CLI for routing one query across many providers and merging the results.",
+    "tagline": "One query, many search engines",
+    "description": "A unified library and CLI to route one query across many search backends and merge the results.",
     "shortLabel": "Multi-Engine Web Search"
   },
   "shirabe": {
     "name": "Shirabe",
-    "tagline": "Rust-native headless browser automation",
-    "description": "A lightweight, Rust-native browser automation library and debug server. It drives any CDP-speaking browser — Chrome, Chromium, Edge — through one hand-rolled engine, fetching and pinning a Chrome for Testing build so you never install a browser by hand.",
+    "tagline": "Rust-native browser automation",
+    "description": "Drive any CDP-speaking browser through one Rust engine — it even pins a Chrome build for you.",
     "shortLabel": "Headless Browser Automation"
   }
 }

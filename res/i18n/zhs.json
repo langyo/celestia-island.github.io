@@ -34,116 +34,116 @@
   },
   "entelecheia": {
     "name": "玄枢 / Entelecheia",
-    "tagline": "面向工业 AI 控制的多智能体平台",
-    "description": "面向安全关键工业控制的 exec-only 微内核多智能体平台。LLM 只能看到少数原语——所有真正的工作都运行在 IEPL TypeScript 管线中，跨多个智能体调度庞大的 MCP 工具面，并具备跨厂商协议支持（Modbus、S7comm、OPC UA）与多层安全关卡。",
+    "tagline": "工业 AI 控制平台",
+    "description": "面向安全关键工业控制的 exec-only 多智能体平台——LLM 只负责编排，所有真正的工作都通过类型化管线和 MCP 工具运行。",
     "shortLabel": "多智能体平台"
   },
   "shittim": {
     "name": "什亭之匣",
     "tagline": "与你的 AI 智能体对话",
-    "description": "Entelecheia 的交互入口——与 AI 智能体流式对话的聊天界面，用于系统配置与权限管理的控制面板，加上桌面与移动端应用。用户所见所触，尽在于此。",
-    "shortLabel": "智能体交互前端"
+    "description": "Entelecheia 的交互入口——流式聊天界面、权限与配置控制面板，以及桌面和移动客户端。",
+    "shortLabel": "智能体聊天与控制"
   },
   "tairitsu": {
     "name": "Tairitsu",
-    "tagline": "WASI 原生，全栈一体",
-    "description": "构建面向 WASI 的完整 Web 应用——前后端共享同一套可移植运行时。用 Rust 编写界面与服务端逻辑，编译为 WASI 组件，部署到浏览器、服务器或边缘端。一个运行时，一种语言，一套代码。",
-    "shortLabel": "WASI 全栈基础框架"
+    "tagline": "一个运行时，贯穿前端到后端",
+    "description": "在单一 WASI 运行时上构建完整 Web 应用——用 Rust 编写 UI 和服务端，编译为 WASI 组件，随处部署。",
+    "shortLabel": "WASI 全栈框架"
   },
   "hikari": {
     "name": "Hikari",
-    "tagline": "WASI 原生的 UI 框架",
-    "description": "专为 WASI 打造的 UI 组件库。精美的现成组件，与你的后端运行在同一 WASI 运行时之上——无需 wasm-bindgen，无需 JavaScript 胶水代码。一次构建界面，随处渲染。",
-    "shortLabel": "WASI 界面组件库"
+    "tagline": "面向 WASI 的 UI 组件",
+    "description": "与你的后端运行在同一 WASI 运行时之上的精致组件库——无需 wasm-bindgen，无需 JS 胶水代码。",
+    "shortLabel": "WASI UI 组件"
   },
   "aoba": {
     "name": "Aoba",
-    "tagline": "Modbus RTU 多协议调试与模拟",
-    "description": "在终端中检测、测试和模拟 Modbus 工业设备。连接真实硬件，快速创建虚拟设备用于测试，在不同协议之间桥接数据——无论在生产现场还是 CI 流水线中，都是自动化工程师的得力助手。",
+    "tagline": "在终端中调试 Modbus",
+    "description": "在终端中检查、测试和模拟 Modbus 设备——连接真实硬件，或启动虚拟设备。",
     "shortLabel": "Modbus 调试工具"
   },
   "kirino": {
     "name": "Kirino",
-    "tagline": "零信任认证与 RBAC，带信任评分",
-    "description": "完全泛型化、基于 trait 的 Rust 认证与授权框架。实现 ANSI INCITS 359-2004 的完整 RBAC（RBAC0/1/2），外加带信任评分、异常检测及受 DO-178C 启发的自治等级（L0–L4）的动态授权层。",
+    "tagline": "基于 trait 的认证、RBAC 与信任评分",
+    "description": "通用的 Rust 认证与授权框架，支持完整的 RBAC 和动态信任评分层。",
     "shortLabel": "认证与 RBAC 框架"
   },
   "ratatui-markdown": {
     "name": "Ratatui Markdown",
-    "tagline": "终端应用中的富文本 Markdown 与图表",
-    "description": "基于 ratatui 构建的 Markdown 渲染、语法高亮、Mermaid 图表、可折叠 JSON/TOML 树视图及混合滚动系统。全部功能通过 feature gate 按需引入。",
+    "tagline": "面向 TUI 应用的 Markdown 与图表",
+    "description": "Markdown 渲染、语法高亮、Mermaid 图表和可折叠树——全部基于 ratatui。",
     "shortLabel": "TUI Markdown"
   },
   "yuuka": {
     "name": "Yuuka",
-    "tagline": "一次宏调用，生成完整嵌套类型",
-    "description": "一个 proc-macro 库，通过紧凑的 DSL 生成复杂深层嵌套的 struct 和 enum。内联类型自动展平、派生并接入 serde——一次宏调用，获得整个类型层级。",
+    "tagline": "一次宏调用生成嵌套类型",
+    "description": "一个 proc-macro，通过紧凑的 DSL 生成深层嵌套的 struct 和 enum，并自动接入 serde。",
     "shortLabel": "嵌套类型生成器"
   },
   "ichika": {
     "name": "Ichika",
-    "tagline": "通过宏声明式构建线程池管道",
-    "description": "用闭包声明式定义多阶段处理管道。pipe! 宏自动生成全部线程连接与通道管线——支持混合同步/异步步骤、分支路由、重试策略和优雅关闭。",
+    "tagline": "声明式线程池管道",
+    "description": "用闭包定义多阶段处理管道——宏自动生成全部线程与通道。",
     "shortLabel": "管道线程库"
   },
   "hifumi": {
     "name": "Hifumi",
-    "tagline": "版本化你的结构体，迁移你的数据",
-    "description": "用于在不同版本间迁移数据的序列化库。用版本属性和迁移规则标注你的类型——Hifumi 自动生成所有旧版结构体和 From 实现，还提供 CLI 跨 git 历史对比结构体。",
+    "tagline": "版本化你的结构体，迁移数据",
+    "description": "一个序列化库，根据版本属性生成旧版结构体和迁移。",
     "shortLabel": "数据迁移库"
   },
   "noa": {
     "name": "Noa",
-    "tagline": "AI 原生的分布式版本控制",
-    "description": "按智能体隔离工作区、仅追加的 JSONL 日志、基于快照的历史记录，以及完整的 git 协议兼容性——为不断分叉、频繁重写历史的 AI 智能体从头设计的版本控制系统。",
+    "tagline": "面向 AI 智能体的版本控制",
+    "description": "按智能体隔离工作区、仅追加日志，以及 git 协议兼容性——专为不断分叉、频繁重写历史的智能体设计。",
     "shortLabel": "分布式版本控制"
   },
   "evernight": {
     "name": "Evernight",
-    "tagline": "跨平台远程控制与工业协议代理",
-    "description": "屏幕串流、SSH/VNC/RDP、硬件遥测，以及工业协议——Modbus、S7comm、OPC UA、CAN、EtherCAT。它是连接云端 AI 智能体与物理设备、并在边缘编排容器与虚拟机的那一层。",
+    "tagline": "工业协议，桥接至云端",
+    "description": "屏幕串流、SSH/VNC/RDP 与工业协议（Modbus、OPC UA、CAN）——云端智能体与物理设备之间的桥梁。",
     "shortLabel": "协议代理与远程控制"
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "派生自 servo 的纯 Rust 浏览器引擎。",
-    "description": "一款由 servo 派生的浏览器引擎。可作为库嵌入任意 Rust 应用，也可作为独立桌面浏览器运行——servo 的 C++ 组件已被纯 Rust 替代方案取代。",
+    "tagline": "基于 servo 的纯 Rust 浏览器引擎",
+    "description": "派生自 servo 的浏览器引擎——可作为 Rust 库嵌入，或独立运行，C++ 组件已被纯 Rust 取代。",
     "shortLabel": "纯 Rust 浏览器引擎"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "面向工业物联网的 Rust OS 内核——派生自 Asterinas",
-    "description": "面向 ARM64 与 RISC-V 边缘设备的 Rust OS 内核，派生自 Asterinas，塑造成实时、可审计的设施，附带 ARM64 板级支持、virtio-gpu 显示与工业驱动。同时提供面向 embassy 传感器节点的 no_std 库，并保持独立于上游的发布周期。",
-    "shortLabel": "RTOS 级物联网内核"
+    "tagline": "面向边缘设备的 Rust OS 内核",
+    "description": "面向 ARM64 和 RISC-V 边缘设备的 Rust OS 内核，派生自 Asterinas，附带工业驱动和 no_std 传感器库。",
+    "shortLabel": "IoT OS 内核"
   },
   "lagrange": {
     "name": "Lagrange",
     "tagline": "多语言 Markdown 静态站点",
-    "description": "把一个 Markdown 文件夹变成静态、多语言的文档站点，内置语言切换与根路径重定向。无需 JavaScript 框架、无需 mdBook、无需 Node 工具链。Lagrange 用自己构建自己的文档。",
+    "description": "把一个 Markdown 文件夹变成静态、多语言的文档站点——无需 JS 框架，无需 Node 工具链。",
     "shortLabel": "Markdown 站点生成器"
   },
   "kou": {
     "name": "Kou",
     "tagline": "独立的虚拟终端引擎",
-    "description": "PTY 管理、VT100/ANSI 屏幕模拟器与字形渲染屏幕输出，集于一个库与 CLI 之中。从 tairitsu 打包器中抽出的 vtty 核心——真正遵循 CSI/SGR 的屏幕，而非裸 PTY 包装。",
+    "description": "PTY 管理与 VT100/ANSI 屏幕模拟器，集于一个库与 CLI 之中。",
     "shortLabel": "虚拟终端引擎"
   },
   "malkuth": {
     "name": "Malkuth",
-    "tagline": "Rust 的可组合服务监管工具包",
-    "description": "为长期运行的 Rust 程序提供优雅关闭、健康探针、协调锁与滚动更新。可插拔传输（基于 TCP/WebSocket/IPC 的 JSON-RPC）、受监管工作进程，以及一个用文件监视与粘性反向代理包裹任意程序的 watchdog CLI。",
+    "tagline": "优雅关闭与健康探针",
+    "description": "为长期运行的 Rust 服务提供优雅关闭、健康探针、协调锁和滚动更新。",
     "shortLabel": "服务监管工具包"
   },
   "seia": {
     "name": "Seia",
-    "tagline": "多引擎网络搜索库与 CLI",
-    "description": "查询多样搜索后端的统一接口。无需鉴权的引擎开箱即用、零配置——一个把单条查询路由到多个提供商并合并结果的库与 CLI。",
+    "tagline": "一次查询，多个搜索引擎",
+    "description": "一个统一的库与 CLI，把单条查询路由到多个搜索后端并合并结果。",
     "shortLabel": "多引擎网络搜索"
   },
   "shirabe": {
     "name": "Shirabe",
-    "tagline": "Rust 原生的无头浏览器自动化",
-    "description": "轻量的 Rust 原生浏览器自动化库与调试服务器。它通过一个手写的引擎驱动任何会说 CDP 的浏览器——Chrome、Chromium、Edge——并自动拉取、固定一个 Chrome for Testing 构建，让你永远不必手动安装浏览器。",
+    "tagline": "Rust 原生的浏览器自动化",
+    "description": "通过一个 Rust 引擎驱动任何支持 CDP 的浏览器——它甚至会为你固定一个 Chrome 版本。",
     "shortLabel": "无头浏览器自动化"
   }
 }

@@ -1,5 +1,5 @@
 # ARIS
 
-**A pure-Rust browser engine derived from servo.**
+Pure-Rust browser engine on servo
 
-ARIS is a browser engine derived from servo. Embed it as a library in any Rust application, or run it as a standalone desktop browser — servo's C++ components are replaced with pure-Rust alternatives.
+A browser engine derived from servo — embed it as a Rust library or run it standalone, with C++ components replaced by pure Rust.

@@ -1,5 +1,5 @@
 # Hikari
 
-Una biblioteca de componentes UI **nativa WASI** — componentes pulidos y listos para usar que se ejecutan en el mismo runtime WASI que tu backend.
+Componentes UI para WASI
 
-Construida sobre Tairitsu, Hikari proporciona un conjunto completo de componentes UI sin la sobrecarga de `wasm-bindgen` ni código glue JavaScript. Construye interfaces una vez, renderízalas en cualquier lugar donde llegue el runtime WASI: navegador, servidor o edge.
+Una biblioteca de componentes pulida que corre en el mismo runtime WASI que tu backend — sin wasm-bindgen, sin glue JS.
