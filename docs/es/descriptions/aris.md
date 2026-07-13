@@ -1,5 +1,5 @@
 # ARIS
 
-El **SO embebido** de las pasarelas IoT industriales de Entelecheia — ejecutando evernight en dispositivos edge ARM/RISC-V.
+**Un motor de navegador en Rust puro derivado de servo** — embebible e independiente.
 
-ARIS es la capa de firmware que baja el broker de protocolos al hardware físico: PLCs, sensores, válvulas, actuadores. A través de un kernel mínimo y reforzado en seguridad, expone las E/S de los dispositivos a evernight manteniendo la superficie de ataque lo más pequeña posible — el último salto entre la intención del software y una acción física.
+ARIS es un motor de navegador derivado de servo. Incástalo como biblioteca en cualquier aplicación Rust, o ejecútalo como navegador de escritorio independiente. El pipeline de renderizado se ensambla con crates puramente en Rust — html5ever, stylo, taffy, parley, Vello CPU — reemplazando el SpiderMonkey, WebRender y SWGL originales de servo por Boa (JS), Vello CPU (rasterización) y Wasmtime (WASM).

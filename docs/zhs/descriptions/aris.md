@@ -1,5 +1,5 @@
 # ARIS
 
-Entelecheia 工业物联网网关的**嵌入式操作系统**——在 ARM/RISC-V 边缘设备上运行 evernight。
+**基于 servo 派生的纯 Rust 浏览器引擎**——可嵌入、可独立运行。
 
-ARIS 是把协议代理下沉到物理硬件（PLC、传感器、阀门、执行器）的固件层。它通过一个最小化、经安全加固的内核，把设备 I/O 暴露给 evernight，同时把攻击面压到尽可能小——它是软件意图与物理动作之间的最后一跳。
+ARIS 是一款由 servo 派生的浏览器引擎。可作为库嵌入任意 Rust 应用，也可作为独立桌面浏览器运行。渲染管线由纯 Rust crate 组装而成——html5ever、stylo、taffy、parley、Vello CPU——并以 Boa（JS）、Vello CPU（光栅化）、Wasmtime（WASM）替换 servo 原本的 SpiderMonkey、WebRender 与 SWGL。

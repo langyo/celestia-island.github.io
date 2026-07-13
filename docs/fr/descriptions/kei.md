@@ -1,5 +1,5 @@
 # KEI
 
-Un **fork ARM64 indépendant d'asterinas**, fournissant le binaire noyau consommé par ARIS.
+**Un noyau OS en Rust pour l'IoT industriel** — dérivé d'Asterinas, temps réel et auditable.
 
-KEI n'est pas une branche de suivi. Il absorbe l'asterinas amont selon son propre calendrier, en ajoutant le support ARM64 et des Board Support Packages taillés pour les passerelles IoT industrielles. Le même modèle de fork qu'Apple emploie pour LLVM — indépendance avec absorption amont périodique — appliqué à un noyau de système d'exploitation conçu pour l'atelier.
+KEI est un noyau OS en Rust pour appareils edge ARM64 et RISC-V, dérivé d'Asterinas et façonné en une installation temps réel et auditable, avec support de cartes ARM64, affichage virtio-gpu et pilotes industriels. Il inclut aussi une bibliothèque no_std pour les nœuds capteurs embassy, en restant indépendant des cycles de publication amont.

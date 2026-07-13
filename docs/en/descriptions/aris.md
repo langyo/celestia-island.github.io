@@ -1,5 +1,5 @@
 # ARIS
 
-The **embedded OS** for Entelecheia industrial IoT gateways — running evernight on ARM/RISC-V edge devices.
+**A pure-Rust browser engine derived from servo** — embed it, run it standalone.
 
-ARIS is the firmware layer that brings the protocol broker down to physical hardware: PLCs, sensors, valves, actuators. Through a minimal, security-hardened kernel, it exposes device I/O to evernight while keeping the attack surface as small as possible — the last hop between software intent and a physical action.
+ARIS is a browser engine derived from servo. Embed it as a library in any Rust application, or run it as a standalone desktop browser. The render pipeline is assembled from pure-Rust crates — html5ever, stylo, taffy, parley, Vello CPU — with servo's SpiderMonkey, WebRender, and SWGL replaced by Boa (JS), Vello CPU (rasterization), and Wasmtime (WASM).

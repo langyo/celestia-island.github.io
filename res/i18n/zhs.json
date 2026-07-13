@@ -106,15 +106,15 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "兼容 Linux 标准的发行版，附带面向 evernight 与 shittim-chest 的桌面环境",
-    "description": "一套兼容 Linux 标准（LSB 兼容）的发行版，附带为 evernight 与 shittim-chest 定制的桌面环境。它对标的是工业 HMI 面板与上位机——操作员面前的机器，而非边缘网关。它运行原版 Linux 内核，且独立于 kei。",
-    "shortLabel": "物联网网关嵌入式系统"
+    "tagline": "基于 servo 派生的纯 Rust 浏览器引擎——可嵌入、可独立运行",
+    "description": "一款由 servo 派生的浏览器引擎。可作为库嵌入任意 Rust 应用，也可作为独立桌面浏览器运行。渲染管线由纯 Rust crate 组装而成——html5ever、stylo、taffy、parley、Vello CPU——并以 Boa（JS）、Vello CPU（光栅化）、Wasmtime（WASM）替换 servo 原本的 SpiderMonkey、WebRender 与 SWGL。",
+    "shortLabel": "派生自 servo 的浏览器引擎"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "面向物联网的操作系统内核 —— Asterinas 上的 RTOS，兼顾 Linux 接入",
-    "description": "一套面向物联网的操作系统内核，将 Asterinas 塑造成 RTOS 风格的设施——小、实时、可审计——同时保留通往 Linux 生态的桥梁。它既不是 Linux 发行版，也不是原版 Asterinas：需要之处提供实时确定性，其余一切享有 Linux 级的软件兼容性。独立于 aris。",
-    "shortLabel": "ARM64 工业内核"
+    "tagline": "面向工业物联网的 Rust OS 内核——派生自 Asterinas",
+    "description": "面向 ARM64 与 RISC-V 边缘设备的 Rust OS 内核，派生自 Asterinas，塑造成实时、可审计的设施，附带 ARM64 板级支持、virtio-gpu 显示与工业驱动。同时提供面向 embassy 传感器节点的 no_std 库，并保持独立于上游的发布周期。",
+    "shortLabel": "RTOS 级物联网内核"
   },
   "lagrange": {
     "name": "Lagrange",

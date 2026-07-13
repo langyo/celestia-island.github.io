@@ -106,15 +106,15 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "Distribución estándar Linux con un escritorio para evernight y shittim-chest",
-    "description": "Una distribución estándar Linux (compatible con LSB) que incluye un entorno de escritorio diseñado específicamente para evernight y shittim-chest. Su referencia es el panel HMI industrial y la estación host (上位机) — la máquina orientada al operador, no la pasarela edge. Ejecuta un núcleo Linux estándar y es independiente de kei.",
-    "shortLabel": "SO Embebido para Gateway IoT"
+    "tagline": "Un motor de navegador en Rust puro derivado de servo — embebible e independiente",
+    "description": "Un motor de navegador derivado de servo. Incástalo como biblioteca en cualquier aplicación Rust, o ejecútalo como navegador de escritorio independiente. El pipeline de renderizado se ensambla con crates puramente en Rust — html5ever, stylo, taffy, parley, Vello CPU — reemplazando el SpiderMonkey, WebRender y SWGL originales de servo por Boa (JS), Vello CPU (rasterización) y Wasmtime (WASM).",
+    "shortLabel": "Motor de navegador derivado de servo"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "Núcleo de SO orientado a IoT — RTOS sobre Asterinas, acceso Linux",
-    "description": "Un núcleo de sistema operativo orientado a IoT que toma Asterinas y lo conforma en una instalación de estilo RTOS — pequeño, en tiempo real, auditable — manteniendo un puente hacia el ecosistema Linux. Ni una distribución Linux ni Asterinas sin modificar: determinismo en tiempo real donde se necesita, compatibilidad de software de grado Linux en el resto. Independiente de aris.",
-    "shortLabel": "Kernel Industrial ARM64"
+    "tagline": "Núcleo de SO en Rust para IoT industrial — derivado de Asterinas",
+    "description": "Un núcleo de SO en Rust para dispositivos edge ARM64 y RISC-V, derivado de Asterinas y moldeado en una instalación en tiempo real y auditable, con soporte de placas ARM64, pantalla virtio-gpu y controladores industriales. También incluye una biblioteca no_std para nodos sensores embassy, manteniéndose independiente de los ciclos de publicación originales.",
+    "shortLabel": "Kernel IoT de grado RTOS"
   },
   "lagrange": {
     "name": "Lagrange",

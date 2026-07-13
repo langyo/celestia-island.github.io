@@ -106,15 +106,15 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "evernight와 shittim-chest용 데스크톱을 갖춘 Linux 표준 배포판",
-    "description": "evernight와 shittim-chest에 맞춰 목적 구축된 데스크톱 환경을 제공하는 Linux 표준(LSB 호환) 배포판입니다. 그 벤치마크는 산업용 HMI 패널과 상위기(감독 호스트) — 즉 엣지 게이트웨이가 아닌, 운용자가 마주하는 기기입니다. 순정 Linux 커널을 구동하며 kei와 독립적입니다.",
-    "shortLabel": "IoT 게이트웨이 임베디드 OS"
+    "tagline": "servo에서 파생된 순수 Rust 브라우저 엔진 — 임베디드 가능, 단독 실행 가능",
+    "description": "servo에서 파생된 브라우저 엔진입니다. 임의의 Rust 애플리케이션에 라이브러리로 임베드하거나, 단독 데스크톱 브라우저로 실행할 수 있습니다. 렌더링 파이프라인은 순수 Rust 크레이트——html5ever, stylo, taffy, parley, Vello CPU——로 조립되며, servo 본래의 SpiderMonkey, WebRender, SWGL을 Boa(JS), Vello CPU(래스터화), Wasmtime(WASM)으로 대체합니다.",
+    "shortLabel": "servo 파생 브라우저 엔진"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "IoT 지향 OS 커널 — Asterinas 위의 RTOS, Linux 접근",
-    "description": "Asterinas를 가져와 RTOS 스타일의 설비 — 작고, 실시간이며, 감사 가능한 — 로 빚어내면서도 Linux 생태계로의 다리를 유지하는, IoT 지향 운영체제 커널입니다. Linux 배포판도 아니고 날것의 Asterinas도 아닙니다 — 필요한 곳에 실시간 결정론을, 그 외에는 Linux 급 소프트웨어 호환성을 제공합니다. aris와 독립적입니다.",
-    "shortLabel": "ARM64 산업 커널"
+    "tagline": "산업 IoT용 Rust OS 커널 — Asterinas에서 파생",
+    "description": "ARM64 및 RISC-V 엣지 디바이스를 위한 Rust OS 커널로, Asterinas에서 파생하여 실시간·감사 가능한 설비로 다듬어졌고 ARM64 보드 지원, virtio-gpu 디스플레이, 산업 드라이버를 갖추고 있습니다. embassy 센서 노드용 no_std 라이브러리도 포함하며, 상위 릴리스 주기와 독립적으로 유지됩니다.",
+    "shortLabel": "RTOS급 IoT 커널"
   },
   "lagrange": {
     "name": "Lagrange",
