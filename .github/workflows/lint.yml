@@ -20,8 +20,8 @@ jobs:
     name: Typecheck (vue-tsc)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 9
       - uses: actions/setup-node@v4
@@ -35,5 +35,6 @@ jobs:
         run: |
           curl -sSL https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-x86_64-unknown-linux-musl.tar.gz | tar xz
           sudo install just /usr/local/bin
+      - run: just fetch
       - run: just install
       - run: just lint

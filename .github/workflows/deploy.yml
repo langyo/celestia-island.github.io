@@ -21,8 +21,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 9
       - uses: actions/setup-node@v4
@@ -36,6 +36,7 @@ jobs:
         run: |
           curl -sSL https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-x86_64-unknown-linux-musl.tar.gz | tar xz
           sudo install just /usr/local/bin
+      - run: just fetch
       - run: just install
       - run: just build
       - uses: actions/configure-pages@v5
@@ -57,11 +58,11 @@ jobs:
         # Node 24 by current runners and fails the deployment. Retried once
         # below — deploy-pages intermittently fails with "Deployment failed,
         # try again later" on transient GitHub Pages backend hiccups.
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         continue-on-error: true
       - name: Wait before retry
         if: steps.deployment.outcome == 'failure'
         run: sleep 30
       - name: Retry deployment
         if: steps.deployment.outcome == 'failure'
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
