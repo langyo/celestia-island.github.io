@@ -1,5 +1,5 @@
 # KEI
 
-An **independent ARM64 fork of asterinas**, providing the kernel binary consumed by ARIS.
+**A Rust OS kernel for industrial IoT** — derived from Asterinas, real-time and auditable.
 
-KEI is not a tracking branch. It absorbs upstream asterinas on its own schedule, adding ARM64 support and Board Support Packages tailored to industrial IoT gateways. The same fork model Apple uses for LLVM — independence with periodic upstream absorption — applied to an OS kernel built for the factory floor.
+KEI is a Rust OS kernel for ARM64 and RISC-V edge devices, derived from Asterinas and shaped into a real-time, auditable facility with ARM64 board support, virtio-gpu display, and industrial drivers. It also ships a no_std library for embassy sensor nodes, while staying independent of upstream release cycles.

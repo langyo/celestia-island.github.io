@@ -106,15 +106,15 @@
   },
   "aris": {
     "name": "ARIS",
-    "tagline": "evernight と shittim-chest 向けデスクトップを備えた Linux 標準ディストリビューション",
-    "description": "evernight と shittim-chest のために専用構築されたデスクトップ環境を同梱する Linux 標準（LSB 互換）ディストリビューション。そのベンチマークは産業用 HMI パネルと上位機（スーパバイザホスト）——すなわちエッジゲートウェイではなく、オペレータが向き合う機械です。ストックの Linux カーネルを実行し、kei から独立しています。",
-    "shortLabel": "IoTゲートウェイ組込みOS"
+    "tagline": "servo 派生の純 Rust ブラウザエンジン——組込み可能、単体実行可能",
+    "description": "servo から派生したブラウザエンジンです。任意の Rust アプリにライブラリとして組み込むことも、単体のデスクトップブラウザとして実行することもできます。レンダリングパイプラインは純 Rust クレート——html5ever、stylo、taffy、parley、Vello CPU——で構成され、servo 本来の SpiderMonkey、WebRender、SWGL を Boa（JS）、Vello CPU（ラスタライズ）、Wasmtime（WASM）に置き換えています。",
+    "shortLabel": "servo 派生のブラウザエンジン"
   },
   "kei": {
     "name": "KEI",
-    "tagline": "IoT 向け OS カーネル — Asterinas 上の RTOS、Linux アクセス",
-    "description": "Asterinas を取り込み、それを RTOS 風の施設へと形作る —— 小さく、リアルタイムで、監査可能 —— 一方で Linux エコシステムへの橋を保つ、IoT 向けの OS カーネル。Linux ディストリビューションでも、ストックの Asterinas でもありません。必要な箇所ではリアルタイムの決定性を、それ以外では Linux グレードのソフトウェア互換性を提供します。aris から独立しています。",
-    "shortLabel": "ARM64産業カーネル"
+    "tagline": "産業 IoT 向けの Rust OS カーネル——Asterinas 由来",
+    "description": "ARM64 および RISC-V エッジデバイス向けの Rust OS カーネルで、Asterinas に由来し、リアルタイムかつ監査可能な設備に仕上げられ、ARM64 ボードサポート、virtio-gpu 表示、産業ドライバを備えています。embassy センサーノード向けの no_std ライブラリも同梱し、上流のリリースサイクルから独立しています。",
+    "shortLabel": "RTOS 級 IoT カーネル"
   },
   "lagrange": {
     "name": "Lagrange",

@@ -1,5 +1,5 @@
 # KEI
 
-asterinas 的**獨立 ARM64 分支**，為 ARIS 提供其消費的核心二進位。
+**面向工業物聯網的 Rust OS 核心**——源自 Asterinas，即時且可稽核。
 
-KEI 不是追蹤分支。它按自身節奏吸收上游 asterinas 的變更，並新增面向工業物聯網閘道的 ARM64 支援與板級支援包（BSP）。這正是 Apple 用於 LLVM 的分支模式——獨立，但週期性吸收上游——只是這次落在了一顆為車間現場打造的作業系統核心上。
+KEI 是面向 ARM64 與 RISC-V 邊緣設備的 Rust OS 核心，源自 Asterinas，塑造為即時、可稽核的設施，附帶 ARM64 板級支援、virtio-gpu 顯示與工業驅動。同時提供面向 embassy 感測器節點的 no_std 庫，並保持獨立於上游的發布週期。

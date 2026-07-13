@@ -1,5 +1,5 @@
 # ARIS
 
-Entelecheia 산업 IoT 게이트웨이를 위한 **임베디드 OS** — ARM/RISC-V 엣지 기기에서 evernight를 실행.
+**servo에서 파생된 순수 Rust 브라우저 엔진** — 임베디드 가능, 단독 실행 가능.
 
-ARIS는 프로토콜 브로커를 물리 하드웨어(PLC, 센서, 밸브, 액추에이터)로 내려 보내는 펌웨어 계층입니다. 최소화되고 안전하게 강화된 커널을 통해 장치 I/O를 evernight에 노출하면서도 공격 표면을 가능한 한 작게 유지합니다 — 소프트웨어 의도와 물리적 동작 사이의 마지막 홉입니다.
+ARIS는 servo에서 파생된 브라우저 엔진입니다. 임의의 Rust 애플리케이션에 라이브러리로 임베드하거나, 단독 데스크톱 브라우저로 실행할 수 있습니다. 렌더링 파이프라인은 순수 Rust 크레이트——html5ever, stylo, taffy, parley, Vello CPU——로 조립되며, servo 본래의 SpiderMonkey, WebRender, SWGL을 Boa(JS), Vello CPU(래스터화), Wasmtime(WASM)으로 대체합니다.
