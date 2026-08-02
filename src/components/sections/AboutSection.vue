@@ -32,6 +32,10 @@
           「{{ t('site.slogan') }}」
         </span>
         <span>{{ t('site.footer.copyright', { year: new Date().getFullYear() }) }}</span>
+        <span v-for="(item, index) in footerExtraItems" :key="index" class="footer-extra">
+          <a v-if="typeof item === 'object'" :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
+          <span v-else v-html="item"></span>
+        </span>
       </div>
     </footer>
   </section>
@@ -58,6 +62,52 @@ const renderedAboutText = computed(() => {
 
   const mdContent = (aboutDocs[docPath] as string) || (aboutDocs[fallbackPath] as string) || ''
   return marked.parse(mdContent)
+})
+
+interface FooterExtraLink {
+  title: string
+  url: string
+}
+
+type FooterExtraEntry = string | FooterExtraLink
+
+function isFooterExtraLink(item: unknown): item is FooterExtraLink {
+  return (
+    typeof item === 'object'
+    && item !== null
+    && typeof (item as FooterExtraLink).title === 'string'
+    && (item as FooterExtraLink).title.trim().length > 0
+    && typeof (item as FooterExtraLink).url === 'string'
+    && (item as FooterExtraLink).url.trim().length > 0
+  )
+}
+
+function parseFooterExtra(raw: string): FooterExtraEntry[] {
+  const value = raw.trim()
+  if (!value) return []
+  try {
+    const parsed: unknown = JSON.parse(value)
+    if (Array.isArray(parsed)) {
+      return parsed.filter((item): item is FooterExtraEntry => isFooterExtraLink(item) || (typeof item === 'string' && item.trim().length > 0))
+    }
+    if (typeof parsed === 'string') return [parsed]
+  } catch {
+    /* not JSON — treat as a single raw HTML string */
+  }
+  return [value]
+}
+
+const footerExtraItems = computed(() => {
+  let raw = ''
+  try {
+    raw = document.getElementById('celestia-footer-extra')?.textContent?.trim() ?? ''
+  } catch {
+    /* document unavailable in some prerender contexts — fall through */
+  }
+  if (!raw || raw.startsWith('$') || raw.startsWith('__')) {
+    raw = (import.meta.env.VITE_FOOTER_EXTRA as string | undefined)?.trim() ?? ''
+  }
+  return parseFooterExtra(raw)
 })
 
 defineExpose({ el, triggerReveal })
@@ -94,6 +144,18 @@ defineExpose({ el, triggerReveal })
 
 .about-text {
   font-size: 0.8125rem;
+}
+
+.footer-extra :deep(a) {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-subtle);
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+}
+
+.footer-extra :deep(a:hover) {
+  color: var(--text-primary);
 }
 
 .delay-300 {
